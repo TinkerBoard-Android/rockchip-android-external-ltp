@@ -1,0 +1,5 @@
+(1) checkout updated LTP tree under external/ltp
+(2) configure LTP tree:
+	cd external/ltp; make autotools; ./configure; cd -
+(3) regenerate Android.ltp.mk from configured LTP tree:
+	tools/regen_android_mk.sh
