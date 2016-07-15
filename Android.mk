@@ -12,17 +12,16 @@
 #
 
 LOCAL_PATH := $(call my-dir)
-ltp_root := external/ltp
-local_ltp_root := $(LOCAL_PATH)/external/ltp
+local_ltp_root := $(LOCAL_PATH)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := ltp
-LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_MODULE_CLASS := NATIVE_TESTS
 LOCAL_MODULE_TAGS := optional
 
-gen_testcases := $(LOCAL_PATH)/tools/gen_ltp_testcases.py
-disabled_tests_file := $(LOCAL_PATH)/tools/disabled_tests.txt
-disabled_gtests_file := $(LOCAL_PATH)/tools/disabled_gtests.txt
+gen_testcases := $(LOCAL_PATH)/android/tools/gen_ltp_testcases.py
+disabled_tests_file := $(LOCAL_PATH)/android/tools/disabled_tests.txt
+disabled_gtests_file := $(LOCAL_PATH)/android/tools/disabled_gtests.txt
 
 intermediates := $(local-generated-sources-dir)
 GEN := $(intermediates)/ltp-testcases.h
@@ -33,7 +32,7 @@ $(GEN): $(gen_testcases) $(disabled_tests_file) $(disabled_gtests_file) $(PRIVAT
 LOCAL_GENERATED_SOURCES += $(GEN)
 
 LOCAL_SRC_FILES := ltp.cpp \
-	RecursiveTemporaryDir.cpp
+    RecursiveTemporaryDir.cpp
 
 include $(BUILD_NATIVE_TEST)
 
@@ -50,7 +49,7 @@ regen_sh := $(local_ltp_root)/testcases/kernel/include/regen.sh
 intermediates := $(local-generated-sources-dir)
 GEN := $(intermediates)/linux_syscall_numbers.h
 $(GEN): PRIVATE_INPUT_FILE := $(wildcard $(local_ltp_root)/testcases/kernel/include/*.in)
-$(GEN): PRIVATE_CUSTOM_TOOL = $(regen_sh) -o $@
+$(GEN): PRIVATE_CUSTOM_TOOL = $(regen_sh) out/target/product/$(TARGET_DEVICE)/gen/STATIC_LIBRARIES/ltp_linux_syscall_numbers_intermediates/linux_syscall_numbers.h -o $@
 $(GEN): $(regen_sh) $(PRIVATE_INPUT_FILE)
 	$(transform-generated-source)
 LOCAL_GENERATED_SOURCES += $(GEN)
@@ -65,19 +64,19 @@ include $(CLEAR_VARS)
 
 # Hacks for bionic compatibility
 ltp_cflags := \
-	-include $(LOCAL_PATH)/include/bionic-compat.h
+    -include $(LOCAL_PATH)/android/include/bionic-compat.h
 
 # Silence noisy warnings
 ltp_cflags += \
-	-Wno-deprecated \
-	-Wno-format \
-	-Wno-gnu-designator \
-	-Wno-macro-redefined \
-	-Wno-missing-field-initializers \
-	-Wno-parentheses-equality \
-	-Wno-pointer-arith \
-	-Wno-sign-compare \
-	-Wno-unused-parameter
+    -Wno-deprecated \
+    -Wno-format \
+    -Wno-gnu-designator \
+    -Wno-macro-redefined \
+    -Wno-missing-field-initializers \
+    -Wno-parentheses-equality \
+    -Wno-pointer-arith \
+    -Wno-sign-compare \
+    -Wno-unused-parameter
 
 # bionic has broken signal handling for signum > 32 on 32-bit ARM and x86
 # (for ABI reasons this can't be fixed)
@@ -85,14 +84,16 @@ ltp_cflags_arm := -DNUMSIGS=32
 ltp_cflags_x86 := -DNUMSIGS=32
 
 ltp_c_includes := \
-	$(LOCAL_PATH)/include
-	
-ltp_static_libraries := \
-	ltp_linux_syscall_numbers
+    $(LOCAL_PATH)/android/include \
+    $(LOCAL_PATH)/include \
 
+ltp_static_libraries := \
+    ltp_linux_syscall_numbers
+
+# TODO: recover libaio when the external project created
 ltp_shared_libraries := \
-	libaio \
-	libselinux
+    libcap \
+    libselinux \
 
 ltp_build_test := $(LOCAL_PATH)/Android.test.mk
 ltp_build_library := $(LOCAL_PATH)/Android.library.mk

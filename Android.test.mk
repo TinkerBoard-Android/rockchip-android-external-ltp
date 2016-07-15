@@ -25,18 +25,18 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MULTILIB := both
 
 LOCAL_CFLAGS := $(ltp_cflags) $(module_cflags)
-LOCAL_CFLAGS_arm := $(ltp_cflags_arm) 
+LOCAL_CFLAGS_arm := $(ltp_cflags_arm)
 LOCAL_CFLAGS_x86 := $(ltp_cflags_x86)
 
 LOCAL_C_INCLUDES := $(ltp_c_includes) \
-	$(addprefix $(LOCAL_PATH)/$(ltp_root)/,$(module_c_includes))
-	
+    $(addprefix $(LOCAL_PATH)/$(ltp_root)/,$(module_c_includes))
+
 LOCAL_STATIC_LIBRARIES := $(ltp_static_libraries) \
-	$(addprefix libltp_,$(module_static_libraries))
+    $(addprefix libltp_,$(module_static_libraries))
 
 LOCAL_SHARED_LIBRARIES := $(ltp_shared_libraries) \
-	$(addprefix lib,$(module_shared_libraries))	
-	
+    $(addprefix lib,$(module_shared_libraries))
+
 LOCAL_SRC_FILES := $(addprefix $(ltp_root)/,$(module_src_files))
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.test.mk
 

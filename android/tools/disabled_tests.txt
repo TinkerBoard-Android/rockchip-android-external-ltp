@@ -223,3 +223,7 @@ lddfile5.obj.so
 # Require mkfifo
 gf12
 gf13
+
+# Case designed only for i386
+f00f
+

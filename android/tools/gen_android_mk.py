@@ -13,6 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 # Parses the output of parse_ltp_{make,make_install} and generates a
 # corresponding Android.mk.
@@ -127,7 +128,6 @@ def parse_input(infile, disabled_tests_filename):
     for target in cc_compilelink:
         if os.path.basename(target) in disabled_tests:
             continue
-
         local_src_files = cc_compilelink[target]
         local_cflags = cc_flags[target]
         local_c_includes = cc_includes[target]
@@ -136,11 +136,9 @@ def parse_input(infile, disabled_tests_filename):
         build_executable(target, local_src_files, local_cflags,
                          local_c_includes, local_libraries, ltp_libs,
                          ltp_libs_used)
-
     for target in cc_link:
         if os.path.basename(target) in disabled_tests:
             continue
-
         local_src_files = set()
         local_cflags = set()
         local_c_includes = set()
@@ -184,7 +182,6 @@ def parse_input(infile, disabled_tests_filename):
     for target in install:
         if os.path.basename(target) in disabled_tests:
             continue
-
         local_src_files = install[target]
         assert len(local_src_files) == 1
 

@@ -1,6 +1,12 @@
 #!/bin/sh
 
 output="linux_syscall_numbers.h"
+
+if [ $# -gt 0 ]; then
+    output=$1
+fi
+echo "ltp testcases kernel include regen: output = "$output
+
 rm -f "${output}".[1-9]*
 output_pid="${output}.$$"
 

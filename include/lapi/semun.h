@@ -19,7 +19,7 @@
 #ifndef SEMUN_H__
 #define SEMUN_H__
 
-#if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)
+#if defined(_UAPI_LINUX_SEM_H) && !defined(_SEM_SEMUN_UNDEFINED)
 /* union semun is defined by including <sys/sem.h> */
 #else
 /* according to X/OPEN we have to define it ourselves */

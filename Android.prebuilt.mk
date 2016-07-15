@@ -20,7 +20,7 @@ module_path := $(patsubst %/,%,$(dir $(module_prebuilt)))
 prebuilt_src_file := $(local_ltp_root)/$(module_src_files)
 
 PRIVATE_CUSTOM_TOOL = $(ACP) -fp $< $@ && \
-	sed -i -e 's?/bin/sh?/system/bin/sh?' -e 's?/bin/bash?/system/bin/sh?' $@
+    sed -i -e 's?/bin/sh?/system/bin/sh?' -e 's?/bin/bash?/system/bin/sh?' $@
 
 LOCAL_MODULE := $(module_name)-32
 LOCAL_INSTALLED_MODULE_STEM := $(module_stem)
