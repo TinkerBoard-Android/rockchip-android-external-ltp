@@ -71,10 +71,6 @@ module_cflags :=
 module_c_includes := include include/old lib
 include $(ltp_build_library)
 
-module_prebuilt := testcases/bin/tcp4-uni-basic02
-module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic02
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ext4_funcs.sh
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4_funcs.sh
 include $(ltp_build_prebuilt)
