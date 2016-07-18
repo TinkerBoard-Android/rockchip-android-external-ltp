@@ -11,6 +11,9 @@
 # GNU General Public License for more details.
 #
 
+# LTP is only for development and not for production
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+
 LOCAL_PATH := $(call my-dir)
 local_ltp_root := $(LOCAL_PATH)
 
@@ -100,3 +103,5 @@ ltp_build_library := $(LOCAL_PATH)/Android.library.mk
 ltp_build_prebuilt := $(LOCAL_PATH)/Android.prebuilt.mk
 
 include $(LOCAL_PATH)/Android.ltp.mk
+
+endif
