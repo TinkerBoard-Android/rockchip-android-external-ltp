@@ -11,6 +11,8 @@
 # GNU General Public License for more details.
 #
 
+# LTP is mainly for vts build targets (skip for sdk_phone*)
+ifeq (,$(filter sdk_phone_armv7, $(TARGET_PRODUCT)))
 # LTP is only for development and not for production
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 
