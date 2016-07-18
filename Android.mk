@@ -11,8 +11,6 @@
 # GNU General Public License for more details.
 #
 
-# TODO(yuexima) temporally skip ltp build for target shamu
-ifneq (shamu, $(TARGET_PRODUCT))
 # LTP is for linux
 ifeq (linux, $(HOST_OS))
 # LTP is only for development and not for production
@@ -108,6 +106,5 @@ ltp_build_prebuilt := $(LOCAL_PATH)/Android.prebuilt.mk
 
 include $(LOCAL_PATH)/Android.ltp.mk
 
-endif
 endif
 endif
