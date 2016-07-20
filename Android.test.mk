@@ -17,8 +17,8 @@ module_name := ltp_$(subst /,_,$(module_testname))
 module_stem := $(notdir $(module_testname))
 
 LOCAL_MODULE := $(module_name)
-LOCAL_MODULE_STEM_32 := $(module_stem)_32
-LOCAL_MODULE_STEM_64 := $(module_stem)_64
+LOCAL_MODULE_STEM_32 := $(module_stem)
+LOCAL_MODULE_STEM_64 := $(module_stem)
 LOCAL_MODULE_PATH_32 := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_DATA_NATIVE_TESTS)/ltp/testcases/bin
 LOCAL_MODULE_PATH_64 := $(TARGET_OUT_DATA_NATIVE_TESTS)/ltp/testcases/bin
 LOCAL_MODULE_TAGS := optional
