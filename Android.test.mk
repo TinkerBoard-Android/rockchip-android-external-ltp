@@ -40,6 +40,5 @@ LOCAL_SHARED_LIBRARIES := $(ltp_shared_libraries) \
 LOCAL_SRC_FILES := $(addprefix $(ltp_root)/,$(module_src_files))
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.test.mk
 
-LOCAL_COMPATIBILITY_SUITE := vts
-
 include $(BUILD_EXECUTABLE)
+include $(LOCAL_PATH)/Android.vts_testcase.mk
