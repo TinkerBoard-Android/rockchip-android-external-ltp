@@ -15,20 +15,27 @@
 #
 
 VTS_TESTCASES_OUT := $(HOST_OUT)/vts/android-vts/testcases
-vts_testcases_out_32 := $(VTS_TESTCASES_OUT)/ltp/32
-vts_testcases_out_64 := $(VTS_TESTCASES_OUT)/ltp/64
 
-vts_ltp_testcase_file_32 := $(vts_testcases_out_32)/$(LOCAL_MODULE_STEM_32)
-vts_ltp_testcase_file_64 := $(vts_testcases_out_64)/$(LOCAL_MODULE_STEM_64)
+ifdef vts_src_file_32
 
-$(vts_ltp_testcase_file_32): $(LOCAL_MODULE_PATH_32)/$(LOCAL_MODULE_STEM_32) | $(ACP)
-	$(hide) mkdir -p $(vts_testcases_out_32)
+vts_testcases_out_32 := $(VTS_TESTCASES_OUT)/32/ltp
+vts_testcase_dst_file_32 := $(vts_testcases_out_32)/$(vts_dst_file_32)
+
+$(vts_testcase_dst_file_32): $(vts_src_file_32) | $(ACP)
+	$(hide) mkdir -p $(dir $(vts_testcase_dst_file_32))
 	$(hide) $(ACP) -fp $< $@
+vts: $(vts_testcase_dst_file_32)
 
-$(vts_ltp_testcase_file_64): $(LOCAL_MODULE_PATH_64)/$(LOCAL_MODULE_STEM_64) | $(ACP)
-	$(hide) mkdir -p $(vts_testcases_out_64)
+endif
+
+ifdef vts_src_file_64
+
+vts_testcases_out_64 := $(VTS_TESTCASES_OUT)/64/ltp
+vts_testcase_dst_file_64 := $(vts_testcases_out_64)/$(vts_dst_file_64)
+
+$(vts_testcase_dst_file_64): $(vts_src_file_64) | $(ACP)
+	$(hide) mkdir -p $(dir $(vts_testcase_dst_file_64))
 	$(hide) $(ACP) -fp $< $@
+vts: $(vts_testcase_dst_file_64)
 
-vts: $(vts_ltp_testcase_file_32)
-vts: $(vts_ltp_testcase_file_64)
-
+endif

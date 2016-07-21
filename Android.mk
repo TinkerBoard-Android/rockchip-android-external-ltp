@@ -40,6 +40,12 @@ LOCAL_SRC_FILES := ltp.cpp \
     RecursiveTemporaryDir.cpp
 
 include $(BUILD_NATIVE_TEST)
+vts_src_file_32 := $(TARGET_OUT_DATA_NATIVE_TESTS)/ltp/$(LOCAL_MODULE)
+vts_src_file_64 := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_DATA_NATIVE_TESTS)/ltp/$(LOCAL_MODULE)
+vts_dst_file_32 := $(LOCAL_MODULE)
+vts_dst_file_64 := $(LOCAL_MODULE)
+include $(LOCAL_PATH)/Android.vts_testcase.mk
+
 
 
 # linux_syscall_numbers.h doesn't really "belong" to any module, so give it
