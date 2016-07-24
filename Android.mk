@@ -11,10 +11,27 @@
 # GNU General Public License for more details.
 #
 
-# LTP is for linux
-ifeq (linux, $(HOST_OS))
+disabled_target := 0
+
+# TODO: enable LTP for darwin and windows hosts
+ifneq (linux, $(HOST_OS))
+disabled_target := 1
+endif
+
+# TODO: enable LTP for mips eng
+ifneq (,$(findstring mips, $(TARGET_PRODUCT)))
+ifeq (eng, $(TARGET_BUILD_VARIANT))
+disabled_target := 1
+endif
+endif
+
 # LTP is only for development and not for production
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+disabled_target := 1
+endif
+
+
+ifeq (0, $(disabled_target))
 
 LOCAL_PATH := $(call my-dir)
 local_ltp_root := $(LOCAL_PATH)
@@ -112,5 +129,4 @@ ltp_build_prebuilt := $(LOCAL_PATH)/Android.prebuilt.mk
 
 include $(LOCAL_PATH)/Android.ltp.mk
 
-endif
 endif
