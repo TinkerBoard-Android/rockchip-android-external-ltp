@@ -8,6 +8,7 @@ core
 .gdb_history
 .gdbinit
 lib*.a
+*.pyc
 
 /aclocal.m4
 autom4te.cache

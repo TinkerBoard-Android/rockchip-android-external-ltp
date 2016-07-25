@@ -48,7 +48,7 @@ disabled_gtests_file := $(LOCAL_PATH)/android/tools/disabled_gtests.txt
 intermediates := $(local-generated-sources-dir)
 GEN := $(intermediates)/ltp-testcases.h
 $(GEN): PRIVATE_INPUT_FILE := $(local_ltp_root)/scenario_groups/default
-$(GEN): PRIVATE_CUSTOM_TOOL = $(gen_testcases) --ltp-root=$(local_ltp_root) --disabled-tests=$(disabled_tests_file) --disabled-gtests=$(disabled_gtests_file) $(PRIVATE_INPUT_FILE) > $@
+$(GEN): PRIVATE_CUSTOM_TOOL = $(gen_testcases) --ltp-root=$(local_ltp_root) --disabled-tests=$(disabled_tests_file) --disabled-gtests=$(disabled_gtests_file) $(PRIVATE_INPUT_FILE) --output_format=cpp> $@
 $(GEN): $(gen_testcases) $(disabled_tests_file) $(disabled_gtests_file) $(PRIVATE_INPUT_FILE)
 	$(transform-generated-source)
 LOCAL_GENERATED_SOURCES += $(GEN)
@@ -63,7 +63,13 @@ vts_dst_file_32 := $(LOCAL_MODULE)
 vts_dst_file_64 := $(LOCAL_MODULE)
 include $(LOCAL_PATH)/Android.vts_testcase.mk
 
-
+include $(CLEAR_VARS)
+LOCAL_MODULE := ltp_vts_testcases
+vts_src_file_32 := $(LOCAL_PATH)/android/$(LOCAL_MODULE).txt
+vts_src_file_64 := $(vts_src_file_32)
+vts_dst_file_32 := $(LOCAL_MODULE).txt
+vts_dst_file_64 := $(LOCAL_MODULE).txt
+include $(LOCAL_PATH)/Android.vts_testcase.mk
 
 # linux_syscall_numbers.h doesn't really "belong" to any module, so give it
 # its own fake static library that the other targets can depend on

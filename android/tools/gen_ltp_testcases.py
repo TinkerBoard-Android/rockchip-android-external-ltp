@@ -36,42 +36,54 @@ import os
 import sys
 
 def read_commented_txt(filename):
+    """Read a lines of a file that are not commented by #."""
     ret = set()
-    if filename:
-        with open(filename, 'r') as f:
-            for line in f.readlines():
-                s = line.strip()
-                if s and not s.startswith('#'):
-                    ret.add(s)
+    if not filename:
+        return ret
+
+    with open(filename, 'r') as f:
+        for line in f.readlines():
+            s = line.strip()
+            if s and not s.startswith('#'):
+                ret.add(s)
 
     return ret
 
 
-def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gtests):
+def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gtests, output_format):
+    """Generate test cases for each test case input."""
     s = line.split()
     testname = s[0]
     testexe = s[1]
     args = s[2:]
 
-    if testexe in disabled_tests:
-        return
+    testname_prefix = 'DISABLED_' if testname in disabled_gtests or testname in disabled_tests else ''
 
-    testname_prefix = 'DISABLED_' if testname in disabled_gtests else ''
     # The testname becomes a C++ class name, which can't have hyphens
     testname = testname_prefix + testname.replace('-', '_')
 
-    if args:
-        cmdline = ', '.join('\"{}\"'.format(i) for i in args)
-        print('LTP_TESTCASE({}, {}, {}, {{{}}});'.format(testsuite, testname,
-                                                         testexe, cmdline))
-    else:
-        print('LTP_TESTCASE({}, {}, {});'.format(testsuite, testname, testexe))
+    if output_format == 'cpp':
+        if args:
+            cmdline = ', '.join('\"{}\"'.format(i) for i in args)
+            print('LTP_TESTCASE({}, {}, {}, {{{}}});'.format(testsuite, testname,
+                                                             testexe, cmdline))
+        else:
+            print('LTP_TESTCASE({}, {}, {});'.format(testsuite, testname, testexe))
+    elif output_format == 'py':
+        print("\t".join([testsuite, testname, testexe, ','.join(args)]))
 
 
-def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests, disabled_gtests):
-    testsuite_script = ltp_root + os.sep + 'runtest' + os.sep + testsuite
+
+def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests,
+                           disabled_gtests, output_format):
+    """Generate test cases for each ltp test suite input."""
+    testsuite_script = os.path.join(ltp_root, 'runtest', testsuite)
     testsuite = testsuite.replace('-', '_')
-    print('LTP_TESTSUITE({});'.format(testsuite))
+
+    if output_format == 'cpp':
+        print('LTP_TESTSUITE({});'.format(testsuite))
+    elif output_format == 'py':
+        print('// The following test cases are generated from LTP TESTSUITE: {}'.format(testsuite))
 
     for line in open(testsuite_script, 'r'):
         l = line.strip()
@@ -79,7 +91,7 @@ def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests, disabled_gtests)
             continue
 
         generate_ltp_testcase(l, testsuite, ltp_root, disabled_tests,
-                              disabled_gtests)
+                              disabled_gtests, output_format)
 
 
 def main():
@@ -91,6 +103,9 @@ def main():
                     help = 'file with a list of disabled tests')
     parser.add_argument('--disabled-gtests', dest = 'disabled_gtests',
                     help = 'file with a list of tests that should be prefixed with DISABLED_')
+    parser.add_argument('--output_format', dest = 'output_format',
+                    help = 'output_format: "cpp" for cpp target side gtest version, ' \
+                           '"py" for python host side vts version ')
 
     args = parser.parse_args()
     script_name = os.path.basename(sys.argv[0])
@@ -109,7 +124,7 @@ def main():
 
     for testsuite in ltp_testsuites:
         generate_ltp_testsuite(testsuite, args.ltp_root, disabled_tests,
-                               disabled_gtests)
+                               disabled_gtests, args.output_format)
 
 if __name__ == '__main__':
     main()
