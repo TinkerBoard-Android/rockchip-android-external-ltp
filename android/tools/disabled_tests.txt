@@ -338,3 +338,7 @@ setresuid05
 setresgid01
 chown03
 setgroups04
+
+
+# The following tests are disabled as they would hang during execution
+inotify06

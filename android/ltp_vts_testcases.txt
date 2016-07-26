@@ -358,7 +358,7 @@ syscalls	inotify02	inotify02
 syscalls	inotify03	inotify03	
 syscalls	inotify04	inotify04	
 syscalls	inotify05	inotify05	
-syscalls	inotify06	inotify06	
+syscalls	DISABLED_inotify06	inotify06	
 syscalls	fanotify01	fanotify01	
 syscalls	fanotify02	fanotify02	
 syscalls	fanotify03	fanotify03	
