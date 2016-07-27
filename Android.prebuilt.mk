@@ -34,7 +34,6 @@ $(LOCAL_BUILT_MODULE): $(prebuilt_src_file) $(LOCAL_PATH)/Android.prebuilt.mk
 	$(transform-generated-source)
 vts_src_file_32 := $(LOCAL_MODULE_PATH)/$(LOCAL_INSTALLED_MODULE_STEM)
 vts_dst_file_32 := $(module_path)/$(module_stem)
-include $(LOCAL_PATH)/Android.vts_testcase.mk
 
 include $(CLEAR_VARS)
 
@@ -50,4 +49,14 @@ $(LOCAL_BUILT_MODULE): $(prebuilt_src_file) $(LOCAL_PATH)/Android.prebuilt.mk
 	$(transform-generated-source)
 vts_src_file_64 := $(LOCAL_MODULE_PATH)/$(LOCAL_INSTALLED_MODULE_STEM)
 vts_dst_file_64 := $(module_path)/$(module_stem)
+
 include $(LOCAL_PATH)/Android.vts_testcase.mk
+
+module_name :=
+module_stem :=
+module_path :=
+prebuilt_src_file :=
+vts_src_file_32 :=
+vts_dst_file_32 :=
+vts_src_file_64 :=
+vts_dst_file_64 :=

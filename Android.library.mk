@@ -33,3 +33,4 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.library.mk
 
 include $(BUILD_STATIC_LIBRARY)
 
+module_name :=

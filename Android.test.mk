@@ -47,3 +47,9 @@ vts_dst_file_32 := testcases/bin/$(LOCAL_MODULE_STEM_32)
 vts_dst_file_64 := testcases/bin/$(LOCAL_MODULE_STEM_64)
 include $(LOCAL_PATH)/Android.vts_testcase.mk
 
+module_name :=
+module_stem :=
+vts_src_file_32 :=
+vts_dst_file_32 :=
+vts_src_file_64 :=
+vts_dst_file_64 :=
