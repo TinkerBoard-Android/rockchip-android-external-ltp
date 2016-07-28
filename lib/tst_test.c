@@ -70,9 +70,14 @@ static void setup_ipc(void)
 {
 	size_t size = getpagesize();
 
+#ifndef ANDROID
 	//TODO: Fallback to tst_tmpdir() if /dev/shm does not exits?
 	snprintf(shm_path, sizeof(shm_path), "/dev/shm/ltp_%s_%d",
 	         tst_test->tid, getpid());
+#else
+	snprintf(shm_path, sizeof(shm_path), "%s/ltp_%s_%d",
+	         getenv("TMPDIR"), tst_test->tid, getpid());
+#endif
 
 	ipc_fd = open(shm_path, O_CREAT | O_EXCL | O_RDWR, 0600);
 	if (ipc_fd < 0)
