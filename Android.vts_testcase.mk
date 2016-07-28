@@ -16,7 +16,7 @@
 
 VTS_TESTCASES_OUT := $(HOST_OUT)/vts/android-vts/testcases
 
-ifneq (, $(vts_src_file_32))
+ifdef vts_src_file_32
 
 vts_testcases_out_32 := $(VTS_TESTCASES_OUT)/32/ltp
 vts_testcase_dst_file_32 := $(vts_testcases_out_32)/$(vts_dst_file_32)
@@ -28,7 +28,7 @@ vts: $(vts_testcase_dst_file_32)
 
 endif
 
-ifneq (, $(vts_src_file_64))
+ifdef vts_src_file_64
 
 vts_testcases_out_64 := $(VTS_TESTCASES_OUT)/64/ltp
 vts_testcase_dst_file_64 := $(vts_testcases_out_64)/$(vts_dst_file_64)
@@ -39,8 +39,3 @@ $(vts_testcase_dst_file_64): $(vts_src_file_64) | $(ACP)
 vts: $(vts_testcase_dst_file_64)
 
 endif
-
-vts_src_file_32 :=
-vts_src_file_64 :=
-vts_testcase_dst_file_32 :=
-vts_testcase_dst_file_64 :=
