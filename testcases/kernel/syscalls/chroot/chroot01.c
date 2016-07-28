@@ -53,8 +53,6 @@ char *TCID = "chroot01";
 int TST_TOTAL = 1;
 int fail;
 
-char path[] = "/tmp";
-
 char nobody_uid[] = "nobody";
 struct passwd *ltpuser;
 
@@ -63,6 +61,7 @@ void cleanup(void);
 
 int main(int ac, char **av)
 {
+	const char* path = getenv("TMP") ? getenv("TMP") : "/tmp";
 	int lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);
