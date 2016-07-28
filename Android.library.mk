@@ -32,5 +32,5 @@ LOCAL_SRC_FILES := $(addprefix $(ltp_root)/,$(module_src_files))
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.library.mk
 
 include $(BUILD_STATIC_LIBRARY)
+include $(LOCAL_PATH)/Android.ltp_clear_vars.mk
 
-module_name :=
