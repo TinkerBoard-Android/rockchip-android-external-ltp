@@ -122,11 +122,11 @@ ltp_c_includes := \
     $(LOCAL_PATH)/include \
 
 ltp_static_libraries := \
-    ltp_linux_syscall_numbers
+    ltp_linux_syscall_numbers \
+    libcap \
 
 # TODO: recover libaio when the external project created
 ltp_shared_libraries := \
-    libcap \
     libselinux \
 
 ltp_build_test := $(LOCAL_PATH)/Android.test.mk
