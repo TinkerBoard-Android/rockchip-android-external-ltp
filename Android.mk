@@ -123,7 +123,16 @@ ltp_c_includes := \
 
 ltp_static_libraries := \
     ltp_linux_syscall_numbers \
+
+ifeq ($(PLATFORM_SDK_VERSION),23)  # MNC
+ltp_static_libraries += \
+    libcap-ng \
+
+else
+ltp_static_libraries += \
     libcap \
+
+endif
 
 # TODO: recover libaio when the external project created
 ltp_shared_libraries := \
