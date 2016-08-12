@@ -10027,10 +10027,6 @@ module_prebuilt := testcases/bin/smack_file_access.sh
 module_src_files := testcases/kernel/security/smack/smack_file_access.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/udp6-multi-diffip02
-module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip02
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/busy_poll01.sh
 module_src_files := testcases/network/busy_poll/busy_poll01.sh
 include $(ltp_build_prebuilt)
@@ -10137,10 +10133,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/run_semaphore_test_01.sh
 module_src_files := testcases/kernel/ipc/ipc_stress/run_semaphore_test_01.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp6-multi-diffip07
-module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip07
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/xinetd_tests.sh
@@ -10483,8 +10475,8 @@ module_prebuilt := testcases/bin/fs_bind/regression/test03
 module_src_files := testcases/kernel/fs/fs_bind/regression/test03
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/run_cpuctl_test_fj.sh
-module_src_files := testcases/kernel/controllers/cpuctl_fj/run_cpuctl_test_fj.sh
+module_prebuilt := testcases/bin/fs_bind/regression/test02
+module_src_files := testcases/kernel/fs/fs_bind/regression/test02
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/vxlan03.sh
@@ -10519,8 +10511,8 @@ module_prebuilt := testcases/bin/fs_bind/cloneNS/test07
 module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/fs_bind/cloneNS/test06
-module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test06
+module_prebuilt := testcases/bin/fs_racer.sh
+module_src_files := testcases/kernel/fs/racer/fs_racer.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/cloneNS/test01
@@ -10621,10 +10613,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/force_erase.sh
 module_src_files := testcases/kernel/security/mmc_security/force_erase.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/http-stress01-rmt
-module_src_files := testcases/network/stress/http/http-stress01-rmt
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-smallsend14
@@ -11019,6 +11007,10 @@ module_prebuilt := testcases/bin/nmfile.c
 module_src_files := testcases/commands/ade/nm/nmfile.c
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp6-multi-diffip07
+module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip07
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp6-multi-diffip06
 module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip06
 include $(ltp_build_prebuilt)
@@ -11259,6 +11251,10 @@ module_prebuilt := testcases/bin/fs_bind/bind/test13
 module_src_files := testcases/kernel/fs/fs_bind/bind/test13
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/run_cpuctl_test_fj.sh
+module_src_files := testcases/kernel/controllers/cpuctl_fj/run_cpuctl_test_fj.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/fs_bind/bind/test07-2
 module_src_files := testcases/kernel/fs/fs_bind/bind/test07-2
 include $(ltp_build_prebuilt)
@@ -11419,8 +11415,8 @@ module_prebuilt := testcases/bin/fs_bind/rbind/test27
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test27
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/fs_bind/rbind/test24
-module_src_files := testcases/kernel/fs/fs_bind/rbind/test24
+module_prebuilt := testcases/bin/fsxtest
+module_src_files := testcases/kernel/fs/fsx-linux/fsxtest
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test25
@@ -11683,8 +11679,8 @@ module_prebuilt := testcases/bin/runpwtests_exclusive04.sh
 module_src_files := testcases/kernel/power_management/runpwtests_exclusive04.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/fsxtest
-module_src_files := testcases/kernel/fs/fsx-linux/fsxtest
+module_prebuilt := testcases/bin/fs_bind/rbind/test24
+module_src_files := testcases/kernel/fs/fs_bind/rbind/test24
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cpuset_inherit_testset.sh
@@ -11903,6 +11899,10 @@ module_prebuilt := testcases/bin/fs_racer_dir_create.sh
 module_src_files := testcases/kernel/fs/racer/fs_racer_dir_create.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/http-stress01-rmt
+module_src_files := testcases/network/stress/http/http-stress01-rmt
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp03.sh
 module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp03.sh
 include $(ltp_build_prebuilt)
@@ -12051,8 +12051,8 @@ module_prebuilt := testcases/bin/add_ipv6addr
 module_src_files := testcases/network/stress/ns-tools/add_ipv6addr
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron_tests.sh
-module_src_files := testcases/commands/cron/cron_tests.sh
+module_prebuilt := testcases/bin/cpuset_memory_testset.sh
+module_src_files := testcases/kernel/controllers/cpuset/cpuset_memory_test/cpuset_memory_testset.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-smallsend10
@@ -12165,6 +12165,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/icmp6-multi-diffip03
 module_src_files := testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip03
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/udp6-multi-diffip02
+module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip02
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/echo01
@@ -12497,6 +12501,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/size01
 module_src_files := testcases/commands/ade/size/size01
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ssh01_s1
+module_src_files := testcases/network/tcp_cmds/ssh/ssh01_s1
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffnic14
@@ -13187,6 +13195,10 @@ module_prebuilt := testcases/bin/sssd03
 module_src_files := testcases/commands/sssd/sssd03
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/sssd02
+module_src_files := testcases/commands/sssd/sssd02
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/sssd01
 module_src_files := testcases/commands/sssd/sssd01
 include $(ltp_build_prebuilt)
@@ -13225,10 +13237,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-basic08
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic08
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp4-uni-pktlossdup08
-module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup08
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-sameport11
@@ -13559,16 +13567,12 @@ module_prebuilt := testcases/bin/tcp6-uni-winscale09
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale09
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/fs_bind/regression/test02
-module_src_files := testcases/kernel/fs/fs_bind/regression/test02
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/mc_opts
 module_src_files := testcases/network/multicast/mc_opts/mc_opts
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cpuset_memory_testset.sh
-module_src_files := testcases/kernel/controllers/cpuset/cpuset_memory_test/cpuset_memory_testset.sh
+module_prebuilt := testcases/bin/cron_tests.sh
+module_src_files := testcases/commands/cron/cron_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/broken_ip6-version
@@ -13619,8 +13623,8 @@ module_prebuilt := testcases/bin/tcp4-uni-pktlossdup09
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup09
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/sssd02
-module_src_files := testcases/commands/sssd/sssd02
+module_prebuilt := testcases/bin/tcp4-uni-pktlossdup08
+module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup08
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mkfs01.sh
@@ -13775,8 +13779,8 @@ module_prebuilt := testcases/bin/runpwtests04.sh
 module_src_files := testcases/kernel/power_management/runpwtests04.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/fs_racer.sh
-module_src_files := testcases/kernel/fs/racer/fs_racer.sh
+module_prebuilt := testcases/bin/fs_bind/cloneNS/test06
+module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test06
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test08
@@ -13853,10 +13857,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/if-addr-addlarge
 module_src_files := testcases/network/stress/interface/if-addr-addlarge
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh01_s1
-module_src_files := testcases/network/tcp_cmds/ssh/ssh01_s1
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-sackoff06
