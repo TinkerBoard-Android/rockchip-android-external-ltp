@@ -217,7 +217,11 @@ void cleanup(void)
 char *getpwd(void)
 {
 	FILE *fin;
+#ifdef ANDROID
+	char *pwd = "/system/bin/pwd";
+#else
 	char *pwd = "/bin/pwd";
+#endif
 	char *cp;
 	char *buf;
 

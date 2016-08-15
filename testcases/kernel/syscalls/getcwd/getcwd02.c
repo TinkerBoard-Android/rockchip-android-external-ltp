@@ -62,7 +62,11 @@
 #include "test.h"
 #define FAILED 1
 
+#ifdef ANDROID
+char *pwd = "/system/bin/pwd";
+#else
 char *pwd = "/bin/pwd";
+#endif
 int flag;
 char *TCID = "getcwd02";
 int TST_TOTAL = 7;
