@@ -70,7 +70,7 @@ def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gt
         else:
             print('LTP_TESTCASE({}, {}, {});'.format(testsuite, testname, testexe))
     elif output_format == 'py':
-        print("\t".join([testsuite, testname, testexe, ','.join(args)]))
+        print("\t".join([testsuite, testname, ' '.join(s[1:])]))
 
 
 
