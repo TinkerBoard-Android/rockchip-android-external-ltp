@@ -185,8 +185,11 @@ void setup(void)
 	if (nobody_u == NULL)
 		tst_brkm(TBROK | TERRNO, cleanup,
 			 "getpwnam(\"nobody\") failed");
-
+#ifdef ANDROID
+	bin_group = getgrnam("everybody");
+#else
 	bin_group = getgrnam("bin");
+#endif
 	if (bin_group == NULL)
 		tst_brkm(TBROK | TERRNO, cleanup, "getgrnam(\"bin\") failed");
 
