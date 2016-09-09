@@ -18,7 +18,7 @@
 TOOLS_DIR=$(realpath $(dirname $0))
 LTP_ANDROID_DIR=$(realpath $TOOLS_DIR/..)
 LTP_ROOT=$(realpath $LTP_ANDROID_DIR/..)
-OUTPUT=$LTP_ROOT/Android.ltp.mk
+OUTPUT=$LTP_ANDROID_DIR/Android.ltp.mk
 
 echo "TOOLS_DIR: $TOOLS_DIR"
 echo "LTP_ANDROID_DIR: $LTP_ANDROID_DIR"
