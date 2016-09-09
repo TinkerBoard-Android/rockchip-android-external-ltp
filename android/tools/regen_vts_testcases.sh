@@ -24,6 +24,5 @@ cat $LTP_ROOT/scenario_groups/default |
 python $TOOLS_DIR/gen_ltp_testcases.py \
     --ltp-root=$LTP_ROOT \
     --disabled-tests=$TOOLS_DIR/disabled_tests.txt \
-    --disabled-gtests=$TOOLS_DIR/disabled_gtests.txt \
-    --output_format=py > \
+    --disabled-gtests=$TOOLS_DIR/disabled_gtests.txt > \
     $LTP_ANDROID_DIR/ltp_vts_testcases.txt \

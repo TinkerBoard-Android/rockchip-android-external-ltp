@@ -50,7 +50,7 @@ def read_commented_txt(filename):
     return ret
 
 
-def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gtests, output_format):
+def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gtests):
     """Generate test cases for each test case input."""
     s = line.split()
     testname = s[0]
@@ -62,36 +62,23 @@ def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gt
     # The testname becomes a C++ class name, which can't have hyphens
     testname = testname_prefix + testname.replace('-', '_')
 
-    if output_format == 'cpp':
-        if args:
-            cmdline = ', '.join('\"{}\"'.format(i) for i in args)
-            print('LTP_TESTCASE({}, {}, {}, {{{}}});'.format(testsuite, testname,
-                                                             testexe, cmdline))
-        else:
-            print('LTP_TESTCASE({}, {}, {});'.format(testsuite, testname, testexe))
-    elif output_format == 'py':
-        print("\t".join([testsuite, testname, ' '.join(s[1:])]))
+    print("\t".join([testsuite, testname, ' '.join(s[1:])]))
 
 
 
-def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests,
-                           disabled_gtests, output_format):
+def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests, disabled_gtests):
     """Generate test cases for each ltp test suite input."""
     testsuite_script = os.path.join(ltp_root, 'runtest', testsuite)
     testsuite = testsuite.replace('-', '_')
 
-    if output_format == 'cpp':
-        print('LTP_TESTSUITE({});'.format(testsuite))
-    elif output_format == 'py':
-        print('// The following test cases are generated from LTP TESTSUITE: {}'.format(testsuite))
+    print('// The following test cases are generated from LTP TESTSUITE: {}'.format(testsuite))
 
     for line in open(testsuite_script, 'r'):
         l = line.strip()
         if not l or l[0] == '#':
             continue
 
-        generate_ltp_testcase(l, testsuite, ltp_root, disabled_tests,
-                              disabled_gtests, output_format)
+        generate_ltp_testcase(l, testsuite, ltp_root, disabled_tests, disabled_gtests)
 
 
 def main():
@@ -103,9 +90,6 @@ def main():
                     help = 'file with a list of disabled tests')
     parser.add_argument('--disabled-gtests', dest = 'disabled_gtests',
                     help = 'file with a list of tests that should be prefixed with DISABLED_')
-    parser.add_argument('--output_format', dest = 'output_format',
-                    help = 'output_format: "cpp" for cpp target side gtest version, ' \
-                           '"py" for python host side vts version ')
 
     args = parser.parse_args()
     script_name = os.path.basename(sys.argv[0])
@@ -123,8 +107,7 @@ def main():
     print('')
 
     for testsuite in ltp_testsuites:
-        generate_ltp_testsuite(testsuite, args.ltp_root, disabled_tests,
-                               disabled_gtests, args.output_format)
+        generate_ltp_testsuite(testsuite, args.ltp_root, disabled_tests, disabled_gtests)
 
 if __name__ == '__main__':
     main()

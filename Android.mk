@@ -37,33 +37,6 @@ LOCAL_PATH := $(call my-dir)
 local_ltp_root := $(LOCAL_PATH)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := ltp
-LOCAL_MODULE_CLASS := NATIVE_TESTS
-LOCAL_MODULE_TAGS := optional
-
-gen_testcases := $(LOCAL_PATH)/android/tools/gen_ltp_testcases.py
-disabled_tests_file := $(LOCAL_PATH)/android/tools/disabled_tests.txt
-disabled_gtests_file := $(LOCAL_PATH)/android/tools/disabled_gtests.txt
-
-intermediates := $(local-generated-sources-dir)
-GEN := $(intermediates)/ltp-testcases.h
-$(GEN): PRIVATE_INPUT_FILE := $(local_ltp_root)/scenario_groups/default
-$(GEN): PRIVATE_CUSTOM_TOOL = $(gen_testcases) --ltp-root=$(local_ltp_root) --disabled-tests=$(disabled_tests_file) --disabled-gtests=$(disabled_gtests_file) $(PRIVATE_INPUT_FILE) --output_format=cpp> $@
-$(GEN): $(gen_testcases) $(disabled_tests_file) $(disabled_gtests_file) $(PRIVATE_INPUT_FILE)
-	$(transform-generated-source)
-LOCAL_GENERATED_SOURCES += $(GEN)
-
-LOCAL_SRC_FILES := ltp.cpp \
-    RecursiveTemporaryDir.cpp
-
-include $(BUILD_NATIVE_TEST)
-vts_src_file_32 := $(TARGET_OUT_DATA_NATIVE_TESTS)/ltp/$(LOCAL_MODULE)
-vts_src_file_64 := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_DATA_NATIVE_TESTS)/ltp/$(LOCAL_MODULE)
-vts_dst_file_32 := $(LOCAL_MODULE)
-vts_dst_file_64 := $(LOCAL_MODULE)
-include $(LOCAL_PATH)/Android.vts_testcase.mk
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := ltp_vts_testcases
 vts_src_file_32 := $(LOCAL_PATH)/android/$(LOCAL_MODULE).txt
 vts_src_file_64 := $(vts_src_file_32)
