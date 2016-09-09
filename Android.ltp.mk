@@ -16,7 +16,7 @@
 module_testname := lib/newlib_tests/test10
 module_src_files := lib/newlib_tests/test10.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -24,7 +24,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test11
 module_src_files := lib/newlib_tests/test11.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -32,7 +32,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test12
 module_src_files := lib/newlib_tests/test12.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -40,7 +40,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test13
 module_src_files := lib/newlib_tests/test13.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -48,7 +48,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/wait4/wait401
 module_src_files := testcases/kernel/syscalls/wait4/wait401.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -56,7 +56,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/cfs-scheduler/hackbench
 module_src_files := testcases/kernel/sched/cfs-scheduler/hackbench.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -64,7 +64,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/wait4/wait402
 module_src_files := testcases/kernel/syscalls/wait4/wait402.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -72,7 +72,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/pipe_test_02
 module_src_files := testcases/kernel/ipc/ipc_stress/pipe_test_02.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -80,7 +80,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/acct/acct01
 module_src_files := testcases/kernel/syscalls/acct/acct01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -88,7 +88,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount2/umount2_01
 module_src_files := testcases/kernel/syscalls/umount2/umount2_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -96,7 +96,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid13
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -104,7 +104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount2/umount2_03
 module_src_files := testcases/kernel/syscalls/umount2/umount2_03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -112,7 +112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount2/umount2_02
 module_src_files := testcases/kernel/syscalls/umount2/umount2_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -120,7 +120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/tunable/overcommit_memory
 module_src_files := testcases/kernel/mem/tunable/overcommit_memory.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -128,7 +128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/securebits/check_keepcaps
 module_src_files := testcases/kernel/security/securebits/check_keepcaps.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -136,7 +136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/numa/support_numa
 module_src_files := testcases/kernel/numa/support_numa.c
 module_cflags := -D_GNU_SOURCE -DNUMA_VERSION1_COMPATIBILITY
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -144,7 +144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/linkat/linkat02
 module_src_files := testcases/kernel/syscalls/linkat/linkat02.c
 module_cflags := -Wno-error
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -152,7 +152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/linkat/linkat01
 module_src_files := testcases/kernel/syscalls/linkat/linkat01.c
 module_cflags := -Wno-error
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -160,7 +160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime06
 module_src_files := testcases/kernel/syscalls/utime/utime06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -168,7 +168,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/lib6/asapi_01
 module_src_files := testcases/network/lib6/asapi_01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -176,7 +176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress04
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -184,7 +184,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/lib6/asapi_03
 module_src_files := testcases/network/lib6/asapi_03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -192,7 +192,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/lib6/asapi_02
 module_src_files := testcases/network/lib6/asapi_02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -200,7 +200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utimes/utimes01
 module_src_files := testcases/kernel/syscalls/utimes/utimes01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -208,7 +208,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/genlgamma
 module_src_files := testcases/misc/math/float/bessel/genlgamma.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -216,7 +216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ioctl/ioctl01
 module_src_files := testcases/kernel/syscalls/ioctl/ioctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -224,7 +224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/vmsplice/vmsplice02
 module_src_files := testcases/kernel/syscalls/vmsplice/vmsplice02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -232,7 +232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ioctl/ioctl03
 module_src_files := testcases/kernel/syscalls/ioctl/ioctl03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -240,7 +240,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_fs_fill_hardlinks
 module_src_files := lib/tests/tst_fs_fill_hardlinks.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -248,7 +248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/prot_hsymlinks/prot_hsymlinks
 module_src_files := testcases/kernel/security/prot_hsymlinks/prot_hsymlinks.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -256,7 +256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/tunable/max_map_count
 module_src_files := testcases/kernel/mem/tunable/max_map_count.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -264,7 +264,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_checkpoint_wake_timeout
 module_src_files := lib/tests/tst_checkpoint_wake_timeout.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -272,7 +272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait05
 module_src_files := testcases/kernel/syscalls/futex/futex_wait05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -280,7 +280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait03
 module_src_files := testcases/kernel/syscalls/futex/futex_wait03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -288,7 +288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait01
 module_src_files := testcases/kernel/syscalls/futex/futex_wait01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -296,7 +296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getsockname/getsockname01
 module_src_files := testcases/kernel/syscalls/getsockname/getsockname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -304,7 +304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress07
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -312,7 +312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigtimedwait/rt_sigtimedwait01
 module_src_files := testcases/kernel/syscalls/sigwaitinfo/sigwaitinfo01.c
 module_cflags := -DTEST_RT_SIGTIMEDWAIT
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -320,7 +320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kcmp/kcmp02
 module_src_files := testcases/kernel/syscalls/kcmp/kcmp02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -328,7 +328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kcmp/kcmp01
 module_src_files := testcases/kernel/syscalls/kcmp/kcmp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -336,7 +336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_test03
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_test03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -344,7 +344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getparam/sched_getparam03
 module_src_files := testcases/kernel/syscalls/sched_getparam/sched_getparam03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -352,7 +352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getparam/sched_getparam02
 module_src_files := testcases/kernel/syscalls/sched_getparam/sched_getparam02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -360,7 +360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getparam/sched_getparam01
 module_src_files := testcases/kernel/syscalls/sched_getparam/sched_getparam01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -368,7 +368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setegid/setegid02
 module_src_files := testcases/kernel/syscalls/setegid/setegid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -376,7 +376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/numa/numa_node_size
 module_src_files := testcases/kernel/numa/numa_node_size.c
 module_cflags := -D_GNU_SOURCE -DNUMA_VERSION1_COMPATIBILITY
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -384,7 +384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ptrace/ptrace03
 module_src_files := testcases/kernel/syscalls/ptrace/ptrace03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -392,7 +392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ptrace/ptrace02
 module_src_files := testcases/kernel/syscalls/ptrace/ptrace02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -400,7 +400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ptrace/ptrace01
 module_src_files := testcases/kernel/syscalls/ptrace/ptrace01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -408,7 +408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid10
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -416,7 +416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ptrace/ptrace05
 module_src_files := testcases/kernel/syscalls/ptrace/ptrace05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -424,7 +424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ptrace/ptrace04
 module_src_files := testcases/kernel/syscalls/ptrace/ptrace04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -432,7 +432,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/can/filter-tests/can_rcv_own_msgs
 module_src_files := testcases/network/can/filter-tests/can_rcv_own_msgs.c
 module_cflags := -DETH_P_CAN=0x000C -DPF_CAN=29 -DAF_CAN=PF_CAN
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -440,7 +440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid11
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -448,7 +448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/prctl/prctl01
 module_src_files := testcases/kernel/syscalls/prctl/prctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -456,7 +456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execle/execle01_child
 module_src_files := testcases/kernel/syscalls/execle/execle01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -464,7 +464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/prctl/prctl02
 module_src_files := testcases/kernel/syscalls/prctl/prctl02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -472,7 +472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns06_capcheck
 module_src_files := testcases/kernel/containers/userns/userns06_capcheck.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -480,7 +480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/renameat2/renameat201
 module_src_files := testcases/kernel/syscalls/renameat2/renameat201.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -488,7 +488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/tee/tee01
 module_src_files := testcases/kernel/syscalls/tee/tee01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -496,7 +496,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/multicast/mc_commo/mc_send
 module_src_files := testcases/network/multicast/mc_commo/mc_send.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -504,7 +504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/tee/tee02
 module_src_files := testcases/kernel/syscalls/tee/tee02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -512,7 +512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/cpuset/cpuset01
 module_src_files := testcases/kernel/mem/cpuset/cpuset01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -520,7 +520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sighold/sighold02
 module_src_files := testcases/kernel/syscalls/sighold/sighold02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -528,7 +528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unlink/unlink07
 module_src_files := testcases/kernel/syscalls/unlink/unlink07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -536,7 +536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/quotactl/quotactl02
 module_src_files := testcases/kernel/syscalls/quotactl/quotactl02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -544,7 +544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/bdflush/bdflush01
 module_src_files := testcases/kernel/syscalls/bdflush/bdflush01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -552,7 +552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/clock_settime/clock_settime02
 module_src_files := testcases/kernel/timers/clock_settime/clock_settime02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -560,7 +560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readdir/readdir02
 module_src_files := testcases/kernel/syscalls/readdir/readdir02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -568,7 +568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unlink/unlink05
 module_src_files := testcases/kernel/syscalls/unlink/unlink05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -576,7 +576,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/float_bessel
 module_src_files := testcases/misc/math/float/float_bessel.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -584,7 +584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readv/readv01
 module_src_files := testcases/kernel/syscalls/readv/readv01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -592,7 +592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setsid/setsid01
 module_src_files := testcases/kernel/syscalls/setsid/setsid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -600,7 +600,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_fs_fill_subdirs
 module_src_files := lib/tests/tst_fs_fill_subdirs.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -608,7 +608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/connectors/pec/pec_listener
 module_src_files := testcases/kernel/connectors/pec/pec_listener.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -616,7 +616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/io/stress_cd/stress_cd
 module_src_files := testcases/kernel/io/stress_cd/stress_cd.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -624,7 +624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lstat/lstat01
 module_src_files := testcases/kernel/syscalls/lstat/lstat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -632,7 +632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lstat/lstat03
 module_src_files := testcases/kernel/syscalls/lstat/lstat03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -640,7 +640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lstat/lstat02
 module_src_files := testcases/kernel/syscalls/lstat/lstat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -648,7 +648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wake01
 module_src_files := testcases/kernel/syscalls/futex/futex_wake01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -656,7 +656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wake02
 module_src_files := testcases/kernel/syscalls/futex/futex_wake02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -664,7 +664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/oom/oom05
 module_src_files := testcases/kernel/mem/oom/oom05.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -672,7 +672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wake04
 module_src_files := testcases/kernel/syscalls/futex/futex_wake04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -680,7 +680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/capset/capset01
 module_src_files := testcases/kernel/syscalls/capset/capset01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -688,7 +688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_filesystem_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_filesystem_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -696,7 +696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/capset/capset02
 module_src_files := testcases/kernel/syscalls/capset/capset02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -704,7 +704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlink/readlink04
 module_src_files := testcases/kernel/syscalls/readlink/readlink04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -712,7 +712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlink/readlink01
 module_src_files := testcases/kernel/syscalls/readlink/readlink01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -720,7 +720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuacct/cpuacct_task
 module_src_files := testcases/kernel/controllers/cpuacct/cpuacct_task.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -728,7 +728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlink/readlink03
 module_src_files := testcases/kernel/syscalls/readlink/readlink03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -736,7 +736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/memmap/mem03
 module_src_files := testcases/kernel/syscalls/memmap/mem03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -744,7 +744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstatat/fstatat01
 module_src_files := testcases/kernel/syscalls/fstatat/fstatat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -752,7 +752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/exit_group/exit_group01
 module_src_files := testcases/kernel/syscalls/exit_group/exit_group01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -760,7 +760,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/iperb/gentanh
 module_src_files := testcases/misc/math/float/iperb/gentanh.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -768,7 +768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/thp/thp02
 module_src_files := testcases/kernel/mem/thp/thp02.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -776,7 +776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/statfs/statfs03
 module_src_files := testcases/kernel/syscalls/statfs/statfs03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -784,7 +784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve01
 module_src_files := testcases/kernel/syscalls/execve/execve01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -792,7 +792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve03
 module_src_files := testcases/kernel/syscalls/execve/execve03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -800,7 +800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve02
 module_src_files := testcases/kernel/syscalls/execve/execve02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -808,7 +808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve05
 module_src_files := testcases/kernel/syscalls/execve/execve05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -816,7 +816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve04
 module_src_files := testcases/kernel/syscalls/execve/execve04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -824,7 +824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nice/nice01
 module_src_files := testcases/kernel/syscalls/nice/nice01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -832,7 +832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/pci/tpci_user/tpci
 module_src_files := testcases/kernel/device-drivers/pci/tpci_user/tpci.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -840,7 +840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/time/time02
 module_src_files := testcases/kernel/syscalls/time/time02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -848,7 +848,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/genatan
 module_src_files := testcases/misc/math/float/trigo/genatan.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -856,7 +856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve01_child
 module_src_files := testcases/kernel/syscalls/execve/execve01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -864,7 +864,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genlog
 module_src_files := testcases/misc/math/float/exp_log/genlog.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -872,7 +872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/pty/hangup01
 module_src_files := testcases/kernel/pty/hangup01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -880,7 +880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_07
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_07.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -888,7 +888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_06
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_06.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -896,7 +896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_05
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_05.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -904,7 +904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_04
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_04.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -912,7 +912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_03
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_03.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -920,7 +920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_02
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_02.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -928,7 +928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/signal_test_01
 module_src_files := testcases/kernel/ipc/ipc_stress/signal_test_01.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -936,7 +936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socket/socket02
 module_src_files := testcases/kernel/syscalls/socket/socket02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -944,7 +944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill12
 module_src_files := testcases/kernel/syscalls/kill/kill12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -952,7 +952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup2/dup205
 module_src_files := testcases/kernel/syscalls/dup2/dup205.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -960,7 +960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup2/dup204
 module_src_files := testcases/kernel/syscalls/dup2/dup204.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -968,7 +968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup2/dup203
 module_src_files := testcases/kernel/syscalls/dup2/dup203.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -976,7 +976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup2/dup202
 module_src_files := testcases/kernel/syscalls/dup2/dup202.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -984,7 +984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup2/dup201
 module_src_files := testcases/kernel/syscalls/dup2/dup201.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -992,7 +992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/uname/uname01
 module_src_files := testcases/kernel/syscalls/uname/uname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1000,7 +1000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/uname/uname03
 module_src_files := testcases/kernel/syscalls/uname/uname03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1008,7 +1008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/uname/uname02
 module_src_files := testcases/kernel/syscalls/uname/uname02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1016,7 +1016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/truncate/truncate01
 module_src_files := testcases/kernel/syscalls/truncate/truncate01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1024,7 +1024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/hugetlb/hugemmap/hugemmap01
 module_src_files := testcases/kernel/mem/hugetlb/hugemmap/hugemmap01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib include include/old
 module_static_libraries := mem kerntest hugetlb ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1032,7 +1032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/integrity/ima/src/ima_measure
 module_src_files := testcases/kernel/security/integrity/ima/src/ima_measure.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := dl crypto
 include $(ltp_build_test)
@@ -1040,7 +1040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/iopl/iopl01
 module_src_files := testcases/kernel/syscalls/iopl/iopl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1048,7 +1048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/ext4-new-features/ext4-inode-version/ext4_test_inode_version
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-inode-version/ext4_test_inode_version.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1056,7 +1056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/acls/acl_link_test
 module_src_files := testcases/kernel/fs/acls/acl_link_test.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1064,7 +1064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpriority/getpriority02
 module_src_files := testcases/kernel/syscalls/getpriority/getpriority02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1072,7 +1072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigwait/sigwait01
 module_src_files := testcases/kernel/syscalls/sigwaitinfo/sigwaitinfo01.c
 module_cflags := -DTEST_SIGWAIT
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1080,7 +1080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdirat/mkdirat01
 module_src_files := testcases/kernel/syscalls/mkdirat/mkdirat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1088,7 +1088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigprocmask/sigprocmask01
 module_src_files := testcases/kernel/syscalls/sigprocmask/sigprocmask01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1096,7 +1096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdirat/mkdirat02
 module_src_files := testcases/kernel/syscalls/mkdirat/mkdirat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1104,7 +1104,7 @@ include $(ltp_build_test)
 module_testname := testcases/lib/tst_checkpoint
 module_src_files := testcases/lib/tst_checkpoint.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1112,7 +1112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/inode/inode01
 module_src_files := testcases/kernel/fs/inode/inode01.c
 module_cflags := -DLINUX
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1120,7 +1120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/inode/inode02
 module_src_files := testcases/kernel/fs/inode/inode02.c
 module_cflags := -DLINUX
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1128,7 +1128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/string/string01
 module_src_files := testcases/kernel/syscalls/string/string01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1136,7 +1136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/send/send01
 module_src_files := testcases/kernel/syscalls/send/send01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1144,7 +1144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/ksm/ksm02
 module_src_files := testcases/kernel/mem/ksm/ksm02.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1152,7 +1152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/vmsplice/vmsplice01
 module_src_files := testcases/kernel/syscalls/vmsplice/vmsplice01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1160,7 +1160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork12
 module_src_files := testcases/kernel/syscalls/fork/fork12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1168,7 +1168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork13
 module_src_files := testcases/kernel/syscalls/fork/fork13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1176,7 +1176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork10
 module_src_files := testcases/kernel/syscalls/fork/fork10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1184,7 +1184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork11
 module_src_files := testcases/kernel/syscalls/fork/fork11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1192,7 +1192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nanosleep/nanosleep01
 module_src_files := testcases/kernel/syscalls/nanosleep/nanosleep01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1200,7 +1200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork14
 module_src_files := testcases/kernel/syscalls/fork/fork14.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1208,7 +1208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nanosleep/nanosleep02
 module_src_files := testcases/kernel/syscalls/nanosleep/nanosleep02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1216,7 +1216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/read/read01
 module_src_files := testcases/kernel/syscalls/read/read01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1224,7 +1224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execve/execve_child
 module_src_files := testcases/kernel/syscalls/execve/execve_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/lib include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1232,7 +1232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fsync/fsync01
 module_src_files := testcases/kernel/syscalls/fsync/fsync01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1240,7 +1240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename08
 module_src_files := testcases/kernel/syscalls/rename/rename08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1248,7 +1248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fsync/fsync03
 module_src_files := testcases/kernel/syscalls/fsync/fsync03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1256,7 +1256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fsync/fsync02
 module_src_files := testcases/kernel/syscalls/fsync/fsync02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1264,7 +1264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename05
 module_src_files := testcases/kernel/syscalls/rename/rename05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1272,7 +1272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename04
 module_src_files := testcases/kernel/syscalls/rename/rename04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1280,7 +1280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename07
 module_src_files := testcases/kernel/syscalls/rename/rename07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1288,7 +1288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename06
 module_src_files := testcases/kernel/syscalls/rename/rename06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1296,7 +1296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename01
 module_src_files := testcases/kernel/syscalls/rename/rename01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1304,7 +1304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename03
 module_src_files := testcases/kernel/syscalls/rename/rename03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1312,7 +1312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename02
 module_src_files := testcases/kernel/syscalls/rename/rename02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1320,7 +1320,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/genasin
 module_src_files := testcases/misc/math/float/trigo/genasin.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1328,7 +1328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_create/timer_create03
 module_src_files := testcases/kernel/timers/timer_create/timer_create03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1336,7 +1336,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/crash/crash01
 module_src_files := testcases/misc/crash/crash01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1344,7 +1344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/syslog/syslog12
 module_src_files := testcases/kernel/syscalls/syslog/syslog12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1352,7 +1352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/modify_ldt/modify_ldt03
 module_src_files := testcases/kernel/syscalls/modify_ldt/modify_ldt03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1360,7 +1360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/modify_ldt/modify_ldt02
 module_src_files := testcases/kernel/syscalls/modify_ldt/modify_ldt02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1368,7 +1368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/modify_ldt/modify_ldt01
 module_src_files := testcases/kernel/syscalls/modify_ldt/modify_ldt01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1376,7 +1376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_delete/timer_delete03
 module_src_files := testcases/kernel/timers/timer_delete/timer_delete03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1384,7 +1384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getsid/getsid01
 module_src_files := testcases/kernel/syscalls/getsid/getsid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1392,7 +1392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getsid/getsid02
 module_src_files := testcases/kernel/syscalls/getsid/getsid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1400,7 +1400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getdomainname/getdomainname01
 module_src_files := testcases/kernel/syscalls/getdomainname/getdomainname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1408,7 +1408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlink/symlink03
 module_src_files := testcases/kernel/syscalls/symlink/symlink03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1416,7 +1416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/time/time01
 module_src_files := testcases/kernel/syscalls/time/time01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1424,7 +1424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/settimeofday/settimeofday01
 module_src_files := testcases/kernel/syscalls/settimeofday/settimeofday01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1432,7 +1432,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/lib6/getaddrinfo_01
 module_src_files := testcases/network/lib6/getaddrinfo_01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1440,7 +1440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/pty/pty01
 module_src_files := testcases/kernel/pty/pty01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1448,7 +1448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/settimeofday/settimeofday02
 module_src_files := testcases/kernel/syscalls/settimeofday/settimeofday02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1456,7 +1456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/get_mempolicy/get_mempolicy01
 module_src_files := testcases/kernel/syscalls/get_mempolicy/get_mempolicy01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1464,7 +1464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/power_management/pm_get_sched_values
 module_src_files := testcases/kernel/power_management/pm_get_sched_values.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1472,7 +1472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/truncate/truncate03
 module_src_files := testcases/kernel/syscalls/truncate/truncate03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1480,7 +1480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/truncate/truncate02
 module_src_files := testcases/kernel/syscalls/truncate/truncate02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/truncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1488,7 +1488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/openat/openat02_child
 module_src_files := testcases/kernel/syscalls/openat/openat02_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1496,7 +1496,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/gentan
 module_src_files := testcases/misc/math/float/trigo/gentan.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1504,7 +1504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/brk/brk01
 module_src_files := testcases/kernel/syscalls/brk/brk01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1512,7 +1512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait04
 module_src_files := testcases/kernel/syscalls/futex/futex_wait04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1520,7 +1520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlink/symlink04
 module_src_files := testcases/kernel/syscalls/symlink/symlink04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1528,7 +1528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fdatasync/fdatasync01
 module_src_files := testcases/kernel/syscalls/fdatasync/fdatasync01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1536,7 +1536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/ext4-new-features/ext4-nsec-timestamps/ext4_file_time
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-nsec-timestamps/ext4_file_time.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1544,7 +1544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgid/setpgid01
 module_src_files := testcases/kernel/syscalls/setpgid/setpgid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1552,7 +1552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setattr/sched_setattr01
 module_src_files := testcases/kernel/syscalls/sched_setattr/sched_setattr01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1560,7 +1560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgid/setpgid03
 module_src_files := testcases/kernel/syscalls/setpgid/setpgid03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1568,7 +1568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgid/setpgid02
 module_src_files := testcases/kernel/syscalls/setpgid/setpgid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1576,7 +1576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/gettimeofday/gettimeofday01
 module_src_files := testcases/kernel/syscalls/gettimeofday/gettimeofday01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1584,7 +1584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval03
 module_src_files := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1592,7 +1592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/gettimeofday/gettimeofday02
 module_src_files := testcases/kernel/syscalls/gettimeofday/gettimeofday02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1600,7 +1600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_test04
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_test04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1608,7 +1608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/clock_settime/clock_settime03
 module_src_files := testcases/kernel/timers/clock_settime/clock_settime03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1616,7 +1616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memctl/memctl_test01
 module_src_files := testcases/kernel/controllers/memctl/memctl_test01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1624,7 +1624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns02
 module_src_files := testcases/kernel/containers/userns/userns02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1632,7 +1632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/ksm/ksm06
 module_src_files := testcases/kernel/mem/ksm/ksm06.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1640,7 +1640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns01
 module_src_files := testcases/kernel/containers/pidns/pidns01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1648,7 +1648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns03
 module_src_files := testcases/kernel/containers/pidns/pidns03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1656,7 +1656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/netns/netns_netlink
 module_src_files := testcases/kernel/containers/netns/netns_netlink.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1664,7 +1664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fpathconf/fpathconf01
 module_src_files := testcases/kernel/syscalls/fpathconf/fpathconf01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1672,7 +1672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns04
 module_src_files := testcases/kernel/containers/pidns/pidns04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1680,7 +1680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns06
 module_src_files := testcases/kernel/containers/pidns/pidns06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1688,7 +1688,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/iperb/geniperb
 module_src_files := testcases/misc/math/float/iperb/geniperb.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1696,7 +1696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getattr/sched_getattr02
 module_src_files := testcases/kernel/syscalls/sched_getattr/sched_getattr02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1704,7 +1704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mincore/mincore01
 module_src_files := testcases/kernel/syscalls/mincore/mincore01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1712,7 +1712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev03
 module_src_files := testcases/kernel/syscalls/writev/writev03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1720,7 +1720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/regression/memcg_test_4
 module_src_files := testcases/kernel/controllers/memcg/regression/memcg_test_4.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1728,7 +1728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_test02
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_test02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1736,7 +1736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rmdir/rmdir05
 module_src_files := testcases/kernel/syscalls/rmdir/rmdir05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1744,7 +1744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rmdir/rmdir04
 module_src_files := testcases/kernel/syscalls/rmdir/rmdir04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1752,7 +1752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rmdir/rmdir01
 module_src_files := testcases/kernel/syscalls/rmdir/rmdir01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1760,7 +1760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_test01
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_test01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1768,7 +1768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rmdir/rmdir02
 module_src_files := testcases/kernel/syscalls/rmdir/rmdir02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1776,7 +1776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_policy_io_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_policy_io_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1784,7 +1784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval02
 module_src_files := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1792,7 +1792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getdtablesize/getdtablesize01
 module_src_files := testcases/kernel/syscalls/getdtablesize/getdtablesize01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1800,7 +1800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs_di/frag
 module_src_files := testcases/kernel/fs/fs_di/frag.c
 module_cflags := -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1808,7 +1808,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/multicast/mc_opts/mc_verify_opts
 module_src_files := testcases/network/multicast/mc_opts/mc_verify_opts.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1816,7 +1816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vma/vma02
 module_src_files := testcases/kernel/mem/vma/vma02.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1824,7 +1824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify05
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1832,7 +1832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify04
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1840,7 +1840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify06
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1848,7 +1848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify01
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1856,7 +1856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify03
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1864,7 +1864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fanotify/fanotify02
 module_src_files := testcases/kernel/syscalls/fanotify/fanotify02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1872,7 +1872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sockioctl/sockioctl01
 module_src_files := testcases/kernel/syscalls/sockioctl/sockioctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1880,7 +1880,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_safe_macros
 module_src_files := lib/tests/tst_safe_macros.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1888,7 +1888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/regression/memcg_test_2
 module_src_files := testcases/kernel/controllers/memcg/regression/memcg_test_2.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1896,7 +1896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/clock_gettime/clock_gettime03
 module_src_files := testcases/kernel/timers/clock_gettime/clock_gettime03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1904,7 +1904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/clock_gettime/clock_gettime02
 module_src_files := testcases/kernel/timers/clock_gettime/clock_gettime02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1912,7 +1912,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/multicast/mc_member/mc_member_test
 module_src_files := testcases/network/multicast/mc_member/mc_member_test.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1920,7 +1920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_settime/timer_settime03
 module_src_files := testcases/kernel/timers/timer_settime/timer_settime03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1928,7 +1928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execv/execv01
 module_src_files := testcases/kernel/syscalls/execv/execv01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1936,7 +1936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vma/vma03
 module_src_files := testcases/kernel/mem/vma/vma03.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1944,7 +1944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd01
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1952,7 +1952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_latency_test
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_latency_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -1960,7 +1960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd03
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1968,7 +1968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd02
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1976,7 +1976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest05/mmstress_dummy
 module_src_files := testcases/kernel/mem/mtest05/mmstress_dummy.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1984,7 +1984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execv/execv01_child
 module_src_files := testcases/kernel/syscalls/execv/execv01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -1992,7 +1992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_create/timer_create02
 module_src_files := testcases/kernel/timers/timer_create/timer_create02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2000,7 +2000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setns/setns01
 module_src_files := testcases/kernel/syscalls/setns/setns01.c
 module_cflags := -Wno-unused-function
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2008,7 +2008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress03
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2016,7 +2016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlock/mlock04
 module_src_files := testcases/kernel/syscalls/mlock/mlock04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2024,7 +2024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress01
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2032,7 +2032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlock/mlock01
 module_src_files := testcases/kernel/syscalls/mlock/mlock01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2040,7 +2040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress06
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2048,7 +2048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlock/mlock03
 module_src_files := testcases/kernel/syscalls/mlock/mlock03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2056,7 +2056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlock/mlock02
 module_src_files := testcases/kernel/syscalls/mlock/mlock02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2064,7 +2064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress09
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2072,7 +2072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mincore/mincore02
 module_src_files := testcases/kernel/syscalls/mincore/mincore02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2080,7 +2080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futimesat/futimesat01
 module_src_files := testcases/kernel/syscalls/futimesat/futimesat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2088,7 +2088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/openfile/openfile
 module_src_files := testcases/kernel/fs/openfile/openfile.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2096,7 +2096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify05
 module_src_files := testcases/kernel/syscalls/inotify/inotify05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2104,7 +2104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify04
 module_src_files := testcases/kernel/syscalls/inotify/inotify04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2112,7 +2112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod03
 module_src_files := testcases/kernel/syscalls/mknod/mknod03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2120,7 +2120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify01
 module_src_files := testcases/kernel/syscalls/inotify/inotify01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2128,7 +2128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod04
 module_src_files := testcases/kernel/syscalls/mknod/mknod04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2136,7 +2136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify03
 module_src_files := testcases/kernel/syscalls/inotify/inotify03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2144,7 +2144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify02
 module_src_files := testcases/kernel/syscalls/inotify/inotify02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2152,7 +2152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod09
 module_src_files := testcases/kernel/syscalls/mknod/mknod09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2160,7 +2160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod08
 module_src_files := testcases/kernel/syscalls/mknod/mknod08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2168,7 +2168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/cap_bounds_rw
 module_src_files := testcases/kernel/security/cap_bound/cap_bounds_rw.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2176,7 +2176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl31
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl31.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2184,7 +2184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl18
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl18.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2192,7 +2192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl19
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl19.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2200,7 +2200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify_init/inotify_init1_01
 module_src_files := testcases/kernel/syscalls/inotify_init/inotify_init1_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2208,7 +2208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify_init/inotify_init1_02
 module_src_files := testcases/kernel/syscalls/inotify_init/inotify_init1_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2216,7 +2216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl12
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl12.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2224,7 +2224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl13
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl13.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2232,7 +2232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl10
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl10.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2240,7 +2240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl11
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl11.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2248,7 +2248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl16
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl16.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2256,7 +2256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl17
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl17.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2264,7 +2264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl14
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl14.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2272,7 +2272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl15
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl15.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2280,7 +2280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresuid/getresuid01
 module_src_files := testcases/kernel/syscalls/getresuid/getresuid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2288,7 +2288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setegid/setegid01
 module_src_files := testcases/kernel/syscalls/setegid/setegid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2296,7 +2296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresuid/getresuid03
 module_src_files := testcases/kernel/syscalls/getresuid/getresuid03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2304,7 +2304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresuid/getresuid02
 module_src_files := testcases/kernel/syscalls/getresuid/getresuid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2312,7 +2312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/swapoff/swapoff01
 module_src_files := testcases/kernel/syscalls/swapoff/swapoff01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2320,7 +2320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigpending/sigpending02
 module_src_files := testcases/kernel/syscalls/sigpending/sigpending02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2328,7 +2328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/accept/accept01
 module_src_files := testcases/kernel/syscalls/accept/accept01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2336,7 +2336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/write/write01
 module_src_files := testcases/kernel/syscalls/write/write01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2344,7 +2344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readv/readv03
 module_src_files := testcases/kernel/syscalls/readv/readv03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2352,7 +2352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readv/readv02
 module_src_files := testcases/kernel/syscalls/readv/readv02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2360,7 +2360,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_strerrno
 module_src_files := lib/tests/tst_strerrno.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2368,7 +2368,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/gensqrt
 module_src_files := testcases/misc/math/float/power/gensqrt.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -2376,7 +2376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/write/write03
 module_src_files := testcases/kernel/syscalls/write/write03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2384,7 +2384,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/iperb/gensinh
 module_src_files := testcases/misc/math/float/iperb/gensinh.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -2392,7 +2392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/write/write02
 module_src_files := testcases/kernel/syscalls/write/write02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2400,7 +2400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_get_priority_min/sched_get_priority_min01
 module_src_files := testcases/kernel/syscalls/sched_get_priority_min/sched_get_priority_min01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2408,7 +2408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_get_priority_min/sched_get_priority_min02
 module_src_files := testcases/kernel/syscalls/sched_get_priority_min/sched_get_priority_min02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2416,7 +2416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresgid/getresgid01
 module_src_files := testcases/kernel/syscalls/getresgid/getresgid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2424,7 +2424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresgid/getresgid03
 module_src_files := testcases/kernel/syscalls/getresgid/getresgid03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2432,7 +2432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getresgid/getresgid02
 module_src_files := testcases/kernel/syscalls/getresgid/getresgid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2440,7 +2440,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_cleanup_once
 module_src_files := lib/tests/tst_cleanup_once.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2448,7 +2448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fdatasync/fdatasync02
 module_src_files := testcases/kernel/syscalls/fdatasync/fdatasync02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2456,7 +2456,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_device
 module_src_files := lib/tests/tst_device.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2464,7 +2464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/leapsec/leapsec_timer
 module_src_files := testcases/kernel/timers/leapsec/leapsec_timer.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2472,7 +2472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock05
 module_src_files := testcases/kernel/syscalls/flock/flock05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2480,7 +2480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock04
 module_src_files := testcases/kernel/syscalls/flock/flock04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2488,7 +2488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock06
 module_src_files := testcases/kernel/syscalls/flock/flock06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2496,7 +2496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock01
 module_src_files := testcases/kernel/syscalls/flock/flock01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2504,7 +2504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock03
 module_src_files := testcases/kernel/syscalls/flock/flock03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2512,7 +2512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/flock/flock02
 module_src_files := testcases/kernel/syscalls/flock/flock02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2520,7 +2520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/recvfrom/recvfrom01
 module_src_files := testcases/kernel/syscalls/recvfrom/recvfrom01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2528,7 +2528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknodat/mknodat01
 module_src_files := testcases/kernel/syscalls/mknodat/mknodat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2536,7 +2536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns32
 module_src_files := testcases/kernel/containers/pidns/pidns32.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2544,7 +2544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknodat/mknodat02
 module_src_files := testcases/kernel/syscalls/mknodat/mknodat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2552,7 +2552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fallocate/fallocate01
 module_src_files := testcases/kernel/syscalls/fallocate/fallocate01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2560,7 +2560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fallocate/fallocate03
 module_src_files := testcases/kernel/syscalls/fallocate/fallocate03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2568,7 +2568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fallocate/fallocate02
 module_src_files := testcases/kernel/syscalls/fallocate/fallocate02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2576,7 +2576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fallocate/fallocate04
 module_src_files := testcases/kernel/syscalls/fallocate/fallocate04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2584,7 +2584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest06/mmap3
 module_src_files := testcases/kernel/mem/mtest06/mmap3.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2592,7 +2592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest06/mmap2
 module_src_files := testcases/kernel/mem/mtest06/mmap2.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2600,7 +2600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup01
 module_src_files := testcases/kernel/syscalls/dup/dup01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2608,7 +2608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pathconf/pathconf01
 module_src_files := testcases/kernel/syscalls/pathconf/pathconf01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2616,7 +2616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup03
 module_src_files := testcases/kernel/syscalls/dup/dup03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2624,7 +2624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup02
 module_src_files := testcases/kernel/syscalls/dup/dup02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2632,7 +2632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup05
 module_src_files := testcases/kernel/syscalls/dup/dup05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2640,7 +2640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup04
 module_src_files := testcases/kernel/syscalls/dup/dup04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2648,7 +2648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup07
 module_src_files := testcases/kernel/syscalls/dup/dup07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2656,7 +2656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup/dup06
 module_src_files := testcases/kernel/syscalls/dup/dup06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2664,7 +2664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/connect/connect01
 module_src_files := testcases/kernel/syscalls/connect/connect01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2672,7 +2672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/pthreads/pth_str03
 module_src_files := testcases/kernel/sched/pthreads/pth_str03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2680,7 +2680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev04
 module_src_files := testcases/kernel/syscalls/writev/writev04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2688,7 +2688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/stat/stat05
 module_src_files := testcases/kernel/syscalls/stat/stat05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2696,7 +2696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/stat/stat06
 module_src_files := testcases/kernel/syscalls/stat/stat06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2704,7 +2704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/stat/stat01
 module_src_files := testcases/kernel/syscalls/stat/stat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2712,7 +2712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/stat/stat03
 module_src_files := testcases/kernel/syscalls/stat/stat03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2720,7 +2720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/stat/stat02
 module_src_files := testcases/kernel/syscalls/stat/stat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/stat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2728,7 +2728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readahead/readahead01
 module_src_files := testcases/kernel/syscalls/readahead/readahead01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2736,7 +2736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readahead/readahead02
 module_src_files := testcases/kernel/syscalls/readahead/readahead02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2744,7 +2744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/ipc/ipc_stress/pipe_test_01
 module_src_files := testcases/kernel/ipc/ipc_stress/pipe_test_01.c
 module_cflags := -D_LINUX_
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2752,7 +2752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/newuname/newuname01
 module_src_files := testcases/kernel/syscalls/newuname/newuname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2760,7 +2760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getsockopt/getsockopt01
 module_src_files := testcases/kernel/syscalls/getsockopt/getsockopt01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2768,7 +2768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/page/page02
 module_src_files := testcases/kernel/mem/page/page02.c
 module_cflags := -DLINUX
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2776,7 +2776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgrp/setpgrp01
 module_src_files := testcases/kernel/syscalls/setpgrp/setpgrp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2784,7 +2784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/gettid/gettid01
 module_src_files := testcases/kernel/syscalls/gettid/gettid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2792,7 +2792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgrp/setpgrp02
 module_src_files := testcases/kernel/syscalls/setpgrp/setpgrp02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2800,7 +2800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlockall/mlockall03
 module_src_files := testcases/kernel/syscalls/mlockall/mlockall03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2808,7 +2808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlockall/mlockall02
 module_src_files := testcases/kernel/syscalls/mlockall/mlockall02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2816,7 +2816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mlockall/mlockall01
 module_src_files := testcases/kernel/syscalls/mlockall/mlockall01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2824,7 +2824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/syslog/syslogtst
 module_src_files := testcases/kernel/syscalls/syslog/syslogtst.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2832,7 +2832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/set_robust_list/set_robust_list01
 module_src_files := testcases/kernel/syscalls/set_robust_list/set_robust_list01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2840,7 +2840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getdents/getdents01
 module_src_files := testcases/kernel/syscalls/getdents/getdents01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2848,7 +2848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getdents/getdents02
 module_src_files := testcases/kernel/syscalls/getdents/getdents02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2856,7 +2856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open09
 module_src_files := testcases/kernel/syscalls/open/open09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2864,7 +2864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open08
 module_src_files := testcases/kernel/syscalls/open/open08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2872,7 +2872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/quotactl/quotactl01
 module_src_files := testcases/kernel/syscalls/quotactl/quotactl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2880,7 +2880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/llseek/llseek01
 module_src_files := testcases/kernel/syscalls/llseek/llseek01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2888,7 +2888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open04
 module_src_files := testcases/kernel/syscalls/open/open04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2896,7 +2896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/llseek/llseek03
 module_src_files := testcases/kernel/syscalls/llseek/llseek03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2904,7 +2904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/llseek/llseek02
 module_src_files := testcases/kernel/syscalls/llseek/llseek02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2912,7 +2912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open01
 module_src_files := testcases/kernel/syscalls/open/open01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2920,7 +2920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_def_task01
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_def_task01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -2928,7 +2928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open03
 module_src_files := testcases/kernel/syscalls/open/open03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2936,7 +2936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open02
 module_src_files := testcases/kernel/syscalls/open/open02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2944,7 +2944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpgid/getpgid01
 module_src_files := testcases/kernel/syscalls/getpgid/getpgid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2952,7 +2952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/renameat/renameat01
 module_src_files := testcases/kernel/syscalls/renameat/renameat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2960,7 +2960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpgid/getpgid02
 module_src_files := testcases/kernel/syscalls/getpgid/getpgid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2968,7 +2968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rmdir/rmdir03
 module_src_files := testcases/kernel/syscalls/rmdir/rmdir03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2976,7 +2976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/integrity/ima/src/ima_boot_aggregate
 module_src_files := testcases/kernel/security/integrity/ima/src/ima_boot_aggregate.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := dl crypto
 include $(ltp_build_test)
@@ -2984,7 +2984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cgroup_fj/cgroup_fj_proc
 module_src_files := testcases/kernel/controllers/cgroup_fj/cgroup_fj_proc.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -2992,7 +2992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/personality/personality01
 module_src_files := testcases/kernel/syscalls/personality/personality01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3000,7 +3000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/personality/personality02
 module_src_files := testcases/kernel/syscalls/personality/personality02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3008,7 +3008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/write/write05
 module_src_files := testcases/kernel/syscalls/write/write05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3016,7 +3016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setrlimit/setrlimit01
 module_src_files := testcases/kernel/syscalls/setrlimit/setrlimit01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3024,7 +3024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/syslog/syslog11
 module_src_files := testcases/kernel/syscalls/syslog/syslog11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3032,7 +3032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setrlimit/setrlimit03
 module_src_files := testcases/kernel/syscalls/setrlimit/setrlimit03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3040,7 +3040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setrlimit/setrlimit02
 module_src_files := testcases/kernel/syscalls/setrlimit/setrlimit02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3048,7 +3048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlink/symlink01
 module_src_files := testcases/kernel/syscalls/symlink/symlink01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3056,7 +3056,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genhypot
 module_src_files := testcases/misc/math/float/exp_log/genhypot.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3064,7 +3064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir01
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3072,7 +3072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlink/symlink05
 module_src_files := testcases/kernel/syscalls/symlink/symlink05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3080,7 +3080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendto/sendto01
 module_src_files := testcases/kernel/syscalls/sendto/sendto01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3088,7 +3088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/io/writetest/writetest
 module_src_files := testcases/kernel/io/writetest/writetest.c
 module_cflags := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3096,7 +3096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setaffinity/sched_setaffinity01
 module_src_files := testcases/kernel/syscalls/sched_setaffinity/sched_setaffinity01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3104,7 +3104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/bind/bind02
 module_src_files := testcases/kernel/syscalls/bind/bind02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3112,7 +3112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/bind/bind01
 module_src_files := testcases/kernel/syscalls/bind/bind01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3120,7 +3120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_yield/sched_yield01
 module_src_files := testcases/kernel/syscalls/sched_yield/sched_yield01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3128,7 +3128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/acls/acl_file_test
 module_src_files := testcases/kernel/fs/acls/acl_file_test.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3136,7 +3136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/request_key/request_key01
 module_src_files := testcases/kernel/syscalls/request_key/request_key01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3144,7 +3144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_latency_check_task
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_latency_check_task.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3152,7 +3152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_create/timer_create04
 module_src_files := testcases/kernel/timers/timer_create/timer_create04.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3160,7 +3160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpriority/setpriority05
 module_src_files := testcases/kernel/syscalls/setpriority/setpriority05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3168,7 +3168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpriority/setpriority04
 module_src_files := testcases/kernel/syscalls/setpriority/setpriority04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3176,7 +3176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/module/delete_module/delete_module02
 module_src_files := testcases/kernel/module/delete_module/delete_module02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3184,7 +3184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpriority/setpriority01
 module_src_files := testcases/kernel/syscalls/setpriority/setpriority01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3192,7 +3192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpriority/setpriority03
 module_src_files := testcases/kernel/syscalls/setpriority/setpriority03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3200,7 +3200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpriority/setpriority02
 module_src_files := testcases/kernel/syscalls/setpriority/setpriority02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3208,7 +3208,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/nfsv4/acl/acl1
 module_src_files := testcases/network/nfsv4/acl/acl1.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3216,7 +3216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid05
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3224,7 +3224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap09
 module_src_files := testcases/kernel/syscalls/mmap/mmap09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3232,7 +3232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap08
 module_src_files := testcases/kernel/syscalls/mmap/mmap08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3240,7 +3240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/poll/poll01
 module_src_files := testcases/kernel/syscalls/poll/poll01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3248,7 +3248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap03
 module_src_files := testcases/kernel/syscalls/mmap/mmap03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3256,7 +3256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap02
 module_src_files := testcases/kernel/syscalls/mmap/mmap02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3264,7 +3264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap01
 module_src_files := testcases/kernel/syscalls/mmap/mmap01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3272,7 +3272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/oom/oom01
 module_src_files := testcases/kernel/mem/oom/oom01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3280,7 +3280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap07
 module_src_files := testcases/kernel/syscalls/mmap/mmap07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3288,7 +3288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap06
 module_src_files := testcases/kernel/syscalls/mmap/mmap06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3296,7 +3296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap05
 module_src_files := testcases/kernel/syscalls/mmap/mmap05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3304,7 +3304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap04
 module_src_files := testcases/kernel/syscalls/mmap/mmap04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3312,7 +3312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigprocmask/rt_sigprocmask01
 module_src_files := testcases/kernel/syscalls/rt_sigprocmask/rt_sigprocmask01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3320,7 +3320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/select/select02
 module_src_files := testcases/kernel/syscalls/select/select02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3328,7 +3328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigprocmask/rt_sigprocmask02
 module_src_files := testcases/kernel/syscalls/rt_sigprocmask/rt_sigprocmask02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3336,7 +3336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlinkat/readlinkat02
 module_src_files := testcases/kernel/syscalls/readlinkat/readlinkat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3344,7 +3344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlinkat/readlinkat01
 module_src_files := testcases/kernel/syscalls/readlinkat/readlinkat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3352,7 +3352,7 @@ include $(ltp_build_test)
 module_testname := testcases/lib/tst_sleep
 module_src_files := testcases/lib/tst_sleep.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3360,7 +3360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigaltstack/sigaltstack01
 module_src_files := testcases/kernel/syscalls/sigaltstack/sigaltstack01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3368,7 +3368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ssetmask/ssetmask01
 module_src_files := testcases/kernel/syscalls/ssetmask/ssetmask01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3376,7 +3376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigaltstack/sigaltstack02
 module_src_files := testcases/kernel/syscalls/sigaltstack/sigaltstack02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3384,7 +3384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cgroup/getdelays
 module_src_files := testcases/kernel/controllers/cgroup/getdelays.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3392,7 +3392,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genfrexp
 module_src_files := testcases/misc/math/float/exp_log/genfrexp.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3400,7 +3400,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/float_trigo
 module_src_files := testcases/misc/math/float/float_trigo.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3408,7 +3408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vma/vma04
 module_src_files := testcases/kernel/mem/vma/vma04.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3416,7 +3416,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/sockets/ltpClient
 module_src_files := testcases/network/sockets/ltpClient.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3424,7 +3424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/capget/capget01
 module_src_files := testcases/kernel/syscalls/capget/capget01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3432,7 +3432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/share/ns_exec
 module_src_files := testcases/kernel/containers/share/ns_exec.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3440,7 +3440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cgroup/test_6_2
 module_src_files := testcases/kernel/controllers/cgroup/test_6_2.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3448,7 +3448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmodat/fchmodat01
 module_src_files := testcases/kernel/syscalls/fchmodat/fchmodat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3456,7 +3456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_ctl/epoll_ctl01
 module_src_files := testcases/kernel/syscalls/epoll_ctl/epoll_ctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3464,7 +3464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_ctl/epoll_ctl02
 module_src_files := testcases/kernel/syscalls/epoll_ctl/epoll_ctl02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3472,7 +3472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/rtc/rtc01
 module_src_files := testcases/kernel/device-drivers/rtc/rtc01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3480,7 +3480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pselect/pselect01
 module_src_files := testcases/kernel/syscalls/pselect/pselect01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pselect testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pselect testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3488,7 +3488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest06/mmap1
 module_src_files := testcases/kernel/mem/mtest06/mmap1.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3496,7 +3496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/capget/capget02
 module_src_files := testcases/kernel/syscalls/capget/capget02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3504,7 +3504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns05
 module_src_files := testcases/kernel/containers/userns/userns05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3512,7 +3512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ioperm/ioperm01
 module_src_files := testcases/kernel/syscalls/ioperm/ioperm01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3520,7 +3520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mbind/mbind01
 module_src_files := testcases/kernel/syscalls/mbind/mbind01.c
 module_cflags := -Wno-unused
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3528,7 +3528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/request_key/request_key02
 module_src_files := testcases/kernel/syscalls/request_key/request_key02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3536,7 +3536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketcall/socketcall01
 module_src_files := testcases/kernel/syscalls/socketcall/socketcall01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3544,7 +3544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execlp/execlp01_child
 module_src_files := testcases/kernel/syscalls/execlp/execlp01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3552,7 +3552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait_bitset01
 module_src_files := testcases/kernel/syscalls/futex/futex_wait_bitset01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3560,7 +3560,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genpower
 module_src_files := testcases/misc/math/float/power/genpower.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3568,7 +3568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/futex/futex_wait_bitset02
 module_src_files := testcases/kernel/syscalls/futex/futex_wait_bitset02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3576,7 +3576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount05
 module_src_files := testcases/kernel/syscalls/mount/mount05.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3584,7 +3584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount04
 module_src_files := testcases/kernel/syscalls/mount/mount04.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3592,7 +3592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/memcmp/memcmp01
 module_src_files := testcases/kernel/syscalls/memcmp/memcmp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3600,7 +3600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount06
 module_src_files := testcases/kernel/syscalls/mount/mount06.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3608,7 +3608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount01
 module_src_files := testcases/kernel/syscalls/mount/mount01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3616,7 +3616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime04
 module_src_files := testcases/kernel/syscalls/utime/utime04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3624,7 +3624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount03
 module_src_files := testcases/kernel/syscalls/mount/mount03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3632,7 +3632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/mount02
 module_src_files := testcases/kernel/syscalls/mount/mount02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3640,7 +3640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone01
 module_src_files := testcases/kernel/syscalls/clone/clone01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3648,7 +3648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl22
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl22.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3656,7 +3656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone03
 module_src_files := testcases/kernel/syscalls/clone/clone03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3664,7 +3664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl20
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl20.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3672,7 +3672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone05
 module_src_files := testcases/kernel/syscalls/clone/clone05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3680,7 +3680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone04
 module_src_files := testcases/kernel/syscalls/clone/clone04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3688,7 +3688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone07
 module_src_files := testcases/kernel/syscalls/clone/clone07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3696,7 +3696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl24
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl24.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3704,7 +3704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone08
 module_src_files := testcases/kernel/syscalls/clone/clone08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3712,7 +3712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl29
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl29.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3720,7 +3720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl28
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl28.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3728,7 +3728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execl/execl01
 module_src_files := testcases/kernel/syscalls/execl/execl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3736,7 +3736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pwritev/pwritev01
 module_src_files := testcases/kernel/syscalls/pwritev/pwritev01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwritev testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwritev testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3744,7 +3744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munlock/munlock01
 module_src_files := testcases/kernel/syscalls/munlock/munlock01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3752,7 +3752,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/tcp_cmds/echo/echoes
 module_src_files := testcases/network/tcp_cmds/echo/echoes.c
 module_cflags := -DDEBUG
-module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include include/old
+module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3760,7 +3760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pwritev/pwritev02
 module_src_files := testcases/kernel/syscalls/pwritev/pwritev02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwritev testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwritev testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3768,7 +3768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/gethostbyname_r/gethostbyname_r01
 module_src_files := testcases/kernel/syscalls/gethostbyname_r/gethostbyname_r01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3776,7 +3776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/cpufreq/cpufreq_boost
 module_src_files := testcases/kernel/device-drivers/cpufreq/cpufreq_boost.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3784,7 +3784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/nptl/nptl01
 module_src_files := testcases/kernel/sched/nptl/nptl01.c
 module_cflags := -DUSING_NPTL
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3792,7 +3792,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genexp_log
 module_src_files := testcases/misc/math/float/exp_log/genexp_log.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3800,7 +3800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sync_file_range/sync_file_range01
 module_src_files := testcases/kernel/syscalls/sync_file_range/sync_file_range01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3808,7 +3808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitid/waitid01
 module_src_files := testcases/kernel/syscalls/waitid/waitid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3816,7 +3816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/module/delete_module/delete_module01
 module_src_files := testcases/kernel/module/delete_module/delete_module01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3824,7 +3824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitid/waitid02
 module_src_files := testcases/kernel/syscalls/waitid/waitid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3832,7 +3832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/tbio/tbio_user/tbio
 module_src_files := testcases/kernel/device-drivers/tbio/tbio_user/tbio.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3840,7 +3840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munlock/munlock02
 module_src_files := testcases/kernel/syscalls/munlock/munlock02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3848,7 +3848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vma/vma01
 module_src_files := testcases/kernel/mem/vma/vma01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3856,7 +3856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename14
 module_src_files := testcases/kernel/syscalls/rename/rename14.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3864,7 +3864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename12
 module_src_files := testcases/kernel/syscalls/rename/rename12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3872,7 +3872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename13
 module_src_files := testcases/kernel/syscalls/rename/rename13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3880,7 +3880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename10
 module_src_files := testcases/kernel/syscalls/rename/rename10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3888,7 +3888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename11
 module_src_files := testcases/kernel/syscalls/rename/rename11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3896,7 +3896,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_record_childstatus
 module_src_files := lib/tests/tst_record_childstatus.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3904,7 +3904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/firmware/fw_load_user/fw_load
 module_src_files := testcases/kernel/firmware/fw_load_user/fw_load.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3912,7 +3912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unshare/unshare01
 module_src_files := testcases/kernel/syscalls/unshare/unshare01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3920,7 +3920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signalfd4/signalfd4_02
 module_src_files := testcases/kernel/syscalls/signalfd4/signalfd4_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3928,7 +3928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unshare/unshare02
 module_src_files := testcases/kernel/syscalls/unshare/unshare02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3936,7 +3936,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/fptests/fptest02
 module_src_files := testcases/misc/math/fptests/fptest02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -3944,7 +3944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/smack/smack_set_socket_labels
 module_src_files := testcases/kernel/security/smack/smack_set_socket_labels.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3952,7 +3952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unlinkat/unlinkat01
 module_src_files := testcases/kernel/syscalls/unlinkat/unlinkat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3960,7 +3960,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/tcp_cmds/sendfile/testsf_s
 module_src_files := testcases/network/tcp_cmds/sendfile/testsf_s.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include include/old
+module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3968,7 +3968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigwaitinfo/sigwaitinfo01
 module_src_files := testcases/kernel/syscalls/sigwaitinfo/sigwaitinfo01.c
 module_cflags := -DTEST_SIGWAITINFO
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3976,7 +3976,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/nfs/nfs_stress/nfs01_open_files
 module_src_files := testcases/network/nfs/nfs_stress/nfs01_open_files.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3984,7 +3984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/oom/oom02
 module_src_files := testcases/kernel/mem/oom/oom02.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -3992,7 +3992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clock_nanosleep/clock_nanosleep01
 module_src_files := testcases/kernel/syscalls/clock_nanosleep/clock_nanosleep01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4000,7 +4000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readdir/readdir01
 module_src_files := testcases/kernel/syscalls/readdir/readdir01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4008,7 +4008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/filecaps/check_simple_capset
 module_src_files := testcases/kernel/security/filecaps/check_simple_capset.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4016,7 +4016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/swapping/swapping01
 module_src_files := testcases/kernel/mem/swapping/swapping01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4024,7 +4024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl_fj/cpuctl_fj_simple_echo
 module_src_files := testcases/kernel/controllers/cpuctl_fj/cpuctl_fj_simple_echo.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4032,7 +4032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/module/delete_module/delete_module03
 module_src_files := testcases/kernel/module/delete_module/delete_module03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4040,7 +4040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/filecaps/inh_capped
 module_src_files := testcases/kernel/security/filecaps/inh_capped.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4048,7 +4048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl_fj/cpuctl_fj_cpu-hog
 module_src_files := testcases/kernel/controllers/cpuctl_fj/cpuctl_fj_cpu-hog.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4056,7 +4056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns01
 module_src_files := testcases/kernel/containers/userns/userns01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4064,7 +4064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/removexattr/removexattr01
 module_src_files := testcases/kernel/syscalls/removexattr/removexattr01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4072,7 +4072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/removexattr/removexattr02
 module_src_files := testcases/kernel/syscalls/removexattr/removexattr02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4080,7 +4080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev02
 module_src_files := testcases/kernel/syscalls/writev/writev02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4088,7 +4088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/exit/exit01
 module_src_files := testcases/kernel/syscalls/exit/exit01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4096,7 +4096,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_checkpoint_wait_timeout
 module_src_files := lib/tests/tst_checkpoint_wait_timeout.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4104,7 +4104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketpair/socketpair01
 module_src_files := testcases/kernel/syscalls/socketpair/socketpair01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4112,7 +4112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/exit/exit02
 module_src_files := testcases/kernel/syscalls/exit/exit02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4120,7 +4120,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/nfs/nfs_stress/nfs04_create_file
 module_src_files := testcases/network/nfs/nfs_stress/nfs04_create_file.c
 module_cflags := -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4128,7 +4128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev01
 module_src_files := testcases/kernel/syscalls/writev/writev01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4136,7 +4136,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_strsig
 module_src_files := lib/tests/tst_strsig.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4144,7 +4144,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/fptests/fptest01
 module_src_files := testcases/misc/math/fptests/fptest01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4152,7 +4152,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/float_iperb
 module_src_files := testcases/misc/math/float/float_iperb.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4160,7 +4160,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genexp
 module_src_files := testcases/misc/math/float/exp_log/genexp.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4168,7 +4168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev06
 module_src_files := testcases/kernel/syscalls/writev/writev06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4176,7 +4176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns13
 module_src_files := testcases/kernel/containers/pidns/pidns13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4184,7 +4184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs-bench/random-access
 module_src_files := testcases/kernel/fs/fs-bench/random-access.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4192,7 +4192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns16
 module_src_files := testcases/kernel/containers/pidns/pidns16.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4200,7 +4200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/writev/writev05
 module_src_files := testcases/kernel/syscalls/writev/writev05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4208,7 +4208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_get_priority_max/sched_get_priority_max01
 module_src_files := testcases/kernel/syscalls/sched_get_priority_max/sched_get_priority_max01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4216,7 +4216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rename/rename09
 module_src_files := testcases/kernel/syscalls/rename/rename09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4224,7 +4224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/times/times01
 module_src_files := testcases/kernel/syscalls/times/times01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4232,7 +4232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrandom/getrandom04
 module_src_files := testcases/kernel/syscalls/getrandom/getrandom04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4240,7 +4240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/times/times03
 module_src_files := testcases/kernel/syscalls/times/times03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4248,7 +4248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrandom/getrandom01
 module_src_files := testcases/kernel/syscalls/getrandom/getrandom01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4256,7 +4256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrandom/getrandom03
 module_src_files := testcases/kernel/syscalls/getrandom/getrandom03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4264,7 +4264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrandom/getrandom02
 module_src_files := testcases/kernel/syscalls/getrandom/getrandom02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4272,7 +4272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/add_key/add_key01
 module_src_files := testcases/kernel/syscalls/add_key/add_key01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4280,7 +4280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/stress/memcg_process_stress
 module_src_files := testcases/kernel/controllers/memcg/stress/memcg_process_stress.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4288,7 +4288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/lftest/lftest
 module_src_files := testcases/kernel/fs/lftest/lftest.c
 module_cflags := -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4296,7 +4296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/add_key/add_key02
 module_src_files := testcases/kernel/syscalls/add_key/add_key02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4304,7 +4304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_file_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_file_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4312,7 +4312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs_perms/fs_perms
 module_src_files := testcases/kernel/fs/fs_perms/fs_perms.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4320,7 +4320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/exec_with_inh
 module_src_files := testcases/kernel/security/cap_bound/exec_with_inh.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4328,7 +4328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/recv/recv01
 module_src_files := testcases/kernel/syscalls/recv/recv01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4336,7 +4336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fsx-linux/fsx-linux
 module_src_files := testcases/kernel/fs/fsx-linux/fsx-linux.c
 module_cflags := -DNO_XFS -D_LARGEFILE64_SOURCE -D_GNU_SOURCE
-module_c_includes := testcases/kernel/fs/fsx-linux include include include/old
+module_c_includes := testcases/kernel/fs/fsx-linux include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4344,7 +4344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime01
 module_src_files := testcases/kernel/syscalls/utime/utime01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4352,7 +4352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysconf/sysconf01
 module_src_files := testcases/kernel/syscalls/sysconf/sysconf01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4360,7 +4360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/page/page01
 module_src_files := testcases/kernel/mem/page/page01.c
 module_cflags := -DLINUX
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4368,7 +4368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getitimer/getitimer01
 module_src_files := testcases/kernel/syscalls/getitimer/getitimer01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4376,7 +4376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getitimer/getitimer03
 module_src_files := testcases/kernel/syscalls/getitimer/getitimer03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4384,7 +4384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getitimer/getitimer02
 module_src_files := testcases/kernel/syscalls/getitimer/getitimer02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4392,7 +4392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/select/select01
 module_src_files := testcases/kernel/syscalls/select/select01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4400,7 +4400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readdir/readdir21
 module_src_files := testcases/kernel/syscalls/readdir/readdir21.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4408,7 +4408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sethostname/sethostname02
 module_src_files := testcases/kernel/syscalls/sethostname/sethostname02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4416,7 +4416,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/can/filter-tests/can_filter
 module_src_files := testcases/network/can/filter-tests/can_filter.c
 module_cflags := -DETH_P_CAN=0x000C -DPF_CAN=29 -DAF_CAN=PF_CAN
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4424,7 +4424,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/crash/crash02
 module_src_files := testcases/misc/crash/crash02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4432,7 +4432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chroot/chroot04
 module_src_files := testcases/kernel/syscalls/chroot/chroot04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4440,7 +4440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chroot/chroot03
 module_src_files := testcases/kernel/syscalls/chroot/chroot03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4448,7 +4448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chroot/chroot02
 module_src_files := testcases/kernel/syscalls/chroot/chroot02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4456,7 +4456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chroot/chroot01
 module_src_files := testcases/kernel/syscalls/chroot/chroot01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4464,7 +4464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_delete/timer_delete02
 module_src_files := testcases/kernel/timers/timer_delete/timer_delete02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4472,7 +4472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/adjtimex/adjtimex01
 module_src_files := testcases/kernel/syscalls/adjtimex/adjtimex01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4480,7 +4480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/adjtimex/adjtimex02
 module_src_files := testcases/kernel/syscalls/adjtimex/adjtimex02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4488,7 +4488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount/umount01
 module_src_files := testcases/kernel/syscalls/umount/umount01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4496,7 +4496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/keyctl/keyctl01
 module_src_files := testcases/kernel/syscalls/keyctl/keyctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4504,7 +4504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd_create01
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd_create01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4512,7 +4512,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/genbessel
 module_src_files := testcases/misc/math/float/bessel/genbessel.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4520,7 +4520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mem/mem01
 module_src_files := testcases/kernel/mem/mem/mem01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4528,7 +4528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setpgid/setpgid03_child
 module_src_files := testcases/kernel/syscalls/setpgid/setpgid03_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4536,7 +4536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open12_child
 module_src_files := testcases/kernel/syscalls/open/open12_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4544,7 +4544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlink/symlink02
 module_src_files := testcases/kernel/syscalls/symlink/symlink02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4552,7 +4552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cgroup_xattr/cgroup_xattr
 module_src_files := testcases/kernel/controllers/cgroup_xattr/cgroup_xattr.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4560,7 +4560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/oom/oom03
 module_src_files := testcases/kernel/mem/oom/oom03.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4568,7 +4568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/cap_bset_inh_bounds
 module_src_files := testcases/kernel/security/cap_bound/cap_bset_inh_bounds.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4576,7 +4576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/filecaps/print_caps
 module_src_files := testcases/kernel/security/filecaps/print_caps.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4584,7 +4584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mem/mem02
 module_src_files := testcases/kernel/mem/mem/mem02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4592,7 +4592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress02
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4600,7 +4600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/pids/pids_task1
 module_src_files := testcases/kernel/controllers/pids/pids_task1.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4608,7 +4608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pselect/pselect02
 module_src_files := testcases/kernel/syscalls/pselect/pselect02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pselect testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pselect testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4616,7 +4616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/pids/pids_task2
 module_src_files := testcases/kernel/controllers/pids/pids_task2.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4624,7 +4624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umask/umask01
 module_src_files := testcases/kernel/syscalls/umask/umask01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4632,7 +4632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umask/umask03
 module_src_files := testcases/kernel/syscalls/umask/umask03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4640,7 +4640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umask/umask02
 module_src_files := testcases/kernel/syscalls/umask/umask02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4648,7 +4648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getxattr/getxattr03
 module_src_files := testcases/kernel/syscalls/getxattr/getxattr03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4656,7 +4656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getxattr/getxattr02
 module_src_files := testcases/kernel/syscalls/getxattr/getxattr02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4664,7 +4664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getxattr/getxattr01
 module_src_files := testcases/kernel/syscalls/getxattr/getxattr01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4672,7 +4672,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/genatan2
 module_src_files := testcases/misc/math/float/trigo/genatan2.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4680,7 +4680,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/gensin
 module_src_files := testcases/misc/math/float/trigo/gensin.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4688,7 +4688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/functional/memcg_getpagesize
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_getpagesize.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -4696,7 +4696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpid/getpid02
 module_src_files := testcases/kernel/syscalls/getpid/getpid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4704,7 +4704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpid/getpid01
 module_src_files := testcases/kernel/syscalls/getpid/getpid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4712,7 +4712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysinfo/sysinfo02
 module_src_files := testcases/kernel/syscalls/sysinfo/sysinfo02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4720,7 +4720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setsockopt/setsockopt01
 module_src_files := testcases/kernel/syscalls/setsockopt/setsockopt01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4728,7 +4728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/tunable/min_free_kbytes
 module_src_files := testcases/kernel/mem/tunable/min_free_kbytes.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4736,7 +4736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setxattr/setxattr03
 module_src_files := testcases/kernel/syscalls/setxattr/setxattr03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4744,7 +4744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setxattr/setxattr02
 module_src_files := testcases/kernel/syscalls/setxattr/setxattr02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4752,7 +4752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setxattr/setxattr01
 module_src_files := testcases/kernel/syscalls/setxattr/setxattr01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4760,7 +4760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime02
 module_src_files := testcases/kernel/syscalls/utime/utime02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4768,7 +4768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/preadv/preadv01
 module_src_files := testcases/kernel/syscalls/preadv/preadv01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/preadv testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/preadv testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4776,7 +4776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress05
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4784,7 +4784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/preadv/preadv02
 module_src_files := testcases/kernel/syscalls/preadv/preadv02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/preadv testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/preadv testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4792,7 +4792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime05
 module_src_files := testcases/kernel/syscalls/utime/utime05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4800,7 +4800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mount/setuid_test
 module_src_files := testcases/kernel/syscalls/mount/setuid_test.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4808,7 +4808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open05
 module_src_files := testcases/kernel/syscalls/open/open05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4816,7 +4816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getcpu/getcpu01
 module_src_files := testcases/kernel/syscalls/getcpu/getcpu01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4824,7 +4824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_wait/epoll_wait01
 module_src_files := testcases/kernel/syscalls/epoll_wait/epoll_wait01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4832,7 +4832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_wait/epoll_wait03
 module_src_files := testcases/kernel/syscalls/epoll_wait/epoll_wait03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4840,7 +4840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_wait/epoll_wait02
 module_src_files := testcases/kernel/syscalls/epoll_wait/epoll_wait02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4848,7 +4848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/madvise/madvise01
 module_src_files := testcases/kernel/syscalls/madvise/madvise01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4856,7 +4856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/connectors/pec/event_generator
 module_src_files := testcases/kernel/connectors/pec/event_generator.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4864,7 +4864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount/umount02
 module_src_files := testcases/kernel/syscalls/umount/umount02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4872,7 +4872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe01
 module_src_files := testcases/kernel/syscalls/pipe/pipe01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4880,7 +4880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl23
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl23.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4888,7 +4888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe03
 module_src_files := testcases/kernel/syscalls/pipe/pipe03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4896,7 +4896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe02
 module_src_files := testcases/kernel/syscalls/pipe/pipe02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4904,7 +4904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe05
 module_src_files := testcases/kernel/syscalls/pipe/pipe05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4912,7 +4912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe04
 module_src_files := testcases/kernel/syscalls/pipe/pipe04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4920,7 +4920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe07
 module_src_files := testcases/kernel/syscalls/pipe/pipe07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4928,7 +4928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe06
 module_src_files := testcases/kernel/syscalls/pipe/pipe06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4936,7 +4936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe09
 module_src_files := testcases/kernel/syscalls/pipe/pipe09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4944,7 +4944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe08
 module_src_files := testcases/kernel/syscalls/pipe/pipe08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4952,7 +4952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl21
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl21.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4960,7 +4960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigtimedwait/sigtimedwait01
 module_src_files := testcases/kernel/syscalls/sigwaitinfo/sigwaitinfo01.c
 module_cflags := -DTEST_SIGTIMEDWAIT
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4968,7 +4968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sethostname/sethostname01
 module_src_files := testcases/kernel/syscalls/sethostname/sethostname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4976,7 +4976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/ksm/ksm01
 module_src_files := testcases/kernel/mem/ksm/ksm01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4984,7 +4984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sethostname/sethostname03
 module_src_files := testcases/kernel/syscalls/sethostname/sethostname03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -4992,7 +4992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone02
 module_src_files := testcases/kernel/syscalls/clone/clone02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5000,7 +5000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_new_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_new_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5008,7 +5008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl27
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl27.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5016,7 +5016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchdir/fchdir01
 module_src_files := testcases/kernel/syscalls/fchdir/fchdir01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5024,7 +5024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchdir/fchdir03
 module_src_files := testcases/kernel/syscalls/fchdir/fchdir03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5032,7 +5032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchdir/fchdir02
 module_src_files := testcases/kernel/syscalls/fchdir/fchdir02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5040,7 +5040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munlockall/munlockall01
 module_src_files := testcases/kernel/syscalls/munlockall/munlockall01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5048,7 +5048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod01
 module_src_files := testcases/kernel/syscalls/mknod/mknod01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5056,7 +5056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munlockall/munlockall02
 module_src_files := testcases/kernel/syscalls/munlockall/munlockall02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5064,7 +5064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl25
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl25.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5072,7 +5072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns04
 module_src_files := testcases/kernel/containers/userns/userns04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5080,7 +5080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open07
 module_src_files := testcases/kernel/syscalls/open/open07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5088,7 +5088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/ksm/ksm03
 module_src_files := testcases/kernel/mem/ksm/ksm03.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5096,7 +5096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clone/clone06
 module_src_files := testcases/kernel/syscalls/clone/clone06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5104,7 +5104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns07
 module_src_files := testcases/kernel/containers/userns/userns07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5112,7 +5112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/ksm/ksm04
 module_src_files := testcases/kernel/mem/ksm/ksm04.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5120,7 +5120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signalfd4/signalfd4_01
 module_src_files := testcases/kernel/syscalls/signalfd4/signalfd4_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5128,7 +5128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/inotify/inotify06
 module_src_files := testcases/kernel/syscalls/inotify/inotify06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5136,7 +5136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid12
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5144,7 +5144,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/genj0
 module_src_files := testcases/misc/math/float/bessel/genj0.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5152,7 +5152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmap-corruption01
 module_src_files := testcases/kernel/mem/mmapstress/mmap-corruption01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5160,7 +5160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs_di/create_datafile
 module_src_files := testcases/kernel/fs/fs_di/create_datafile.c
 module_cflags := -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5168,7 +5168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod05
 module_src_files := testcases/kernel/syscalls/mknod/mknod05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5176,7 +5176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/readlink/readlink02
 module_src_files := testcases/kernel/syscalls/readlink/readlink02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5184,7 +5184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd_gettime01
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd_gettime01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5192,7 +5192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/hugetlb/hugemmap/hugemmap06
 module_src_files := testcases/kernel/mem/hugetlb/hugemmap/hugemmap06.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib include include/old
 module_static_libraries := mem kerntest hugetlb ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5200,7 +5200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/thp/thp03
 module_src_files := testcases/kernel/mem/thp/thp03.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5208,7 +5208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal02
 module_src_files := testcases/kernel/syscalls/signal/signal02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5216,7 +5216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod07
 module_src_files := testcases/kernel/syscalls/mknod/mknod07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5224,7 +5224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open06
 module_src_files := testcases/kernel/syscalls/open/open06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5232,7 +5232,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/sockets/ltpServer
 module_src_files := testcases/network/sockets/ltpServer.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5240,7 +5240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod06
 module_src_files := testcases/kernel/syscalls/mknod/mknod06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5248,7 +5248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek01
 module_src_files := testcases/kernel/syscalls/lseek/lseek01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5256,7 +5256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile08
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5264,7 +5264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek03
 module_src_files := testcases/kernel/syscalls/lseek/lseek03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5272,7 +5272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek02
 module_src_files := testcases/kernel/syscalls/lseek/lseek02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5280,7 +5280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll/epoll-ltp
 module_src_files := testcases/kernel/syscalls/epoll/epoll-ltp.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5288,7 +5288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek04
 module_src_files := testcases/kernel/syscalls/lseek/lseek04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5296,7 +5296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek07
 module_src_files := testcases/kernel/syscalls/lseek/lseek07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5304,7 +5304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek06
 module_src_files := testcases/kernel/syscalls/lseek/lseek06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5312,7 +5312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek09
 module_src_files := testcases/kernel/syscalls/lseek/lseek09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5320,7 +5320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek08
 module_src_files := testcases/kernel/syscalls/lseek/lseek08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5328,7 +5328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile03
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5336,7 +5336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile02
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5344,7 +5344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile05
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5352,7 +5352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execl/execl01_child
 module_src_files := testcases/kernel/syscalls/execl/execl01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5360,7 +5360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile07
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5368,7 +5368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile06
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5376,7 +5376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal05
 module_src_files := testcases/kernel/syscalls/signal/signal05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5384,7 +5384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/regression/memcg_test_1
 module_src_files := testcases/kernel/controllers/memcg/regression/memcg_test_1.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5392,7 +5392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/smack/smack_notroot
 module_src_files := testcases/kernel/security/smack/smack_notroot.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5400,7 +5400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open14
 module_src_files := testcases/kernel/syscalls/open/open14.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5408,7 +5408,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/genj1
 module_src_files := testcases/misc/math/float/bessel/genj1.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5416,7 +5416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open13
 module_src_files := testcases/kernel/syscalls/open/open13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5424,7 +5424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open10
 module_src_files := testcases/kernel/syscalls/open/open10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5432,7 +5432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/open/open11
 module_src_files := testcases/kernel/syscalls/open/open11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5440,7 +5440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl26
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl26.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5448,7 +5448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getaffinity/sched_getaffinity01
 module_src_files := testcases/kernel/syscalls/sched_getaffinity/sched_getaffinity01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5456,7 +5456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getcwd/getcwd04
 module_src_files := testcases/kernel/syscalls/getcwd/getcwd04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5464,7 +5464,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/lib6/in6_02
 module_src_files := testcases/network/lib6/in6_02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5472,7 +5472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getcwd/getcwd01
 module_src_files := testcases/kernel/syscalls/getcwd/getcwd01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5480,7 +5480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getcwd/getcwd03
 module_src_files := testcases/kernel/syscalls/getcwd/getcwd03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5488,7 +5488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getcwd/getcwd02
 module_src_files := testcases/kernel/syscalls/getcwd/getcwd02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5496,7 +5496,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/genacos
 module_src_files := testcases/misc/math/float/trigo/genacos.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5504,7 +5504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timerfd/timerfd_settime01
 module_src_files := testcases/kernel/syscalls/timerfd/timerfd_settime01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5512,7 +5512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/hugetlb/hugemmap/hugemmap02
 module_src_files := testcases/kernel/mem/hugetlb/hugemmap/hugemmap02.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib include include/old
 module_static_libraries := mem kerntest hugetlb ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5520,7 +5520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/recvmsg/recvmsg01
 module_src_files := testcases/kernel/syscalls/recvmsg/recvmsg01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5528,7 +5528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/recvmsg/recvmsg02
 module_src_files := testcases/kernel/syscalls/recvmsg/recvmsg02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5536,7 +5536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mremap/mremap01
 module_src_files := testcases/kernel/syscalls/mremap/mremap01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5544,7 +5544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/acpi/ltp_acpi
 module_src_files := testcases/kernel/device-drivers/acpi/ltp_acpi.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5552,7 +5552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mremap/mremap03
 module_src_files := testcases/kernel/syscalls/mremap/mremap03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5560,7 +5560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mremap/mremap02
 module_src_files := testcases/kernel/syscalls/mremap/mremap02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5568,7 +5568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mremap/mremap05
 module_src_files := testcases/kernel/syscalls/mremap/mremap05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5576,7 +5576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap001
 module_src_files := testcases/kernel/syscalls/mmap/mmap001.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5584,7 +5584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/hugetlb/hugemmap/hugemmap04
 module_src_files := testcases/kernel/mem/hugetlb/hugemmap/hugemmap04.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/mem/hugetlb/lib include include/old
 module_static_libraries := mem kerntest hugetlb ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5592,7 +5592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns03
 module_src_files := testcases/kernel/containers/userns/userns03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5600,7 +5600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pause/pause01
 module_src_files := testcases/kernel/syscalls/pause/pause01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5608,7 +5608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pause/pause03
 module_src_files := testcases/kernel/syscalls/pause/pause03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5616,7 +5616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pause/pause02
 module_src_files := testcases/kernel/syscalls/pause/pause02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5624,7 +5624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/share/ns_ifmove
 module_src_files := testcases/kernel/containers/share/ns_ifmove.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5632,7 +5632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_accept_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_accept_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5640,7 +5640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysinfo/sysinfo01
 module_src_files := testcases/kernel/syscalls/sysinfo/sysinfo01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5648,7 +5648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap14
 module_src_files := testcases/kernel/syscalls/mmap/mmap14.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5656,7 +5656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap15
 module_src_files := testcases/kernel/syscalls/mmap/mmap15.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5664,7 +5664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap16
 module_src_files := testcases/kernel/syscalls/mmap/mmap16.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5672,7 +5672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap10
 module_src_files := testcases/kernel/syscalls/mmap/mmap10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5680,7 +5680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap11
 module_src_files := testcases/kernel/syscalls/mmap/mmap11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5688,7 +5688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap12
 module_src_files := testcases/kernel/syscalls/mmap/mmap12.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5696,7 +5696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mmap/mmap13
 module_src_files := testcases/kernel/syscalls/mmap/mmap13.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5704,7 +5704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysctl/sysctl05
 module_src_files := testcases/kernel/syscalls/sysctl/sysctl05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5712,7 +5712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysctl/sysctl04
 module_src_files := testcases/kernel/syscalls/sysctl/sysctl04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5720,7 +5720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utime/utime03
 module_src_files := testcases/kernel/syscalls/utime/utime03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5728,7 +5728,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genpow
 module_src_files := testcases/misc/math/float/power/genpow.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5736,7 +5736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrlimit/getrlimit01
 module_src_files := testcases/kernel/syscalls/getrlimit/getrlimit01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5744,7 +5744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nice/nice05
 module_src_files := testcases/kernel/syscalls/nice/nice05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5752,7 +5752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysctl/sysctl03
 module_src_files := testcases/kernel/syscalls/sysctl/sysctl03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5760,7 +5760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrlimit/getrlimit02
 module_src_files := testcases/kernel/syscalls/getrlimit/getrlimit02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5768,7 +5768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/utimensat/utimensat01
 module_src_files := testcases/kernel/syscalls/utimensat/utimensat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5776,7 +5776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nice/nice04
 module_src_files := testcases/kernel/syscalls/nice/nice04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5784,7 +5784,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/gencos
 module_src_files := testcases/misc/math/float/trigo/gencos.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5792,7 +5792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nice/nice03
 module_src_files := testcases/kernel/syscalls/nice/nice03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5800,7 +5800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/cap_bounds_r
 module_src_files := testcases/kernel/security/cap_bound/cap_bounds_r.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5808,7 +5808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nice/nice02
 module_src_files := testcases/kernel/syscalls/nice/nice02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5816,7 +5816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/get_robust_list/get_robust_list01
 module_src_files := testcases/kernel/syscalls/get_robust_list/get_robust_list01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5824,7 +5824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/doio/iogen
 module_src_files := testcases/kernel/fs/doio/iogen.c
 module_cflags := -D_LARGEFILE64_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5832,7 +5832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/utsname/utstest
 module_src_files := testcases/kernel/containers/utsname/utstest.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5840,7 +5840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/access/access04
 module_src_files := testcases/kernel/syscalls/access/access04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5848,7 +5848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/epoll_create1/epoll_create1_01
 module_src_files := testcases/kernel/syscalls/epoll_create1/epoll_create1_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5856,7 +5856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/renameat2/renameat202
 module_src_files := testcases/kernel/syscalls/renameat2/renameat202.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5864,7 +5864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unlink/unlink06
 module_src_files := testcases/kernel/syscalls/unlink/unlink06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5872,7 +5872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pwrite/pwrite04
 module_src_files := testcases/kernel/syscalls/pwrite/pwrite04.c
 module_cflags := -Wno-error
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5880,7 +5880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pwrite/pwrite02
 module_src_files := testcases/kernel/syscalls/pwrite/pwrite02.c
 module_cflags := -Wno-error
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5888,7 +5888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pwrite/pwrite01
 module_src_files := testcases/kernel/syscalls/pwrite/pwrite01.c
 module_cflags := -Wno-error
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pwrite testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5896,7 +5896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setitimer/setitimer01
 module_src_files := testcases/kernel/syscalls/setitimer/setitimer01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5904,7 +5904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vmtests/stack_space
 module_src_files := testcases/kernel/mem/vmtests/stack_space.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5912,7 +5912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/splice/splice01
 module_src_files := testcases/kernel/syscalls/splice/splice01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5920,7 +5920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/splice/splice03
 module_src_files := testcases/kernel/syscalls/splice/splice03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5928,7 +5928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/splice/splice02
 module_src_files := testcases/kernel/syscalls/splice/splice02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5936,7 +5936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socket/socket03
 module_src_files := testcases/kernel/syscalls/socket/socket03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5944,7 +5944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpgrp/getpgrp01
 module_src_files := testcases/kernel/syscalls/getpgrp/getpgrp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5952,7 +5952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socket/socket01
 module_src_files := testcases/kernel/syscalls/socket/socket01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5960,7 +5960,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genfloor
 module_src_files := testcases/misc/math/float/power/genfloor.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5968,7 +5968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setitimer/setitimer03
 module_src_files := testcases/kernel/syscalls/setitimer/setitimer03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5976,7 +5976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/tool/time-schedule
 module_src_files := testcases/kernel/sched/tool/time-schedule.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -5984,7 +5984,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/float_power
 module_src_files := testcases/misc/math/float/float_power.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -5992,7 +5992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setitimer/setitimer02
 module_src_files := testcases/kernel/syscalls/setitimer/setitimer02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6000,7 +6000,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_process_state
 module_src_files := lib/tests/tst_process_state.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6008,7 +6008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns02
 module_src_files := testcases/kernel/containers/pidns/pidns02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6016,7 +6016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ioperm/ioperm02
 module_src_files := testcases/kernel/syscalls/ioperm/ioperm02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6024,7 +6024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setdomainname/setdomainname02
 module_src_files := testcases/kernel/syscalls/setdomainname/setdomainname02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6032,7 +6032,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genmodf
 module_src_files := testcases/misc/math/float/exp_log/genmodf.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6040,7 +6040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timer_gettime/timer_gettime01
 module_src_files := testcases/kernel/syscalls/timer_gettime/timer_gettime01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6048,7 +6048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile09
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6056,7 +6056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/pty/ptem01
 module_src_files := testcases/kernel/pty/ptem01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6064,7 +6064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/swapoff/swapoff02
 module_src_files := testcases/kernel/syscalls/swapoff/swapoff02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6072,7 +6072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/pthreads/pth_str02
 module_src_files := testcases/kernel/sched/pthreads/pth_str02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6080,7 +6080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/oom/oom04
 module_src_files := testcases/kernel/mem/oom/oom04.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6088,7 +6088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl30
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl30.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6096,7 +6096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpeername/getpeername01
 module_src_files := testcases/kernel/syscalls/getpeername/getpeername01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6104,7 +6104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl32
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl32.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6112,7 +6112,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl33
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl33.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6120,7 +6120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl34
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl34.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6128,7 +6128,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test03
 module_src_files := lib/newlib_tests/test03.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6136,7 +6136,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test02
 module_src_files := lib/newlib_tests/test02.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6144,7 +6144,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test01
 module_src_files := lib/newlib_tests/test01.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6152,7 +6152,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test07
 module_src_files := lib/newlib_tests/test07.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6160,7 +6160,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test06
 module_src_files := lib/newlib_tests/test06.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6168,7 +6168,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test05
 module_src_files := lib/newlib_tests/test05.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6176,7 +6176,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test04
 module_src_files := lib/newlib_tests/test04.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6184,7 +6184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/accept4/accept4_01
 module_src_files := testcases/kernel/syscalls/accept4/accept4_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6192,7 +6192,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test09
 module_src_files := lib/newlib_tests/test09.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6200,7 +6200,7 @@ include $(ltp_build_test)
 module_testname := lib/newlib_tests/test08
 module_src_files := lib/newlib_tests/test08.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6208,7 +6208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_def_task04
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_def_task04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6216,7 +6216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/switch/endian_switch01
 module_src_files := testcases/kernel/syscalls/switch/endian_switch01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6224,7 +6224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketcall/socketcall03
 module_src_files := testcases/kernel/syscalls/socketcall/socketcall03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6232,7 +6232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/memcpy/memcpy01
 module_src_files := testcases/kernel/syscalls/memcpy/memcpy01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6240,7 +6240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval01
 module_src_files := testcases/kernel/syscalls/sched_rr_get_interval/sched_rr_get_interval01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6248,7 +6248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigrelse/sigrelse01
 module_src_files := testcases/kernel/syscalls/sigrelse/sigrelse01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6256,7 +6256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid08
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6264,7 +6264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpriority/getpriority01
 module_src_files := testcases/kernel/syscalls/getpriority/getpriority01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6272,7 +6272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs05
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6280,7 +6280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid04
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6288,7 +6288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid07
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6296,7 +6296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid06
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6304,7 +6304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid01
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6312,7 +6312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/io-throttle/iobw
 module_src_files := testcases/kernel/controllers/io-throttle/iobw.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6320,7 +6320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid03
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6328,7 +6328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid02
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6336,7 +6336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm01
 module_src_files := testcases/kernel/syscalls/alarm/alarm01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6344,7 +6344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setscheduler/sched_setscheduler02
 module_src_files := testcases/kernel/syscalls/sched_setscheduler/sched_setscheduler02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6352,7 +6352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm03
 module_src_files := testcases/kernel/syscalls/alarm/alarm03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6360,7 +6360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm02
 module_src_files := testcases/kernel/syscalls/alarm/alarm02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6368,7 +6368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm05
 module_src_files := testcases/kernel/syscalls/alarm/alarm05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6376,7 +6376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm07
 module_src_files := testcases/kernel/syscalls/alarm/alarm07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6384,7 +6384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/alarm/alarm06
 module_src_files := testcases/kernel/syscalls/alarm/alarm06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6392,7 +6392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/msync/msync01
 module_src_files := testcases/kernel/syscalls/msync/msync01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6400,7 +6400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/msync/msync03
 module_src_files := testcases/kernel/syscalls/msync/msync03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6408,7 +6408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/msync/msync02
 module_src_files := testcases/kernel/syscalls/msync/msync02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6416,7 +6416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/pidns/pidns05
 module_src_files := testcases/kernel/containers/pidns/pidns05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6424,7 +6424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendfile/sendfile04
 module_src_files := testcases/kernel/syscalls/sendfile/sendfile04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/sendfile testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6432,7 +6432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchownat/fchownat01
 module_src_files := testcases/kernel/syscalls/fchownat/fchownat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6440,7 +6440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_new_file_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_new_file_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6448,7 +6448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_rewrite_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_rewrite_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6456,7 +6456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchownat/fchownat02
 module_src_files := testcases/kernel/syscalls/fchownat/fchownat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6464,7 +6464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigaction/sigaction01
 module_src_files := testcases/kernel/syscalls/sigaction/sigaction01.c
 module_cflags := -DGLIBC_SIGACTION_BUG=1 -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6472,7 +6472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sigaction/sigaction02
 module_src_files := testcases/kernel/syscalls/sigaction/sigaction02.c
 module_cflags := -DGLIBC_SIGACTION_BUG=1 -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6480,7 +6480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod03
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6488,7 +6488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod02
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6496,7 +6496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod01
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6504,7 +6504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod07
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6512,7 +6512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod06
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6520,7 +6520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod05
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6528,7 +6528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fchmod/fchmod04
 module_src_files := testcases/kernel/syscalls/fchmod/fchmod04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6536,7 +6536,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/trerrno
 module_src_files := lib/tests/trerrno.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6544,7 +6544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs02
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6552,7 +6552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe2/pipe2_01
 module_src_files := testcases/kernel/syscalls/pipe2/pipe2_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6560,7 +6560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe2/pipe2_02
 module_src_files := testcases/kernel/syscalls/pipe2/pipe2_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6568,7 +6568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal01
 module_src_files := testcases/kernel/syscalls/signal/signal01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6576,7 +6576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/symlinkat/symlinkat01
 module_src_files := testcases/kernel/syscalls/symlinkat/symlinkat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6584,7 +6584,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/geny1
 module_src_files := testcases/misc/math/float/bessel/geny1.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6592,7 +6592,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/bessel/geny0
 module_src_files := testcases/misc/math/float/bessel/geny0.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6600,7 +6600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal03
 module_src_files := testcases/kernel/syscalls/signal/signal03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6608,7 +6608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ppoll/ppoll01
 module_src_files := testcases/kernel/syscalls/ppoll/ppoll01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6616,7 +6616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/stream/stream04
 module_src_files := testcases/kernel/fs/stream/stream04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6624,7 +6624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/read/read03
 module_src_files := testcases/kernel/syscalls/read/read03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6632,7 +6632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/read/read02
 module_src_files := testcases/kernel/syscalls/read/read02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6640,7 +6640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/read/read04
 module_src_files := testcases/kernel/syscalls/read/read04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6648,7 +6648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/unlink/unlink08
 module_src_files := testcases/kernel/syscalls/unlink/unlink08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6656,7 +6656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cgroup/fork_processes
 module_src_files := testcases/kernel/controllers/cgroup/fork_processes.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6664,7 +6664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signalfd/signalfd01
 module_src_files := testcases/kernel/syscalls/signalfd/signalfd01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6672,7 +6672,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/share/setns_check
 module_src_files := testcases/kernel/containers/share/setns_check.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6680,7 +6680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/timer_getoverrun/timer_getoverrun01
 module_src_files := testcases/kernel/syscalls/timer_getoverrun/timer_getoverrun01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6688,7 +6688,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mknod/mknod02
 module_src_files := testcases/kernel/syscalls/mknod/mknod02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6696,7 +6696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs06
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6704,7 +6704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/openat/openat03
 module_src_files := testcases/kernel/syscalls/openat/openat03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6712,7 +6712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/openat/openat01
 module_src_files := testcases/kernel/syscalls/openat/openat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6720,7 +6720,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill10
 module_src_files := testcases/kernel/syscalls/kill/kill10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6728,7 +6728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setdomainname/setdomainname03
 module_src_files := testcases/kernel/syscalls/setdomainname/setdomainname03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6736,7 +6736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/perf_event_open/perf_event_open01
 module_src_files := testcases/kernel/syscalls/perf_event_open/perf_event_open01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6744,7 +6744,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genfabs
 module_src_files := testcases/misc/math/float/power/genfabs.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6752,7 +6752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill11
 module_src_files := testcases/kernel/syscalls/kill/kill11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6760,7 +6760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/stream/stream02
 module_src_files := testcases/kernel/fs/stream/stream02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6768,7 +6768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/freezer/vfork
 module_src_files := testcases/kernel/controllers/freezer/vfork.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6776,7 +6776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/tkill/tkill01
 module_src_files := testcases/kernel/syscalls/tkill/tkill01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6784,7 +6784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getpagesize/getpagesize01
 module_src_files := testcases/kernel/syscalls/getpagesize/getpagesize01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6792,7 +6792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/freezer/fork_exec_loop
 module_src_files := testcases/kernel/controllers/freezer/fork_exec_loop.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6800,7 +6800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mprotect/mprotect02
 module_src_files := testcases/kernel/syscalls/mprotect/mprotect02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6808,7 +6808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/stream/stream03
 module_src_files := testcases/kernel/fs/stream/stream03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6816,7 +6816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/uaccess/uaccess
 module_src_files := testcases/kernel/device-drivers/uaccess/uaccess.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6824,7 +6824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs01
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6832,7 +6832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs04
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6840,7 +6840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getppid/getppid01
 module_src_files := testcases/kernel/syscalls/getppid/getppid01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6848,7 +6848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat08
 module_src_files := testcases/kernel/syscalls/creat/creat08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6856,7 +6856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysfs/sysfs03
 module_src_files := testcases/kernel/syscalls/sysfs/sysfs03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6864,7 +6864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getppid/getppid02
 module_src_files := testcases/kernel/syscalls/getppid/getppid02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6872,7 +6872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat05
 module_src_files := testcases/kernel/syscalls/creat/creat05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6880,7 +6880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat04
 module_src_files := testcases/kernel/syscalls/creat/creat04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6888,7 +6888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat07
 module_src_files := testcases/kernel/syscalls/creat/creat07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6896,7 +6896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat01
 module_src_files := testcases/kernel/syscalls/creat/creat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6904,7 +6904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal04
 module_src_files := testcases/kernel/syscalls/signal/signal04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6912,7 +6912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat03
 module_src_files := testcases/kernel/syscalls/creat/creat03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6920,7 +6920,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/signal/signal06
 module_src_files := testcases/kernel/syscalls/signal/signal06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6928,7 +6928,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genldexp
 module_src_files := testcases/misc/math/float/exp_log/genldexp.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -6936,7 +6936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link08
 module_src_files := testcases/kernel/syscalls/link/link08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6944,7 +6944,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/tcp_cmds/echo/createfile
 module_src_files := testcases/network/tcp_cmds/echo/createfile.c
 module_cflags := -DDEBUG
-module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include include/old
+module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6952,7 +6952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/gethostname/gethostname01
 module_src_files := testcases/kernel/syscalls/gethostname/gethostname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6960,7 +6960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link04
 module_src_files := testcases/kernel/syscalls/link/link04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6968,7 +6968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link07
 module_src_files := testcases/kernel/syscalls/link/link07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6976,7 +6976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clock_nanosleep2/clock_nanosleep2_01
 module_src_files := testcases/kernel/syscalls/clock_nanosleep2/clock_nanosleep2_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6984,7 +6984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link03
 module_src_files := testcases/kernel/syscalls/link/link03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -6992,7 +6992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link02
 module_src_files := testcases/kernel/syscalls/link/link02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7000,7 +7000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstatfs/fstatfs01
 module_src_files := testcases/kernel/syscalls/fstatfs/fstatfs01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstatfs testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstatfs testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7008,7 +7008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link05
 module_src_files := testcases/kernel/syscalls/link/link05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7016,7 +7016,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstatfs/fstatfs02
 module_src_files := testcases/kernel/syscalls/fstatfs/fstatfs02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstatfs testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstatfs testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7024,7 +7024,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/timers/timer_settime/timer_settime02
 module_src_files := testcases/kernel/timers/timer_settime/timer_settime02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/timers/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7032,7 +7032,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/tcp_cmds/sendfile/testsf_c
 module_src_files := testcases/network/tcp_cmds/sendfile/testsf_c.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include include/old
+module_c_includes := testcases/kernel/include testcases/network/tcp_cmds/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7040,7 +7040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_def_task02
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_def_task02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7048,7 +7048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/link/link06
 module_src_files := testcases/kernel/syscalls/link/link06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7056,7 +7056,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/tcp_fastopen/tcp_fastopen
 module_src_files := testcases/network/tcp_fastopen/tcp_fastopen.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7064,7 +7064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getattr/sched_getattr01
 module_src_files := testcases/kernel/syscalls/sched_getattr/sched_getattr01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7072,7 +7072,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/float_exp_log
 module_src_files := testcases/misc/math/float/float_exp_log.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7080,7 +7080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execlp/execlp01
 module_src_files := testcases/kernel/syscalls/execlp/execlp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7088,7 +7088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/integrity/ima/src/ima_mmap
 module_src_files := testcases/kernel/security/integrity/ima/src/ima_mmap.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := dl crypto
 include $(ltp_build_test)
@@ -7096,7 +7096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/block/block_dev_user/block_dev
 module_src_files := testcases/kernel/device-drivers/block/block_dev_user/block_dev.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7104,7 +7104,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_dataroot02
 module_src_files := lib/tests/tst_dataroot02.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7112,7 +7112,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_dataroot03
 module_src_files := lib/tests/tst_dataroot03.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7120,7 +7120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstat/fstat03
 module_src_files := testcases/kernel/syscalls/fstat/fstat03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7128,7 +7128,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_dataroot01
 module_src_files := lib/tests/tst_dataroot01.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7136,7 +7136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstat/fstat05
 module_src_files := testcases/kernel/syscalls/fstat/fstat05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7144,7 +7144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/cpuctl/cpuctl_def_task03
 module_src_files := testcases/kernel/controllers/cpuctl/cpuctl_def_task03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := controllers ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7152,7 +7152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/memcg/control/mem_process
 module_src_files := testcases/kernel/controllers/memcg/control/mem_process.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/controllers/libcontrollers include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7160,7 +7160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest01/mtest01
 module_src_files := testcases/kernel/mem/mtest01/mtest01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7168,7 +7168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/ext4-new-features/ext4-subdir-limit/create_long_dirs
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-subdir-limit/create_long_dirs.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7176,7 +7176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execle/execle01
 module_src_files := testcases/kernel/syscalls/execle/execle01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7184,7 +7184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/logging/kmsg/kmsg01
 module_src_files := testcases/kernel/logging/kmsg/kmsg01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7192,7 +7192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/statfs/statfs02
 module_src_files := testcases/kernel/syscalls/statfs/statfs02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7200,7 +7200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/statfs/statfs01
 module_src_files := testcases/kernel/syscalls/statfs/statfs01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/statfs testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7208,7 +7208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/madvise/madvise02
 module_src_files := testcases/kernel/syscalls/madvise/madvise02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7216,7 +7216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/madvise/madvise05
 module_src_files := testcases/kernel/syscalls/madvise/madvise05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7224,7 +7224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/close/close08
 module_src_files := testcases/kernel/syscalls/close/close08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7232,7 +7232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/madvise/madvise06
 module_src_files := testcases/kernel/syscalls/madvise/madvise06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7240,7 +7240,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genfmod
 module_src_files := testcases/misc/math/float/power/genfmod.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7248,7 +7248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/iopl/iopl02
 module_src_files := testcases/kernel/syscalls/iopl/iopl02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7256,7 +7256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/close/close01
 module_src_files := testcases/kernel/syscalls/close/close01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7264,7 +7264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/close/close02
 module_src_files := testcases/kernel/syscalls/close/close02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7272,7 +7272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill09
 module_src_files := testcases/kernel/syscalls/kill/kill09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7280,7 +7280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill08
 module_src_files := testcases/kernel/syscalls/kill/kill08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7288,7 +7288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigaction/rt_sigaction01
 module_src_files := testcases/kernel/syscalls/rt_sigaction/rt_sigaction01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7296,7 +7296,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/power/genceil
 module_src_files := testcases/misc/math/float/power/genceil.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -7304,7 +7304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigaction/rt_sigaction03
 module_src_files := testcases/kernel/syscalls/rt_sigaction/rt_sigaction03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7312,7 +7312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigaction/rt_sigaction02
 module_src_files := testcases/kernel/syscalls/rt_sigaction/rt_sigaction02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7320,7 +7320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill01
 module_src_files := testcases/kernel/syscalls/kill/kill01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7328,7 +7328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill03
 module_src_files := testcases/kernel/syscalls/kill/kill03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7336,7 +7336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill02
 module_src_files := testcases/kernel/syscalls/kill/kill02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7344,7 +7344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill04
 module_src_files := testcases/kernel/syscalls/kill/kill04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7352,7 +7352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/clock_getres/clock_getres01
 module_src_files := testcases/kernel/syscalls/clock_getres/clock_getres01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7360,7 +7360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/kill/kill06
 module_src_files := testcases/kernel/syscalls/kill/kill06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ipc/lib include include/old
 module_static_libraries := ipc ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7368,7 +7368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munmap/munmap01
 module_src_files := testcases/kernel/syscalls/munmap/munmap01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7376,7 +7376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munmap/munmap03
 module_src_files := testcases/kernel/syscalls/munmap/munmap03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7384,7 +7384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/munmap/munmap02
 module_src_files := testcases/kernel/syscalls/munmap/munmap02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7392,7 +7392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek05
 module_src_files := testcases/kernel/syscalls/lseek/lseek05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7400,7 +7400,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe10
 module_src_files := testcases/kernel/syscalls/pipe/pipe10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7408,7 +7408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pipe/pipe11
 module_src_files := testcases/kernel/syscalls/pipe/pipe11.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7416,7 +7416,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup3/dup3_01
 module_src_files := testcases/kernel/syscalls/dup3/dup3_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7424,7 +7424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/exec_without_inh
 module_src_files := testcases/kernel/security/cap_bound/exec_without_inh.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7432,7 +7432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/dup3/dup3_02
 module_src_files := testcases/kernel/syscalls/dup3/dup3_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7440,7 +7440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getscheduler/sched_getscheduler02
 module_src_files := testcases/kernel/syscalls/sched_getscheduler/sched_getscheduler02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7448,7 +7448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_getscheduler/sched_getscheduler01
 module_src_files := testcases/kernel/syscalls/sched_getscheduler/sched_getscheduler01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7456,7 +7456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execvp/execvp01_child
 module_src_files := testcases/kernel/syscalls/execvp/execvp01_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7464,7 +7464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/proc/proc01
 module_src_files := testcases/kernel/fs/proc/proc01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7472,7 +7472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setscheduler/sched_setscheduler01
 module_src_files := testcases/kernel/syscalls/sched_setscheduler/sched_setscheduler01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7480,7 +7480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/creat/creat07_child
 module_src_files := testcases/kernel/syscalls/creat/creat07_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7488,7 +7488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sbrk/sbrk01
 module_src_files := testcases/kernel/syscalls/sbrk/sbrk01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7496,7 +7496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sbrk/sbrk03
 module_src_files := testcases/kernel/syscalls/sbrk/sbrk03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7504,7 +7504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sbrk/sbrk02
 module_src_files := testcases/kernel/syscalls/sbrk/sbrk02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7512,7 +7512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pread/pread01
 module_src_files := testcases/kernel/syscalls/pread/pread01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7520,7 +7520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sgetmask/sgetmask01
 module_src_files := testcases/kernel/syscalls/sgetmask/sgetmask01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7528,7 +7528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pread/pread03
 module_src_files := testcases/kernel/syscalls/pread/pread03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7536,7 +7536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/pread/pread02
 module_src_files := testcases/kernel/syscalls/pread/pread02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/pread testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7544,7 +7544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork09
 module_src_files := testcases/kernel/syscalls/fork/fork09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7552,7 +7552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork08
 module_src_files := testcases/kernel/syscalls/fork/fork08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7560,7 +7560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/asyncio/asyncio02
 module_src_files := testcases/kernel/syscalls/asyncio/asyncio02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7568,7 +7568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/device-drivers/zram/zram03
 module_src_files := testcases/kernel/device-drivers/zram/zram03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7576,7 +7576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork01
 module_src_files := testcases/kernel/syscalls/fork/fork01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7584,7 +7584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/write/write04
 module_src_files := testcases/kernel/syscalls/write/write04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7592,7 +7592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork03
 module_src_files := testcases/kernel/syscalls/fork/fork03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7600,7 +7600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork02
 module_src_files := testcases/kernel/syscalls/fork/fork02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7608,7 +7608,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork05
 module_src_files := testcases/kernel/syscalls/fork/fork05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7616,7 +7616,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork04
 module_src_files := testcases/kernel/syscalls/fork/fork04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7624,7 +7624,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork07
 module_src_files := testcases/kernel/syscalls/fork/fork07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7632,7 +7632,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fork/fork06
 module_src_files := testcases/kernel/syscalls/fork/fork06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7640,7 +7640,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/faccessat/faccessat01
 module_src_files := testcases/kernel/syscalls/faccessat/faccessat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7648,7 +7648,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/thp/thp01
 module_src_files := testcases/kernel/mem/thp/thp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/mem/include testcases/kernel/include testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/mem/include testcases/kernel/include include include/old
 module_static_libraries := mem kerntest ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7656,7 +7656,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketpair/socketpair02
 module_src_files := testcases/kernel/syscalls/socketpair/socketpair02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7664,7 +7664,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/sched/pthreads/pth_str01
 module_src_files := testcases/kernel/sched/pthreads/pth_str01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7672,7 +7672,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/bytes_by_prefix_test
 module_src_files := lib/tests/bytes_by_prefix_test.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7680,7 +7680,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress08
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7688,7 +7688,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_checkpoint
 module_src_files := lib/tests/tst_checkpoint.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7696,7 +7696,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/wait/wait02
 module_src_files := testcases/kernel/syscalls/wait/wait02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7704,7 +7704,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/wait/wait01
 module_src_files := testcases/kernel/syscalls/wait/wait01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7712,7 +7712,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/cacheflush/cacheflush01
 module_src_files := testcases/kernel/syscalls/cacheflush/cacheflush01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7720,7 +7720,7 @@ include $(ltp_build_test)
 module_testname := testcases/lib/tst_random
 module_src_files := testcases/lib/tst_random.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7728,7 +7728,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/eventfd2/eventfd2_01
 module_src_files := testcases/kernel/syscalls/eventfd2/eventfd2_01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7736,7 +7736,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/poll/poll02
 module_src_files := testcases/kernel/syscalls/poll/poll02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7744,7 +7744,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/eventfd2/eventfd2_03
 module_src_files := testcases/kernel/syscalls/eventfd2/eventfd2_03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7752,7 +7752,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/eventfd2/eventfd2_02
 module_src_files := testcases/kernel/syscalls/eventfd2/eventfd2_02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7760,7 +7760,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/abort/abort01
 module_src_files := testcases/kernel/syscalls/abort/abort01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7768,7 +7768,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/mountns/mountns04
 module_src_files := testcases/kernel/containers/mountns/mountns04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7776,7 +7776,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/mountns/mountns01
 module_src_files := testcases/kernel/containers/mountns/mountns01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7784,7 +7784,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/mountns/mountns03
 module_src_files := testcases/kernel/containers/mountns/mountns03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7792,7 +7792,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/mountns/mountns02
 module_src_files := testcases/kernel/containers/mountns/mountns02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7800,7 +7800,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ftruncate/ftruncate01
 module_src_files := testcases/kernel/syscalls/ftruncate/ftruncate01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7808,7 +7808,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketcall/socketcall02
 module_src_files := testcases/kernel/syscalls/socketcall/socketcall02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7816,7 +7816,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ftruncate/ftruncate03
 module_src_files := testcases/kernel/syscalls/ftruncate/ftruncate03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7824,7 +7824,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ftruncate/ftruncate02
 module_src_files := testcases/kernel/syscalls/ftruncate/ftruncate02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7832,7 +7832,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/ftruncate/ftruncate04
 module_src_files := testcases/kernel/syscalls/ftruncate/ftruncate04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/ftruncate testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7840,7 +7840,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/lseek/lseek10
 module_src_files := testcases/kernel/syscalls/lseek/lseek10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7848,7 +7848,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/socketcall/socketcall04
 module_src_files := testcases/kernel/syscalls/socketcall/socketcall04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7856,7 +7856,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fadvise/posix_fadvise03
 module_src_files := testcases/kernel/syscalls/fadvise/posix_fadvise03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7864,7 +7864,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fadvise/posix_fadvise02
 module_src_files := testcases/kernel/syscalls/fadvise/posix_fadvise02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7872,7 +7872,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fadvise/posix_fadvise01
 module_src_files := testcases/kernel/syscalls/fadvise/posix_fadvise01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7880,7 +7880,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrusage/getrusage03_child
 module_src_files := testcases/kernel/syscalls/getrusage/getrusage03_child.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7888,7 +7888,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/controllers/freezer/timed_forkbomb
 module_src_files := testcases/kernel/controllers/freezer/timed_forkbomb.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7896,7 +7896,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fadvise/posix_fadvise04
 module_src_files := testcases/kernel/syscalls/fadvise/posix_fadvise04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fadvise testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7904,7 +7904,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/perf_event_open/perf_event_open02
 module_src_files := testcases/kernel/syscalls/perf_event_open/perf_event_open02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7912,7 +7912,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/setdomainname/setdomainname01
 module_src_files := testcases/kernel/syscalls/setdomainname/setdomainname01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7920,7 +7920,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/multicast/mc_commo/mc_recv
 module_src_files := testcases/network/multicast/mc_commo/mc_recv.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7928,7 +7928,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/tkill/tkill02
 module_src_files := testcases/kernel/syscalls/tkill/tkill02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7936,7 +7936,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs_bind/bin/nsclone
 module_src_files := testcases/kernel/fs/fs_bind/bin/nsclone.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7944,7 +7944,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/userns/userns06
 module_src_files := testcases/kernel/containers/userns/userns06.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7952,7 +7952,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/select/select04
 module_src_files := testcases/kernel/syscalls/select/select04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7960,7 +7960,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/select/select03
 module_src_files := testcases/kernel/syscalls/select/select03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7968,7 +7968,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/set_tid_address/set_tid_address01
 module_src_files := testcases/kernel/syscalls/set_tid_address/set_tid_address01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7976,7 +7976,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/reboot/reboot02
 module_src_files := testcases/kernel/syscalls/reboot/reboot02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7984,7 +7984,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/reboot/reboot01
 module_src_files := testcases/kernel/syscalls/reboot/reboot01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -7992,7 +7992,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setparam/sched_setparam03
 module_src_files := testcases/kernel/syscalls/sched_setparam/sched_setparam03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8000,7 +8000,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setparam/sched_setparam02
 module_src_files := testcases/kernel/syscalls/sched_setparam/sched_setparam02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8008,7 +8008,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setparam/sched_setparam01
 module_src_files := testcases/kernel/syscalls/sched_setparam/sched_setparam01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8016,7 +8016,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/trigo/gentrigo
 module_src_files := testcases/misc/math/float/trigo/gentrigo.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -8024,7 +8024,7 @@ include $(ltp_build_test)
 module_testname := testcases/network/multicast/mc_opts/mc_verify_opts_error
 module_src_files := testcases/network/multicast/mc_opts/mc_verify_opts_error.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8032,7 +8032,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setparam/sched_setparam05
 module_src_files := testcases/kernel/syscalls/sched_setparam/sched_setparam05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8040,7 +8040,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_setparam/sched_setparam04
 module_src_files := testcases/kernel/syscalls/sched_setparam/sched_setparam04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8048,7 +8048,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod05
 module_src_files := testcases/kernel/syscalls/chmod/chmod05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8056,7 +8056,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod04
 module_src_files := testcases/kernel/syscalls/chmod/chmod04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8064,7 +8064,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod07
 module_src_files := testcases/kernel/syscalls/chmod/chmod07.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8072,7 +8072,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod01
 module_src_files := testcases/kernel/syscalls/chmod/chmod01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8080,7 +8080,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod03
 module_src_files := testcases/kernel/syscalls/chmod/chmod03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8088,7 +8088,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chmod/chmod02
 module_src_files := testcases/kernel/syscalls/chmod/chmod02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8096,7 +8096,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sendmsg/sendmsg01
 module_src_files := testcases/kernel/syscalls/sendmsg/sendmsg01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8104,7 +8104,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/newns
 module_src_files := testcases/kernel/security/tomoyo/newns.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8112,7 +8112,7 @@ include $(ltp_build_test)
 module_testname := lib/tests/tst_tmpdir_test
 module_src_files := lib/tests/tst_tmpdir_test.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8120,7 +8120,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mprotect/mprotect01
 module_src_files := testcases/kernel/syscalls/mprotect/mprotect01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8128,7 +8128,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mtest05/mmstress
 module_src_files := testcases/kernel/mem/mtest05/mmstress.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8136,7 +8136,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/waitpid/waitpid09
 module_src_files := testcases/kernel/syscalls/waitpid/waitpid09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8144,7 +8144,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mprotect/mprotect03
 module_src_files := testcases/kernel/syscalls/mprotect/mprotect03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8152,7 +8152,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/vmtests/data_space
 module_src_files := testcases/kernel/mem/vmtests/data_space.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8160,7 +8160,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/access/access05
 module_src_files := testcases/kernel/syscalls/access/access05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8168,7 +8168,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstat/fstat01
 module_src_files := testcases/kernel/syscalls/fstat/fstat01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8176,7 +8176,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/access/access01
 module_src_files := testcases/kernel/syscalls/access/access01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8184,7 +8184,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/access/access03
 module_src_files := testcases/kernel/syscalls/access/access03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8192,7 +8192,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/access/access02
 module_src_files := testcases/kernel/syscalls/access/access02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8200,7 +8200,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sync/sync02
 module_src_files := testcases/kernel/syscalls/sync/sync02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8208,7 +8208,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sync/sync01
 module_src_files := testcases/kernel/syscalls/sync/sync01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8216,7 +8216,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mprotect/mprotect04
 module_src_files := testcases/kernel/syscalls/mprotect/mprotect04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8224,7 +8224,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/vfork/vfork01
 module_src_files := testcases/kernel/syscalls/vfork/vfork01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8232,7 +8232,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fstat/fstat02
 module_src_files := testcases/kernel/syscalls/fstat/fstat02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fstat testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8240,7 +8240,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir09
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir09.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8248,7 +8248,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir08
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir08.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8256,7 +8256,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/fs_bind/bin/smount
 module_src_files := testcases/kernel/fs/fs_bind/bin/smount.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8264,7 +8264,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir05
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8272,7 +8272,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir04
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8280,7 +8280,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir03
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8288,7 +8288,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/mkdir/mkdir02
 module_src_files := testcases/kernel/syscalls/mkdir/mkdir02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8296,7 +8296,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/stream/stream05
 module_src_files := testcases/kernel/fs/stream/stream05.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8304,7 +8304,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/vfork/vfork02
 module_src_files := testcases/kernel/syscalls/vfork/vfork02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8312,7 +8312,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/stream/stream01
 module_src_files := testcases/kernel/fs/stream/stream01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8320,7 +8320,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/listen/listen01
 module_src_files := testcases/kernel/syscalls/listen/listen01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8328,7 +8328,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nanosleep/nanosleep04
 module_src_files := testcases/kernel/syscalls/nanosleep/nanosleep04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8336,7 +8336,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/fs/ext4-new-features/ext4-subdir-limit/create_short_dirs
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-subdir-limit/create_short_dirs.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -8344,7 +8344,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chdir/chdir01
 module_src_files := testcases/kernel/syscalls/chdir/chdir01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8352,7 +8352,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/rt_sigqueueinfo/rt_sigqueueinfo01
 module_src_files := testcases/kernel/syscalls/rt_sigqueueinfo/rt_sigqueueinfo01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8360,7 +8360,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chdir/chdir03
 module_src_files := testcases/kernel/syscalls/chdir/chdir03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8368,7 +8368,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chdir/chdir02
 module_src_files := testcases/kernel/syscalls/chdir/chdir02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8376,7 +8376,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/syscall/syscall01
 module_src_files := testcases/kernel/syscalls/syscall/syscall01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8384,7 +8384,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/chdir/chdir04
 module_src_files := testcases/kernel/syscalls/chdir/chdir04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8392,7 +8392,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sysctl/sysctl01
 module_src_files := testcases/kernel/syscalls/sysctl/sysctl01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8400,7 +8400,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/iperb/gencosh
 module_src_files := testcases/misc/math/float/iperb/gencosh.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -8408,7 +8408,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/mem/mmapstress/mmapstress10
 module_src_files := testcases/kernel/mem/mmapstress/mmapstress10.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8416,7 +8416,7 @@ include $(ltp_build_test)
 module_testname := testcases/misc/math/float/exp_log/genlog10
 module_src_files := testcases/misc/math/float/exp_log/genlog10.c
 module_cflags := 
-module_c_includes := include include include/old
+module_c_includes := include include/old
 module_static_libraries := 
 module_shared_libraries := m
 include $(ltp_build_test)
@@ -8424,7 +8424,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/nanosleep/nanosleep03
 module_src_files := testcases/kernel/syscalls/nanosleep/nanosleep03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8432,7 +8432,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/umount/umount03
 module_src_files := testcases/kernel/syscalls/umount/umount03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8440,7 +8440,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/cap_bound/check_pe
 module_src_files := testcases/kernel/security/cap_bound/check_pe.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8448,7 +8448,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/execvp/execvp01
 module_src_files := testcases/kernel/syscalls/execvp/execvp01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8456,7 +8456,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/security/tomoyo/tomoyo_policy_memory_test
 module_src_files := testcases/kernel/security/tomoyo/tomoyo_policy_memory_test.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8464,7 +8464,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/sched_get_priority_max/sched_get_priority_max02
 module_src_files := testcases/kernel/syscalls/sched_get_priority_max/sched_get_priority_max02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8472,7 +8472,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrusage/getrusage04
 module_src_files := testcases/kernel/syscalls/getrusage/getrusage04.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8480,7 +8480,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrusage/getrusage01
 module_src_files := testcases/kernel/syscalls/getrusage/getrusage01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8488,7 +8488,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/memset/memset01
 module_src_files := testcases/kernel/syscalls/memset/memset01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8496,7 +8496,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrusage/getrusage03
 module_src_files := testcases/kernel/syscalls/getrusage/getrusage03.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8504,7 +8504,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/getrusage/getrusage02
 module_src_files := testcases/kernel/syscalls/getrusage/getrusage02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8512,7 +8512,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/statvfs/statvfs01
 module_src_files := testcases/kernel/syscalls/statvfs/statvfs01.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8520,7 +8520,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/containers/share/ns_create
 module_src_files := testcases/kernel/containers/share/ns_create.c
 module_cflags := 
-module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8528,7 +8528,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/statvfs/statvfs02
 module_src_files := testcases/kernel/syscalls/statvfs/statvfs02.c
 module_cflags := 
-module_c_includes := testcases/kernel/include include include include/old
+module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8536,7 +8536,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl09
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl09.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8544,7 +8544,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl08
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl08.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8552,7 +8552,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl05
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl05.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8560,7 +8560,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl04
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl04.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8568,7 +8568,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl07
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl07.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8576,7 +8576,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl06
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl06.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8584,7 +8584,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl01
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl01.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8592,7 +8592,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl03
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl03.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
@@ -8600,7 +8600,7 @@ include $(ltp_build_test)
 module_testname := testcases/kernel/syscalls/fcntl/fcntl02
 module_src_files := testcases/kernel/syscalls/fcntl/fcntl02.c
 module_cflags := -D_GNU_SOURCE
-module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include include/old
+module_c_includes := testcases/kernel/include testcases/kernel/syscalls/fcntl testcases/kernel/syscalls/utils include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)

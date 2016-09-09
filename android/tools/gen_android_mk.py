@@ -26,6 +26,19 @@ import fileinput
 import os.path
 import re
 
+def unique_keep_order(sequence):
+    '''Get a copy of list where items are unique and order is preserved.
+
+    Args:
+      sequence: a sequence, can be a list, tuple, or other iterable
+    Returns:
+        a list where items copied from input sequence are unique
+        and order is preserved.
+    '''
+    seen = set()
+    return [x for x in sequence if not (x in seen or seen.add(x))]
+
+
 def read_commented_txt(filename):
     ret = set()
     with open(filename, 'r') as f:
@@ -91,6 +104,7 @@ def handle_parsed_rule(line, rules):
     else:
         rule_value = list(i.strip()[1:-1] for i in groups[2].split(','))
 
+    rule_value = unique_keep_order(rule_value)
     rules.setdefault(rule, {})[rule_key] = rule_value
 
 
