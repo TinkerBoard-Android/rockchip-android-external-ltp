@@ -19,6 +19,7 @@ import os
 import argparse
 import math
 
+
 class Module(object):
     """class used to represent a ltp module
 
@@ -34,7 +35,6 @@ class Module(object):
     _type = None
     _path = None
     _output_dir = None
-
 
     def __init__(self, output_dir):
         self._output_dir = output_dir
@@ -74,10 +74,10 @@ class Module(object):
 
         counts[self._type] = counts.get(self._type, 0) + 1
 
-        success = {"module_testname" : self.IsBuildSuccessModuleTestname,
-                   "module_libname" : self.IsBuildSuccessModuleLibname,
-                   "module_prebuilt" : self.IsBuildSuccessModulePrebuilt,
-                  }[self._type]()
+        success = {"module_testname": self.IsBuildSuccessModuleTestname,
+                   "module_libname": self.IsBuildSuccessModuleLibname,
+                   "module_prebuilt": self.IsBuildSuccessModulePrebuilt,
+                   }[self._type]()
 
         if not success:
             print "  Module build failed: " + os.path.basename(self._path)
@@ -159,12 +159,12 @@ class LtpModuleChecker(object):
         """Read the LTP Android.mk file and seperate modules into
            a list of string
         """
-        return self.Read(self._file_path_android_ltp_mk).split("\n\n");
+        return self.Read(self._file_path_android_ltp_mk).split("\n\n")
 
     def CheckModules(self):
         """Start the LTP module build result checking and counting."""
         modules = [Module(self._output_dir).parse(module)
-            for module in self.LoadModules()]
+                   for module in self.LoadModules()]
         modules_succeed = \
             [module for module in modules
              if module is not None and
@@ -183,25 +183,29 @@ class LtpModuleChecker(object):
 
 def main():
     parser = argparse.ArgumentParser(
-        description = 'Generate Android.mk from parsed LTP make output')
-    parser.add_argument('--android_build_top',
-                        dest = 'android_build_top',
-                        required = True,
-                        help = 'android build top directory')
-    parser.add_argument('--ltp_dir',
-                        dest = 'ltp_dir',
-                        required = True,
-                        help = 'directory for the forked ltp project')
-    parser.add_argument('--target_product',
-                        dest = 'target_product',
-                        required = True,
-                        help = 'target product name, \
+        description='Generate Android.mk from parsed LTP make output')
+    parser.add_argument(
+        '--android_build_top',
+        dest='android_build_top',
+        required=True,
+        help='android build top directory')
+    parser.add_argument(
+        '--ltp_dir',
+        dest='ltp_dir',
+        required=True,
+        help='directory for the forked ltp project')
+    parser.add_argument(
+        '--target_product',
+        dest='target_product',
+        required=True,
+        help='target product name, \
                                 such as "bullhead", "angler", etc.')
     args = parser.parse_args()
 
-    checker = LtpModuleChecker(args.android_build_top,
-                               args.ltp_dir, args.target_product)
+    checker = LtpModuleChecker(args.android_build_top, args.ltp_dir,
+                               args.target_product)
     checker.CheckModules()
+
 
 if __name__ == '__main__':
     main()

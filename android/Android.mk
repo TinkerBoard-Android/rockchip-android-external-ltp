@@ -43,6 +43,10 @@ vts_src_file_64 := $(vts_src_file_32)
 vts_dst_file_32 := $(LOCAL_MODULE).txt
 vts_dst_file_64 := $(LOCAL_MODULE).txt
 include $(LOCAL_PATH)/Android.vts_testcase.mk
+vts_src_file_32 :=
+vts_dst_file_32 :=
+vts_src_file_64 :=
+vts_dst_file_64 :=
 
 # linux_syscall_numbers.h doesn't really "belong" to any module, so give it
 # its own fake static library that the other targets can depend on

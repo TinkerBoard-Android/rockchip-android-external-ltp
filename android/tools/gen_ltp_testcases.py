@@ -35,6 +35,7 @@ import fileinput
 import os
 import sys
 
+
 def read_commented_txt(filename):
     """Read a lines of a file that are not commented by #."""
     ret = set()
@@ -50,7 +51,8 @@ def read_commented_txt(filename):
     return ret
 
 
-def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gtests):
+def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests,
+                          disabled_gtests):
     """Generate test cases for each test case input."""
     s = line.split()
     testname = s[0]
@@ -65,31 +67,42 @@ def generate_ltp_testcase(line, testsuite, ltp_root, disabled_tests, disabled_gt
     print("\t".join([testsuite, testname, ' '.join(s[1:])]))
 
 
-
-def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests, disabled_gtests):
+def generate_ltp_testsuite(testsuite, ltp_root, disabled_tests,
+                           disabled_gtests):
     """Generate test cases for each ltp test suite input."""
     testsuite_script = os.path.join(ltp_root, 'runtest', testsuite)
     testsuite = testsuite.replace('-', '_')
 
-    print('// The following test cases are generated from LTP TESTSUITE: {}'.format(testsuite))
+    print(
+        '// The following test cases are generated from LTP TESTSUITE: {}'.format(
+            testsuite))
 
     for line in open(testsuite_script, 'r'):
         l = line.strip()
         if not l or l[0] == '#':
             continue
 
-        generate_ltp_testcase(l, testsuite, ltp_root, disabled_tests, disabled_gtests)
+        generate_ltp_testcase(l, testsuite, ltp_root, disabled_tests,
+                              disabled_gtests)
 
 
 def main():
-    parser = argparse.ArgumentParser(description = 'Generate ltp-testcases.h from an LTP test scenario')
-    parser.add_argument('infile', nargs = '?', default = '-')
-    parser.add_argument('--ltp-root', dest = 'ltp_root', required = True,
-                    help = 'location of LTP root directory')
-    parser.add_argument('--disabled-tests', dest = 'disabled_tests',
-                    help = 'file with a list of disabled tests')
-    parser.add_argument('--disabled-gtests', dest = 'disabled_gtests',
-                    help = 'file with a list of tests that should be prefixed with DISABLED_')
+    parser = argparse.ArgumentParser(
+        description='Generate ltp-testcases.h from an LTP test scenario')
+    parser.add_argument('infile', nargs='?', default='-')
+    parser.add_argument(
+        '--ltp-root',
+        dest='ltp_root',
+        required=True,
+        help='location of LTP root directory')
+    parser.add_argument(
+        '--disabled-tests',
+        dest='disabled_tests',
+        help='file with a list of disabled tests')
+    parser.add_argument(
+        '--disabled-gtests',
+        dest='disabled_gtests',
+        help='file with a list of tests that should be prefixed with DISABLED_')
 
     args = parser.parse_args()
     script_name = os.path.basename(sys.argv[0])
@@ -107,7 +120,9 @@ def main():
     print('')
 
     for testsuite in ltp_testsuites:
-        generate_ltp_testsuite(testsuite, args.ltp_root, disabled_tests, disabled_gtests)
+        generate_ltp_testsuite(testsuite, args.ltp_root, disabled_tests,
+                               disabled_gtests)
+
 
 if __name__ == '__main__':
     main()
