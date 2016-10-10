@@ -121,4 +121,24 @@ ltp_build_prebuilt := $(LOCAL_PATH)/Android.prebuilt.mk
 
 include $(LOCAL_PATH)/Android.ltp.mk
 
+
+# Copy LTP run scripts and disabled tests configs to vts directory
+include $(CLEAR_VARS)
+
+vts-ltp-dir := $(HOST_OUT)/vts/android-vts/testcases/ltp
+
+ltp-runtest := runtest
+vts-ltp-runtest := $(vts-ltp-dir)/$(ltp-runtest)
+$(vts-ltp-runtest): $(ACP)
+	mkdir -p $(vts-ltp-runtest)
+	$(ACP) -rfp $(local_ltp_root)/$(ltp-runtest)/* $(vts-ltp-runtest)
+vts: $(vts-ltp-runtest)
+
+vts-ltp-config := $(vts-ltp-dir)/config
+$(vts-ltp-config): $(ACP)
+	mkdir -p $(vts-ltp-config)
+	$(ACP) -rfp $(local_ltp_root)/android/tools/disabled*.txt $(vts-ltp-config)
+vts: $(vts-ltp-config)
+
+
 endif
