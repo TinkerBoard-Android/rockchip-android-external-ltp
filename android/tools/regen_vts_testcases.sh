@@ -20,7 +20,7 @@ LTP_ANDROID_DIR=$(realpath $TOOLS_DIR/..)
 LTP_ROOT=$(realpath $LTP_ANDROID_DIR/..)
 OUTPUT=$LTP_ROOT/Android.ltp.mk
 
-cat $LTP_ROOT/scenario_groups/default |
+cat $LTP_ROOT/scenario_groups/vts |
 python $TOOLS_DIR/gen_ltp_testcases.py \
     --ltp-root=$LTP_ROOT \
     --disabled-tests=$TOOLS_DIR/disabled_tests.txt \
