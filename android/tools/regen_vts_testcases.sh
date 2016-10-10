@@ -23,6 +23,5 @@ OUTPUT=$LTP_ROOT/Android.ltp.mk
 cat $LTP_ROOT/scenario_groups/vts |
 python $TOOLS_DIR/gen_ltp_testcases.py \
     --ltp-root=$LTP_ROOT \
-    --disabled-tests=$TOOLS_DIR/disabled_tests.txt \
-    --disabled-gtests=$TOOLS_DIR/disabled_gtests.txt > \
+    --disabled-tests=$TOOLS_DIR/disabled_tests.txt > \
     $LTP_ANDROID_DIR/ltp_vts_testcases.txt \
