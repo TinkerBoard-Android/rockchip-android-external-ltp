@@ -36,18 +36,6 @@ ifeq (0, $(disabled_target))
 LOCAL_PATH := $(call my-dir)
 local_ltp_root := $(LOCAL_PATH)/..
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := ltp_vts_testcases
-vts_src_file_32 := $(LOCAL_PATH)/$(LOCAL_MODULE).txt
-vts_src_file_64 := $(vts_src_file_32)
-vts_dst_file_32 := $(LOCAL_MODULE).txt
-vts_dst_file_64 := $(LOCAL_MODULE).txt
-include $(LOCAL_PATH)/Android.vts_testcase.mk
-vts_src_file_32 :=
-vts_dst_file_32 :=
-vts_src_file_64 :=
-vts_dst_file_64 :=
-
 # linux_syscall_numbers.h doesn't really "belong" to any module, so give it
 # its own fake static library that the other targets can depend on
 include $(CLEAR_VARS)
@@ -132,13 +120,7 @@ vts-ltp-runtest := $(vts-ltp-dir)/$(ltp-runtest)
 $(vts-ltp-runtest): $(ACP)
 	mkdir -p $(vts-ltp-runtest)
 	$(ACP) -rfp $(local_ltp_root)/$(ltp-runtest)/* $(vts-ltp-runtest)
+	$(ACP) -fp $(local_ltp_root)/android/tools/disabled_tests.txt $(vts-ltp-dir)
 vts: $(vts-ltp-runtest)
-
-vts-ltp-config := $(vts-ltp-dir)/config
-$(vts-ltp-config): $(ACP)
-	mkdir -p $(vts-ltp-config)
-	$(ACP) -rfp $(local_ltp_root)/android/tools/disabled*.txt $(vts-ltp-config)
-vts: $(vts-ltp-config)
-
 
 endif
