@@ -11,126 +11,27 @@
 # GNU General Public License for more details.
 #
 
-disabled_target := 0
-target_support_64bit := 0
-
-# TODO: enable LTP for darwin and windows hosts
-ifneq (linux, $(HOST_OS))
-disabled_target := 1
-endif
-
-# TODO: enable LTP for mips eng
-ifneq (,$(findstring mips, $(TARGET_PRODUCT)))
-ifeq (eng, $(TARGET_BUILD_VARIANT))
-disabled_target := 1
-endif
-endif
-
-# LTP is only for development and not for production
-ifeq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-disabled_target := 1
-endif
-
-
-ifneq (,$(findstring 64, $(TARGET_ARCH)))
-target_support_64bit := 1
-endif
-
-ifneq (,$(findstring 64, $(TARGET_2ND_ARCH)))
-target_support_64bit := 1
-endif
-
-
-ifeq (0, $(disabled_target))
-
 LOCAL_PATH := $(call my-dir)
 local_ltp_root := $(LOCAL_PATH)/..
 
-# linux_syscall_numbers.h doesn't really "belong" to any module, so give it
-# its own fake static library that the other targets can depend on
-include $(CLEAR_VARS)
-LOCAL_MODULE := ltp_linux_syscall_numbers
-LOCAL_MODULE_CLASS := STATIC_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-
-regen_sh := $(local_ltp_root)/testcases/kernel/include/regen.sh
-
-intermediates := $(local-generated-sources-dir)
-GEN := $(intermediates)/linux_syscall_numbers.h
-$(GEN): PRIVATE_INPUT_FILE := $(wildcard $(local_ltp_root)/testcases/kernel/include/*.in)
-$(GEN): PRIVATE_CUSTOM_TOOL = $(regen_sh) $(OUT_DIR)/target/product/$(TARGET_DEVICE)/gen/STATIC_LIBRARIES/ltp_linux_syscall_numbers_intermediates/linux_syscall_numbers.h -o $@
-$(GEN): $(regen_sh) $(PRIVATE_INPUT_FILE)
-	$(transform-generated-source)
-LOCAL_GENERATED_SOURCES += $(GEN)
-
-$(LOCAL_BUILT_MODULE): $(GEN)
-
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(intermediates)
-include $(BUILD_STATIC_LIBRARY)
-
-
-include $(CLEAR_VARS)
-
-# Hacks for bionic compatibility
-ltp_cflags := \
-    -include $(LOCAL_PATH)/include/bionic-compat.h
-
-# Silence noisy warnings
-ltp_cflags += \
-    -Wno-deprecated \
-    -Wno-format \
-    -Wno-gnu-designator \
-    -Wno-macro-redefined \
-    -Wno-missing-field-initializers \
-    -Wno-parentheses-equality \
-    -Wno-pointer-arith \
-    -Wno-sign-compare \
-    -Wno-unused-parameter
-
-# bionic has broken signal handling for signum > 32 on 32-bit ARM and x86
-# (for ABI reasons this can't be fixed)
-ltp_cflags_arm := -DNUMSIGS=32
-ltp_cflags_x86 := -DNUMSIGS=32
-
-ltp_c_includes := \
-    $(LOCAL_PATH)/include \
-    $(local_ltp_root)/include \
-
-ltp_static_libraries := \
-    ltp_linux_syscall_numbers \
-
-ifeq ($(PLATFORM_SDK_VERSION),23)  # MNC
-ltp_static_libraries += \
-    libcap-ng \
-
-else
-ltp_static_libraries += \
-    libcap \
-
-endif
-
-# TODO: recover libaio when the external project created
-ltp_shared_libraries := \
-    libselinux \
-
-ltp_build_test := $(LOCAL_PATH)/Android.test.mk
-ltp_build_library := $(LOCAL_PATH)/Android.library.mk
 ltp_build_prebuilt := $(LOCAL_PATH)/Android.prebuilt.mk
 
 include $(LOCAL_PATH)/Android.ltp.mk
 
+local_ltp_root :=
+ltp_build_prebuilt :=
 
-# Copy LTP run scripts and disabled tests configs to vts directory
 include $(CLEAR_VARS)
+LOCAL_MODULE := ltp
+LOCAL_MODULE_STEM := disabled_tests.txt
+LOCAL_PREBUILT_MODULE_FILE := $(LOCAL_PATH)/tools/disabled_tests.txt
+LOCAL_MODULE_RELATIVE_PATH := ltp
+LOCAL_MODULE_CLASS := NATIVE_TESTS
+LOCAL_MULTILIB := both
+LOCAL_TEST_DATA := $(call find-test-data-in-subdirs,external/ltp,"*",runtest)
 
-vts-ltp-dir := $(HOST_OUT)/vts/android-vts/testcases/ltp
+include $(LOCAL_PATH)/ltp_package_list.mk
+LOCAL_REQUIRED_MODULES := $(ltp_packages)
+ltp_packages :=
 
-ltp-runtest := runtest
-vts-ltp-runtest := $(vts-ltp-dir)/$(ltp-runtest)
-$(vts-ltp-runtest): $(ACP)
-	mkdir -p $(vts-ltp-runtest)
-	$(ACP) -rfp $(local_ltp_root)/$(ltp-runtest)/* $(vts-ltp-runtest)
-	$(ACP) -fp $(local_ltp_root)/android/tools/disabled_tests.txt $(vts-ltp-dir)
-vts: $(vts-ltp-runtest)
-
-endif
+include $(BUILD_PREBUILT)
