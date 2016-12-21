@@ -12,6 +12,7 @@
 #
 
 disabled_target := 0
+target_support_64bit := 0
 
 # TODO: enable LTP for darwin and windows hosts
 ifneq (linux, $(HOST_OS))
@@ -28,6 +29,15 @@ endif
 # LTP is only for development and not for production
 ifeq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 disabled_target := 1
+endif
+
+
+ifneq (,$(findstring 64, $(TARGET_ARCH)))
+target_support_64bit := 1
+endif
+
+ifneq (,$(findstring 64, $(TARGET_2ND_ARCH)))
+target_support_64bit := 1
 endif
 
 

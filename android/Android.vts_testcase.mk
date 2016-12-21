@@ -28,6 +28,7 @@ vts: $(vts_testcase_dst_file_32)
 
 endif
 
+ifeq (1, $(target_support_64bit))
 ifdef vts_src_file_64
 
 vts_testcases_out_64 := $(VTS_TESTCASES_OUT)/64/ltp
@@ -38,4 +39,5 @@ $(vts_testcase_dst_file_64): $(vts_src_file_64) | $(ACP)
 	$(hide) $(ACP) -fp $< $@
 vts: $(vts_testcase_dst_file_64)
 
+endif
 endif
