@@ -18,11 +18,13 @@ module_stem := $(notdir $(module_testname))
 
 LOCAL_MODULE := $(module_name)
 LOCAL_MODULE_STEM_32 := $(module_stem)
-LOCAL_MODULE_STEM_64 := $(module_stem)
 LOCAL_MODULE_PATH_32 := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_DATA_NATIVE_TESTS)/ltp/testcases/bin
+ifeq (1, $(target_support_64bit))
+LOCAL_MODULE_STEM_64 := $(module_stem)
 LOCAL_MODULE_PATH_64 := $(TARGET_OUT_DATA_NATIVE_TESTS)/ltp/testcases/bin
+endif
 LOCAL_MODULE_TAGS := optional
-LOCAL_MULTILIB := both
+LOCAL_MULTILIB :=
 
 LOCAL_CFLAGS := $(ltp_cflags) $(module_cflags)
 LOCAL_CFLAGS_arm := $(ltp_cflags_arm)
