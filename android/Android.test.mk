@@ -22,9 +22,11 @@ LOCAL_MODULE_PATH_32 := $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_DATA_NATIVE_TE
 ifeq (1, $(target_support_64bit))
 LOCAL_MODULE_STEM_64 := $(module_stem)
 LOCAL_MODULE_PATH_64 := $(TARGET_OUT_DATA_NATIVE_TESTS)/ltp/testcases/bin
+LOCAL_MULTILIB := both
+else
+LOCAL_MULTILIB := 32
 endif
 LOCAL_MODULE_TAGS := optional
-LOCAL_MULTILIB :=
 
 LOCAL_CFLAGS := $(ltp_cflags) $(module_cflags)
 LOCAL_CFLAGS_arm := $(ltp_cflags_arm)
