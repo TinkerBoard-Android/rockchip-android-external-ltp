@@ -7685,14 +7685,6 @@ module_static_libraries := ltp
 module_shared_libraries := 
 include $(ltp_build_test)
 
-module_testname := lib/tests/tst_checkpoint
-module_src_files := lib/tests/tst_checkpoint.c
-module_cflags := 
-module_c_includes := include include/old
-module_static_libraries := ltp
-module_shared_libraries := 
-include $(ltp_build_test)
-
 module_testname := testcases/kernel/syscalls/wait/wait02
 module_src_files := testcases/kernel/syscalls/wait/wait02.c
 module_cflags := 

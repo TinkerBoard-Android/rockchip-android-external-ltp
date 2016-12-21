@@ -84,7 +84,7 @@ class AndroidMkGenerator(object):
 
     def BuildExecutable(self, cc_target, local_src_files, local_cflags,
                         local_c_includes, local_libraries, ltp_libs,
-                        ltp_libs_used):
+                        ltp_libs_used, ltp_names_used):
         '''Build a test module.
 
         Args:
@@ -94,8 +94,16 @@ class AndroidMkGenerator(object):
             local_c_includes: list of string
             local_libraries: list of string
             ltp_libs: list of string
-            ltp_libs_used: list of string
+            ltp_libs_used: set of string
+            ltp_names_used: set of string, set of already used cc_target basenames
         '''
+        base_name = os.path.basename(cc_target)
+        if base_name in ltp_names_used:
+            print 'ERROR: base name {} of cc_target {} already used. Skipping...'.format(
+                base_name, cc_target)
+            return
+        ltp_names_used.add(base_name)
+
         self.result.append('module_testname := %s' % cc_target)
         self.result.append('module_src_files := %s' %
                            ' '.join(local_src_files))
@@ -209,6 +217,7 @@ class AndroidMkGenerator(object):
         ltp_libs = set(self.ArTargetToLibraryName(i) for i in ar.keys())
         # All libraries used by the LTP tests we actually build
         ltp_libs_used = set()
+        ltp_names_used = set()
 
         print(
             "Disabled lib tests: Test cases listed here are"
@@ -243,7 +252,7 @@ class AndroidMkGenerator(object):
                 continue
             self.BuildExecutable(target, local_src_files, local_cflags,
                                  local_c_includes, local_libraries, ltp_libs,
-                                 ltp_libs_used)
+                                 ltp_libs_used, ltp_names_used)
 
         for target in cc_link:
             if os.path.basename(target) in disabled_tests:
@@ -270,7 +279,7 @@ class AndroidMkGenerator(object):
 
             self.BuildExecutable(target, local_src_files, local_cflags,
                                  local_c_includes, local_libraries, ltp_libs,
-                                 ltp_libs_used)
+                                 ltp_libs_used, ltp_names_used)
 
         for target in ar:
             # Disabled ltp library is already excluded
