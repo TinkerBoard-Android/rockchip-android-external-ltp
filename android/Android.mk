@@ -58,7 +58,7 @@ regen_sh := $(local_ltp_root)/testcases/kernel/include/regen.sh
 intermediates := $(local-generated-sources-dir)
 GEN := $(intermediates)/linux_syscall_numbers.h
 $(GEN): PRIVATE_INPUT_FILE := $(wildcard $(local_ltp_root)/testcases/kernel/include/*.in)
-$(GEN): PRIVATE_CUSTOM_TOOL = $(regen_sh) out/target/product/$(TARGET_DEVICE)/gen/STATIC_LIBRARIES/ltp_linux_syscall_numbers_intermediates/linux_syscall_numbers.h -o $@
+$(GEN): PRIVATE_CUSTOM_TOOL = $(regen_sh) $(OUT_DIR)/target/product/$(TARGET_DEVICE)/gen/STATIC_LIBRARIES/ltp_linux_syscall_numbers_intermediates/linux_syscall_numbers.h -o $@
 $(GEN): $(regen_sh) $(PRIVATE_INPUT_FILE)
 	$(transform-generated-source)
 LOCAL_GENERATED_SOURCES += $(GEN)
