@@ -130,7 +130,7 @@ module_src_files := testcases/kernel/security/securebits/check_keepcaps.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/numa/support_numa
@@ -474,7 +474,7 @@ module_src_files := testcases/kernel/containers/userns/userns06_capcheck.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/renameat2/renameat201
@@ -1626,7 +1626,7 @@ module_src_files := testcases/kernel/containers/userns/userns02.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/mem/ksm/ksm06
@@ -2170,7 +2170,7 @@ module_src_files := testcases/kernel/security/cap_bound/cap_bounds_rw.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/fcntl/fcntl31
@@ -3506,7 +3506,7 @@ module_src_files := testcases/kernel/containers/userns/userns05.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/ioperm/ioperm01
@@ -4010,7 +4010,7 @@ module_src_files := testcases/kernel/security/filecaps/check_simple_capset.c
 module_cflags := -D_GNU_SOURCE
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/mem/swapping/swapping01
@@ -4042,7 +4042,7 @@ module_src_files := testcases/kernel/security/filecaps/inh_capped.c
 module_cflags := -D_GNU_SOURCE
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/controllers/cpuctl_fj/cpuctl_fj_cpu-hog
@@ -4058,7 +4058,7 @@ module_src_files := testcases/kernel/containers/userns/userns01.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/removexattr/removexattr01
@@ -4322,7 +4322,7 @@ module_src_files := testcases/kernel/security/cap_bound/exec_with_inh.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/recv/recv01
@@ -4570,7 +4570,7 @@ module_src_files := testcases/kernel/security/cap_bound/cap_bset_inh_bounds.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/security/filecaps/print_caps
@@ -4578,7 +4578,7 @@ module_src_files := testcases/kernel/security/filecaps/print_caps.c
 module_cflags := -D_GNU_SOURCE
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/mem/mem/mem02
@@ -5074,7 +5074,7 @@ module_src_files := testcases/kernel/containers/userns/userns04.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/open/open07
@@ -5106,7 +5106,7 @@ module_src_files := testcases/kernel/containers/userns/userns07.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/mem/ksm/ksm04
@@ -5487,7 +5487,7 @@ include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/getcwd/getcwd02
 module_src_files := testcases/kernel/syscalls/getcwd/getcwd02.c
-module_cflags := 
+module_cflags := -U_FORTIFY_SOURCE
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
 module_shared_libraries := 
@@ -5594,7 +5594,7 @@ module_src_files := testcases/kernel/containers/userns/userns03.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/pause/pause01
@@ -5802,7 +5802,7 @@ module_src_files := testcases/kernel/security/cap_bound/cap_bounds_r.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/nice/nice02
@@ -7426,7 +7426,7 @@ module_src_files := testcases/kernel/security/cap_bound/exec_without_inh.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/dup3/dup3_02
@@ -7938,7 +7938,7 @@ module_src_files := testcases/kernel/containers/userns/userns06.c
 module_cflags := 
 module_c_includes := testcases/kernel/include testcases/kernel/containers/libclone include include/old
 module_static_libraries := clone ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/select/select04
@@ -8434,7 +8434,7 @@ module_src_files := testcases/kernel/security/cap_bound/check_pe.c
 module_cflags := 
 module_c_includes := testcases/kernel/include include include/old
 module_static_libraries := ltp
-module_shared_libraries := 
+module_shared_libraries := cap
 include $(ltp_build_test)
 
 module_testname := testcases/kernel/syscalls/execvp/execvp01
