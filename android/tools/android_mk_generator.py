@@ -23,6 +23,7 @@
 
 import argparse
 import fileinput
+import json
 import os.path
 import re
 
@@ -41,10 +42,16 @@ class AndroidMkGenerator(object):
 
     Attributes:
         result: list of string, result string buffer
+        _custom_cflags: dict of string (module name) to lists of strings (cflags
+            to add for said module)
+        _unused_custom_cflags: set of strings; tracks the modules with custom
+            cflags that we haven't yet seen
     '''
 
-    def __init__(self):
+    def __init__(self, custom_cflags):
         self.result = []
+        self._custom_cflags = custom_cflags
+        self._unused_custom_cflags = set(custom_cflags)
 
     def UniqueKeepOrder(self, sequence):
         '''Get a copy of list where items are unique and order is preserved.
@@ -103,6 +110,10 @@ class AndroidMkGenerator(object):
                 base_name, cc_target)
             return
         ltp_names_used.add(base_name)
+
+        if cc_target in self._custom_cflags:
+            local_cflags.extend(self._custom_cflags[cc_target])
+            self._unused_custom_cflags.remove(cc_target)
 
         self.result.append('module_testname := %s' % cc_target)
         self.result.append('module_src_files := %s' %
@@ -336,6 +347,10 @@ class AndroidMkGenerator(object):
         parser = make_install_parser.MakeInstallParser(ltp_root)
         self.ParseInput(parser.ParseFile(MAKE_INSTALL_DRY_RUN_FILE_NAME))
 
+    def GetUnusedCustomCFlagsTargets(self):
+        '''Get targets that have custom cflags, but that weren't built.'''
+        return list(self._unused_custom_cflags)
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -347,11 +362,28 @@ def main():
         dest='output_path',
         required=True,
         help='output file path')
+    parser.add_argument(
+        '--custom_cflags_file',
+        dest='custom_cflags_file',
+        required=True,
+        help='file with custom per-module cflags. empty means no file.')
     args = parser.parse_args()
 
-    generator = AndroidMkGenerator()
+    custom_cflags = {}
+    if args.custom_cflags_file:
+        # The file is expected to just be a JSON map of string -> [string], e.g.
+        # {"testcases/kernel/syscalls/getcwd/getcwd02": ["-DFOO", "-O3"]}
+        with open(args.custom_cflags_file) as f:
+            custom_cflags = json.load(f)
+
+    generator = AndroidMkGenerator(custom_cflags)
     generator.ParseAll(args.ltp_root)
     generator.WriteResult(args.output_path)
+
+    unused_cflags_targs = generator.GetUnusedCustomCFlagsTargets()
+    if unused_cflags_targs:
+        print 'NOTE: Tests had custom cflags, but were never seen: {}'.format(
+            ', '.join(unused_cflags_targs))
 
     print 'Finished!'
 
