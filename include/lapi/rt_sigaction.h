@@ -41,7 +41,7 @@ struct kernel_sigaction {
 };
 
 /* This macro marks if (struct sigaction) has .sa_restorer member */
-#if !defined(__ia64__) && !defined(__alpha__) && !defined(__hppa__)
+#if !defined(__ia64__) && !defined(__alpha__) && !defined(__hppa__) && !defined(__mips__)
 # define HAVE_SA_RESTORER
 #endif
 
