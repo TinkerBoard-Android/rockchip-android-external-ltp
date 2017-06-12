@@ -20,6 +20,7 @@ import os.path
 import sys
 import re
 import fileinput
+import pprint
 
 AR = 'ar'
 CC = 'gcc'
@@ -84,9 +85,22 @@ class MakeParser(object):
         args, unparsed = self.ar_parser.parse_known_args(line.split()[1:])
 
         sources = self.GetRelativePathForExtensions(unparsed, ['o'])
-        target = self.GetRelativePath(args.c.replace('"', ""))
+
+        # Support 'ar' command line with or without hyphens (-)
+        #  e.g.:
+        #    1. ar rcs libfoo.a foo1.o foo2.o
+        #    2. ar -rc "libfoo.a" foo1.o foo2.o; ranlib "libfoo.a"
+        target = None
+        if not args.c and not args.r:
+            for path in unparsed:
+                if path.endswith('.a'):
+                    target = self.GetRelativePath(path)
+                    break
+        else:
+            target = self.GetRelativePath(args.c.replace('"', ""))
 
         assert len(sources) > 0
+        assert target != None
 
         self.result.append("ar['%s'] = %s" % (target, sources))
 
@@ -187,7 +201,7 @@ def main():
     make_parser = MakeParser(args.ltp_root)
     result = make_parser.ParseFile(args.input_path)
 
-    print result
+    print pprint.pprint(result)
 
 if __name__ == '__main__':
     main()
