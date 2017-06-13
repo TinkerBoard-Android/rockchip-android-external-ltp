@@ -168,3 +168,26 @@ class MakeParser(object):
                     self.ParseCc(line)
 
         return self.result
+
+def main():
+    arg_parser = argparse.ArgumentParser(
+        description='Parse the LTP make --dry-run output into a list')
+    arg_parser.add_argument(
+        '--ltp-root',
+        dest='ltp_root',
+        required=True,
+        help='LTP Root dir')
+    arg_parser.add_argument(
+        '--dry-run-file',
+        dest='input_path',
+        required=True,
+        help='Path to LTP make --dry-run output file')
+    args = arg_parser.parse_args()
+
+    make_parser = MakeParser(args.ltp_root)
+    result = make_parser.ParseFile(args.input_path)
+
+    print result
+
+if __name__ == '__main__':
+    main()
