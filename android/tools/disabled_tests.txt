@@ -163,6 +163,19 @@ openat02
 process
 sendmsg02
 
+# Following test require 'syslogd' running on device which Android doesn't
+# support
+syslog01
+syslog02
+syslog03
+syslog04
+syslog05
+syslog06
+syslog07
+syslog08
+syslog09
+syslog10
+
 # Require mkfs on device
 access06
 chmod06
@@ -341,4 +354,3 @@ setresuid05
 setresgid01
 chown03
 setgroups04
-

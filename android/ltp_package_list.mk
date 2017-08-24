@@ -1622,16 +1622,6 @@ ltp_packages := \
   ltp_testcases_bin_su01_s1 \
   ltp_testcases_bin_su_set_passwd \
   ltp_testcases_bin_syslog-lib.sh \
-  ltp_testcases_bin_syslog01 \
-  ltp_testcases_bin_syslog02 \
-  ltp_testcases_bin_syslog03 \
-  ltp_testcases_bin_syslog04 \
-  ltp_testcases_bin_syslog05 \
-  ltp_testcases_bin_syslog06 \
-  ltp_testcases_bin_syslog07 \
-  ltp_testcases_bin_syslog08 \
-  ltp_testcases_bin_syslog09 \
-  ltp_testcases_bin_syslog10 \
   ltp_testcases_bin_tar_tests.sh \
   ltp_testcases_bin_tcp4-multi-diffip01 \
   ltp_testcases_bin_tcp4-multi-diffip02 \
