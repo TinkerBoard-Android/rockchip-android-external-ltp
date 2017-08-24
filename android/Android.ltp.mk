@@ -1189,10 +1189,6 @@ module_prebuilt := testcases/data/file01/in.txt
 module_src_files := testcases/commands/file/datafiles/in.txt
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/syslog08
-module_src_files := testcases/kernel/syscalls/syslog/syslog08
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/icmp4-multi-diffip06
 module_src_files := testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip06
 include $(ltp_build_prebuilt)
@@ -2315,10 +2311,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-tso02
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp6-uni-tso02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog10
-module_src_files := testcases/kernel/syscalls/syslog/syslog10
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp4-multi-diffport03
@@ -3487,38 +3479,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-smallsend09
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend09
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog01
-module_src_files := testcases/kernel/syscalls/syslog/syslog01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog03
-module_src_files := testcases/kernel/syscalls/syslog/syslog03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog02
-module_src_files := testcases/kernel/syscalls/syslog/syslog02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog05
-module_src_files := testcases/kernel/syscalls/syslog/syslog05
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog04
-module_src_files := testcases/kernel/syscalls/syslog/syslog04
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog07
-module_src_files := testcases/kernel/syscalls/syslog/syslog07
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog06
-module_src_files := testcases/kernel/syscalls/syslog/syslog06
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog09
-module_src_files := testcases/kernel/syscalls/syslog/syslog09
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/lock_torture.sh
