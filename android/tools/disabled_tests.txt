@@ -179,6 +179,9 @@ syslog10
 # Requires readelf on device
 file_test.sh
 
+# Requires unsupported options for 'tar'
+tar_tests.sh
+
 # Require mkfs on device
 access06
 chmod06
