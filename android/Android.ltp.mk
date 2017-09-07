@@ -1573,10 +1573,6 @@ module_prebuilt := testcases/bin/mc_commo
 module_src_files := testcases/network/multicast/mc_commo/mc_commo
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/file_test.sh
-module_src_files := testcases/commands/file/file_test.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff02
 module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff02
 include $(ltp_build_prebuilt)

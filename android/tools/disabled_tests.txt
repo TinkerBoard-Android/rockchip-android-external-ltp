@@ -176,6 +176,9 @@ syslog08
 syslog09
 syslog10
 
+# Requires readelf on device
+file_test.sh
+
 # Require mkfs on device
 access06
 chmod06
