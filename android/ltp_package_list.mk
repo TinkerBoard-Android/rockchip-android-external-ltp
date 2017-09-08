@@ -1216,7 +1216,6 @@ ltp_packages := \
   ltp_testcases_bin_ext4_persist_prealloc_test.sh \
   ltp_testcases_bin_ext4_subdir_limit_test.sh \
   ltp_testcases_bin_ext4_uninit_groups_test.sh \
-  ltp_testcases_bin_file_test.sh \
   ltp_testcases_bin_filecapstest.sh \
   ltp_testcases_bin_find_portbundle \
   ltp_testcases_bin_finger01 \
