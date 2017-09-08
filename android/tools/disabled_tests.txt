@@ -232,6 +232,7 @@ fsstress
 
 # The ldd test requires specials hacks to build, and tests a utility we
 # don't ship in AOSP anyway
+ldd01
 lddfile.out
 lddfile1.obj.so
 lddfile2.obj.so
