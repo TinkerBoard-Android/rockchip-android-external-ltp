@@ -1633,10 +1633,6 @@ module_prebuilt := testcases/bin/udp4-multi-diffport02
 module_src_files := testcases/network/stress/udp/multi-diffport/udp4-multi-diffport02
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ldd01
-module_src_files := testcases/commands/ldd/ldd01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-sackoff13
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff13
 include $(ltp_build_prebuilt)
