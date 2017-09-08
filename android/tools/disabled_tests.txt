@@ -186,6 +186,9 @@ chown04
 chown04_16
 creat06
 
+# Requires 'awk' on device
+mv_tests.sh
+
 # Requires glob()
 epoll-test
 
