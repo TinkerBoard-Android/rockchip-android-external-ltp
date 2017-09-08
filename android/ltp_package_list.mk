@@ -1505,7 +1505,6 @@ ltp_packages := \
   ltp_testcases_bin_mkswap01.sh \
   ltp_testcases_bin_modaltr.sh \
   ltp_testcases_bin_move_pages.sh \
-  ltp_testcases_bin_mv_tests.sh \
   ltp_testcases_bin_myfunctions-io.sh \
   ltp_testcases_bin_myfunctions.sh \
   ltp_testcases_bin_net_cmdlib.sh \
