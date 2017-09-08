@@ -1445,7 +1445,6 @@ ltp_packages := \
   ltp_testcases_bin_killall_tcp_traffic \
   ltp_testcases_bin_killall_udp_traffic \
   ltp_testcases_bin_ld01 \
-  ltp_testcases_bin_ldd01 \
   ltp_testcases_bin_libcgroup_freezer \
   ltp_testcases_bin_linktest.sh \
   ltp_testcases_bin_ln_tests.sh \
