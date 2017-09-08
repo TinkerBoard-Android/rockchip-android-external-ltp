@@ -1089,10 +1089,6 @@ module_prebuilt := testcases/bin/icmp6-multi-diffnic02
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic02
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mv_tests.sh
-module_src_files := testcases/commands/mv/mv_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-sackoff02
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff02
 include $(ltp_build_prebuilt)
