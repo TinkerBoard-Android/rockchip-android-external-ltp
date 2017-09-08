@@ -1417,10 +1417,6 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tar_tests.sh
-module_src_files := testcases/commands/tar/tar_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/netstat01
 module_src_files := testcases/network/tcp_cmds/netstat/netstat01
 include $(ltp_build_prebuilt)
