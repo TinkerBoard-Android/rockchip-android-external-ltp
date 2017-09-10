@@ -1089,10 +1089,6 @@ module_prebuilt := testcases/bin/icmp6-multi-diffnic02
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic02
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mv_tests.sh
-module_src_files := testcases/commands/mv/mv_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-sackoff02
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff02
 include $(ltp_build_prebuilt)
@@ -1421,10 +1417,6 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tar_tests.sh
-module_src_files := testcases/commands/tar/tar_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/netstat01
 module_src_files := testcases/network/tcp_cmds/netstat/netstat01
 include $(ltp_build_prebuilt)
@@ -1573,10 +1565,6 @@ module_prebuilt := testcases/bin/mc_commo
 module_src_files := testcases/network/multicast/mc_commo/mc_commo
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/file_test.sh
-module_src_files := testcases/commands/file/file_test.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff02
 module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff02
 include $(ltp_build_prebuilt)
@@ -1639,10 +1627,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp4-multi-diffport02
 module_src_files := testcases/network/stress/udp/multi-diffport/udp4-multi-diffport02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ldd01
-module_src_files := testcases/commands/ldd/ldd01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-sackoff13

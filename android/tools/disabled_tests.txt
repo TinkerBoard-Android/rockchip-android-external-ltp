@@ -176,12 +176,21 @@ syslog08
 syslog09
 syslog10
 
+# Requires readelf on device
+file_test.sh
+
+# Requires unsupported options for 'tar'
+tar_tests.sh
+
 # Require mkfs on device
 access06
 chmod06
 chown04
 chown04_16
 creat06
+
+# Requires 'awk' on device
+mv_tests.sh
 
 # Requires glob()
 epoll-test
@@ -226,6 +235,7 @@ fsstress
 
 # The ldd test requires specials hacks to build, and tests a utility we
 # don't ship in AOSP anyway
+ldd01
 lddfile.out
 lddfile1.obj.so
 lddfile2.obj.so

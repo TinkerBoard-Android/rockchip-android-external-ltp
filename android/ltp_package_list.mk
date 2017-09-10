@@ -1216,7 +1216,6 @@ ltp_packages := \
   ltp_testcases_bin_ext4_persist_prealloc_test.sh \
   ltp_testcases_bin_ext4_subdir_limit_test.sh \
   ltp_testcases_bin_ext4_uninit_groups_test.sh \
-  ltp_testcases_bin_file_test.sh \
   ltp_testcases_bin_filecapstest.sh \
   ltp_testcases_bin_find_portbundle \
   ltp_testcases_bin_finger01 \
@@ -1446,7 +1445,6 @@ ltp_packages := \
   ltp_testcases_bin_killall_tcp_traffic \
   ltp_testcases_bin_killall_udp_traffic \
   ltp_testcases_bin_ld01 \
-  ltp_testcases_bin_ldd01 \
   ltp_testcases_bin_libcgroup_freezer \
   ltp_testcases_bin_linktest.sh \
   ltp_testcases_bin_ln_tests.sh \
@@ -1506,7 +1504,6 @@ ltp_packages := \
   ltp_testcases_bin_mkswap01.sh \
   ltp_testcases_bin_modaltr.sh \
   ltp_testcases_bin_move_pages.sh \
-  ltp_testcases_bin_mv_tests.sh \
   ltp_testcases_bin_myfunctions-io.sh \
   ltp_testcases_bin_myfunctions.sh \
   ltp_testcases_bin_net_cmdlib.sh \
@@ -1622,7 +1619,6 @@ ltp_packages := \
   ltp_testcases_bin_su01_s1 \
   ltp_testcases_bin_su_set_passwd \
   ltp_testcases_bin_syslog-lib.sh \
-  ltp_testcases_bin_tar_tests.sh \
   ltp_testcases_bin_tcp4-multi-diffip01 \
   ltp_testcases_bin_tcp4-multi-diffip02 \
   ltp_testcases_bin_tcp4-multi-diffip03 \
