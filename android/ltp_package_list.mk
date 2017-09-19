@@ -1183,15 +1183,6 @@ ltp_packages := \
   ltp_testcases_bin_cpuset_sched_domains_test.sh \
   ltp_testcases_bin_cpuset_syscall_testset.sh \
   ltp_testcases_bin_create_file \
-  ltp_testcases_bin_cron02 \
-  ltp_testcases_bin_cron03 \
-  ltp_testcases_bin_cron_allow01 \
-  ltp_testcases_bin_cron_deny01 \
-  ltp_testcases_bin_cron_dirs_checks01 \
-  ltp_testcases_bin_cron_illegal_cron_lines \
-  ltp_testcases_bin_cron_neg_tests.sh \
-  ltp_testcases_bin_cron_pos_tests.sh \
-  ltp_testcases_bin_cron_tests.sh \
   ltp_testcases_bin_daemonlib.sh \
   ltp_testcases_bin_data \
   ltp_testcases_bin_dctcp01.sh \

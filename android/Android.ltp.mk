@@ -1361,14 +1361,6 @@ module_prebuilt := testcases/bin/runpwtests05.sh
 module_src_files := testcases/kernel/power_management/runpwtests05.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron02
-module_src_files := testcases/commands/cron/cron02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/cron03
-module_src_files := testcases/commands/cron/cron03
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/isofs.sh
 module_src_files := testcases/kernel/fs/iso9660/isofs.sh
 include $(ltp_build_prebuilt)
@@ -1501,10 +1493,6 @@ module_prebuilt := testcases/bin/tcp6-multi-sameport07
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron_illegal_cron_lines
-module_src_files := testcases/commands/cron/cron_illegal_cron_lines
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-tso13
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso13
 include $(ltp_build_prebuilt)
@@ -1517,16 +1505,8 @@ module_prebuilt := testcases/bin/memcg_test_4.sh
 module_src_files := testcases/kernel/controllers/memcg/regression/memcg_test_4.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron_pos_tests.sh
-module_src_files := testcases/commands/cron/cron_pos_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/data/file01/in.mp3
 module_src_files := testcases/commands/file/datafiles/in.mp3
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/cron_deny01
-module_src_files := testcases/commands/cron/cron_deny01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-smallsend11
@@ -2409,10 +2389,6 @@ module_prebuilt := testcases/bin/udp4-uni-basic06
 module_src_files := testcases/network/stress/udp/uni-basic/udp4-uni-basic06
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron_neg_tests.sh
-module_src_files := testcases/commands/cron/cron_neg_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-multi-diffport07
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport07
 include $(ltp_build_prebuilt)
@@ -2815,10 +2791,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/broken_ip4-totlen
 module_src_files := testcases/network/stress/broken_ip/broken_ip4-totlen
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/cron_dirs_checks01
-module_src_files := testcases/commands/cron/cron_dirs_checks01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp4-uni-basic04
@@ -3285,10 +3257,6 @@ module_prebuilt := testcases/bin/tcp6-uni-basic14
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp6-uni-basic14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cron_allow01
-module_src_files := testcases/commands/cron/cron_allow01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/dns-stress01-rmt
 module_src_files := testcases/network/stress/dns/dns-stress01-rmt
 include $(ltp_build_prebuilt)
@@ -3643,10 +3611,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mc_opts
 module_src_files := testcases/network/multicast/mc_opts/mc_opts
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/cron_tests.sh
-module_src_files := testcases/commands/cron/cron_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/broken_ip6-version
