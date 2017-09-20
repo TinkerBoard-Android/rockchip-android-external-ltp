@@ -2522,22 +2522,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_netns_netlink",
-    stem: "netns_netlink",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/netns/netns_netlink.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_fpathconf01",
     stem: "fpathconf01",
     defaults: ["ltp_test_defaults"],

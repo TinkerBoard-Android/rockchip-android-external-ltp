@@ -163,6 +163,14 @@ openat02
 process
 sendmsg02
 
+# Following tests are for containers and network namespaces which Android
+# doesn't support / use.
+netns_breakns.sh
+netns_comm.sh
+netns_helper.sh
+netns_netlink
+netns_sysfs.sh
+
 # Following test require 'syslogd' running on device which Android doesn't
 # support
 syslog01
@@ -175,6 +183,19 @@ syslog07
 syslog08
 syslog09
 syslog10
+
+# Following tests require 'cron' running on device which Android doesn't
+# support
+cron02
+cron03
+cron_allow01
+cron_deny01
+cron_dirs_check
+cron_dirs_checks01
+cron_illegal_cron_lines
+cron_neg_tests.sh
+cron_pos_tests.sh
+cron_tests.sh
 
 # Requires readelf on device
 file_test.sh
@@ -270,7 +291,6 @@ io_submit01
 pidns17
 pidns20
 io_getevents01
-cron_dirs_check
 nfs05_make_tree
 test
 check_tray
