@@ -171,6 +171,7 @@ nm01
 su01
 su01_s1
 su_set_passwd
+unzip_tests.sh
 
 # Following tests are for containers and network namespaces which Android
 # doesn't support / use.
