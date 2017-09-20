@@ -163,6 +163,12 @@ openat02
 process
 sendmsg02
 
+# Following testa are for commands that are not available on Android
+# device
+su01
+su01_s1
+su_set_passwd
+
 # Following tests are for containers and network namespaces which Android
 # doesn't support / use.
 netns_breakns.sh
