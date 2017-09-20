@@ -549,10 +549,6 @@ module_prebuilt := testcases/bin/fs_bind/cloneNS/test02
 module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test02
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ar01
-module_src_files := testcases/commands/ar/ar01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ns-echoclient
 module_src_files := testcases/network/stress/ns-tools/ns-echoclient
 include $(ltp_build_prebuilt)
