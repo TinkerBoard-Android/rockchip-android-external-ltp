@@ -1116,7 +1116,6 @@ ltp_packages := \
   ltp_test_6_2 \
   ltp_testcases_bin_acl_test01 \
   ltp_testcases_bin_add_ipv6addr \
-  ltp_testcases_bin_ar01 \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
   ltp_testcases_bin_assign_password.sh \
