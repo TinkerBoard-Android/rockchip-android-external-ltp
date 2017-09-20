@@ -513,10 +513,6 @@ module_prebuilt := testcases/bin/run_memctl_test.sh
 module_src_files := testcases/kernel/controllers/memctl/run_memctl_test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/unzip_tests.sh
-module_src_files := testcases/commands/unzip/unzip_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_bind/cloneNS/test05
 module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test05
 include $(ltp_build_prebuilt)
