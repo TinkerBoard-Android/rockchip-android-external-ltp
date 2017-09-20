@@ -1001,10 +1001,6 @@ module_prebuilt := testcases/bin/fs-bench-test.sh
 module_src_files := testcases/kernel/fs/fs-bench/fs-bench-test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/logrotate_tests.sh
-module_src_files := testcases/commands/logrotate/logrotate_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/dns-stress-lib.sh
 module_src_files := testcases/network/stress/dns/dns-stress-lib.sh
 include $(ltp_build_prebuilt)
