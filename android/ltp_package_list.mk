@@ -1570,10 +1570,6 @@ ltp_packages := \
   ltp_testcases_bin_ssh03 \
   ltp_testcases_bin_ssh03_s1 \
   ltp_testcases_bin_ssh_setup \
-  ltp_testcases_bin_sssd-lib.sh \
-  ltp_testcases_bin_sssd01 \
-  ltp_testcases_bin_sssd02 \
-  ltp_testcases_bin_sssd03 \
   ltp_testcases_bin_stop_freeze_sleep_thaw_cont.sh \
   ltp_testcases_bin_stop_freeze_thaw_cont.sh \
   ltp_testcases_bin_stress_floppy \
