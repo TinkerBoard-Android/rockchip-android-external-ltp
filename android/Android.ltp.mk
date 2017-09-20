@@ -477,10 +477,6 @@ module_prebuilt := testcases/bin/get_ifname
 module_src_files := testcases/network/stress/ns-tools/get_ifname
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/nm01
-module_src_files := testcases/commands/nm/nm01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/runpwtests_exclusive01.sh
 module_src_files := testcases/kernel/power_management/runpwtests_exclusive01.sh
 include $(ltp_build_prebuilt)
