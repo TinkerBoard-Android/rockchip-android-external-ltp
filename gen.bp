@@ -686,22 +686,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_userns06_capcheck",
-    stem: "userns06_capcheck",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns06_capcheck.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_renameat201",
     stem: "renameat201",
     defaults: ["ltp_test_defaults"],
@@ -2457,22 +2441,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_userns02",
-    stem: "userns02",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns02.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_ksm06",
     stem: "ksm06",
     defaults: ["ltp_test_defaults"],
@@ -2490,38 +2458,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_pidns01",
-    stem: "pidns01",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns01.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_pidns03",
-    stem: "pidns03",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns03.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_fpathconf01",
     stem: "fpathconf01",
     defaults: ["ltp_test_defaults"],
@@ -2531,38 +2467,6 @@ cc_test {
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_pidns04",
-    stem: "pidns04",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns04.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_pidns06",
-    stem: "pidns06",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns06.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -3855,22 +3759,6 @@ cc_test {
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_pidns32",
-    stem: "pidns32",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns32.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -5179,19 +5067,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_ns_exec",
-    stem: "ns_exec",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/share/ns_exec.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_test_6_2",
     stem: "test_6_2",
     defaults: ["ltp_test_defaults"],
@@ -6217,22 +6092,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_userns01",
-    stem: "userns01",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns01.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_removexattr01",
     stem: "removexattr01",
     defaults: ["ltp_test_defaults"],
@@ -6407,43 +6266,11 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_pidns13",
-    stem: "pidns13",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns13.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_random-access",
     stem: "random-access",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/fs/fs-bench/random-access.c"],
     local_include_dirs: ["include/old"],
-}
-
-cc_test {
-    name: "ltp_pidns16",
-    stem: "pidns16",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns16.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -7860,22 +7687,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_userns04",
-    stem: "userns04",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns04.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_open07",
     stem: "open07",
     defaults: ["ltp_test_defaults"],
@@ -7914,22 +7725,6 @@ cc_test {
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_userns07",
-    stem: "userns07",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns07.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -8711,22 +8506,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_userns03",
-    stem: "userns03",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns03.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_lgetxattr01",
     stem: "lgetxattr01",
     defaults: ["ltp_test_defaults"],
@@ -8757,19 +8536,6 @@ cc_test {
     srcs: ["testcases/kernel/syscalls/lgetxattr/lgetxattr02.c"],
     local_include_dirs: [
         "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_ns_ifmove",
-    stem: "ns_ifmove",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/share/ns_ifmove.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
@@ -9070,22 +8836,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_utstest",
-    stem: "utstest",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/utsname/utstest.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_access04",
     stem: "access04",
     defaults: ["ltp_test_defaults"],
@@ -9325,38 +9075,6 @@ cc_test {
     srcs: ["lib/tests/tst_process_state.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_pidns02",
-    stem: "pidns02",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns02.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_userns05",
-    stem: "userns05",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns05.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -9972,22 +9690,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_pidns05",
-    stem: "pidns05",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/pidns/pidns05.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_sendfile04",
     stem: "sendfile04",
     defaults: ["ltp_test_defaults"],
@@ -10378,19 +10080,6 @@ cc_test {
     srcs: ["testcases/kernel/syscalls/signalfd/signalfd01.c"],
     local_include_dirs: [
         "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_setns_check",
-    stem: "setns_check",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/share/setns_check.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
@@ -12082,70 +11771,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_mountns04",
-    stem: "mountns04",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/mountns/mountns04.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_mountns01",
-    stem: "mountns01",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/mountns/mountns01.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_mountns03",
-    stem: "mountns03",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/mountns/mountns03.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
-    name: "ltp_mountns02",
-    stem: "mountns02",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/mountns/mountns02.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_ftruncate01",
     stem: "ftruncate01",
     defaults: ["ltp_test_defaults"],
@@ -12371,22 +11996,6 @@ cc_test {
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_userns06",
-    stem: "userns06",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/userns/userns06.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_clone",
-        "libltp_ltp",
-    ],
 }
 
 cc_test {
@@ -13266,19 +12875,6 @@ cc_test {
     srcs: ["testcases/kernel/syscalls/statvfs/statvfs01.c"],
     local_include_dirs: [
         "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_ns_create",
-    stem: "ns_create",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/containers/share/ns_create.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "testcases/kernel/containers/libclone",
         "include/old",
     ],
     static_libs: ["libltp_ltp"],
@@ -16345,19 +15941,6 @@ cc_library_static {
     srcs: [
         "testcases/kernel/syscalls/ipc/lib/libipc.c",
         "testcases/kernel/syscalls/ipc/lib/libmsgctl.c",
-    ],
-}
-
-cc_library_static {
-    name: "libltp_clone",
-    defaults: ["ltp_defaults"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "include",
-        "include/old",
-    ],
-    srcs: [
-        "testcases/kernel/containers/libclone/libclone.c",
     ],
 }
 
