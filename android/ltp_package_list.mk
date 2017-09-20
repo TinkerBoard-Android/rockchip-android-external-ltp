@@ -661,10 +661,6 @@ ltp_packages := \
   ltp_mount04 \
   ltp_mount05 \
   ltp_mount06 \
-  ltp_mountns01 \
-  ltp_mountns02 \
-  ltp_mountns03 \
-  ltp_mountns04 \
   ltp_move_pages01 \
   ltp_move_pages02 \
   ltp_move_pages03 \
@@ -725,9 +721,6 @@ ltp_packages := \
   ltp_ns-udpclient \
   ltp_ns-udpsender \
   ltp_ns-udpserver \
-  ltp_ns_create \
-  ltp_ns_exec \
-  ltp_ns_ifmove \
   ltp_nsclone \
   ltp_oom01 \
   ltp_oom02 \
@@ -764,15 +757,6 @@ ltp_packages := \
   ltp_perf_event_open02 \
   ltp_personality01 \
   ltp_personality02 \
-  ltp_pidns01 \
-  ltp_pidns02 \
-  ltp_pidns03 \
-  ltp_pidns04 \
-  ltp_pidns05 \
-  ltp_pidns06 \
-  ltp_pidns13 \
-  ltp_pidns16 \
-  ltp_pidns32 \
   ltp_pids_task1 \
   ltp_pids_task2 \
   ltp_pipe01 \
@@ -981,7 +965,6 @@ ltp_packages := \
   ltp_setitimer02 \
   ltp_setitimer03 \
   ltp_setns01 \
-  ltp_setns_check \
   ltp_setpgid01 \
   ltp_setpgid02 \
   ltp_setpgid03 \
@@ -1546,7 +1529,6 @@ ltp_packages := \
   ltp_testcases_bin_run_memctl_test.sh \
   ltp_testcases_bin_run_pec_test \
   ltp_testcases_bin_run_sched_cliserv.sh \
-  ltp_testcases_bin_runipctests_noltp.sh \
   ltp_testcases_bin_runpwtests01.sh \
   ltp_testcases_bin_runpwtests02.sh \
   ltp_testcases_bin_runpwtests03.sh \
@@ -1558,7 +1540,6 @@ ltp_packages := \
   ltp_testcases_bin_runpwtests_exclusive03.sh \
   ltp_testcases_bin_runpwtests_exclusive04.sh \
   ltp_testcases_bin_runpwtests_exclusive05.sh \
-  ltp_testcases_bin_runutstests_noltp.sh \
   ltp_testcases_bin_rup01 \
   ltp_testcases_bin_rusers01 \
   ltp_testcases_bin_rwho01 \
@@ -2182,14 +2163,6 @@ ltp_packages := \
   ltp_unlinkat01 \
   ltp_unshare01 \
   ltp_unshare02 \
-  ltp_userns01 \
-  ltp_userns02 \
-  ltp_userns03 \
-  ltp_userns04 \
-  ltp_userns05 \
-  ltp_userns06 \
-  ltp_userns06_capcheck \
-  ltp_userns07 \
   ltp_utime01 \
   ltp_utime02 \
   ltp_utime03 \
@@ -2198,7 +2171,6 @@ ltp_packages := \
   ltp_utime06 \
   ltp_utimensat01 \
   ltp_utimes01 \
-  ltp_utstest \
   ltp_vfork \
   ltp_vfork01 \
   ltp_vfork02 \

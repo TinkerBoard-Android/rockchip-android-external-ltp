@@ -175,13 +175,59 @@ su01_s1
 su_set_passwd
 unzip_tests.sh
 
-# Following tests are for containers and network namespaces which Android
-# doesn't support / use.
+# Following tests are for containers which Android doesn't support / use.
+# Some of these also require SysV IPC, so they need to be disabled anyway.
+mountns01
+mountns02
+mountns03
+mountns04
+mesgq_nstest
+mqns_01
+mqns_02
+mqns_03
+mqns_04
+msg_comm
 netns_breakns.sh
 netns_comm.sh
 netns_helper.sh
 netns_netlink
 netns_sysfs.sh
+ns_create
+ns_exec
+ns_ifmove
+pidns01
+pidns02
+pidns03
+pidns04
+pidns05
+pidns06
+pidns10
+pidns12
+pidns13
+pidns16
+pidns17
+pidns20
+pidns30
+pidns31
+pidns32
+runipctests_noltp.sh
+runutstests_noltp.sh
+sem_comm
+sem_nstest
+semtest_2ns
+setns_check
+shm_comm
+shmem_2nstest
+shmnstest
+userns01
+userns02
+userns03
+userns04
+userns05
+userns06
+userns06_capcheck
+userns07
+utstest
 
 # Following test require 'syslogd' running on device which Android doesn't
 # support
