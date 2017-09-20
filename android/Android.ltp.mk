@@ -137,10 +137,6 @@ module_prebuilt := testcases/bin/route6-change-if
 module_src_files := testcases/network/stress/route/route6-change-if
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/netns_helper.sh
-module_src_files := testcases/kernel/containers/netns/netns_helper.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp04.sh
 module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp04.sh
 include $(ltp_build_prebuilt)
@@ -347,10 +343,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_usage_in_bytes_test.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_usage_in_bytes_test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/netns_breakns.sh
-module_src_files := testcases/kernel/containers/netns/netns_breakns.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_racer_file_list.sh
@@ -823,10 +815,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_cpumask.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_cpumask.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/netns_comm.sh
-module_src_files := testcases/kernel/containers/netns/netns_comm.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-tso10
@@ -2475,10 +2463,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-pktlossdup05
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup05
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/netns_sysfs.sh
-module_src_files := testcases/kernel/containers/netns/netns_sysfs.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-pktlossdup04

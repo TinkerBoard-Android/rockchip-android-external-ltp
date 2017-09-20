@@ -163,6 +163,14 @@ openat02
 process
 sendmsg02
 
+# Following tests are for containers and network namespaces which Android
+# doesn't support / use.
+netns_breakns.sh
+netns_comm.sh
+netns_helper.sh
+netns_netlink
+netns_sysfs.sh
+
 # Following test require 'syslogd' running on device which Android doesn't
 # support
 syslog01
