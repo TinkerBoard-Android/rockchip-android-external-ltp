@@ -163,13 +163,17 @@ openat02
 process
 sendmsg02
 
-# Following testa are for commands that are not available on Android
+# Following tests are for commands that are not available on Android
 # device
 ar01
 ld01
 logrotate_tests.sh
 mail_tests.sh
 nm01
+sssd01
+sssd02
+sssd03
+sssd-lib.sh
 su01
 su01_s1
 su_set_passwd
