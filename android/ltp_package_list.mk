@@ -1437,7 +1437,6 @@ ltp_packages := \
   ltp_testcases_bin_linktest.sh \
   ltp_testcases_bin_ln_tests.sh \
   ltp_testcases_bin_lock_torture.sh \
-  ltp_testcases_bin_logrotate_tests.sh \
   ltp_testcases_bin_lsmod01.sh \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macvlan01.sh \

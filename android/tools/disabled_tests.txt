@@ -167,11 +167,12 @@ sendmsg02
 # device
 ar01
 ld01
+logrotate_tests.sh
+mail_tests.sh
 nm01
 su01
 su01_s1
 su_set_passwd
-mail_tests.sh
 unzip_tests.sh
 
 # Following tests are for containers and network namespaces which Android
