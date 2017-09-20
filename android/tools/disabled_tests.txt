@@ -166,6 +166,7 @@ sendmsg02
 # Following testa are for commands that are not available on Android
 # device
 ar01
+nm01
 su01
 su01_s1
 su_set_passwd

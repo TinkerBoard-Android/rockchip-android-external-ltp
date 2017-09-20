@@ -1506,7 +1506,6 @@ ltp_packages := \
   ltp_testcases_bin_nfs_lib.sh \
   ltp_testcases_bin_nfslock01 \
   ltp_testcases_bin_nfsstat01 \
-  ltp_testcases_bin_nm01 \
   ltp_testcases_bin_ns-echoclient \
   ltp_testcases_bin_numa01.sh \
   ltp_testcases_bin_output_ipsec_conf \
