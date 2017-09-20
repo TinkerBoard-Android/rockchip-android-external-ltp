@@ -700,7 +700,6 @@ ltp_packages := \
   ltp_nanosleep02 \
   ltp_nanosleep03 \
   ltp_nanosleep04 \
-  ltp_netns_netlink \
   ltp_netstress \
   ltp_newns \
   ltp_newuname01 \
@@ -1498,10 +1497,6 @@ ltp_packages := \
   ltp_testcases_bin_myfunctions-io.sh \
   ltp_testcases_bin_myfunctions.sh \
   ltp_testcases_bin_net_cmdlib.sh \
-  ltp_testcases_bin_netns_breakns.sh \
-  ltp_testcases_bin_netns_comm.sh \
-  ltp_testcases_bin_netns_helper.sh \
-  ltp_testcases_bin_netns_sysfs.sh \
   ltp_testcases_bin_netstat01 \
   ltp_testcases_bin_nfs01 \
   ltp_testcases_bin_nfs02 \
