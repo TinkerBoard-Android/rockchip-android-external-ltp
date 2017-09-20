@@ -2865,10 +2865,6 @@ module_prebuilt := testcases/bin/tcp4-multi-diffport14
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ld01
-module_src_files := testcases/commands/ld/ld01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ipvlan01.sh
 module_src_files := testcases/network/virt/ipvlan01.sh
 include $(ltp_build_prebuilt)
