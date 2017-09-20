@@ -2024,7 +2024,6 @@ ltp_packages := \
   ltp_testcases_bin_udp6-uni-basic06 \
   ltp_testcases_bin_udp6-uni-basic07 \
   ltp_testcases_bin_udp_ipsec.sh \
-  ltp_testcases_bin_unzip_tests.sh \
   ltp_testcases_bin_utimensat_tests.sh \
   ltp_testcases_bin_vfork_freeze.sh \
   ltp_testcases_bin_virt_lib.sh \
