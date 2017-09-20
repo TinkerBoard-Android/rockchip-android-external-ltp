@@ -1442,7 +1442,6 @@ ltp_packages := \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
-  ltp_testcases_bin_mail_tests.sh \
   ltp_testcases_bin_mc_cmds \
   ltp_testcases_bin_mc_commo \
   ltp_testcases_bin_mc_member \
