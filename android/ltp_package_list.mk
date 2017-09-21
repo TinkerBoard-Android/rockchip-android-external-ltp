@@ -1135,7 +1135,6 @@ ltp_packages := \
   ltp_testcases_bin_cmdlib.sh \
   ltp_testcases_bin_connector_test.sh \
   ltp_testcases_bin_cp_tests.sh \
-  ltp_testcases_bin_cpio_tests.sh \
   ltp_testcases_bin_cpuacct.sh \
   ltp_testcases_bin_cpuhotplug01.sh \
   ltp_testcases_bin_cpuhotplug02.sh \
