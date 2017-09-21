@@ -1757,10 +1757,6 @@ module_prebuilt := testcases/bin/tcp4-multi-diffport11
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport11
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cpio_tests.sh
-module_src_files := testcases/commands/cpio/cpio_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-multi-diffport12
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport12
 include $(ltp_build_prebuilt)
