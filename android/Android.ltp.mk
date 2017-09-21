@@ -3177,18 +3177,6 @@ module_prebuilt := testcases/bin/tcp6-multi-diffport06
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport06
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/sssd03
-module_src_files := testcases/commands/sssd/sssd03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd02
-module_src_files := testcases/commands/sssd/sssd02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd01
-module_src_files := testcases/commands/sssd/sssd01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-basic14
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp6-uni-basic14
 include $(ltp_build_prebuilt)
@@ -3335,10 +3323,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-sameport13
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport13
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd-lib.sh
-module_src_files := testcases/commands/sssd/sssd-lib.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_function_profile_enabled.sh
