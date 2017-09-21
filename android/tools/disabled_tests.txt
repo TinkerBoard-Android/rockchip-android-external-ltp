@@ -189,6 +189,7 @@ syslog07
 syslog08
 syslog09
 syslog10
+syslog-lib.sh
 
 # Following tests require 'cron' running on device which Android doesn't
 # support

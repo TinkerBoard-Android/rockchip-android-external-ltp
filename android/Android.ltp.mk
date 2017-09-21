@@ -1421,10 +1421,6 @@ module_prebuilt := testcases/bin/fs_bind/rbind/test28
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test28
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/syslog-lib.sh
-module_src_files := testcases/kernel/syscalls/syslog/syslog-lib.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_bind/rbind/test22
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test22
 include $(ltp_build_prebuilt)
