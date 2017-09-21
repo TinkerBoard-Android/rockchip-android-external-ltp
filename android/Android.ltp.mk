@@ -253,10 +253,6 @@ module_prebuilt := testcases/bin/memcg_limit_in_bytes.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_limit_in_bytes.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/su01_s1
-module_src_files := testcases/commands/su/su01_s1
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/rsh01
 module_src_files := testcases/network/tcp_cmds/rsh/rsh01
 include $(ltp_build_prebuilt)
@@ -1389,10 +1385,6 @@ module_prebuilt := testcases/data/file01/in.py
 module_src_files := testcases/commands/file/datafiles/in.py
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/su01
-module_src_files := testcases/commands/su/su01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
 include $(ltp_build_prebuilt)
@@ -1771,10 +1763,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-winscale07
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale07
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/su_set_passwd
-module_src_files := testcases/commands/su/su_set_passwd
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/iptables_tests.sh
