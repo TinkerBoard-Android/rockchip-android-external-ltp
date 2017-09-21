@@ -2001,10 +2001,6 @@ module_prebuilt := testcases/bin/tcp4-uni-basic11
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic11
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/runutstests_noltp.sh
-module_src_files := testcases/kernel/containers/utsname/runutstests_noltp.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-basic14
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic14
 include $(ltp_build_prebuilt)
@@ -3003,10 +2999,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mcast4-pktfld01
 module_src_files := testcases/network/stress/multicast/packet-flood/mcast4-pktfld01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/runipctests_noltp.sh
-module_src_files := testcases/kernel/containers/sysvipc/runipctests_noltp.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/test_9_2.sh
