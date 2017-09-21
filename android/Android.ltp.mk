@@ -769,10 +769,6 @@ module_prebuilt := testcases/bin/tpmtoken_import_tests_exp03.sh
 module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp03.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mail_tests.sh
-module_src_files := testcases/commands/mail/mail_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/killall_udp_traffic
 module_src_files := testcases/network/stress/ns-tools/killall_udp_traffic
 include $(ltp_build_prebuilt)
