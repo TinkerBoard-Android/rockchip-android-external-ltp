@@ -253,10 +253,6 @@ module_prebuilt := testcases/bin/memcg_limit_in_bytes.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_limit_in_bytes.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/su01_s1
-module_src_files := testcases/commands/su/su01_s1
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/rsh01
 module_src_files := testcases/network/tcp_cmds/rsh/rsh01
 include $(ltp_build_prebuilt)
@@ -481,10 +477,6 @@ module_prebuilt := testcases/bin/get_ifname
 module_src_files := testcases/network/stress/ns-tools/get_ifname
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/nm01
-module_src_files := testcases/commands/nm/nm01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/runpwtests_exclusive01.sh
 module_src_files := testcases/kernel/power_management/runpwtests_exclusive01.sh
 include $(ltp_build_prebuilt)
@@ -521,10 +513,6 @@ module_prebuilt := testcases/bin/run_memctl_test.sh
 module_src_files := testcases/kernel/controllers/memctl/run_memctl_test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/unzip_tests.sh
-module_src_files := testcases/commands/unzip/unzip_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_bind/cloneNS/test05
 module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test05
 include $(ltp_build_prebuilt)
@@ -551,10 +539,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/cloneNS/test02
 module_src_files := testcases/kernel/fs/fs_bind/cloneNS/test02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ar01
-module_src_files := testcases/commands/ar/ar01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ns-echoclient
@@ -783,10 +767,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tpmtoken_import_tests_exp03.sh
 module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp03.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/mail_tests.sh
-module_src_files := testcases/commands/mail/mail_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/killall_udp_traffic
@@ -1019,10 +999,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs-bench-test.sh
 module_src_files := testcases/kernel/fs/fs-bench/fs-bench-test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/logrotate_tests.sh
-module_src_files := testcases/commands/logrotate/logrotate_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dns-stress-lib.sh
@@ -1389,10 +1365,6 @@ module_prebuilt := testcases/data/file01/in.py
 module_src_files := testcases/commands/file/datafiles/in.py
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/su01
-module_src_files := testcases/commands/su/su01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
 include $(ltp_build_prebuilt)
@@ -1427,10 +1399,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test28
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test28
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/syslog-lib.sh
-module_src_files := testcases/kernel/syscalls/syslog/syslog-lib.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test22
@@ -1773,10 +1741,6 @@ module_prebuilt := testcases/bin/tcp6-uni-winscale07
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/su_set_passwd
-module_src_files := testcases/commands/su/su_set_passwd
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/iptables_tests.sh
 module_src_files := testcases/network/iptables/iptables_tests.sh
 include $(ltp_build_prebuilt)
@@ -1791,10 +1755,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffport11
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport11
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/cpio_tests.sh
-module_src_files := testcases/commands/cpio/cpio_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffport12
@@ -2035,10 +1995,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-basic11
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic11
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/runutstests_noltp.sh
-module_src_files := testcases/kernel/containers/utsname/runutstests_noltp.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-basic14
@@ -2889,10 +2845,6 @@ module_prebuilt := testcases/bin/tcp4-multi-diffport14
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ld01
-module_src_files := testcases/commands/ld/ld01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ipvlan01.sh
 module_src_files := testcases/network/virt/ipvlan01.sh
 include $(ltp_build_prebuilt)
@@ -3043,10 +2995,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mcast4-pktfld01
 module_src_files := testcases/network/stress/multicast/packet-flood/mcast4-pktfld01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/runipctests_noltp.sh
-module_src_files := testcases/kernel/containers/sysvipc/runipctests_noltp.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/test_9_2.sh
@@ -3225,18 +3173,6 @@ module_prebuilt := testcases/bin/tcp6-multi-diffport06
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport06
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/sssd03
-module_src_files := testcases/commands/sssd/sssd03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd02
-module_src_files := testcases/commands/sssd/sssd02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd01
-module_src_files := testcases/commands/sssd/sssd01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-basic14
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp6-uni-basic14
 include $(ltp_build_prebuilt)
@@ -3383,10 +3319,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-sameport13
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport13
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/sssd-lib.sh
-module_src_files := testcases/commands/sssd/sssd-lib.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_function_profile_enabled.sh

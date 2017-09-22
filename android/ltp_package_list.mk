@@ -661,10 +661,6 @@ ltp_packages := \
   ltp_mount04 \
   ltp_mount05 \
   ltp_mount06 \
-  ltp_mountns01 \
-  ltp_mountns02 \
-  ltp_mountns03 \
-  ltp_mountns04 \
   ltp_move_pages01 \
   ltp_move_pages02 \
   ltp_move_pages03 \
@@ -725,9 +721,6 @@ ltp_packages := \
   ltp_ns-udpclient \
   ltp_ns-udpsender \
   ltp_ns-udpserver \
-  ltp_ns_create \
-  ltp_ns_exec \
-  ltp_ns_ifmove \
   ltp_nsclone \
   ltp_oom01 \
   ltp_oom02 \
@@ -764,15 +757,6 @@ ltp_packages := \
   ltp_perf_event_open02 \
   ltp_personality01 \
   ltp_personality02 \
-  ltp_pidns01 \
-  ltp_pidns02 \
-  ltp_pidns03 \
-  ltp_pidns04 \
-  ltp_pidns05 \
-  ltp_pidns06 \
-  ltp_pidns13 \
-  ltp_pidns16 \
-  ltp_pidns32 \
   ltp_pids_task1 \
   ltp_pids_task2 \
   ltp_pipe01 \
@@ -981,7 +965,6 @@ ltp_packages := \
   ltp_setitimer02 \
   ltp_setitimer03 \
   ltp_setns01 \
-  ltp_setns_check \
   ltp_setpgid01 \
   ltp_setpgid02 \
   ltp_setpgid03 \
@@ -1116,7 +1099,6 @@ ltp_packages := \
   ltp_test_6_2 \
   ltp_testcases_bin_acl_test01 \
   ltp_testcases_bin_add_ipv6addr \
-  ltp_testcases_bin_ar01 \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
   ltp_testcases_bin_assign_password.sh \
@@ -1153,7 +1135,6 @@ ltp_packages := \
   ltp_testcases_bin_cmdlib.sh \
   ltp_testcases_bin_connector_test.sh \
   ltp_testcases_bin_cp_tests.sh \
-  ltp_testcases_bin_cpio_tests.sh \
   ltp_testcases_bin_cpuacct.sh \
   ltp_testcases_bin_cpuhotplug01.sh \
   ltp_testcases_bin_cpuhotplug02.sh \
@@ -1434,17 +1415,14 @@ ltp_packages := \
   ltp_testcases_bin_killall_icmp_traffic \
   ltp_testcases_bin_killall_tcp_traffic \
   ltp_testcases_bin_killall_udp_traffic \
-  ltp_testcases_bin_ld01 \
   ltp_testcases_bin_libcgroup_freezer \
   ltp_testcases_bin_linktest.sh \
   ltp_testcases_bin_ln_tests.sh \
   ltp_testcases_bin_lock_torture.sh \
-  ltp_testcases_bin_logrotate_tests.sh \
   ltp_testcases_bin_lsmod01.sh \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
-  ltp_testcases_bin_mail_tests.sh \
   ltp_testcases_bin_mc_cmds \
   ltp_testcases_bin_mc_commo \
   ltp_testcases_bin_mc_member \
@@ -1507,7 +1485,6 @@ ltp_packages := \
   ltp_testcases_bin_nfs_lib.sh \
   ltp_testcases_bin_nfslock01 \
   ltp_testcases_bin_nfsstat01 \
-  ltp_testcases_bin_nm01 \
   ltp_testcases_bin_ns-echoclient \
   ltp_testcases_bin_numa01.sh \
   ltp_testcases_bin_output_ipsec_conf \
@@ -1551,7 +1528,6 @@ ltp_packages := \
   ltp_testcases_bin_run_memctl_test.sh \
   ltp_testcases_bin_run_pec_test \
   ltp_testcases_bin_run_sched_cliserv.sh \
-  ltp_testcases_bin_runipctests_noltp.sh \
   ltp_testcases_bin_runpwtests01.sh \
   ltp_testcases_bin_runpwtests02.sh \
   ltp_testcases_bin_runpwtests03.sh \
@@ -1563,7 +1539,6 @@ ltp_packages := \
   ltp_testcases_bin_runpwtests_exclusive03.sh \
   ltp_testcases_bin_runpwtests_exclusive04.sh \
   ltp_testcases_bin_runpwtests_exclusive05.sh \
-  ltp_testcases_bin_runutstests_noltp.sh \
   ltp_testcases_bin_rup01 \
   ltp_testcases_bin_rusers01 \
   ltp_testcases_bin_rwho01 \
@@ -1594,17 +1569,9 @@ ltp_packages := \
   ltp_testcases_bin_ssh03 \
   ltp_testcases_bin_ssh03_s1 \
   ltp_testcases_bin_ssh_setup \
-  ltp_testcases_bin_sssd-lib.sh \
-  ltp_testcases_bin_sssd01 \
-  ltp_testcases_bin_sssd02 \
-  ltp_testcases_bin_sssd03 \
   ltp_testcases_bin_stop_freeze_sleep_thaw_cont.sh \
   ltp_testcases_bin_stop_freeze_thaw_cont.sh \
   ltp_testcases_bin_stress_floppy \
-  ltp_testcases_bin_su01 \
-  ltp_testcases_bin_su01_s1 \
-  ltp_testcases_bin_su_set_passwd \
-  ltp_testcases_bin_syslog-lib.sh \
   ltp_testcases_bin_tcp4-multi-diffip01 \
   ltp_testcases_bin_tcp4-multi-diffip02 \
   ltp_testcases_bin_tcp4-multi-diffip03 \
@@ -2031,7 +1998,6 @@ ltp_packages := \
   ltp_testcases_bin_udp6-uni-basic06 \
   ltp_testcases_bin_udp6-uni-basic07 \
   ltp_testcases_bin_udp_ipsec.sh \
-  ltp_testcases_bin_unzip_tests.sh \
   ltp_testcases_bin_utimensat_tests.sh \
   ltp_testcases_bin_vfork_freeze.sh \
   ltp_testcases_bin_virt_lib.sh \
@@ -2192,14 +2158,6 @@ ltp_packages := \
   ltp_unlinkat01 \
   ltp_unshare01 \
   ltp_unshare02 \
-  ltp_userns01 \
-  ltp_userns02 \
-  ltp_userns03 \
-  ltp_userns04 \
-  ltp_userns05 \
-  ltp_userns06 \
-  ltp_userns06_capcheck \
-  ltp_userns07 \
   ltp_utime01 \
   ltp_utime02 \
   ltp_utime03 \
@@ -2208,7 +2166,6 @@ ltp_packages := \
   ltp_utime06 \
   ltp_utimensat01 \
   ltp_utimes01 \
-  ltp_utstest \
   ltp_vfork \
   ltp_vfork01 \
   ltp_vfork02 \

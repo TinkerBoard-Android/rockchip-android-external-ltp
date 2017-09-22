@@ -163,13 +163,76 @@ openat02
 process
 sendmsg02
 
-# Following tests are for containers and network namespaces which Android
-# doesn't support / use.
+# Following tests are for commands that are not available on Android
+# device
+ar01
+cpio_tests.sh
+ld01
+logrotate_tests.sh
+mail_tests.sh
+nm01
+sssd01
+sssd02
+sssd03
+sssd-lib.sh
+su01
+su01_s1
+su_set_passwd
+unzip_tests.sh
+
+# Following tests are for containers which Android doesn't support / use.
+# Some of these also require SysV IPC, so they need to be disabled anyway.
+mountns01
+mountns02
+mountns03
+mountns04
+mesgq_nstest
+mqns_01
+mqns_02
+mqns_03
+mqns_04
+msg_comm
 netns_breakns.sh
 netns_comm.sh
 netns_helper.sh
 netns_netlink
 netns_sysfs.sh
+ns_create
+ns_exec
+ns_ifmove
+pidns01
+pidns02
+pidns03
+pidns04
+pidns05
+pidns06
+pidns10
+pidns12
+pidns13
+pidns16
+pidns17
+pidns20
+pidns30
+pidns31
+pidns32
+runipctests_noltp.sh
+runutstests_noltp.sh
+sem_comm
+sem_nstest
+semtest_2ns
+setns_check
+shm_comm
+shmem_2nstest
+shmnstest
+userns01
+userns02
+userns03
+userns04
+userns05
+userns06
+userns06_capcheck
+userns07
+utstest
 
 # Following test require 'syslogd' running on device which Android doesn't
 # support
@@ -183,6 +246,7 @@ syslog07
 syslog08
 syslog09
 syslog10
+syslog-lib.sh
 
 # Following tests require 'cron' running on device which Android doesn't
 # support
