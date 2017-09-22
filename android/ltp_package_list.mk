@@ -164,7 +164,6 @@ ltp_packages := \
   ltp_dup3_02 \
   ltp_echoes \
   ltp_echoes6 \
-  ltp_eject_check_tray \
   ltp_endian_switch01 \
   ltp_epoll-ltp \
   ltp_epoll_create1_01 \
@@ -1123,8 +1122,6 @@ ltp_packages := \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
   ltp_testcases_bin_assign_password.sh \
-  ltp_testcases_bin_at_allow01 \
-  ltp_testcases_bin_at_deny01 \
   ltp_testcases_bin_broken_ip4-checksum \
   ltp_testcases_bin_broken_ip4-dstaddr \
   ltp_testcases_bin_broken_ip4-fragment \
@@ -1154,7 +1151,6 @@ ltp_packages := \
   ltp_testcases_bin_clockdiff01.sh \
   ltp_testcases_bin_cmdlib.sh \
   ltp_testcases_bin_connector_test.sh \
-  ltp_testcases_bin_cp_tests.sh \
   ltp_testcases_bin_cpuacct.sh \
   ltp_testcases_bin_cpuhotplug01.sh \
   ltp_testcases_bin_cpuhotplug02.sh \
@@ -1187,7 +1183,6 @@ ltp_packages := \
   ltp_testcases_bin_data \
   ltp_testcases_bin_dccp01.sh \
   ltp_testcases_bin_dctcp01.sh \
-  ltp_testcases_bin_df01.sh \
   ltp_testcases_bin_dhcp_lib.sh \
   ltp_testcases_bin_dhcpd_tests.sh \
   ltp_testcases_bin_dns-stress \
@@ -1195,10 +1190,8 @@ ltp_packages := \
   ltp_testcases_bin_dns-stress01-rmt \
   ltp_testcases_bin_dns-stress02-rmt \
   ltp_testcases_bin_dnsmasq_tests.sh \
-  ltp_testcases_bin_du01.sh \
   ltp_testcases_bin_dynamic_debug01.sh \
   ltp_testcases_bin_echo01 \
-  ltp_testcases_bin_eject-tests.sh \
   ltp_testcases_bin_ext4-alloc-test.sh \
   ltp_testcases_bin_ext4_funcs.sh \
   ltp_testcases_bin_ext4_get_inode_version.sh \
@@ -1379,7 +1372,6 @@ ltp_packages := \
   ltp_testcases_bin_geneve01.sh \
   ltp_testcases_bin_get_ifname \
   ltp_testcases_bin_gre01.sh \
-  ltp_testcases_bin_gzip_tests.sh \
   ltp_testcases_bin_host01 \
   ltp_testcases_bin_http-stress \
   ltp_testcases_bin_http-stress01-rmt \
@@ -1427,14 +1419,12 @@ ltp_packages := \
   ltp_testcases_bin_ima_tpm.sh \
   ltp_testcases_bin_ima_violations.sh \
   ltp_testcases_bin_initialize_if \
-  ltp_testcases_bin_insmod01.sh \
   ltp_testcases_bin_ip_tests.sh \
   ltp_testcases_bin_ipneigh01.sh \
   ltp_testcases_bin_ipsec_lib.sh \
   ltp_testcases_bin_iptables_tests.sh \
   ltp_testcases_bin_ipvlan01.sh \
   ltp_testcases_bin_isofs.sh \
-  ltp_testcases_bin_keyctl01.sh \
   ltp_testcases_bin_killall_icmp_traffic \
   ltp_testcases_bin_killall_tcp_traffic \
   ltp_testcases_bin_killall_udp_traffic \
@@ -1442,7 +1432,6 @@ ltp_packages := \
   ltp_testcases_bin_linktest.sh \
   ltp_testcases_bin_ln_tests.sh \
   ltp_testcases_bin_lock_torture.sh \
-  ltp_testcases_bin_lsmod01.sh \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
@@ -1487,9 +1476,6 @@ ltp_packages := \
   ltp_testcases_bin_memcg_test_4.sh \
   ltp_testcases_bin_memcg_usage_in_bytes_test.sh \
   ltp_testcases_bin_memcg_use_hierarchy_test.sh \
-  ltp_testcases_bin_mkdir_tests.sh \
-  ltp_testcases_bin_mkfs01.sh \
-  ltp_testcases_bin_mkswap01.sh \
   ltp_testcases_bin_modaltr.sh \
   ltp_testcases_bin_move_pages.sh \
   ltp_testcases_bin_myfunctions-io.sh \
@@ -1920,46 +1906,6 @@ ltp_packages := \
   ltp_testcases_bin_test_net_stress.sh \
   ltp_testcases_bin_test_robind.sh \
   ltp_testcases_bin_testall.sh \
-  ltp_testcases_bin_tpm_changeauth_tests.sh \
-  ltp_testcases_bin_tpm_changeauth_tests_exp01.sh \
-  ltp_testcases_bin_tpm_changeauth_tests_exp02.sh \
-  ltp_testcases_bin_tpm_changeauth_tests_exp03.sh \
-  ltp_testcases_bin_tpm_clear_tests.sh \
-  ltp_testcases_bin_tpm_clear_tests_exp01.sh \
-  ltp_testcases_bin_tpm_getpubek_tests.sh \
-  ltp_testcases_bin_tpm_getpubek_tests_exp01.sh \
-  ltp_testcases_bin_tpm_restrictpubek_tests.sh \
-  ltp_testcases_bin_tpm_restrictpubek_tests_exp01.sh \
-  ltp_testcases_bin_tpm_restrictpubek_tests_exp02.sh \
-  ltp_testcases_bin_tpm_restrictpubek_tests_exp03.sh \
-  ltp_testcases_bin_tpm_selftest_tests.sh \
-  ltp_testcases_bin_tpm_takeownership_tests.sh \
-  ltp_testcases_bin_tpm_takeownership_tests_exp01.sh \
-  ltp_testcases_bin_tpm_version_tests.sh \
-  ltp_testcases_bin_tpmtoken_import_tests.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp01.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp02.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp03.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp04.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp05.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp06.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp07.sh \
-  ltp_testcases_bin_tpmtoken_import_tests_exp08.sh \
-  ltp_testcases_bin_tpmtoken_init_tests.sh \
-  ltp_testcases_bin_tpmtoken_init_tests_exp00.sh \
-  ltp_testcases_bin_tpmtoken_init_tests_exp01.sh \
-  ltp_testcases_bin_tpmtoken_init_tests_exp02.sh \
-  ltp_testcases_bin_tpmtoken_init_tests_exp03.sh \
-  ltp_testcases_bin_tpmtoken_objects_tests.sh \
-  ltp_testcases_bin_tpmtoken_objects_tests_exp01.sh \
-  ltp_testcases_bin_tpmtoken_protect_tests.sh \
-  ltp_testcases_bin_tpmtoken_protect_tests_exp01.sh \
-  ltp_testcases_bin_tpmtoken_protect_tests_exp02.sh \
-  ltp_testcases_bin_tpmtoken_setpasswd_tests.sh \
-  ltp_testcases_bin_tpmtoken_setpasswd_tests_exp01.sh \
-  ltp_testcases_bin_tpmtoken_setpasswd_tests_exp02.sh \
-  ltp_testcases_bin_tpmtoken_setpasswd_tests_exp03.sh \
-  ltp_testcases_bin_tpmtoken_setpasswd_tests_exp04.sh \
   ltp_testcases_bin_tracepath01.sh \
   ltp_testcases_bin_traceroute01.sh \
   ltp_testcases_bin_tst_ansi_color.sh \
@@ -2033,8 +1979,6 @@ ltp_packages := \
   ltp_testcases_bin_vxlan01.sh \
   ltp_testcases_bin_vxlan02.sh \
   ltp_testcases_bin_vxlan03.sh \
-  ltp_testcases_bin_wc01.sh \
-  ltp_testcases_bin_which01.sh \
   ltp_testcases_bin_write_freezing.sh \
   ltp_testcases_bin_xinetd_tests.sh \
   ltp_testcases_bin_zram01.sh \
