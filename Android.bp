@@ -32,16 +32,32 @@ cc_defaults {
         // Hacks for bionic compatibility
         "-include bionic-compat.h",
 
+        "-Wall",
+        "-Werror",
+        // Keep some warnings to check later
+        "-Wno-error=absolute-value",
+        "-Wno-error=undefined-internal",
+        "-Wno-error=uninitialized",
+        "-Wno-error=user-defined-warnings",
         // Silence noisy warnings
+        "-Wno-constant-conversion",
         "-Wno-deprecated",
+        "-Wno-duplicate-decl-specifier",
+        "-Wno-empty-body",
         "-Wno-format",
         "-Wno-gnu-designator",
+        "-Wno-knr-promoted-parameter",
         "-Wno-macro-redefined",
         "-Wno-missing-field-initializers",
         "-Wno-parentheses-equality",
         "-Wno-pointer-arith",
+        "-Wno-pointer-sign",
         "-Wno-sign-compare",
+        "-Wno-tautological-compare",
+        "-Wno-unneeded-internal-declaration",
+        "-Wno-unused-function",
         "-Wno-unused-parameter",
+        "-Wno-unused-variable",
     ],
 
     local_include_dirs: [
