@@ -188,7 +188,6 @@ cc_test {
     stem: "linkat02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/linkat/linkat02.c"],
-    cflags: ["-Wno-error"],
     local_include_dirs: [
         "testcases/kernel/include",
         "include/old",
@@ -201,7 +200,6 @@ cc_test {
     stem: "linkat01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/linkat/linkat01.c"],
-    cflags: ["-Wno-error"],
     local_include_dirs: [
         "testcases/kernel/include",
         "include/old",
@@ -8888,7 +8886,6 @@ cc_test {
     stem: "pwrite04",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/pwrite/pwrite04.c"],
-    cflags: ["-Wno-error"],
     local_include_dirs: [
         "testcases/kernel/include",
         "testcases/kernel/syscalls/pwrite",
@@ -8903,7 +8900,6 @@ cc_test {
     stem: "pwrite02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/pwrite/pwrite02.c"],
-    cflags: ["-Wno-error"],
     local_include_dirs: [
         "testcases/kernel/include",
         "testcases/kernel/syscalls/pwrite",
@@ -8918,7 +8914,6 @@ cc_test {
     stem: "pwrite01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/pwrite/pwrite01.c"],
-    cflags: ["-Wno-error"],
     local_include_dirs: [
         "testcases/kernel/include",
         "testcases/kernel/syscalls/pwrite",
@@ -14032,7 +14027,6 @@ cc_test {
     cflags: [
         "-D_FILE_OFFSET_BITS=64",
         "-DTST_USE_NEWER64_SYSCALL=1",
-        "-Wno-error",
     ],
     local_include_dirs: [
         "testcases/kernel/include",
@@ -15363,7 +15357,6 @@ cc_test {
     cflags: [
         "-D_FILE_OFFSET_BITS=64",
         "-DTST_USE_NEWER64_SYSCALL=1",
-        "-Wno-error",
     ],
     local_include_dirs: [
         "testcases/kernel/include",
@@ -15468,7 +15461,6 @@ cc_test {
     cflags: [
         "-D_FILE_OFFSET_BITS=64",
         "-DTST_USE_NEWER64_SYSCALL=1",
-        "-Wno-error",
     ],
     local_include_dirs: [
         "testcases/kernel/include",
