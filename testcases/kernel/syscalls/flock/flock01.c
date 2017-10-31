@@ -69,6 +69,7 @@
 #include <stdio.h>
 #include <sys/wait.h>
 #include <sys/file.h>
+#include <fcntl.h>
 #include "test.h"
 
 void setup(void);
@@ -153,7 +154,7 @@ void setup(void)
 	sprintf(filename, "flock01.%d", getpid());
 
 	/* creating temporary file */
-	fd = creat(filename, 0644);
+	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
 	if (fd < 0)
 		tst_brkm(TBROK, tst_rmdir, "creating a new file failed");
 }
