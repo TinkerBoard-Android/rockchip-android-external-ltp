@@ -132,7 +132,7 @@
 /* #undef HAVE_LIBACL */
 
 /* Define to 1 if you have the <libaio.h> header file. */
-#define HAVE_LIBAIO_H 1
+/* undef HAVE_LIBAIO_H */
 
 /* Define to 1 if you have libcap-2 installed. */
 #define HAVE_LIBCAP 1
@@ -281,6 +281,9 @@
 /* Define to 1 if the system has the type `struct iovec'. */
 #define HAVE_STRUCT_IOVEC 1
 
+/* Define to 1 if the system has the type `struct mmsghdr'. */
+#define HAVE_STRUCT_MMSGHDR 1
+
 /* Define to 1 if the system has the type `struct modify_ldt_ldt_s'. */
 /* #undef HAVE_STRUCT_MODIFY_LDT_LDT_S */
 
@@ -317,6 +320,15 @@
 
 /* Define to 1 if the system has the type `struct user_regs_struct'. */
 #define HAVE_STRUCT_USER_REGS_STRUCT 1
+
+/* Define to 1 if `domainname' is a member of `struct utsname'. */
+#define HAVE_STRUCT_UTSNAME_DOMAINNAME 1
+
+/* Define to 1 if the system has the type `struct xt_entry_match'. */
+#define HAVE_STRUCT_XT_ENTRY_MATCH 1
+
+/* Define to 1 if the system has the type `struct xt_entry_target'. */
+#define HAVE_STRUCT_XT_ENTRY_TARGET 1
 
 /* Define to 1 if you have __sync_add_and_fetch */
 #define HAVE_SYNC_ADD_AND_FETCH 1
