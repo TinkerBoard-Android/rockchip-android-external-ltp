@@ -36,12 +36,12 @@
 static char filename[40];
 static int fd;
 
-void setup(void)
+static void setup(void)
 {
 	sprintf(filename, "creat01.%d", getpid());
 }
 
-struct tcase {
+static struct tcase {
 	int mode;
 } tcases[] = {
 	{0644},
@@ -85,7 +85,6 @@ static void cleanup(void)
 }
 
 static struct tst_test test = {
-	.tid = "creat01",
 	.tcnt = 2,
 	.test = verify_creat,
 	.needs_tmpdir = 1,

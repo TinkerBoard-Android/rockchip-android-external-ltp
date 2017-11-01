@@ -215,7 +215,7 @@ The path is constructed according to these rules:
 
 1. if '$LTPROOT' is set, return '$LTPROOT/testcases/data/$TCID'
 2. else if 'tst_tmpdir()' was called return '$STARTWD/datafiles'
-   (where '$STARTWD' is initial working directory as recorded by 'tst_tmdir()')
+   (where '$STARTWD' is initial working directory as recorded by 'tst_tmpdir()')
 3. else return '$CWD/datafiles'
 
 See 'testcases/commands/file/' for example.
@@ -224,9 +224,9 @@ See 'testcases/commands/file/' for example.
 ^^^^^^^^^^^^^^^^^^^^
 
 If you test needs to execute a binary, place it in the same directory as the
-testcase and name the file starting with testname_ ('.tid' see below).
-Once the test is executed by the framework, the path to the directory with all
-LTP binaries is added to the '$PATH' and you can execute it just by its name.
+testcase and name the file starting with '${test_binary_name}_'.  Once the
+test is executed by the framework, the path to the directory with all LTP
+binaries is added to the '$PATH' and you can execute it just by its name.
 
 TIP: If you need to execute such test from the LTP tree, you can add path to
      current directory to '$PATH' manually with: 'PATH="$PATH:$PWD" ./foo01'.
@@ -288,7 +288,6 @@ next:
 }
 
 static struct tst_test test = {
-	.tid = "getenv01",
 	.test_all = test,
 	.setup = setup,
 };
@@ -296,11 +295,6 @@ static struct tst_test test = {
 
 Each test includes the 'tst_test.h' header and must define the 'struct
 tst_test test' structure.
-
-The '.tid' defines test name (usually syscall/libcall name + number). The name
-is used in the test results as well as a base for temporary directory name if
-temporary directory is needed. In most of the cases it's the same as test
-filename without the extension.
 
 The overall test initialization is done in the 'setup()' function.
 
@@ -326,7 +320,9 @@ IMPORTANT: Only one of '.test' and '.test_all' can be set at a time.
 
 Each test has a default timeout set to 300s. The default timeout can be
 overriden by setting '.timeout' in the test structure or by calling
-'tst_set_timeout()' in the test 'setup()'.
+'tst_set_timeout()' in the test 'setup()'. There are a few testcases whose run
+time may vary arbitrarily, for these timeout can be disabled by setting it to
+-1.
 
 A word about the cleanup() callback
 +++++++++++++++++++++++++++++++++++
@@ -457,7 +453,8 @@ void tst_set_timeout(unsigned int timeout);
 -------------------------------------------------------------------------------
 
 Allows for setting timeout per test iteration dymanically in the test setup(),
-the timeout is specified in seconds.
+the timeout is specified in seconds. There are a few testcases whose runtime
+can vary arbitrarily, these can disable timeouts by setting it to -1.
 
 2.2.3 Test temporary directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1235,11 +1232,11 @@ there is need to set '.needs_tmpdir' as well.
 
 The test library looks for datafiles first, these are either stored in a
 directory called +datafiles+ in the +$PWD+ at the start of the test or in
-+$LTPROOT/testcases/data/$tid+. If the file is not found the library looks
-into +$LTPROOT/testcases/bin/+ and to +$PWD+ at the start of the test. This
-ensures that the testcases can copy the file(s) effortlessly both when test is
-started from the directory it was compiled in as well as when LTP was
-installed.
++$LTPROOT/testcases/data/${test_binary_name}+. If the file is not found the
+library looks into +$LTPROOT/testcases/bin/+ and to +$PWD+ at the start of the
+test. This ensures that the testcases can copy the file(s) effortlessly both
+when test is started from the directory it was compiled in as well as when LTP
+was installed.
 
 The file(s) are copied to the newly created test temporary directory which is
 set as the test working directory when the 'test()' functions is executed.
@@ -1312,7 +1309,6 @@ WARNING: All identifiers starting with TST_ or tst_ are reserved for the
 # This is a basic test for true shell buildin
 #
 
-TST_ID="true01"
 TST_TESTFUNC=do_test
 . tst_test.sh
 
@@ -1358,7 +1354,6 @@ starts the test.
 # Example test with tests in separate functions
 #
 
-TST_ID="example01"
 TST_TESTFUNC=test
 TST_CNT=2
 . tst_test.sh
@@ -1387,7 +1382,6 @@ found they are executed one by one.
 # Example test with tests in a single function
 #
 
-TST_ID="example02"
 TST_TESTFUNC=do_test
 TST_CNT=2
 . tst_test.sh
@@ -1467,7 +1461,6 @@ variable, if module wasn't found the test will exit with 'TCONF'.
 # Optional test command line parameters
 #
 
-TST_ID="example03"
 TST_OPTS="af:"
 TST_USAGE=usage
 TST_PARSE_ARGS=parse_args
@@ -1522,7 +1515,6 @@ if option has argument, its value in '$2'.
 # Optional test positional paramters
 #
 
-TST_ID="example04"
 TST_POS_ARGS=3
 TST_USAGE=usage
 TST_TESTFUNC=do_test

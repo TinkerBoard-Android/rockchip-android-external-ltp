@@ -31,7 +31,6 @@ AC_PROG_YACC
 AC_PREFIX_DEFAULT(/opt/ltp)
 
 AC_CHECK_HEADERS([ \
-    dmapi.h \
     ifaddrs.h \
     libaio.h \
     mm.h \
@@ -44,7 +43,6 @@ AC_CHECK_HEADERS([ \
     sys/epoll.h \
     sys/inotify.h \
     sys/fanotify.h \
-    sys/jfsdmapi.h \
     sys/prctl.h \
 ])
 
@@ -132,6 +130,8 @@ fi
 
 AC_CONFIG_SUBDIRS([utils/ffsb-6.0-rc2])
 
+AC_CONFIG_COMMANDS([syscalls.h], [cd include/lapi/syscalls; ./regen.sh])
+
 # END testsuites knobs
 LTP_CHECK_FORTIFY_SOURCE
 LTP_CHECK_CC_WARN_OLDSTYLE
@@ -189,5 +189,8 @@ LTP_CHECK_EPOLL_PWAIT
 LTP_CHECK_KEYUTILS_SUPPORT
 LTP_CHECK_SYNC_ADD_AND_FETCH
 LTP_CHECK_BUILTIN_CLEAR_CACHE
+LTP_CHECK_MMSGHDR
+LTP_CHECK_UNAME_DOMAINNAME
+LTP_CHECK_X_TABLES
 
 AC_OUTPUT

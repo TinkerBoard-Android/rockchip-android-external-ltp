@@ -39,6 +39,7 @@ ltp_packages := \
   ltp_asapi_02 \
   ltp_asapi_03 \
   ltp_asyncio02 \
+  ltp_autogroup01 \
   ltp_bdflush01 \
   ltp_bind01 \
   ltp_bind02 \
@@ -77,6 +78,7 @@ ltp_packages := \
   ltp_clock_gettime02 \
   ltp_clock_gettime03 \
   ltp_clock_nanosleep01 \
+  ltp_clock_nanosleep02 \
   ltp_clock_nanosleep2_01 \
   ltp_clock_settime02 \
   ltp_clock_settime03 \
@@ -88,10 +90,12 @@ ltp_packages := \
   ltp_clone06 \
   ltp_clone07 \
   ltp_clone08 \
+  ltp_clone09 \
   ltp_close01 \
   ltp_close02 \
   ltp_close08 \
   ltp_connect01 \
+  ltp_copy_file_range01 \
   ltp_cpuacct_task \
   ltp_cpuctl_def_task01 \
   ltp_cpuctl_def_task02 \
@@ -121,6 +125,16 @@ ltp_packages := \
   ltp_create_long_dirs \
   ltp_create_short_dirs \
   ltp_createfile \
+  ltp_cve-2012-0957 \
+  ltp_cve-2014-0196 \
+  ltp_cve-2016-10044 \
+  ltp_cve-2016-4997 \
+  ltp_cve-2016-7042 \
+  ltp_cve-2016-7117 \
+  ltp_cve-2017-2618 \
+  ltp_cve-2017-2671 \
+  ltp_cve-2017-5669 \
+  ltp_cve-2017-6951 \
   ltp_data_space \
   ltp_delete_module01 \
   ltp_delete_module02 \
@@ -201,6 +215,8 @@ ltp_packages := \
   ltp_fanotify04 \
   ltp_fanotify05 \
   ltp_fanotify06 \
+  ltp_fanotify07 \
+  ltp_fanotify08 \
   ltp_fchdir01 \
   ltp_fchdir02 \
   ltp_fchdir03 \
@@ -282,6 +298,10 @@ ltp_packages := \
   ltp_fcntl33_64 \
   ltp_fcntl34 \
   ltp_fcntl34_64 \
+  ltp_fcntl35 \
+  ltp_fcntl35_64 \
+  ltp_fcntl36 \
+  ltp_fcntl36_64 \
   ltp_fdatasync01 \
   ltp_fdatasync02 \
   ltp_flistxattr01 \
@@ -446,6 +466,7 @@ ltp_packages := \
   ltp_getsid02 \
   ltp_getsockname01 \
   ltp_getsockopt01 \
+  ltp_getsockopt02 \
   ltp_gettid01 \
   ltp_gettimeofday01 \
   ltp_gettimeofday02 \
@@ -501,6 +522,8 @@ ltp_packages := \
   ltp_keyctl01 \
   ltp_keyctl02 \
   ltp_keyctl03 \
+  ltp_keyctl04 \
+  ltp_keyctl05 \
   ltp_kill01 \
   ltp_kill02 \
   ltp_kill03 \
@@ -540,14 +563,7 @@ ltp_packages := \
   ltp_locktests \
   ltp_lseek01 \
   ltp_lseek02 \
-  ltp_lseek03 \
-  ltp_lseek04 \
-  ltp_lseek05 \
-  ltp_lseek06 \
   ltp_lseek07 \
-  ltp_lseek08 \
-  ltp_lseek09 \
-  ltp_lseek10 \
   ltp_lseek11 \
   ltp_lstat01 \
   ltp_lstat01_64 \
@@ -579,6 +595,7 @@ ltp_packages := \
   ltp_memcg_process_stress \
   ltp_memcg_test_1 \
   ltp_memcg_test_2 \
+  ltp_memcg_test_3 \
   ltp_memcg_test_4 \
   ltp_memcmp01 \
   ltp_memcpy01 \
@@ -684,6 +701,7 @@ ltp_packages := \
   ltp_msync01 \
   ltp_msync02 \
   ltp_msync03 \
+  ltp_msync04 \
   ltp_mtest01 \
   ltp_munlock01 \
   ltp_munlock02 \
@@ -1019,7 +1037,10 @@ ltp_packages := \
   ltp_splice01 \
   ltp_splice02 \
   ltp_splice03 \
+  ltp_splice04 \
+  ltp_splice05 \
   ltp_ssetmask01 \
+  ltp_stack_clash \
   ltp_stack_space \
   ltp_stat01 \
   ltp_stat01_64 \
@@ -1104,7 +1125,6 @@ ltp_packages := \
   ltp_testcases_bin_assign_password.sh \
   ltp_testcases_bin_at_allow01 \
   ltp_testcases_bin_at_deny01 \
-  ltp_testcases_bin_bg_tcp_traffic \
   ltp_testcases_bin_broken_ip4-checksum \
   ltp_testcases_bin_broken_ip4-dstaddr \
   ltp_testcases_bin_broken_ip4-fragment \
@@ -1165,6 +1185,7 @@ ltp_packages := \
   ltp_testcases_bin_create_file \
   ltp_testcases_bin_daemonlib.sh \
   ltp_testcases_bin_data \
+  ltp_testcases_bin_dccp01.sh \
   ltp_testcases_bin_dctcp01.sh \
   ltp_testcases_bin_df01.sh \
   ltp_testcases_bin_dhcp_lib.sh \
@@ -1175,6 +1196,7 @@ ltp_packages := \
   ltp_testcases_bin_dns-stress02-rmt \
   ltp_testcases_bin_dnsmasq_tests.sh \
   ltp_testcases_bin_du01.sh \
+  ltp_testcases_bin_dynamic_debug01.sh \
   ltp_testcases_bin_echo01 \
   ltp_testcases_bin_eject-tests.sh \
   ltp_testcases_bin_ext4-alloc-test.sh \
@@ -1187,6 +1209,7 @@ ltp_packages := \
   ltp_testcases_bin_ext4_persist_prealloc_test.sh \
   ltp_testcases_bin_ext4_subdir_limit_test.sh \
   ltp_testcases_bin_ext4_uninit_groups_test.sh \
+  ltp_testcases_bin_file01.sh \
   ltp_testcases_bin_filecapstest.sh \
   ltp_testcases_bin_find_portbundle \
   ltp_testcases_bin_finger01 \
@@ -1352,6 +1375,7 @@ ltp_packages := \
   ltp_testcases_bin_ftrace_stress_ftrace_tracing_max_latency.sh \
   ltp_testcases_bin_ftrace_stress_ftrace_tracing_on.sh \
   ltp_testcases_bin_ftrace_stress_test.sh \
+  ltp_testcases_bin_gdb01.sh \
   ltp_testcases_bin_geneve01.sh \
   ltp_testcases_bin_get_ifname \
   ltp_testcases_bin_gre01.sh \
@@ -1392,7 +1416,6 @@ ltp_packages := \
   ltp_testcases_bin_icmp6-multi-diffnic07 \
   ltp_testcases_bin_if-addr-adddel \
   ltp_testcases_bin_if-addr-addlarge \
-  ltp_testcases_bin_if-lib.sh \
   ltp_testcases_bin_if-mtu-change \
   ltp_testcases_bin_if-route-adddel \
   ltp_testcases_bin_if-route-addlarge \
@@ -1427,10 +1450,11 @@ ltp_packages := \
   ltp_testcases_bin_mc_commo \
   ltp_testcases_bin_mc_member \
   ltp_testcases_bin_mc_opts \
-  ltp_testcases_bin_mcast4-grpope01 \
-  ltp_testcases_bin_mcast4-grpope02 \
-  ltp_testcases_bin_mcast4-grpope03 \
-  ltp_testcases_bin_mcast4-grpope04 \
+  ltp_testcases_bin_mcast-group-multiple-socket \
+  ltp_testcases_bin_mcast-group-same-group \
+  ltp_testcases_bin_mcast-group-single-socket \
+  ltp_testcases_bin_mcast-group-source-filter \
+  ltp_testcases_bin_mcast-lib.sh \
   ltp_testcases_bin_mcast4-pktfld01 \
   ltp_testcases_bin_mcast4-pktfld02 \
   ltp_testcases_bin_mcast4-queryfld01 \
@@ -1439,10 +1463,6 @@ ltp_packages := \
   ltp_testcases_bin_mcast4-queryfld04 \
   ltp_testcases_bin_mcast4-queryfld05 \
   ltp_testcases_bin_mcast4-queryfld06 \
-  ltp_testcases_bin_mcast6-grpope01 \
-  ltp_testcases_bin_mcast6-grpope02 \
-  ltp_testcases_bin_mcast6-grpope03 \
-  ltp_testcases_bin_mcast6-grpope04 \
   ltp_testcases_bin_mcast6-pktfld01 \
   ltp_testcases_bin_mcast6-pktfld02 \
   ltp_testcases_bin_mcast6-queryfld01 \
@@ -1544,6 +1564,7 @@ ltp_packages := \
   ltp_testcases_bin_rwho01 \
   ltp_testcases_bin_rwtest \
   ltp_testcases_bin_sched_stress.sh \
+  ltp_testcases_bin_sctp01.sh \
   ltp_testcases_bin_sendfile01 \
   ltp_testcases_bin_set_ipv4addr \
   ltp_testcases_bin_smack_common.sh \
@@ -1882,6 +1903,7 @@ ltp_packages := \
   ltp_testcases_bin_tcp6-uni-winscale14 \
   ltp_testcases_bin_tcp_fastopen_run.sh \
   ltp_testcases_bin_tcp_ipsec.sh \
+  ltp_testcases_bin_tcp_ipsec_vti.sh \
   ltp_testcases_bin_tcpdump01 \
   ltp_testcases_bin_telnet01 \
   ltp_testcases_bin_test.sh \
@@ -1895,6 +1917,7 @@ ltp_packages := \
   ltp_testcases_bin_test_controllers.sh \
   ltp_testcases_bin_test_ioctl \
   ltp_testcases_bin_test_net.sh \
+  ltp_testcases_bin_test_net_stress.sh \
   ltp_testcases_bin_test_robind.sh \
   ltp_testcases_bin_testall.sh \
   ltp_testcases_bin_tpm_changeauth_tests.sh \
@@ -1998,12 +2021,15 @@ ltp_packages := \
   ltp_testcases_bin_udp6-uni-basic06 \
   ltp_testcases_bin_udp6-uni-basic07 \
   ltp_testcases_bin_udp_ipsec.sh \
+  ltp_testcases_bin_udp_ipsec_vti.sh \
+  ltp_testcases_bin_unzip01.sh \
   ltp_testcases_bin_utimensat_tests.sh \
   ltp_testcases_bin_vfork_freeze.sh \
   ltp_testcases_bin_virt_lib.sh \
   ltp_testcases_bin_vlan01.sh \
   ltp_testcases_bin_vlan02.sh \
   ltp_testcases_bin_vlan03.sh \
+  ltp_testcases_bin_vma05.sh \
   ltp_testcases_bin_vxlan01.sh \
   ltp_testcases_bin_vxlan02.sh \
   ltp_testcases_bin_vxlan03.sh \
@@ -2127,6 +2153,9 @@ ltp_packages := \
   ltp_tst_ncpus \
   ltp_tst_ncpus_conf \
   ltp_tst_ncpus_max \
+  ltp_tst_net_iface_prefix \
+  ltp_tst_net_ip_prefix \
+  ltp_tst_net_vars \
   ltp_tst_process_state \
   ltp_tst_random \
   ltp_tst_record_childstatus \
@@ -2173,6 +2202,7 @@ ltp_packages := \
   ltp_vma02 \
   ltp_vma03 \
   ltp_vma04 \
+  ltp_vma05_vdso \
   ltp_vmsplice01 \
   ltp_vmsplice02 \
   ltp_wait01 \
@@ -2195,7 +2225,6 @@ ltp_packages := \
   ltp_waitpid12 \
   ltp_waitpid13 \
   ltp_write01 \
-  ltp_write02 \
   ltp_write03 \
   ltp_write04 \
   ltp_write05 \
