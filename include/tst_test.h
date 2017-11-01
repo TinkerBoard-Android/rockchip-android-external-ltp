@@ -23,6 +23,7 @@
 #endif /* __TEST_H__ */
 
 #include <unistd.h>
+#include <limits.h>
 
 #include "tst_common.h"
 #include "tst_res_flags.h"
@@ -38,6 +39,7 @@
 #include "tst_kvercmp.h"
 #include "tst_clone.h"
 #include "tst_kernel.h"
+#include "tst_minmax.h"
 
 /*
  * Reports testcase result.
@@ -112,6 +114,9 @@ struct tst_test {
 
 	const char *min_kver;
 
+	/* If set the test is compiled out */
+	const char *tconf_msg;
+
 	int needs_tmpdir:1;
 	int needs_root:1;
 	int forks_child:1;
@@ -119,6 +124,7 @@ struct tst_test {
 	int needs_checkpoints:1;
 	int format_device:1;
 	int mount_device:1;
+	int needs_rofs:1;
 
 	/* Minimal device size in megabytes */
 	unsigned int dev_min_size;
@@ -135,14 +141,17 @@ struct tst_test {
 	unsigned int mnt_flags;
 	void *mnt_data;
 
-	/* override default timeout per test run */
-	unsigned int timeout;
+	/* override default timeout per test run, disabled == -1 */
+	int timeout;
 
 	void (*setup)(void);
 	void (*cleanup)(void);
 
 	void (*test)(unsigned int test_nr);
 	void (*test_all)(void);
+
+	/* Sampling function for timer measurement testcases */
+	int (*sample)(int clk_id, long long usec);
 
 	/* NULL terminated array of resource file names */
 	const char *const *resource_files;
@@ -178,11 +187,11 @@ extern int TEST_ERRNO;
 const char *tst_strerrno(int err);
 const char *tst_strsig(int sig);
 
+void tst_set_timeout(int timeout);
+
 #ifndef TST_NO_DEFAULT_MAIN
 
 static struct tst_test test;
-
-void tst_set_timeout(unsigned int timeout);
 
 int main(int argc, char *argv[])
 {
@@ -191,9 +200,8 @@ int main(int argc, char *argv[])
 
 #endif /* TST_NO_DEFAULT_MAIN */
 
-#define TST_TEST_TCONF(message)                                              \
-        static void tst_do_test(void) { tst_brk(TCONF, "%s", message); };    \
-        static struct tst_test test = { .test_all = tst_do_test, .tid = "" } \
+#define TST_TEST_TCONF(message)                                 \
+        static struct tst_test test = { .tconf_msg = message  } \
 /*
  * This is a hack to make the testcases link without defining TCID
  */

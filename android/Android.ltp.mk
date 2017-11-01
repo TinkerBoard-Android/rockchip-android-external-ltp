@@ -49,6 +49,10 @@ module_prebuilt := testcases/bin/cpuset_syscall_testset.sh
 module_src_files := testcases/kernel/controllers/cpuset/cpuset_syscall_test/cpuset_syscall_testset.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/mcast-group-source-filter
+module_src_files := testcases/network/stress/multicast/grp-operation/mcast-group-source-filter
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/smack_file_access.sh
 module_src_files := testcases/kernel/security/smack/smack_file_access.sh
 include $(ltp_build_prebuilt)
@@ -79,6 +83,14 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-tso13
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp6-uni-tso13
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/route4-redirect
+module_src_files := testcases/network/stress/route/route4-redirect
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tcp4-uni-tso13
+module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso13
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-tso10
@@ -119,6 +131,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffnic06
 module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic06
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tcp6-multi-diffip04
+module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip04
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/file01/in.zip
@@ -201,6 +217,10 @@ module_prebuilt := testcases/data/ar01/file2.in
 module_src_files := testcases/commands/ar/datafiles/file2.in
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp6-multi-diffnic03
+module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic03
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/fs_bind/bind/test24
 module_src_files := testcases/kernel/fs/fs_bind/bind/test24
 include $(ltp_build_prebuilt)
@@ -233,10 +253,6 @@ module_prebuilt := testcases/bin/tcp4-uni-sackoff05
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff05
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-uni-dsackoff03
-module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff03
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tpm_changeauth_tests_exp02.sh
 module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests_exp02.sh
 include $(ltp_build_prebuilt)
@@ -263,10 +279,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffport01
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp4-uni-winscale08
-module_src_files := testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale08
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-winscale11
@@ -593,6 +605,10 @@ module_prebuilt := testcases/bin/tcp4-uni-sackoff03
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff03
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/mcast-lib.sh
+module_src_files := testcases/network/stress/multicast/grp-operation/mcast-lib.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp4-uni-sackoff08
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff08
 include $(ltp_build_prebuilt)
@@ -801,12 +817,12 @@ module_prebuilt := testcases/bin/tcp4-uni-tso10
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso10
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp4-uni-tso11
-module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso11
+module_prebuilt := testcases/bin/sctp01.sh
+module_src_files := testcases/network/sctp/sctp01.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp4-uni-tso12
-module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso12
+module_prebuilt := testcases/bin/test_net_stress.sh
+module_src_files := testcases/network/stress/ns-tools/test_net_stress.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dctcp01.sh
@@ -1073,20 +1089,8 @@ module_prebuilt := testcases/bin/broken_ip6-dstaddr
 module_src_files := testcases/network/stress/broken_ip/broken_ip6-dstaddr
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mcast6-grpope03
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast6-grpope03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/mcast6-grpope02
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast6-grpope02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/mcast6-grpope01
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast6-grpope01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/bg_tcp_traffic
-module_src_files := testcases/network/stress/ns-tools/bg_tcp_traffic
+module_prebuilt := testcases/bin/tcp6-uni-sackoff06
+module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff06
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_lib.sh
@@ -1401,6 +1405,10 @@ module_prebuilt := testcases/bin/fs_bind/rbind/test28
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test28
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp6-multi-sameport08
+module_src_files := testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport08
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/fs_bind/rbind/test22
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test22
 include $(ltp_build_prebuilt)
@@ -1449,8 +1457,8 @@ module_prebuilt := testcases/bin/tcp6-multi-sameport07
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp4-uni-tso13
-module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso13
+module_prebuilt := testcases/bin/file01.sh
+module_src_files := testcases/commands/file/file01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tpm_changeauth_tests_exp03.sh
@@ -1493,12 +1501,20 @@ module_prebuilt := testcases/data/file01/in.src.rpm
 module_src_files := testcases/commands/file/datafiles/in.src.rpm
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp4-uni-tso11
+module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso11
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff01
 module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mc_commo
 module_src_files := testcases/network/multicast/mc_commo/mc_commo
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tcp6-uni-dsackoff03
+module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff03
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff02
@@ -1555,6 +1571,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftp-download-stress01-rmt
 module_src_files := testcases/network/stress/ftp/ftp-download-stress01-rmt
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/udp_ipsec_vti.sh
+module_src_files := testcases/network/stress/udp/udp_ipsec_vti.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/broken_ip4-protcol
@@ -1705,8 +1725,8 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_stat.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_stat.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mcast4-grpope01
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast4-grpope01
+module_prebuilt := testcases/bin/tcp4-multi-diffport14
+module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/gzip_tests.sh
@@ -1729,16 +1749,8 @@ module_prebuilt := testcases/bin/tpmtoken_objects_tests_exp01.sh
 module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_objects/tpmtoken_objects_tests_exp01.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-uni-winscale06
-module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale06
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/daemonlib.sh
 module_src_files := testcases/lib/daemonlib.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp6-uni-winscale07
-module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale07
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/iptables_tests.sh
@@ -1753,8 +1765,8 @@ module_prebuilt := testcases/data/stress_floppy/dumpdir/1K_file
 module_src_files := testcases/kernel/io/stress_floppy/datafiles/dumpdir/1K_file
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp4-multi-diffport11
-module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport11
+module_prebuilt := testcases/bin/tcp6-uni-winscale01
+module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffport12
@@ -2129,6 +2141,10 @@ module_prebuilt := testcases/bin/rcp01
 module_src_files := testcases/network/tcp_cmds/rcp/rcp01
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/unzip01.sh
+module_src_files := testcases/commands/unzip/unzip01.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/icmp6-multi-diffip04
 module_src_files := testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip04
 include $(ltp_build_prebuilt)
@@ -2243,6 +2259,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tpm_selftest_tests.sh
 module_src_files := testcases/commands/tpm-tools/tpm/tpm_selftest/tpm_selftest_tests.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/dynamic_debug01.sh
+module_src_files := testcases/kernel/tracing/dynamic_debug/dynamic_debug01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_memsw_limit_in_bytes_test.sh
@@ -2389,6 +2409,10 @@ module_prebuilt := testcases/bin/tcp6-uni-pktlossdup01
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup01
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp_ipsec_vti.sh
+module_src_files := testcases/network/stress/tcp/tcp_ipsec_vti.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/mcast6-queryfld05
 module_src_files := testcases/network/stress/multicast/query-flood/mcast6-queryfld05
 include $(ltp_build_prebuilt)
@@ -2441,8 +2465,8 @@ module_prebuilt := testcases/bin/freeze_cancel.sh
 module_src_files := testcases/kernel/controllers/freezer/freeze_cancel.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/route4-redirect
-module_src_files := testcases/network/stress/route/route4-redirect
+module_prebuilt := testcases/bin/mcast-group-same-group
+module_src_files := testcases/network/stress/multicast/grp-operation/mcast-group-same-group
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/route6-change-gw
@@ -2841,10 +2865,6 @@ module_prebuilt := testcases/bin/route4-rmmod
 module_src_files := testcases/network/stress/route/route4-rmmod
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp4-multi-diffport14
-module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ipvlan01.sh
 module_src_files := testcases/network/virt/ipvlan01.sh
 include $(ltp_build_prebuilt)
@@ -2969,8 +2989,8 @@ module_prebuilt := testcases/bin/memcg_stress_test.sh
 module_src_files := testcases/kernel/controllers/memcg/stress/memcg_stress_test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-multi-diffip04
-module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip04
+module_prebuilt := testcases/bin/dccp01.sh
+module_src_files := testcases/network/dccp/dccp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/pm_sched_mc.py
@@ -3009,16 +3029,12 @@ module_prebuilt := testcases/bin/if-route-addlarge
 module_src_files := testcases/network/stress/interface/if-route-addlarge
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-multi-diffnic03
-module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic03
+module_prebuilt := testcases/bin/gdb01.sh
+module_src_files := testcases/commands/gdb/gdb01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp6-multi-diffport05
 module_src_files := testcases/network/stress/udp/multi-diffport/udp6-multi-diffport05
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp6-multi-diffnic02
-module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic02
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-dsackoff11
@@ -3205,6 +3221,10 @@ module_prebuilt := testcases/bin/tcp4-uni-basic08
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic08
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/mcast-group-single-socket
+module_src_files := testcases/network/stress/multicast/grp-operation/mcast-group-single-socket
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp4-multi-sameport11
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport11
 include $(ltp_build_prebuilt)
@@ -3243,10 +3263,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/pm_cpu_consolidation.py
 module_src_files := testcases/kernel/power_management/pm_cpu_consolidation.py
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tcp6-uni-winscale01
-module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/check_netem
@@ -3361,6 +3377,10 @@ module_prebuilt := testcases/bin/smt_smp_affinity.sh
 module_src_files := testcases/kernel/sched/hyperthreading/ht_affinity/smt_smp_affinity.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/mcast-group-multiple-socket
+module_src_files := testcases/network/stress/multicast/grp-operation/mcast-group-multiple-socket
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp4-uni-winscale06
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale06
 include $(ltp_build_prebuilt)
@@ -3371,10 +3391,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ima_policy.sh
 module_src_files := testcases/kernel/security/integrity/ima/tests/ima_policy.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/mcast6-grpope04
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast6-grpope04
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/parameters.sh
@@ -3389,8 +3405,8 @@ module_prebuilt := testcases/data/ar01/file1.in
 module_src_files := testcases/commands/ar/datafiles/file1.in
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-multi-sameport08
-module_src_files := testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport08
+module_prebuilt := testcases/bin/broken_ip6-version
+module_src_files := testcases/network/stress/broken_ip/broken_ip6-version
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/file01/in.tar
@@ -3477,20 +3493,20 @@ module_prebuilt := testcases/bin/tcp6-uni-winscale05
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale05
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mcast4-grpope03
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast4-grpope03
+module_prebuilt := testcases/bin/tcp6-uni-winscale06
+module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale06
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mcast4-grpope02
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast4-grpope02
+module_prebuilt := testcases/bin/tcp6-uni-winscale07
+module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale07
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffport10
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport10
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mcast4-grpope04
-module_src_files := testcases/network/stress/multicast/grp-operation/mcast4-grpope04
+module_prebuilt := testcases/bin/tcp4-multi-diffport11
+module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport11
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/bin/check_prop
@@ -3529,8 +3545,8 @@ module_prebuilt := testcases/bin/mc_opts
 module_src_files := testcases/network/multicast/mc_opts/mc_opts
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/broken_ip6-version
-module_src_files := testcases/network/stress/broken_ip/broken_ip6-version
+module_prebuilt := testcases/bin/vma05.sh
+module_src_files := testcases/kernel/mem/vma/vma05.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-pktlossdup07
@@ -3625,6 +3641,10 @@ module_prebuilt := testcases/bin/ping01.sh
 module_src_files := testcases/network/tcp_cmds/ping/ping01.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/tcp4-uni-tso12
+module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso12
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/broken_ip4-ihl
 module_src_files := testcases/network/stress/broken_ip/broken_ip4-ihl
 include $(ltp_build_prebuilt)
@@ -3705,8 +3725,8 @@ module_prebuilt := testcases/bin/tpm_changeauth_tests.sh
 module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/if-lib.sh
-module_src_files := testcases/network/stress/interface/if-lib.sh
+module_prebuilt := testcases/bin/tcp6-multi-diffnic02
+module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic02
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/modaltr.sh
@@ -3817,8 +3837,8 @@ module_prebuilt := testcases/bin/if-addr-addlarge
 module_src_files := testcases/network/stress/interface/if-addr-addlarge
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tcp6-uni-sackoff06
-module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff06
+module_prebuilt := testcases/bin/tcp4-uni-winscale08
+module_src_files := testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale08
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-winscale09

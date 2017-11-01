@@ -152,7 +152,6 @@ static void verify_epoll_ctl(void)
 }
 
 static struct tst_test test = {
-	.tid = "epoll_ctl01",
 	.setup = setup,
 	.cleanup = cleanup,
 	.test_all = verify_epoll_ctl,
