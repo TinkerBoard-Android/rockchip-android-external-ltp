@@ -166,10 +166,43 @@ sendmsg02
 # Following tests are for commands that are not available on Android
 # device
 ar01
+at_allow01
+at_deny01
+cp_tests.sh
 cpio_tests.sh
+cron02
+cron03
+cron_allow01
+cron_deny01
+cron_dirs_check
+cron_dirs_checks01
+cron_illegal_cron_lines
+cron_neg_tests.sh
+cron_pos_tests.sh
+cron_tests.sh
+df01.sh
+du01.sh
+eject_check_tray
+eject-tests.sh
+file_test.sh
+gzip_tests.sh
+insmod01.sh
+keyctl01.sh
 ld01
+ldd01
+lddfile.out
+lddfile1.obj.so
+lddfile2.obj.so
+lddfile3.obj.so
+lddfile4.obj.so
+lddfile5.obj.so
 logrotate_tests.sh
+lsmod01.sh
 mail_tests.sh
+mkdir_tests.sh
+mkfs01.sh
+mkswap01.sh
+mv_tests.sh
 nm01
 sssd01
 sssd02
@@ -178,7 +211,50 @@ sssd-lib.sh
 su01
 su01_s1
 su_set_passwd
+tar_tests.sh
+tpm_changeauth_tests.sh
+tpm_changeauth_tests_exp01.sh
+tpm_changeauth_tests_exp02.sh
+tpm_changeauth_tests_exp03.sh
+tpm_clear_tests.sh
+tpm_clear_tests_exp01.sh
+tpm_getpubek_tests.sh
+tpm_getpubek_tests_exp01.sh
+tpm_restrictpubek_tests.sh
+tpm_restrictpubek_tests_exp01.sh
+tpm_restrictpubek_tests_exp02.sh
+tpm_restrictpubek_tests_exp03.sh
+tpm_selftest_tests.sh
+tpm_takeownership_tests.sh
+tpm_takeownership_tests_exp01.sh
+tpm_version_tests.sh
+tpmtoken_import_tests.sh
+tpmtoken_import_tests_exp01.sh
+tpmtoken_import_tests_exp02.sh
+tpmtoken_import_tests_exp03.sh
+tpmtoken_import_tests_exp04.sh
+tpmtoken_import_tests_exp05.sh
+tpmtoken_import_tests_exp06.sh
+tpmtoken_import_tests_exp07.sh
+tpmtoken_import_tests_exp08.sh
+tpmtoken_init_tests.sh
+tpmtoken_init_tests_exp00.sh
+tpmtoken_init_tests_exp01.sh
+tpmtoken_init_tests_exp02.sh
+tpmtoken_init_tests_exp03.sh
+tpmtoken_objects_tests.sh
+tpmtoken_objects_tests_exp01.sh
+tpmtoken_protect_tests.sh
+tpmtoken_protect_tests_exp01.sh
+tpmtoken_protect_tests_exp02.sh
+tpmtoken_setpasswd_tests.sh
+tpmtoken_setpasswd_tests_exp01.sh
+tpmtoken_setpasswd_tests_exp02.sh
+tpmtoken_setpasswd_tests_exp03.sh
+tpmtoken_setpasswd_tests_exp04.sh
 unzip_tests.sh
+wc01.sh
+which01.sh
 
 # Following tests are for containers which Android doesn't support / use.
 # Some of these also require SysV IPC, so they need to be disabled anyway.
@@ -248,34 +324,12 @@ syslog09
 syslog10
 syslog-lib.sh
 
-# Following tests require 'cron' running on device which Android doesn't
-# support
-cron02
-cron03
-cron_allow01
-cron_deny01
-cron_dirs_check
-cron_dirs_checks01
-cron_illegal_cron_lines
-cron_neg_tests.sh
-cron_pos_tests.sh
-cron_tests.sh
-
-# Requires readelf on device
-file_test.sh
-
-# Requires unsupported options for 'tar'
-tar_tests.sh
-
 # Require mkfs on device
 access06
 chmod06
 chown04
 chown04_16
 creat06
-
-# Requires 'awk' on device
-mv_tests.sh
 
 # Requires glob()
 epoll-test
@@ -317,16 +371,6 @@ mc_gethost
 
 # Actually two conflicting tests with the same name (upstream bug)
 fsstress
-
-# The ldd test requires specials hacks to build, and tests a utility we
-# don't ship in AOSP anyway
-ldd01
-lddfile.out
-lddfile1.obj.so
-lddfile2.obj.so
-lddfile3.obj.so
-lddfile4.obj.so
-lddfile5.obj.so
 
 # Require mkfifo
 gf12
