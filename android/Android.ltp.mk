@@ -41,10 +41,6 @@ module_prebuilt := testcases/bin/tcp6-uni-sackoff12
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff12
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/insmod01.sh
-module_src_files := testcases/commands/insmod/insmod01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/cpuset_syscall_testset.sh
 module_src_files := testcases/kernel/controllers/cpuset/cpuset_syscall_test/cpuset_syscall_testset.sh
 include $(ltp_build_prebuilt)
@@ -63,10 +59,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/test_ioctl
 module_src_files := testcases/kernel/syscalls/ioctl/test_ioctl
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/which01.sh
-module_src_files := testcases/commands/which/which01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-sackoff09
@@ -103,10 +95,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffip11
 module_src_files := testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip11
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_protect_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_protect/tpmtoken_protect_tests_exp02.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/if-updown
@@ -153,14 +141,6 @@ module_prebuilt := testcases/bin/route6-change-if
 module_src_files := testcases/network/stress/route/route6-change-if
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp04.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp04.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp06.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp06.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_racer_dir_test.sh
 module_src_files := testcases/kernel/fs/racer/fs_racer_dir_test.sh
 include $(ltp_build_prebuilt)
@@ -185,14 +165,6 @@ module_prebuilt := testcases/bin/nfs04
 module_src_files := testcases/network/nfs/nfs_stress/nfs04
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_init_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_init/tpmtoken_init_tests_exp01.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_getpubek_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_getpubek/tpm_getpubek_tests_exp01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/run_freezer.sh
 module_src_files := testcases/kernel/controllers/freezer/run_freezer.sh
 include $(ltp_build_prebuilt)
@@ -203,10 +175,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ext4_nsec_timestamps_test.sh
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-nsec-timestamps/ext4_nsec_timestamps_test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp04.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp04.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/nfs05
@@ -251,10 +219,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-sackoff05
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff05
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_changeauth_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests_exp02.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/route4-change-gw
@@ -317,24 +281,12 @@ module_prebuilt := testcases/bin/tcp6-uni-basic03
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp6-uni-basic03
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp08.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp08.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/at_deny01
-module_src_files := testcases/commands/at/at_deny01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/nfsstat01
 module_src_files := testcases/network/nfs/nfsstat01/nfsstat01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-basic07
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp6-uni-basic07
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_init_tests_exp03.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_init/tpmtoken_init_tests_exp03.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-basic05
@@ -359,10 +311,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cpuset_load_balance_test.sh
 module_src_files := testcases/kernel/controllers/cpuset/cpuset_load_balance_test/cpuset_load_balance_test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_getpubek_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_getpubek/tpm_getpubek_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-smallsend07
@@ -617,10 +565,6 @@ module_prebuilt := testcases/bin/rcu_torture.sh
 module_src_files := testcases/kernel/device-drivers/rcu/rcu_torture.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_restrictpubek_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_restrictpubek/tpm_restrictpubek_tests_exp02.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_bind/bin/lockfile
 module_src_files := testcases/kernel/fs/fs_bind/bin/lockfile
 include $(ltp_build_prebuilt)
@@ -725,10 +669,6 @@ module_prebuilt := testcases/bin/tcp4-uni-pktlossdup10
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup10
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_takeownership_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_takeownership/tpm_takeownership_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-pktlossdup12
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup12
 include $(ltp_build_prebuilt)
@@ -779,10 +719,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/file01/in.ar
 module_src_files := testcases/commands/file/datafiles/in.ar
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp03.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp03.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/killall_udp_traffic
@@ -893,10 +829,6 @@ module_prebuilt := testcases/bin/tcp4-multi-sameport09
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport09
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mkswap01.sh
-module_src_files := testcases/commands/mkswap/mkswap01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-sackoff07
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff07
 include $(ltp_build_prebuilt)
@@ -917,16 +849,8 @@ module_prebuilt := testcases/bin/ext4_get_inode_version.sh
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-inode-version/ext4_get_inode_version.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_init_tests_exp00.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_init/tpmtoken_init_tests_exp00.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/vfork_freeze.sh
 module_src_files := testcases/kernel/controllers/freezer/vfork_freeze.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_changeauth_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests_exp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test13
@@ -1061,10 +985,6 @@ module_prebuilt := testcases/bin/broken_ip4-fragment
 module_src_files := testcases/network/stress/broken_ip/broken_ip4-fragment
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/mkdir_tests.sh
-module_src_files := testcases/commands/mkdir/mkdir_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/icmp6-multi-diffnic02
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic02
 include $(ltp_build_prebuilt)
@@ -1079,10 +999,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_move_charge_at_immigrate_test.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_move_charge_at_immigrate_test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp07.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp07.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/broken_ip6-dstaddr
@@ -1141,10 +1057,6 @@ module_prebuilt := testcases/bin/tcp4-uni-smallsend13
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend13
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_init_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_init/tpmtoken_init_tests_exp02.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/icmp4-multi-diffip01
 module_src_files := testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip01
 include $(ltp_build_prebuilt)
@@ -1193,10 +1105,6 @@ module_prebuilt := testcases/bin/udp4-multi-diffnic05
 module_src_files := testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic05
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/du01.sh
-module_src_files := testcases/commands/du/du01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/killall_icmp_traffic
 module_src_files := testcases/network/stress/ns-tools/killall_icmp_traffic
 include $(ltp_build_prebuilt)
@@ -1215,10 +1123,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-tso11
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp6-uni-tso11
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp05.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp05.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp4-multi-diffnic03
@@ -1293,10 +1197,6 @@ module_prebuilt := testcases/bin/cpuhotplug_do_kcompile_loop
 module_src_files := testcases/kernel/hotplug/cpu_hotplug/tools/cpuhotplug_do_kcompile_loop
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/cp_tests.sh
-module_src_files := testcases/commands/cp/cp_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ln_tests.sh
 module_src_files := testcases/commands/ln/ln_tests.sh
 include $(ltp_build_prebuilt)
@@ -1355,10 +1255,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/output_ipsec_conf
 module_src_files := testcases/network/stress/ns-tools/output_ipsec_conf
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_protect_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_protect/tpmtoken_protect_tests_exp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/remove_password.sh
@@ -1459,10 +1355,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/file01.sh
 module_src_files := testcases/commands/file/file01.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_changeauth_tests_exp03.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests_exp03.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_test_4.sh
@@ -1613,10 +1505,6 @@ module_prebuilt := testcases/bin/ftrace_regression01.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_regression01.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/lsmod01.sh
-module_src_files := testcases/commands/lsmod/lsmod01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ip_tests.sh
 module_src_files := testcases/network/iproute/ip_tests.sh
 include $(ltp_build_prebuilt)
@@ -1729,10 +1617,6 @@ module_prebuilt := testcases/bin/tcp4-multi-diffport14
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/gzip_tests.sh
-module_src_files := testcases/commands/gzip/gzip_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/udp6-multi-diffnic02
 module_src_files := testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic02
 include $(ltp_build_prebuilt)
@@ -1743,10 +1627,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/vlan02.sh
 module_src_files := testcases/network/virt/vlan02.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_objects_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_objects/tpmtoken_objects_tests_exp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/daemonlib.sh
@@ -1837,10 +1717,6 @@ module_prebuilt := testcases/data/unzip01/test.zip
 module_src_files := testcases/commands/unzip/datafiles/test.zip
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_clear_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_clear/tpm_clear_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/arping01.sh
 module_src_files := testcases/network/tcp_cmds/arping/arping01.sh
 include $(ltp_build_prebuilt)
@@ -1909,20 +1785,12 @@ module_prebuilt := testcases/bin/http-stress01-rmt
 module_src_files := testcases/network/stress/http/http-stress01-rmt
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp03.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp03.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-multi-diffport11
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport11
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/zram01.sh
 module_src_files := testcases/kernel/device-drivers/zram/zram01.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/eject-tests.sh
-module_src_files := testcases/commands/eject/eject-tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cpuset_sched_domains_test.sh
@@ -1949,10 +1817,6 @@ module_prebuilt := testcases/bin/icmp4-multi-diffnic04
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic04
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/icmp4-multi-diffnic06
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic06
 include $(ltp_build_prebuilt)
@@ -1977,16 +1841,8 @@ module_prebuilt := testcases/bin/icmp4-multi-diffnic03
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic03
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ext4_online_defrag_test.sh
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-online-defrag/ext4_online_defrag_test.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_init_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_init/tpmtoken_init_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ssh_setup
@@ -2077,10 +1933,6 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_ftrace_filter.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_filter.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_objects_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_objects/tpmtoken_objects_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-smallsend12
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend12
 include $(ltp_build_prebuilt)
@@ -2115,10 +1967,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffip14
 module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip14
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_version_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_version/tpm_version_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ltpSockets.sh
@@ -2255,10 +2103,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftrace_stress/ftrace_stack_trace.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_trace.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_selftest_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_selftest/tpm_selftest_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dynamic_debug01.sh
@@ -2489,10 +2333,6 @@ module_prebuilt := testcases/bin/cpuhotplug_testsuite.sh
 module_src_files := testcases/kernel/hotplug/cpu_hotplug/include/cpuhotplug_testsuite.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/acl_test01
 module_src_files := testcases/kernel/fs/acls/acl_test01
 include $(ltp_build_prebuilt)
@@ -2643,10 +2483,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dns-stress02-rmt
 module_src_files := testcases/network/stress/dns/dns-stress02-rmt
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_takeownership_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_takeownership/tpm_takeownership_tests_exp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/move/test12
@@ -3045,10 +2881,6 @@ module_prebuilt := testcases/bin/memcg_stat_test.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_stat_test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/at_allow01
-module_src_files := testcases/commands/at/at_allow01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/fs_bind/bind/test18
 module_src_files := testcases/kernel/fs/fs_bind/bind/test18
 include $(ltp_build_prebuilt)
@@ -3137,10 +2969,6 @@ module_prebuilt := testcases/bin/icmp6-multi-diffnic05
 module_src_files := testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic05
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_setpasswd_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_setpasswd/tpmtoken_setpasswd_tests_exp02.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/udp4-uni-basic07
 module_src_files := testcases/network/stress/udp/uni-basic/udp4-uni-basic07
 include $(ltp_build_prebuilt)
@@ -3153,16 +2981,8 @@ module_prebuilt := testcases/bin/tcp4-multi-diffport03
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport03
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_clear_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_clear/tpm_clear_tests_exp01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ftp04
 module_src_files := testcases/network/tcp_cmds/ftp/ftp04
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/wc01.sh
-module_src_files := testcases/commands/wc/wc01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffip08
@@ -3257,10 +3077,6 @@ module_prebuilt := testcases/bin/tcp4-uni-basic06
 module_src_files := testcases/network/stress/tcp/uni-basic/tcp4-uni-basic06
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_restrictpubek_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_restrictpubek/tpm_restrictpubek_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/pm_cpu_consolidation.py
 module_src_files := testcases/kernel/power_management/pm_cpu_consolidation.py
 include $(ltp_build_prebuilt)
@@ -3341,14 +3157,6 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_function_profile_enabled.s
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_function_profile_enabled.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpmtoken_import_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/keyctl01.sh
-module_src_files := testcases/commands/keyctl/keyctl01.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/telnet01
 module_src_files := testcases/network/tcp_cmds/telnet/telnet01
 include $(ltp_build_prebuilt)
@@ -3367,10 +3175,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/lock_torture.sh
 module_src_files := testcases/kernel/device-drivers/locking/lock_torture.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_import_tests_exp02.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_import/tpmtoken_import_tests_exp02.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/smt_smp_affinity.sh
@@ -3445,10 +3249,6 @@ module_prebuilt := testcases/bin/tcp6-multi-sameport01
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport01
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_restrictpubek_tests_exp03.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_restrictpubek/tpm_restrictpubek_tests_exp03.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-uni-smallsend08
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend08
 include $(ltp_build_prebuilt)
@@ -3479,10 +3279,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-smallsend03
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/df01.sh
-module_src_files := testcases/commands/df/df01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dhcpd_tests.sh
@@ -3595,10 +3391,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-pktlossdup08
 module_src_files := testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup08
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/mkfs01.sh
-module_src_files := testcases/commands/mkfs/mkfs01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/mcast6-queryfld03
@@ -3721,10 +3513,6 @@ module_prebuilt := testcases/data/file01/in.csh
 module_src_files := testcases/commands/file/datafiles/in.csh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/tpm_changeauth_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_changeauth/tpm_changeauth_tests.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp6-multi-diffnic02
 module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic02
 include $(ltp_build_prebuilt)
@@ -3767,10 +3555,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test09
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test09
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpmtoken_protect_tests.sh
-module_src_files := testcases/commands/tpm-tools/tpmtoken/tpmtoken_protect/tpmtoken_protect_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-sameport10
@@ -3883,8 +3667,4 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/gre01.sh
 module_src_files := testcases/network/virt/gre01.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/tpm_restrictpubek_tests_exp01.sh
-module_src_files := testcases/commands/tpm-tools/tpm/tpm_restrictpubek/tpm_restrictpubek_tests_exp01.sh
 include $(ltp_build_prebuilt)
