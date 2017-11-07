@@ -10064,15 +10064,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_eject_check_tray",
-    stem: "eject_check_tray",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/commands/eject/eject_check_tray.c"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_mmstress",
     stem: "mmstress",
     defaults: ["ltp_test_defaults"],
