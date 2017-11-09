@@ -38,7 +38,6 @@ static char *tst_string = "THIS IS A TEST";
 static int len;
 static int pipe_fd[2];
 static pid_t pids[2];
-static int semid;
 
 static void child_alloc(void);
 static void child_invoke(void);
@@ -86,7 +85,7 @@ int main(int argc, char **argv)
 			tst_resm(TFAIL, "child 1 returns %d", status);
 
 		/* child_alloc is free to exit now */
-		safe_semop(semid, 0, 1);
+		TST_SAFE_CHECKPOINT_WAKE(cleanup, 0);
 
 		if (waitpid(pids[0], &status, 0) == -1)
 			tst_brkm(TBROK | TERRNO, cleanup, "waitpid");
@@ -115,7 +114,7 @@ static void child_alloc(void)
 	SAFE_CLOSE(tst_exit, pipe_fd[1]);
 
 	/* wait until child_invoke is done reading from our VM */
-	safe_semop(semid, 0, -1);
+	TST_SAFE_CHECKPOINT_WAIT(cleanup, 0);
 }
 
 static void child_invoke(void)
@@ -156,12 +155,13 @@ static void setup(void)
 	tst_brkm(TCONF, NULL, "process_vm_readv does not exist "
 		 "on your system");
 #endif
-	semid = init_sem(1);
+	tst_tmpdir();
+	TST_CHECKPOINT_INIT(cleanup);
 
 	TEST_PAUSE;
 }
 
 static void cleanup(void)
 {
-	clean_sem(semid);
+	tst_rmdir();
 }
