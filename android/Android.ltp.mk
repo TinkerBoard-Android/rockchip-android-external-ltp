@@ -745,10 +745,6 @@ module_prebuilt := testcases/bin/test_3_2.sh
 module_src_files := testcases/kernel/controllers/cgroup/test_3_2.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_cpumask.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_cpumask.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-tso10
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso10
 include $(ltp_build_prebuilt)
@@ -835,10 +831,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/rwho01
 module_src_files := testcases/network/tcp_cmds/rwho/rwho01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_event.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_event.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ext4-alloc-test.sh
@@ -1265,10 +1257,6 @@ module_prebuilt := testcases/data/file01/in.py
 module_src_files := testcases/commands/file/datafiles/in.py
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/netstat01
 module_src_files := testcases/network/tcp_cmds/netstat/netstat01
 include $(ltp_build_prebuilt)
@@ -1437,10 +1425,6 @@ module_prebuilt := testcases/data/mc_member/ManyGroups
 module_src_files := testcases/network/multicast/mc_member/datafiles/ManyGroups
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_on.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_on.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-tso14
 module_src_files := testcases/network/stress/tcp/uni-tso/tcp4-uni-tso14
 include $(ltp_build_prebuilt)
@@ -1573,10 +1557,6 @@ module_prebuilt := testcases/bin/tcp6-multi-diffport08
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport08
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_current_tracer.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_current_tracer.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/udp6-uni-basic05
 module_src_files := testcases/network/stress/udp/uni-basic/udp6-uni-basic05
 include $(ltp_build_prebuilt)
@@ -1607,10 +1587,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp6-multi-diffnic03
 module_src_files := testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_stat.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_stat.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffport14
@@ -1671,10 +1647,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/bind/test08
 module_src_files := testcases/kernel/fs/fs_bind/bind/test08
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_ftrace_pid.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_pid.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/bind/test01
@@ -1929,10 +1901,6 @@ module_prebuilt := testcases/bin/route6-rmmod
 module_src_files := testcases/network/stress/route/route6-rmmod
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_ftrace_filter.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_filter.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/tcp4-uni-smallsend12
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend12
 include $(ltp_build_prebuilt)
@@ -2099,10 +2067,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftp-download-stress
 module_src_files := testcases/network/stress/ftp/ftp-download-stress
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_stack_trace.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_trace.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dynamic_debug01.sh
@@ -2369,10 +2333,6 @@ module_prebuilt := testcases/bin/tcp4-multi-diffnic14
 module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress_test.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress_test.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/mcast4-pktfld02
 module_src_files := testcases/network/stress/multicast/packet-flood/mcast4-pktfld02
 include $(ltp_build_prebuilt)
@@ -2503,10 +2463,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cgroup_fj_function.sh
 module_src_files := testcases/kernel/controllers/cgroup_fj/cgroup_fj_function.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_stack_max_size.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_max_size.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff14
@@ -2769,10 +2725,6 @@ module_prebuilt := testcases/bin/udp6-multi-diffip07
 module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_enabled.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_enabled.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/udp6-multi-diffip01
 module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip01
 include $(ltp_build_prebuilt)
@@ -2813,10 +2765,6 @@ module_prebuilt := testcases/bin/ftp05
 module_src_files := testcases/network/tcp_cmds/ftp/ftp05
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_pipe.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_pipe.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/check_envval
 module_src_files := testcases/network/stress/ns-tools/check_envval
 include $(ltp_build_prebuilt)
@@ -2835,10 +2783,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cpuset_base_ops_testset.sh
 module_src_files := testcases/kernel/controllers/cpuset/cpuset_base_ops_test/cpuset_base_ops_testset.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_clock.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_clock.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffnic01
@@ -3121,10 +3065,6 @@ module_prebuilt := testcases/bin/tcp4-uni-smallsend01
 module_src_files := testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend01
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ftp-download-stress02-rmt
 module_src_files := testcases/network/stress/ftp/ftp-download-stress02-rmt
 include $(ltp_build_prebuilt)
@@ -3141,20 +3081,12 @@ module_prebuilt := testcases/bin/macvtap01.sh
 module_src_files := testcases/network/virt/macvtap01.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_max_latency.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_max_latency.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/stop_freeze_sleep_thaw_cont.sh
 module_src_files := testcases/kernel/controllers/freezer/stop_freeze_sleep_thaw_cont.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-sameport13
 module_src_files := testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport13
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_function_profile_enabled.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_function_profile_enabled.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/telnet01
@@ -3531,10 +3463,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffnic09
 module_src_files := testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic09
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_options.sh
-module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_options.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/runpwtests04.sh

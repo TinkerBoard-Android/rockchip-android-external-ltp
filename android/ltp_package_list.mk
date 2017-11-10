@@ -1350,24 +1350,6 @@ ltp_packages := \
   ltp_testcases_bin_ftrace_regression01.sh \
   ltp_testcases_bin_ftrace_regression02.sh \
   ltp_testcases_bin_ftrace_stress_ftrace_buffer_size_kb.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_current_tracer.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_ftrace_enabled.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_function_profile_enabled.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_set_event.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_set_ftrace_filter.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_set_ftrace_pid.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_stack_max_size.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_stack_trace.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_trace.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_trace_clock.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_trace_options.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_trace_pipe.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_trace_stat.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_tracing_cpumask.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_tracing_enabled.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_tracing_max_latency.sh \
-  ltp_testcases_bin_ftrace_stress_ftrace_tracing_on.sh \
-  ltp_testcases_bin_ftrace_stress_test.sh \
   ltp_testcases_bin_gdb01.sh \
   ltp_testcases_bin_geneve01.sh \
   ltp_testcases_bin_get_ifname \
