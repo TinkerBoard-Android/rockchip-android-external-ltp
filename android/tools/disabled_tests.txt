@@ -339,3 +339,7 @@ setresgid01
 chown03
 setgroups04
 
+# TODO b/69263988
+# The leapsec timer test relies on manipulations of the system time
+# which may be disrupted if the device is configured to use network time.
+leapsec_timer
