@@ -3049,18 +3049,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_leapsec_timer",
-    stem: "leapsec_timer",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/timers/leapsec/leapsec_timer.c"],
-    local_include_dirs: [
-        "testcases/kernel/timers/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_nice02",
     stem: "nice02",
     defaults: ["ltp_test_defaults"],
