@@ -76,10 +76,6 @@ msgsnd03
 msgsnd04
 msgsnd05
 msgsnd06
-process_vm01
-process_vm_readv02
-process_vm_readv03
-process_vm_writev02
 remap_file_pages01
 remap_file_pages02
 sem01
