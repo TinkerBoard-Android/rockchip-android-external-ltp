@@ -814,6 +814,10 @@ ltp_packages := \
   ltp_preadv02_64 \
   ltp_print_caps \
   ltp_proc01 \
+  ltp_process_vm01 \
+  ltp_process_vm_readv02 \
+  ltp_process_vm_readv03 \
+  ltp_process_vm_writev02 \
   ltp_pselect01 \
   ltp_pselect01_64 \
   ltp_pselect02 \
