@@ -502,7 +502,6 @@ ltp_packages := \
   ltp_ksm03 \
   ltp_ksm04 \
   ltp_ksm06 \
-  ltp_leapsec_timer \
   ltp_lftest \
   ltp_link02 \
   ltp_link03 \
