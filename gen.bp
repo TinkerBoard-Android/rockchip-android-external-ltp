@@ -2208,6 +2208,15 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_process_vm_writev02",
+    stem: "process_vm_writev02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/cma/process_vm_writev02.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_vma02",
     stem: "vma02",
     defaults: ["ltp_test_defaults"],
@@ -2613,6 +2622,15 @@ cc_test {
     stem: "mknod03",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/mknod/mknod03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_process_vm01",
+    stem: "process_vm01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/cma/process_vm01.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -7643,6 +7661,24 @@ cc_test {
         "testcases/kernel/syscalls/utils",
         "include/old",
     ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_process_vm_readv03",
+    stem: "process_vm_readv03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/cma/process_vm_readv03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_process_vm_readv02",
+    stem: "process_vm_readv02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/cma/process_vm_readv02.c"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
