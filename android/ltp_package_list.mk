@@ -439,8 +439,6 @@ ltp_packages := \
   ltp_getrlimit02 \
   ltp_getrusage01 \
   ltp_getrusage02 \
-  ltp_getrusage03 \
-  ltp_getrusage03_child \
   ltp_getrusage04 \
   ltp_getsid01 \
   ltp_getsid02 \

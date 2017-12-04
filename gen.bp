@@ -12283,18 +12283,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_getrusage03_child",
-    stem: "getrusage03_child",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/getrusage/getrusage03_child.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_timed_forkbomb",
     stem: "timed_forkbomb",
     defaults: ["ltp_test_defaults"],
@@ -13231,18 +13219,6 @@ cc_test {
     stem: "memset01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/memset/memset01.c"],
-    local_include_dirs: [
-        "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_getrusage03",
-    stem: "getrusage03",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/getrusage/getrusage03.c"],
     local_include_dirs: [
         "testcases/kernel/include",
         "include/old",
