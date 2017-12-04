@@ -513,3 +513,9 @@ setgroups04
 # The leapsec timer test relies on manipulations of the system time
 # which may be disrupted if the device is configured to use network time.
 leapsec_timer
+
+# b/70174578
+# The getrusage03 test is dependent on the runtime environment and the current
+# memory pressure in the system, making it a poor choice to include in a
+# compliance test suite.
+getrusage03
