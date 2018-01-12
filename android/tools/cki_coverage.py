@@ -340,7 +340,9 @@ if __name__ == "__main__":
 
   cki = gensyscalls.SysCallsTxtParser()
   cki.parse_file(os.path.join(bionic_libc_root, "SYSCALLS.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_APP.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_COMMON.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_SYSTEM.TXT"))
   cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_GLOBAL.TXT"))
   if args.l:
     for syscall in cki.syscalls:
