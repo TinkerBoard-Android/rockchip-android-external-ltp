@@ -277,22 +277,38 @@ class CKI_Coverage(object):
       return
     count = 0
     uncovered = 0
+
+    print ""
+    print "         Covered Syscalls"
     for syscall in self.cki_syscalls:
+      if not self.passing_tests[syscall]:
+        continue
       if not count % 20:
         print ("%25s   Disabled Skipped Failing Passing -------------" %
                "-------------")
-      sys.stdout.write("%25s   %s        %s       %s       %s" %
+      sys.stdout.write("%25s   %s        %s       %s       %s\n" %
                        (syscall, len(self.disabled_tests[syscall]),
                         len(self.skipped_tests[syscall]),
                         len(self.failing_tests[syscall]),
                         len(self.passing_tests[syscall])))
-      if not self.passing_tests[syscall]:
-        print " <-- uncovered"
-        uncovered += 1
-      else:
-        print ""
       count += 1
-    print ""
+
+    count = 0
+    print "\n"
+    print "       Uncovered Syscalls"
+    for syscall in self.cki_syscalls:
+      if self.passing_tests[syscall]:
+        continue
+      if not count % 20:
+        print ("%25s   Disabled Skipped Failing Passing -------------" %
+               "-------------")
+      sys.stdout.write("%25s   %s        %s       %s       %s\n" %
+                       (syscall, len(self.disabled_tests[syscall]),
+                        len(self.skipped_tests[syscall]),
+                        len(self.failing_tests[syscall]),
+                        len(self.passing_tests[syscall])))
+      uncovered += 1
+      count += 1
     print ("Total uncovered syscalls: %s out of %s" %
            (uncovered, len(self.cki_syscalls)))
 
@@ -304,21 +320,39 @@ class CKI_Coverage(object):
     """
     count = 0
     uncovered = 0
+
+    print ""
+    print "         Covered Syscalls"
     for syscall in self.cki_syscalls:
+      if (len(self.syscall_tests[syscall]) -
+          len(self.disabled_tests[syscall]) <= 0):
+        continue
       if not count % 20:
         print ("%25s   Disabled Enabled -------------" %
                "-------------")
-      sys.stdout.write("%25s   %s        %s" %
+      sys.stdout.write("%25s   %s        %s\n" %
                        (syscall, len(self.disabled_tests[syscall]),
                         len(self.syscall_tests[syscall]) -
                         len(self.disabled_tests[syscall])))
-      if (len(self.syscall_tests[syscall]) -
-          len(self.disabled_tests[syscall]) <= 0):
-        print " <-- uncovered"
-        uncovered += 1
-      else:
-        print ""
       count += 1
+
+    count = 0
+    print "\n"
+    print "       Uncovered Syscalls"
+    for syscall in self.cki_syscalls:
+      if (len(self.syscall_tests[syscall]) -
+          len(self.disabled_tests[syscall]) > 0):
+        continue
+      if not count % 20:
+        print ("%25s   Disabled Enabled -------------" %
+               "-------------")
+      sys.stdout.write("%25s   %s        %s\n" %
+                       (syscall, len(self.disabled_tests[syscall]),
+                        len(self.syscall_tests[syscall]) -
+                        len(self.disabled_tests[syscall])))
+      uncovered += 1
+      count += 1
+
     print ""
     print ("Total uncovered syscalls: %s out of %s" %
            (uncovered, len(self.cki_syscalls)))
