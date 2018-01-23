@@ -53,9 +53,9 @@ init_ltp_netspace()
 # Run command on remote host.
 # Options:
 # -b run in background
+# -B run in background and save output to $TST_TMPDIR/bg.cmd
 # -s safe option, if something goes wrong, will exit with TBROK
 # -c specify command to run
-
 tst_rhost_run()
 {
 	local pre_cmd=
@@ -64,13 +64,15 @@ tst_rhost_run()
 	local user="root"
 	local cmd=
 	local safe=0
+	local bg=
 
 	OPTIND=0
 
-	while getopts :bsc:u: opt; do
+	while getopts :bBsc:u: opt; do
 		case "$opt" in
-		b) [ "$TST_USE_NETNS" ] && pre_cmd="" || pre_cmd="nohup"
-		   post_cmd=" > /dev/null 2>&1 &"
+		b|B) [ "$TST_USE_NETNS" ] && pre_cmd= || pre_cmd="nohup"
+		   [ "$opt" = b ] && bg="/dev/null" || bg="$TST_TMPDIR/bg.cmd"
+		   post_cmd=" > $bg 2>&1 &"
 		   out="1> /dev/null"
 		;;
 		s) safe=1 ;;
@@ -388,13 +390,20 @@ tst_wait_ipv6_dad()
 	done
 }
 
+tst_dump_rhost_cmd()
+{
+	tst_rhost_run -c "cat $TST_TMPDIR/bg.cmd"
+}
+
 # Run network load test, see 'netstress -h' for option description
 tst_netload()
 {
 	local rfile="tst_netload.res"
 	local expect_res="pass"
 	local ret=0
-	local type=
+	local type="tcp"
+	local hostopt=
+	local setup_srchost=0
 	# common options for client and server
 	local cs_opts=
 
@@ -407,31 +416,41 @@ tst_netload()
 	local s_opts=
 
 	OPTIND=0
-	while getopts :a:H:d:n:N:r:R:b:t:T:fe:m: opt; do
+	while getopts :a:H:d:n:N:r:R:S:b:t:T:fFe:m:A: opt; do
 		case "$opt" in
 		a) c_num="$OPTARG" ;;
-		H) c_opts="${c_opts}-H $OPTARG " ;;
+		H) c_opts="${c_opts}-H $OPTARG "
+		   hostopt="$OPTARG" ;;
 		d) rfile="$OPTARG" ;;
 		n) c_opts="${c_opts}-n $OPTARG " ;;
 		N) c_opts="${c_opts}-N $OPTARG " ;;
 		r) c_requests="$OPTARG" ;;
+		A) c_opts="${c_opts}-A $OPTARG " ;;
 		R) s_replies="$OPTARG" ;;
+		S) c_opts="${c_opts}-S $OPTARG "
+		   setup_srchost=1 ;;
 		b) cs_opts="${cs_opts}-b $OPTARG " ;;
 		t) cs_opts="${cs_opts}-t $OPTARG " ;;
 		T) cs_opts="${cs_opts}-T $OPTARG "
 		   type="$OPTARG" ;;
 		m) cs_opts="${cs_opts}-m $OPTARG " ;;
 		f) cs_opts="${cs_opts}-f " ;;
+		F) cs_opts="${cs_opts}-F " ;;
 		e) expect_res="$OPTARG" ;;
 		*) tst_brkm TBROK "tst_netload: unknown option: $OPTARG" ;;
 		esac
 	done
 	OPTIND=0
 
+	[ "$setup_srchost" = 1 ] && s_opts="${s_opts}-S $hostopt "
+
 	local expect_ret=0
 	[ "$expect_res" != "pass" ] && expect_ret=1
 
-	local port="$(tst_rhost_run -c 'tst_get_unused_port ipv6 stream')"
+	local ptype="stream"
+	[ "$type" = "udp" ] && ptype="dgram"
+
+	local port=$(tst_rhost_run -c "tst_get_unused_port ipv6 $ptype")
 	[ $? -ne 0 ] && tst_brkm TBROK "failed to get unused port"
 
 	tst_rhost_run -c "pkill -9 netstress\$"
@@ -440,7 +459,7 @@ tst_netload()
 	s_opts="${cs_opts}${s_opts}-R $s_replies -g $port"
 
 	tst_resm TINFO "run server 'netstress $s_opts'"
-	tst_rhost_run -s -b -c "netstress $s_opts"
+	tst_rhost_run -s -B -c "netstress $s_opts"
 
 	tst_resm TINFO "check that server port in 'LISTEN' state"
 	local sec_waited=
@@ -449,12 +468,13 @@ tst_netload()
 	if [ "$type" = "sctp" ]; then
 		sock_cmd="netstat -naS | grep $port | grep -q LISTEN"
 	else
-		sock_cmd="ss -ldutn | grep -q $port"
+		sock_cmd="ss -ln$(echo $type | head -c1) | grep -q $port"
 	fi
 
 	for sec_waited in $(seq 1 1200); do
 		tst_rhost_run -c "$sock_cmd" && break
 		if [ $sec_waited -eq 1200 ]; then
+			tst_dump_rhost_cmd
 			tst_rhost_run -c "ss -dutnp | grep $port"
 			tst_brkm TFAIL "server not in LISTEN state"
 		fi
@@ -466,12 +486,14 @@ tst_netload()
 	tst_rhost_run -c "pkill -9 netstress\$"
 
 	if [ "$expect_ret" -ne "$ret" ]; then
+		tst_dump_rhost_cmd
 		cat tst_netload.log
 		tst_brkm TFAIL "expected '$expect_res' but ret: '$ret'"
 	fi
 
 	if [ "$ret" -eq 0 ]; then
 		if [ ! -f $rfile ]; then
+			tst_dump_rhost_cmd
 			cat tst_netload.log
 			tst_brkm TFAIL "can't read $rfile"
 		fi
@@ -577,6 +599,11 @@ tst_set_sysctl()
 	tst_rhost_run $safe -c "sysctl -qw $add_opt $name=$value"
 }
 
+tst_cleanup_rhost()
+{
+	tst_rhost_run -c "rm -rf $TST_TMPDIR"
+}
+
 # Management Link
 [ -z "$RHOST" ] && TST_USE_NETNS="yes"
 export RHOST="$RHOST"
@@ -669,3 +696,10 @@ export RHOST_HWADDRS="${RHOST_HWADDRS:-$(tst_get_hwaddrs rhost)}"
 
 # More information about network parameters can be found
 # in the following document: testcases/network/stress/README
+
+if [ "$TST_NEEDS_TMPDIR" = 1 ]; then
+	tst_tmpdir
+	tst_rhost_run -c "mkdir -p $TST_TMPDIR"
+	tst_rhost_run -c "chmod 777 $TST_TMPDIR"
+	export TST_TMPDIR_RHOST=1
+fi
