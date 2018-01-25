@@ -26,7 +26,6 @@
 #include <sys/wait.h>
 #include <limits.h>
 #include "hugetlb.h"
-#include "mem.h"
 #include "hugetlb.h"
 
 static size_t shm_size;
@@ -52,14 +51,12 @@ static void test_hugeshmget(void)
 		tst_brk(TBROK | TERRNO, "fork");
 	case 0:
 		/* set the user ID of the child to the non root user */
-		if (setuid(ltp_uid) == -1)
-			tst_brk(TBROK | TERRNO, "setuid");
+		SAFE_SETUID(ltp_uid);
 		do_child();
 		exit(0);
 	default:
 		/* wait for the child to return */
-		if (waitpid(pid, &status, 0) == -1)
-			tst_brk(TBROK | TERRNO, "waitpid");
+		SAFE_WAITPID(pid, &status, 0);
 	}
 }
 
@@ -81,11 +78,10 @@ void setup(void)
 {
 	long hpage_size;
 
-	check_hugepage();
+	save_nr_hugepages();
 	if (nr_opt)
 		hugepages = SAFE_STRTOL(nr_opt, 0, LONG_MAX);
 
-	orig_hugepages = get_sys_tune("nr_hugepages");
 	set_sys_tune("nr_hugepages", hugepages, 1);
 	hpage_size = SAFE_READ_MEMINFO("Hugepagesize:") * 1024;
 
@@ -104,7 +100,7 @@ void setup(void)
 void cleanup(void)
 {
 	rm_shm(shm_id_1);
-	set_sys_tune("nr_hugepages", orig_hugepages, 0);
+	restore_nr_hugepages();
 }
 
 static struct tst_test test = {

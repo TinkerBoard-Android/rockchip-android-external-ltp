@@ -305,6 +305,10 @@ module_prebuilt := testcases/bin/memcg_usage_in_bytes_test.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_usage_in_bytes_test.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/udp4-multi-diffport04
+module_src_files := testcases/network/stress/udp/multi-diffport/udp4-multi-diffport04
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/fs_racer_file_list.sh
 module_src_files := testcases/kernel/fs/racer/fs_racer_file_list.sh
 include $(ltp_build_prebuilt)
@@ -829,10 +833,6 @@ module_prebuilt := testcases/bin/tcp6-uni-sackoff07
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff07
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/rwho01
-module_src_files := testcases/network/tcp_cmds/rwho/rwho01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/ext4-alloc-test.sh
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-delalloc-mballoc/ext4-alloc-test.sh
 include $(ltp_build_prebuilt)
@@ -1161,12 +1161,16 @@ module_prebuilt := testcases/data/stress_floppy/dd_file
 module_src_files := testcases/kernel/io/stress_floppy/datafiles/dd_file
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/macsec01.sh
+module_src_files := testcases/network/virt/macsec01.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/tcp6-uni-sackoff08
 module_src_files := testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff08
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/finger01
-module_src_files := testcases/network/tcp_cmds/finger/finger01
+module_prebuilt := testcases/bin/macsec02.sh
+module_src_files := testcases/network/virt/macsec02.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/run_cpuctl_test_fj.sh
@@ -1207,10 +1211,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ssh02
 module_src_files := testcases/network/tcp_cmds/ssh/ssh02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/rdist01
-module_src_files := testcases/network/tcp_cmds/rdist/rdist01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/file01/in.png
@@ -1937,12 +1937,20 @@ module_prebuilt := testcases/bin/tcp6-multi-diffip14
 module_src_files := testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip14
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/sctp_ipsec.sh
+module_src_files := testcases/network/stress/sctp/sctp_ipsec.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/ltpSockets.sh
 module_src_files := testcases/network/sockets/ltpSockets.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp6-multi-diffip06
 module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip06
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/unshare01.sh
+module_src_files := testcases/commands/unshare/unshare01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/vxlan02.sh
@@ -1999,10 +2007,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp6-multi-diffip02
 module_src_files := testcases/network/stress/udp/multi-diffip/udp6-multi-diffip02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/echo01
-module_src_files := testcases/network/tcp_cmds/echo/echo01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_racer_file_concat.sh
@@ -2697,8 +2701,8 @@ module_prebuilt := testcases/bin/tcp6-multi-diffport14
 module_src_files := testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport14
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/udp4-multi-diffport04
-module_src_files := testcases/network/stress/udp/multi-diffport/udp4-multi-diffport04
+module_prebuilt := testcases/bin/sctp_ipsec_vti.sh
+module_src_files := testcases/network/stress/sctp/sctp_ipsec_vti.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-multi-diffip01
@@ -3349,6 +3353,10 @@ module_prebuilt := testcases/bin/tcp6-uni-winscale08
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale08
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/dccp_ipsec_vti.sh
+module_src_files := testcases/network/stress/dccp/dccp_ipsec_vti.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/fork_freeze.sh
 module_src_files := testcases/kernel/controllers/freezer/fork_freeze.sh
 include $(ltp_build_prebuilt)
@@ -3579,6 +3587,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/run_cpuctl_latency_test.sh
 module_src_files := testcases/kernel/controllers/cpuctl/run_cpuctl_latency_test.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/dccp_ipsec.sh
+module_src_files := testcases/network/stress/dccp/dccp_ipsec.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-uni-sackoff04

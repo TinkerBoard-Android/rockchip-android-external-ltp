@@ -23,6 +23,9 @@
 #include "config.h"
 #include <stdio.h>
 #include <sys/wait.h>
+#if HAVE_NUMA_H
+#include <numa.h>
+#endif
 #if HAVE_NUMAIF_H
 #include <numaif.h>
 #endif
@@ -30,8 +33,8 @@
 #include "mem.h"
 #include "numa_helper.h"
 
-#if HAVE_NUMA_H && HAVE_LINUX_MEMPOLICY_H && HAVE_NUMAIF_H \
-	&& HAVE_MPOL_CONSTANTS
+#ifdef HAVE_NUMA_V2
+
 volatile int end;
 static int *nodes;
 static int nnodes;
@@ -71,8 +74,7 @@ static void test_cpuset(void)
 	snprintf(buf, BUFSIZ, "%d", nodes[1]);
 	write_cpuset_files(CPATH_NEW, "mems", buf);
 
-	if (waitpid(child, &status, WUNTRACED | WCONTINUED) == -1)
-		tst_brk(TBROK | TERRNO, "waitpid");
+	SAFE_WAITPID(child, &status, WUNTRACED | WCONTINUED);
 	if (WEXITSTATUS(status) != 0) {
 		tst_res(TFAIL, "child exit status is %d", WEXITSTATUS(status));
 		return;
@@ -187,6 +189,6 @@ static struct tst_test test = {
 	.min_kver = "2.6.32",
 };
 
-#else /* no NUMA */
-	TST_TEST_TCONF("no NUMA development packages installed.");
+#else
+	TST_TEST_TCONF("test requires libnuma >= 2 and it's development packages");
 #endif
