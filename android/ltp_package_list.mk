@@ -27,8 +27,16 @@ ltp_packages := \
   ltp_acl_link_test \
   ltp_add_key01 \
   ltp_add_key02 \
+  ltp_add_key03 \
+  ltp_add_key04 \
   ltp_adjtimex01 \
   ltp_adjtimex02 \
+  ltp_aio-stress \
+  ltp_aio01 \
+  ltp_aio_tio \
+  ltp_aiocp \
+  ltp_aiodio_append \
+  ltp_aiodio_sparse \
   ltp_alarm01 \
   ltp_alarm02 \
   ltp_alarm03 \
@@ -124,7 +132,6 @@ ltp_packages := \
   ltp_create_datafile \
   ltp_create_long_dirs \
   ltp_create_short_dirs \
-  ltp_createfile \
   ltp_cve-2012-0957 \
   ltp_cve-2014-0196 \
   ltp_cve-2016-10044 \
@@ -139,11 +146,15 @@ ltp_packages := \
   ltp_delete_module01 \
   ltp_delete_module02 \
   ltp_delete_module03 \
+  ltp_dio_append \
+  ltp_dio_sparse \
+  ltp_dio_truncate \
   ltp_diotest1 \
   ltp_diotest2 \
   ltp_diotest3 \
   ltp_diotest5 \
   ltp_diotest6 \
+  ltp_dirty \
   ltp_dirtyc0w \
   ltp_dirtyc0w_child \
   ltp_disktest \
@@ -162,8 +173,6 @@ ltp_packages := \
   ltp_dup205 \
   ltp_dup3_01 \
   ltp_dup3_02 \
-  ltp_echoes \
-  ltp_echoes6 \
   ltp_endian_switch01 \
   ltp_epoll-ltp \
   ltp_epoll_create1_01 \
@@ -208,6 +217,7 @@ ltp_packages := \
   ltp_fallocate02 \
   ltp_fallocate03 \
   ltp_fallocate04 \
+  ltp_fallocate05 \
   ltp_fanotify01 \
   ltp_fanotify02 \
   ltp_fanotify03 \
@@ -337,6 +347,7 @@ ltp_packages := \
   ltp_fptest01 \
   ltp_fptest02 \
   ltp_frag \
+  ltp_fs_fill \
   ltp_fs_perms \
   ltp_fstat01 \
   ltp_fstat01_64 \
@@ -458,6 +469,7 @@ ltp_packages := \
   ltp_getrlimit02 \
   ltp_getrusage01 \
   ltp_getrusage02 \
+  ltp_getrusage03_child \
   ltp_getrusage04 \
   ltp_getsid01 \
   ltp_getsid02 \
@@ -508,6 +520,7 @@ ltp_packages := \
   ltp_ioctl04 \
   ltp_ioctl05 \
   ltp_ioctl06 \
+  ltp_ioctl07 \
   ltp_iogen \
   ltp_ioperm01 \
   ltp_ioperm02 \
@@ -521,6 +534,9 @@ ltp_packages := \
   ltp_keyctl03 \
   ltp_keyctl04 \
   ltp_keyctl05 \
+  ltp_keyctl06 \
+  ltp_keyctl07 \
+  ltp_keyctl08 \
   ltp_kill01 \
   ltp_kill02 \
   ltp_kill03 \
@@ -567,6 +583,7 @@ ltp_packages := \
   ltp_lstat02_64 \
   ltp_lstat03 \
   ltp_lstat03_64 \
+  ltp_ltp-diorh \
   ltp_ltpClient \
   ltp_ltpServer \
   ltp_ltp_acpi \
@@ -584,6 +601,7 @@ ltp_packages := \
   ltp_mc_send \
   ltp_mc_verify_opts \
   ltp_mc_verify_opts_error \
+  ltp_meltdown \
   ltp_mem01 \
   ltp_mem02 \
   ltp_mem03 \
@@ -671,6 +689,7 @@ ltp_packages := \
   ltp_mount01 \
   ltp_mount02 \
   ltp_mount03 \
+  ltp_mount03_setuid_test \
   ltp_mount04 \
   ltp_mount05 \
   ltp_mount06 \
@@ -833,6 +852,7 @@ ltp_packages := \
   ltp_ptrace03 \
   ltp_ptrace04 \
   ltp_ptrace05 \
+  ltp_ptrace07 \
   ltp_pty01 \
   ltp_pwrite01 \
   ltp_pwrite01_64 \
@@ -853,6 +873,7 @@ ltp_packages := \
   ltp_read02 \
   ltp_read03 \
   ltp_read04 \
+  ltp_read_checkzero \
   ltp_readahead01 \
   ltp_readahead02 \
   ltp_readdir01 \
@@ -895,6 +916,7 @@ ltp_packages := \
   ltp_renameat202 \
   ltp_request_key01 \
   ltp_request_key02 \
+  ltp_request_key03 \
   ltp_rmdir01 \
   ltp_rmdir02 \
   ltp_rmdir03 \
@@ -993,11 +1015,13 @@ ltp_packages := \
   ltp_setrlimit01 \
   ltp_setrlimit02 \
   ltp_setrlimit03 \
+  ltp_setrlimit04 \
+  ltp_setrlimit05 \
   ltp_setsid01 \
   ltp_setsockopt01 \
+  ltp_setsockopt02 \
   ltp_settimeofday01 \
   ltp_settimeofday02 \
-  ltp_setuid_test \
   ltp_setxattr01 \
   ltp_setxattr02 \
   ltp_setxattr03 \
@@ -1117,6 +1141,9 @@ ltp_packages := \
   ltp_test12 \
   ltp_test13 \
   ltp_test14 \
+  ltp_test15 \
+  ltp_test16 \
+  ltp_test17 \
   ltp_test_6_2 \
   ltp_testcases_bin_acl_test01 \
   ltp_testcases_bin_add_ipv6addr \
@@ -1183,6 +1210,8 @@ ltp_packages := \
   ltp_testcases_bin_daemonlib.sh \
   ltp_testcases_bin_data \
   ltp_testcases_bin_dccp01.sh \
+  ltp_testcases_bin_dccp_ipsec.sh \
+  ltp_testcases_bin_dccp_ipsec_vti.sh \
   ltp_testcases_bin_dctcp01.sh \
   ltp_testcases_bin_dhcp_lib.sh \
   ltp_testcases_bin_dhcpd_tests.sh \
@@ -1192,7 +1221,6 @@ ltp_packages := \
   ltp_testcases_bin_dns-stress02-rmt \
   ltp_testcases_bin_dnsmasq_tests.sh \
   ltp_testcases_bin_dynamic_debug01.sh \
-  ltp_testcases_bin_echo01 \
   ltp_testcases_bin_ext4-alloc-test.sh \
   ltp_testcases_bin_ext4_funcs.sh \
   ltp_testcases_bin_ext4_get_inode_version.sh \
@@ -1206,7 +1234,6 @@ ltp_packages := \
   ltp_testcases_bin_file01.sh \
   ltp_testcases_bin_filecapstest.sh \
   ltp_testcases_bin_find_portbundle \
-  ltp_testcases_bin_finger01 \
   ltp_testcases_bin_force_erase.sh \
   ltp_testcases_bin_fork_freeze.sh \
   ltp_testcases_bin_freeze_cancel.sh \
@@ -1416,6 +1443,8 @@ ltp_packages := \
   ltp_testcases_bin_ln_tests.sh \
   ltp_testcases_bin_lock_torture.sh \
   ltp_testcases_bin_ltpSockets.sh \
+  ltp_testcases_bin_macsec01.sh \
+  ltp_testcases_bin_macsec02.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
   ltp_testcases_bin_mc_cmds \
@@ -1489,7 +1518,6 @@ ltp_packages := \
   ltp_testcases_bin_quota_remount_test01.sh \
   ltp_testcases_bin_rcp01 \
   ltp_testcases_bin_rcu_torture.sh \
-  ltp_testcases_bin_rdist01 \
   ltp_testcases_bin_remove_password.sh \
   ltp_testcases_bin_rlogin01 \
   ltp_testcases_bin_route4-change-dst \
@@ -1530,10 +1558,11 @@ ltp_packages := \
   ltp_testcases_bin_runpwtests_exclusive05.sh \
   ltp_testcases_bin_rup01 \
   ltp_testcases_bin_rusers01 \
-  ltp_testcases_bin_rwho01 \
   ltp_testcases_bin_rwtest \
   ltp_testcases_bin_sched_stress.sh \
   ltp_testcases_bin_sctp01.sh \
+  ltp_testcases_bin_sctp_ipsec.sh \
+  ltp_testcases_bin_sctp_ipsec_vti.sh \
   ltp_testcases_bin_sendfile01 \
   ltp_testcases_bin_set_ipv4addr \
   ltp_testcases_bin_smack_common.sh \
@@ -1951,6 +1980,7 @@ ltp_packages := \
   ltp_testcases_bin_udp6-uni-basic07 \
   ltp_testcases_bin_udp_ipsec.sh \
   ltp_testcases_bin_udp_ipsec_vti.sh \
+  ltp_testcases_bin_unshare01.sh \
   ltp_testcases_bin_unzip01.sh \
   ltp_testcases_bin_utimensat_tests.sh \
   ltp_testcases_bin_vfork_freeze.sh \
@@ -2095,6 +2125,7 @@ ltp_packages := \
   ltp_tst_sleep \
   ltp_tst_strerrno \
   ltp_tst_strsig \
+  ltp_tst_strstatus \
   ltp_tst_tmpdir_test \
   ltp_uaccess \
   ltp_umask01 \

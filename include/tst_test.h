@@ -105,8 +105,6 @@ int tst_parse_long(const char *str, long *val, long min, long max);
 int tst_parse_float(const char *str, float *val, float min, float max);
 
 struct tst_test {
-	/* test id usually the same as test filename without file suffix */
-	const char *tid;
 	/* number of tests available in test() function */
 	unsigned int tcnt;
 
@@ -125,6 +123,15 @@ struct tst_test {
 	int format_device:1;
 	int mount_device:1;
 	int needs_rofs:1;
+	/*
+	 * If set the test function will be executed for all available
+	 * filesystems and the current filesytem type would be set in the
+	 * tst_device->fs_type.
+	 *
+	 * The test setup and cleanup are executed before/after __EACH__ call
+	 * to the test function.
+	 */
+	int all_filesystems:1;
 
 	/* Minimal device size in megabytes */
 	unsigned int dev_min_size;
@@ -149,6 +156,9 @@ struct tst_test {
 
 	void (*test)(unsigned int test_nr);
 	void (*test_all)(void);
+
+	/* Syscall name used by the timer measurement library */
+	const char *scall;
 
 	/* Sampling function for timer measurement testcases */
 	int (*sample)(int clk_id, long long usec);
@@ -186,6 +196,12 @@ extern int TEST_ERRNO;
  */
 const char *tst_strerrno(int err);
 const char *tst_strsig(int sig);
+/*
+ * Returns string describing status as returned by wait().
+ *
+ * BEWARE: Not thread safe.
+ */
+const char *tst_strstatus(int status);
 
 void tst_set_timeout(int timeout);
 

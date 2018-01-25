@@ -51,8 +51,10 @@
 #define NUM_READ_MSGS 3
 #define NUM_READ_RETRY 10
 #define NUM_OVERWRITE_MSGS 1024
-#define READ_TIMEOUT 5
+#define PRINTK "/proc/sys/kernel/printk"
+#define CONSOLE_LOGLEVEL_QUIET   4
 
+static int console_loglevel = -1;
 
 /*
  * inject_msg - write message to /dev/kmsg
@@ -65,9 +67,7 @@
 static int inject_msg(const char *msg)
 {
 	int f;
-	f = open("/dev/kmsg", O_WRONLY);
-	if (f < 0)
-		tst_brk(TBROK | TERRNO, "failed to open /dev/kmsg");
+	f = SAFE_OPEN("/dev/kmsg", O_WRONLY);
 	TEST(write(f, msg, strlen(msg)));
 	SAFE_CLOSE(f);
 	errno = TEST_ERRNO;
@@ -93,9 +93,7 @@ static int find_msg(int fd, const char *text_to_find, char *buf, int bufsize,
 	char msg[MAX_MSGSIZE + 1];
 
 	if (fd < 0) {
-		f = open("/dev/kmsg", O_RDONLY | O_NONBLOCK);
-		if (f < 0)
-			tst_brk(TBROK, "failed to open /dev/kmsg");
+		f = SAFE_OPEN("/dev/kmsg", O_RDONLY | O_NONBLOCK);
 	} else {
 		f = fd;
 	}
@@ -149,14 +147,14 @@ static int get_msg_fields(const char *msg, unsigned long *prio,
 /*
  * timed_read - if possible reads from fd or times out
  * @fd:           fd to read from
- * @timeout_sec:  timeout in seconds
+ * @timeout_usec: timeout in useconds
  *
  * RETURNS:
  *   read bytes on successful read
  *  -1 on read() error, errno reflects read() errno
  *  -2 on timeout
  */
-static int timed_read(int fd, int timeout_sec)
+static int timed_read(int fd, long timeout_usec)
 {
 	int ret, tmp;
 	struct timeval timeout;
@@ -164,8 +162,8 @@ static int timed_read(int fd, int timeout_sec)
 
 	FD_ZERO(&read_fds);
 	FD_SET(fd, &read_fds);
-	timeout.tv_sec = timeout_sec;
-	timeout.tv_usec = 0;
+	timeout.tv_sec = timeout_usec / 1000000;
+	timeout.tv_usec = timeout_usec % 1000000;
 
 	ret = select(fd + 1, &read_fds, 0, 0, &timeout);
 	switch (ret) {
@@ -184,14 +182,14 @@ static int timed_read(int fd, int timeout_sec)
  *                   read fails or times out. This ignores any
  *                   EPIPE errors.
  * @fd:           fd to read from
- * @timeout_sec:  timeout in seconds for every read attempt
+ * @timeout_usec: timeout in useconds for every read attempt
  *
  * RETURNS:
  *     0 on read reaching eof
  *    -1 on read error, errno reflects read() errno
  *    -2 on timeout
  */
-static int timed_read_kmsg(int fd, int timeout_sec)
+static int timed_read_kmsg(int fd, long timeout_usec)
 {
 	int child, status, ret = 0;
 	int pipefd[2];
@@ -227,15 +225,14 @@ static int timed_read_kmsg(int fd, int timeout_sec)
 
 	/* parent reads pipe until it reaches eof or until read times out */
 	do {
-		TEST(timed_read(pipefd[0], timeout_sec));
+		TEST(timed_read(pipefd[0], timeout_usec));
 	} while (TEST_RETURN > 0);
 	SAFE_CLOSE(pipefd[0]);
 
 	/* child is blocked, kill it */
 	if (TEST_RETURN == -2)
 		kill(child, SIGTERM);
-	if (waitpid(child, &status, 0) == -1)
-		tst_brk(TBROK | TERRNO, "waitpid");
+	SAFE_WAITPID(child, &status, 0);
 	if (WIFEXITED(status)) {
 		if (WEXITSTATUS(status) == 0) {
 			return 0;
@@ -252,11 +249,9 @@ static void test_read_nonblock(void)
 	int fd;
 
 	tst_res(TINFO, "TEST: nonblock read");
-	fd = open("/dev/kmsg", O_RDONLY | O_NONBLOCK);
-	if (fd < 0)
-		tst_brk(TBROK|TERRNO, "failed to open /dev/kmsg");
+	fd = SAFE_OPEN("/dev/kmsg", O_RDONLY | O_NONBLOCK);
 
-	TEST(timed_read_kmsg(fd, READ_TIMEOUT));
+	TEST(timed_read_kmsg(fd, 5000000));
 	if (TEST_RETURN == -1 && TEST_ERRNO == EAGAIN)
 		tst_res(TPASS, "non-block read returned EAGAIN");
 	else
@@ -270,11 +265,9 @@ static void test_read_block(void)
 	int fd;
 
 	tst_res(TINFO, "TEST: blocking read");
-	fd = open("/dev/kmsg", O_RDONLY);
-	if (fd < 0)
-		tst_brk(TBROK|TERRNO, "failed to open /dev/kmsg");
+	fd = SAFE_OPEN("/dev/kmsg", O_RDONLY);
 
-	TEST(timed_read_kmsg(fd, READ_TIMEOUT));
+	TEST(timed_read_kmsg(fd, 500000));
 	if (TEST_RETURN == -2)
 		tst_res(TPASS, "read blocked");
 	else
@@ -288,9 +281,7 @@ static void test_partial_read(void)
 	int fd;
 
 	tst_res(TINFO, "TEST: partial read");
-	fd = open("/dev/kmsg", O_RDONLY | O_NONBLOCK);
-	if (fd < 0)
-		tst_brk(TBROK|TERRNO, "failed to open /dev/kmsg");
+	fd = SAFE_OPEN("/dev/kmsg", O_RDONLY | O_NONBLOCK);
 
 	TEST(read(fd, msg, 1));
 	if (TEST_RETURN < 0)
@@ -366,9 +357,7 @@ static void test_read_returns_first_message(void)
 	 * NUM_READ_RETRY attempts, report TWARN */
 	tst_res(TINFO, "TEST: mult. readers will get same first message");
 	while (j) {
-		fd = open("/dev/kmsg", O_RDONLY | O_NONBLOCK);
-		if (fd < 0)
-			tst_brk(TBROK|TERRNO, "failed to open /dev/kmsg");
+		fd = SAFE_OPEN("/dev/kmsg", O_RDONLY | O_NONBLOCK);
 
 		for (i = 0; i < NUM_READ_MSGS; i++) {
 			if (find_msg(-1, "", msg, sizeof(msg), 1) != 0)
@@ -421,9 +410,7 @@ static void test_messages_overwritten(void)
 	 * We know first message is overwritten when its seqno changes */
 	tst_res(TINFO, "TEST: read returns EPIPE when messages get "
 		"overwritten");
-	fd = open("/dev/kmsg", O_RDONLY | O_NONBLOCK);
-	if (fd < 0)
-		tst_brk(TBROK|TERRNO, "failed to open /dev/kmsg");
+	fd = SAFE_OPEN("/dev/kmsg", O_RDONLY | O_NONBLOCK);
 
 	if (find_msg(-1, "", msg, sizeof(msg), 1) == 0
 		&& get_msg_fields(msg, NULL, &first_seqno) == 0) {
@@ -586,7 +573,23 @@ static void test_kmsg(void)
 	test_seek();
 }
 
+static void setup(void)
+{
+	if (access(PRINTK, F_OK) == 0) {
+		SAFE_FILE_SCANF(PRINTK, "%d", &console_loglevel);
+		SAFE_FILE_PRINTF(PRINTK, "%d", CONSOLE_LOGLEVEL_QUIET);
+	}
+}
+
+static void cleanup(void)
+{
+	if (console_loglevel != -1)
+		SAFE_FILE_PRINTF(PRINTK, "%d", console_loglevel);
+}
+
 static struct tst_test test = {
+	.setup = setup,
+	.cleanup = cleanup,
 	.needs_root = 1,
 	.test_all = test_kmsg,
 	.min_kver = "3.5.0"

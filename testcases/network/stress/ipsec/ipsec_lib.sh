@@ -40,7 +40,7 @@ while getopts "hl:m:p:s:S:k:A:e:a:c:r:6" opt; do
 		echo "h        help"
 		echo "l n      n is the number of test link when tests run"
 		echo "m x      x is ipsec mode, could be transport / tunnel"
-		echo "p x      x is ipsec protocol, could be ah / esp / ipcomp"
+		echo "p x      x is ipsec protocol, could be ah / esp / comp"
 		echo "s x      x is icmp messge size array"
 		echo "S n      n is IPsec SPI value"
 		echo "k x      key for vti interface"
@@ -119,6 +119,8 @@ tst_ipsec_cleanup()
 		ip li del $cleanup_vti 2>/dev/null
 		tst_rhost_run -c "ip li del $cleanup_vti 2>/dev/null"
 	fi
+
+	[ "$TST_NEEDS_TMPDIR" = 1 ] && tst_rmdir
 }
 
 ipsec_set_algoline()
@@ -166,6 +168,9 @@ ipsec_try()
 		echo "$output" | grep -q \
 			'RTNETLINK answers: Function not implemented' && \
 			tst_brkm TCONF "'$@': not implemented"
+		echo "$output" | grep -q \
+			'RTNETLINK answers: Operation not supported' && \
+			tst_brkm TCONF "'$@': not supported (maybe missing 'ip${TST_IPV6}_vti' kernel module)"
 		tst_brkm TBROK "$@ failed: $output"
 	fi
 }
@@ -240,6 +245,8 @@ tst_ipsec_vti()
 	local key="key $VTI_KEY"
 	local mrk="mark $VTI_KEY"
 	local type="type vti$TST_IPV6"
+	local d="dev $(tst_iface)"
+	local rd="dev $(tst_iface rhost)"
 
 	ip li add type vti help 2>&1 | grep -q vti || \
 		tst_brkm TCONF "iproute doesn't support 'vti'"
@@ -253,7 +260,7 @@ tst_ipsec_vti()
 	cleanup_vti=$vti
 
 	if [ $target = lhost ]; then
-		ROD ip li add $vti $type local $src remote $dst $key
+		ipsec_try ip li add $vti $type local $src remote $dst $key $d
 		ROD ip li set $vti up
 
 		local spi_1="spi 0x$SPI"
@@ -264,7 +271,7 @@ tst_ipsec_vti()
 		ROD $ipx po add dir in tmpl $i_dir $p $m $mrk
 	elif [ $target = rhost ]; then
 		tst_rhost_run -s -c \
-			"ip li add $vti $type local $src remote $dst $key"
+			"ip li add $vti $type local $src remote $dst $key $rd"
 		tst_rhost_run -s -c "ip li set $vti up"
 
 		local spi_1="spi 0x$(( $SPI + 1 ))"

@@ -130,24 +130,12 @@ static void check_child(void)
 		tst_brk(TBROK | TERRNO,
 			 "sigaction(SIGCHLD, &child_action, NULL) failed");
 	}
-	if (waitpid(-1, &child_ret, 0) < 0) {
-		tst_brk(TBROK | TERRNO,
-				 "waitpid(-1, &child_ret, 0) failed");
-	}
+	SAFE_WAITPID(-1, &child_ret, 0);
 
-	if (WIFSIGNALED(child_ret)) {
-		tst_res(TFAIL, "child exited due to signal %d",
-			 WTERMSIG(child_ret));
-	} else if (WIFEXITED(child_ret)) {
-		if (WEXITSTATUS(child_ret) == 0)
-			tst_res(TPASS, "child exited correctly");
-		else
-			tst_res(TFAIL, "child exited with status %d",
-				 WEXITSTATUS(child_ret));
-	} else {
-		tst_res(TFAIL, "child exited for unknown reason (status %d)",
-			 child_ret);
-	}
+	if (WIFEXITED(child_ret) && WEXITSTATUS(child_ret) == 0)
+		tst_res(TPASS, "child exited correctly");
+	else
+		tst_res(TFAIL, "child %s", tst_strstatus(child_ret));
 }
 
 void test01(void)
@@ -157,10 +145,7 @@ void test01(void)
 	int ret, len = 0, i = 0, test_num = 0;
 
 	if (fd_notify_backup == -1) {
-		fd_notify_backup = dup(fd_notify);
-		if (fd_notify_backup < 0)
-			tst_brk(TBROK | TERRNO,
-				 "dup(%d) failed", fd_notify);
+		fd_notify_backup = SAFE_DUP(fd_notify);
 	}
 	run_child();
 
