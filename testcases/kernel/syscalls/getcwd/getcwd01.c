@@ -75,7 +75,6 @@ static void verify_getcwd(unsigned int n)
 }
 
 static struct tst_test test = {
-	.tid = "getcwd01",
 	.tcnt = ARRAY_SIZE(tcases),
 	.test = verify_getcwd
 };

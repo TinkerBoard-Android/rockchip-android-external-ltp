@@ -48,6 +48,7 @@
 #include <sys/wait.h>
 
 #include "test.h"
+#include "safe_macros.h"
 #include "usctest.h"
 #include "ltp_priv.h"
 #include "tst_ansi_color.h"
@@ -80,8 +81,14 @@ int TEST_ERRNO;
 	assert(strlen(buf) > 0);		\
 } while (0)
 
-#if defined(__ANDROID__) && !defined(PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP)
-#define PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP PTHREAD_RECURSIVE_MUTEX_INITIALIZER;
+#ifndef PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
+# ifdef __ANDROID__
+#  define PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP \
+	PTHREAD_RECURSIVE_MUTEX_INITIALIZER
+# else
+/* MUSL: http://www.openwall.com/lists/musl/2017/02/20/5 */
+#  define PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP  { {PTHREAD_MUTEX_RECURSIVE} }
+# endif
 #endif
 
 static pthread_mutex_t tmutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
@@ -423,8 +430,7 @@ void tst_record_childstatus(void (*cleanup)(void), pid_t child)
 
 	NO_NEWLIB_ASSERT("Unknown", 0);
 
-	if (waitpid(child, &status, 0) < 0)
-		tst_brkm(TBROK | TERRNO, cleanup, "waitpid(%d) failed", child);
+	SAFE_WAITPID(cleanup, child, &status, 0);
 
 	if (WIFEXITED(status)) {
 		ttype_result = WEXITSTATUS(status);

@@ -1,5 +1,4 @@
-dnl
-dnl Copyright (c) Linux Test Project, 2014
+dnl Copyright (c) 2018 Petr Vorel <pvorel@suse.cz>
 dnl
 dnl This program is free software;  you can redistribute it and/or modify
 dnl it under the terms of the GNU General Public License as published by
@@ -12,14 +11,15 @@ dnl MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
 dnl the GNU General Public License for more details.
 dnl
 dnl You should have received a copy of the GNU General Public License
-dnl along with this program;  if not, write to the Free Software
-dnl Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
-dnl
+dnl along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-dnl
-dnl LTP_CHECK_CAN_SUPPORT
-dnl ----------------------------
-dnl
-AC_DEFUN([LTP_CHECK_CAN_SUPPORT],[
-AC_CHECK_HEADERS([linux/can.h])
+AC_DEFUN([LTP_DETECT_HOST_CPU], [
+AC_SUBST([HOST_CPU], [$host_cpu])
+AS_CASE([$host_cpu],
+  [amd64], [HOST_CPU=x86_64],
+  [arm*], [HOST_CPU=arm],
+  [i?86|x86], [HOST_CPU=x86],
+  [s390*], [HOST_CPU=s390],
+)
+AC_SUBST([HOST_CPU])
 ])
