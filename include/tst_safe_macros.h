@@ -66,7 +66,7 @@ static inline int safe_dup(const char *file, const int lineno,
 #define SAFE_DUP(oldfd) \
 	safe_dup(__FILE__, __LINE__, (oldfd))
 
-#define	SAFE_GETCWD(buf, size) \
+#define SAFE_GETCWD(buf, size) \
 	safe_getcwd(__FILE__, __LINE__, NULL, (buf), (size))
 
 #define SAFE_GETPWNAM(name) \
@@ -403,6 +403,12 @@ static inline sighandler_t safe_signal(const char *file, const int lineno,
 	         "execlp(%s, %s, ...) failed", file, arg); \
 	} while (0)
 
+#define SAFE_EXECL(file, arg, ...) do {				\
+       execl((file), (arg), ##__VA_ARGS__);			\
+       tst_brk_(__FILE__, __LINE__, TBROK | TERRNO,		\
+                "execl(%s, %s, ...) failed", file, arg); 	\
+       } while (0)
+
 int safe_getpriority(const char *file, const int lineno, int which, id_t who);
 #define SAFE_GETPRIORITY(which, who) \
 	safe_getpriority(__FILE__, __LINE__, (which), (who))
@@ -447,5 +453,12 @@ int safe_personality(const char *filename, unsigned int lineno,
 		    unsigned long persona);
 #define SAFE_PERSONALITY(persona) safe_personality(__FILE__, __LINE__, persona)
 
+#define SAFE_SETENV(name, value, overwrite) do {		\
+	if (setenv(name, value, overwrite)) {			\
+		tst_brk_(__FILE__, __LINE__, TBROK | TERRNO,	\
+			"setenv(%s, %s, %d) failed",		\
+			name, value, overwrite);		\
+	}							\
+	} while (0)
 
 #endif /* SAFE_MACROS_H__ */

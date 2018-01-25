@@ -8,6 +8,8 @@
 /acct/acct01
 /add_key/add_key01
 /add_key/add_key02
+/add_key/add_key03
+/add_key/add_key04
 /adjtimex/adjtimex01
 /adjtimex/adjtimex02
 /alarm/alarm01
@@ -141,6 +143,7 @@
 /fallocate/fallocate02
 /fallocate/fallocate03
 /fallocate/fallocate04
+/fallocate/fallocate05
 /fchdir/fchdir01
 /fchdir/fchdir02
 /fchdir/fchdir03
@@ -395,6 +398,7 @@
 /ioctl/ioctl04
 /ioctl/ioctl05
 /ioctl/ioctl06
+/ioctl/ioctl07
 /ioperm/ioperm01
 /ioperm/ioperm02
 /iopl/iopl01
@@ -462,6 +466,9 @@
 /keyctl/keyctl03
 /keyctl/keyctl04
 /keyctl/keyctl05
+/keyctl/keyctl06
+/keyctl/keyctl07
+/keyctl/keyctl08
 /kcmp/kcmp01
 /kcmp/kcmp02
 /kcmp/kcmp03
@@ -583,10 +590,10 @@
 /mount/mount01
 /mount/mount02
 /mount/mount03
+/mount/mount03_setuid_test
 /mount/mount04
 /mount/mount05
 /mount/mount06
-/mount/setuid_test
 /move_pages/move_pages01
 /move_pages/move_pages02
 /move_pages/move_pages03
@@ -702,6 +709,7 @@
 /ptrace/ptrace03
 /ptrace/ptrace04
 /ptrace/ptrace05
+/ptrace/ptrace07
 /ptrace/simple_tracer
 /pwrite/f
 /pwrite/pwrite01
@@ -766,6 +774,7 @@
 /renameat2/renameat202
 /request_key/request_key01
 /request_key/request_key02
+/request_key/request_key03
 /rmdir/rmdir01
 /rmdir/rmdir02
 /rmdir/rmdir03
@@ -929,8 +938,11 @@
 /setrlimit/setrlimit01
 /setrlimit/setrlimit02
 /setrlimit/setrlimit03
+/setrlimit/setrlimit04
+/setrlimit/setrlimit05
 /setsid/setsid01
 /setsockopt/setsockopt01
+/setsockopt/setsockopt02
 /settimeofday/settimeofday01
 /settimeofday/settimeofday02
 /setuid/setuid01

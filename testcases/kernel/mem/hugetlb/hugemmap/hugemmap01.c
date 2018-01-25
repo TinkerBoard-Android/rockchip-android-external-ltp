@@ -37,8 +37,6 @@
 #include <sys/mount.h>
 #include <limits.h>
 #include <sys/param.h>
-
-#include "mem.h"
 #include "hugetlb.h"
 
 static struct tst_option options[] = {
@@ -91,13 +89,11 @@ static void test_hugemmap(void)
 
 void setup(void)
 {
-	check_hugepage();
-	orig_hugepages = get_sys_tune("nr_hugepages");
+	save_nr_hugepages();
 
 	if (!Hopt)
 		Hopt = tst_get_tmpdir();
-	if (mount("none", Hopt, "hugetlbfs", 0, NULL) < 0)
-		tst_brk(TBROK | TERRNO, "mount failed on %s", Hopt);
+	SAFE_MOUNT("none", Hopt, "hugetlbfs", 0, NULL);
 
 	if (nr_opt)
 		hugepages = SAFE_STRTOL(nr_opt, 0, LONG_MAX);
@@ -109,7 +105,7 @@ void setup(void)
 void cleanup(void)
 {
 	unlink(TEMPFILE);
-	set_sys_tune("nr_hugepages", orig_hugepages, 0);
+	restore_nr_hugepages();
 
 	umount(Hopt);
 }

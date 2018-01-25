@@ -32,18 +32,29 @@ AC_PREFIX_DEFAULT(/opt/ltp)
 
 AC_CHECK_HEADERS([ \
     ifaddrs.h \
-    libaio.h \
-    mm.h \
-    pthread.h \
-    sys/xattr.h \
+    keyutils.h \
+    linux/can.h \
     linux/genetlink.h \
+    linux/keyctl.h \
+    linux/if_packet.h \
+    linux/if_ether.h \
     linux/mempolicy.h \
     linux/module.h \
     linux/netlink.h \
+    mm.h \
+    pthread.h \
     sys/epoll.h \
-    sys/inotify.h \
     sys/fanotify.h \
+    sys/inotify.h \
     sys/prctl.h \
+    sys/shm.h \
+    sys/ustat.h \
+    sys/xattr.h \
+])
+
+AC_CHECK_FUNCS([ \
+    profil \
+    ustat \
 ])
 
 # Tools knobs
@@ -130,7 +141,7 @@ fi
 
 AC_CONFIG_SUBDIRS([utils/ffsb-6.0-rc2])
 
-AC_CONFIG_COMMANDS([syscalls.h], [cd include/lapi/syscalls; ./regen.sh])
+AC_CONFIG_COMMANDS([syscalls.h], [cd ${ac_top_srcdir}/include/lapi/syscalls; ./regen.sh])
 
 # END testsuites knobs
 LTP_CHECK_FORTIFY_SOURCE
@@ -176,9 +187,7 @@ LTP_CHECK_TEE
 LTP_CHECK_SPLICE
 LTP_CHECK_VMSPLICE
 LTP_CHECK_TIMERFD
-LTP_CHECK_CAN_SUPPORT
 LTP_CHECK_IOVEC
-LTP_CHECK_KEYCTL
 LTP_CHECK_LINUXRANDOM
 LTP_CHECK_IF_LINK
 LTP_CHECK_KCMP
@@ -192,5 +201,8 @@ LTP_CHECK_BUILTIN_CLEAR_CACHE
 LTP_CHECK_MMSGHDR
 LTP_CHECK_UNAME_DOMAINNAME
 LTP_CHECK_X_TABLES
+LTP_CHECK_ATOMIC_MEMORY_MODEL
+LTP_CHECK_TPACKET_V3
+LTP_DETECT_HOST_CPU
 
 AC_OUTPUT

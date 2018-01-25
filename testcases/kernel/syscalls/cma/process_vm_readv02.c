@@ -55,8 +55,7 @@ int main(int argc, char **argv)
 		tst_count = 0;
 		len = strlen(tst_string);
 
-		if (pipe(pipe_fd) < 0)
-			tst_brkm(TBROK | TERRNO, cleanup, "pipe");
+		SAFE_PIPE(cleanup, pipe_fd);
 
 		/* the start of child_alloc and child_invoke is already
 		 * synchronized via pipe */
@@ -79,16 +78,14 @@ int main(int argc, char **argv)
 		}
 
 		/* wait until child_invoke reads from child_alloc's VM */
-		if (waitpid(pids[1], &status, 0) == -1)
-			tst_brkm(TBROK | TERRNO, cleanup, "waitpid");
+		SAFE_WAITPID(cleanup, pids[1], &status, 0);
 		if (!WIFEXITED(status) || WEXITSTATUS(status) != 0)
 			tst_resm(TFAIL, "child 1 returns %d", status);
 
 		/* child_alloc is free to exit now */
 		TST_SAFE_CHECKPOINT_WAKE(cleanup, 0);
 
-		if (waitpid(pids[0], &status, 0) == -1)
-			tst_brkm(TBROK | TERRNO, cleanup, "waitpid");
+		SAFE_WAITPID(cleanup, pids[0], &status, 0);
 		if (!WIFEXITED(status) || WEXITSTATUS(status) != 0)
 			tst_resm(TFAIL, "child 0 returns %d", status);
 	}
@@ -110,7 +107,7 @@ static void child_alloc(void)
 	/* passing addr of string "foo" via pipe */
 	SAFE_CLOSE(tst_exit, pipe_fd[0]);
 	snprintf(buf, BUFSIZ, "%p", foo);
-	SAFE_WRITE(tst_exit, 1, pipe_fd[1], buf, strlen(buf));
+	SAFE_WRITE(tst_exit, 1, pipe_fd[1], buf, strlen(buf) + 1);
 	SAFE_CLOSE(tst_exit, pipe_fd[1]);
 
 	/* wait until child_invoke is done reading from our VM */
