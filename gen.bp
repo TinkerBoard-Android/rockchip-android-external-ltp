@@ -12514,18 +12514,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_input03",
-    stem: "input03",
-    defaults: ["ltp_test_defaults"],
-    srcs: [
-        "testcases/kernel/input/input_helper.c",
-        "testcases/kernel/input/input03.c",
-    ],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_fcntl31_64",
     stem: "fcntl31_64",
     defaults: ["ltp_test_defaults"],

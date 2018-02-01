@@ -519,3 +519,6 @@ leapsec_timer
 # memory pressure in the system, making it a poor choice to include in a
 # compliance test suite.
 getrusage03
+
+# input03 depends on /dev/input/mice which may not exist
+input03
