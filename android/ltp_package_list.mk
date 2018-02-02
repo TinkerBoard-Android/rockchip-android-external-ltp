@@ -510,7 +510,6 @@ ltp_packages := \
   ltp_inotify_init1_02 \
   ltp_input01 \
   ltp_input02 \
-  ltp_input03 \
   ltp_input04 \
   ltp_input05 \
   ltp_input06 \
