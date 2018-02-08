@@ -4491,19 +4491,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_cve-2017-5669",
-    stem: "cve-2017-5669",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/cve/cve-2017-5669.c"],
-    cflags: [
-        "-D_GNU_SOURCE",
-        "-D_FORTIFY_SOURCE=2",
-    ],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_mmap03",
     stem: "mmap03",
     defaults: ["ltp_test_defaults"],
