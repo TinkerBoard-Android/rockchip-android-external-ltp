@@ -127,11 +127,8 @@ int main(int ac, char **av)
 		}
 		group1_gid = group->gr_gid;
 		if ((group = getgrnam("bin")) == NULL) {
-			if ((group = getgrnam("shell")) == NULL) {
-				tst_brkm(TBROK | TERRNO, cleanup,
-					 "getgrnam(\"bin\") and "
-					 "getgrnam(\"shell\") failed");
-			}
+			tst_brkm(TBROK | TERRNO, cleanup,
+				 "getgrnam(\"bin\") failed");
 		}
 		group2_gid = group->gr_gid;
 
