@@ -140,7 +140,6 @@ ltp_packages := \
   ltp_cve-2016-7117 \
   ltp_cve-2017-2618 \
   ltp_cve-2017-2671 \
-  ltp_cve-2017-5669 \
   ltp_cve-2017-6951 \
   ltp_data_space \
   ltp_delete_module01 \
