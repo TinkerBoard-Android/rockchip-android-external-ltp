@@ -21,7 +21,8 @@ ustat02
 vhangup01
 vhangup02
 
-# Test SysV IPC, while bionic deliberately doesn't support
+# Test SysV IPC, which is not allowed in Android kernels.
+cve-2017-5669
 hugeshmat01
 hugeshmat02
 hugeshmat03
