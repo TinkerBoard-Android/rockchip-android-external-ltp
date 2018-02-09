@@ -448,67 +448,6 @@ cpuset_sched_domains_check
 cpuset_memory_pressure
 
 # The following test cases are disabled due to a disabled cflags
-setfsgid02
-setregid01
-getgid03
-setregid02
-setreuid07
-getegid02
-geteuid01
-setgroups02
-setfsuid04
-getgroups03
-setfsuid03
-setreuid02
-fchown04
-setresuid03
-getuid01
-setreuid05
-setgroups01
-fchown01
-setresgid03
-lchown01
-getgroups01
-getuid03
-setgid03
-setgid02
-chown01
-fchown02
-getgid01
-setreuid01
-setgid01
-chown05
-lchown03
-setreuid03
-setreuid04
-setreuid06
-setuid01
-chown04
-fchown05
-setresuid02
-setuid02
-getegid01
-setregid04
-lchown02
-setresuid04
-geteuid02
-setgroups03
-fchown03
-setfsuid01
-setfsgid03
-setresgid02
-setuid03
-setresgid04
-setregid03
-setresuid01
-chown02
-setfsgid01
-setfsuid02
-setuid04
-setresuid05
-setresgid01
-chown03
-setgroups04
 
 # TODO b/69263988
 # The leapsec timer test relies on manipulations of the system time
