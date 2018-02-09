@@ -78,6 +78,10 @@ ltp_packages := \
   ltp_chmod04 \
   ltp_chmod05 \
   ltp_chmod07 \
+  ltp_chown01 \
+  ltp_chown02 \
+  ltp_chown03 \
+  ltp_chown05 \
   ltp_chroot01 \
   ltp_chroot02 \
   ltp_chroot03 \
@@ -236,6 +240,11 @@ ltp_packages := \
   ltp_fchmod06 \
   ltp_fchmod07 \
   ltp_fchmodat01 \
+  ltp_fchown01 \
+  ltp_fchown02 \
+  ltp_fchown03 \
+  ltp_fchown04 \
+  ltp_fchown05 \
   ltp_fchownat01 \
   ltp_fchownat02 \
   ltp_fcntl01 \
@@ -438,6 +447,13 @@ ltp_packages := \
   ltp_getdents02 \
   ltp_getdomainname01 \
   ltp_getdtablesize01 \
+  ltp_getegid01 \
+  ltp_getegid02 \
+  ltp_geteuid01 \
+  ltp_geteuid02 \
+  ltp_getgid01 \
+  ltp_getgid03 \
+  ltp_getgroups01 \
   ltp_gethostbyname_r01 \
   ltp_gethostname01 \
   ltp_getitimer01 \
@@ -478,6 +494,8 @@ ltp_packages := \
   ltp_gettid01 \
   ltp_gettimeofday01 \
   ltp_gettimeofday02 \
+  ltp_getuid01 \
+  ltp_getuid03 \
   ltp_getxattr01 \
   ltp_getxattr02 \
   ltp_getxattr03 \
@@ -551,6 +569,9 @@ ltp_packages := \
   ltp_ksm03 \
   ltp_ksm04 \
   ltp_ksm06 \
+  ltp_lchown01 \
+  ltp_lchown02 \
+  ltp_lchown03 \
   ltp_lftest \
   ltp_lgetxattr01 \
   ltp_lgetxattr02 \
@@ -996,6 +1017,20 @@ ltp_packages := \
   ltp_setdomainname03 \
   ltp_setegid01 \
   ltp_setegid02 \
+  ltp_setfsgid01 \
+  ltp_setfsgid02 \
+  ltp_setfsgid03 \
+  ltp_setfsuid01 \
+  ltp_setfsuid02 \
+  ltp_setfsuid03 \
+  ltp_setfsuid04 \
+  ltp_setgid01 \
+  ltp_setgid02 \
+  ltp_setgid03 \
+  ltp_setgroups01 \
+  ltp_setgroups02 \
+  ltp_setgroups03 \
+  ltp_setgroups04 \
   ltp_sethostname01 \
   ltp_sethostname02 \
   ltp_sethostname03 \
@@ -1010,6 +1045,26 @@ ltp_packages := \
   ltp_setpgrp01 \
   ltp_setpgrp02 \
   ltp_setpriority02 \
+  ltp_setregid01 \
+  ltp_setregid02 \
+  ltp_setregid03 \
+  ltp_setregid04 \
+  ltp_setresgid01 \
+  ltp_setresgid02 \
+  ltp_setresgid03 \
+  ltp_setresgid04 \
+  ltp_setresuid01 \
+  ltp_setresuid02 \
+  ltp_setresuid03 \
+  ltp_setresuid04 \
+  ltp_setresuid05 \
+  ltp_setreuid01 \
+  ltp_setreuid02 \
+  ltp_setreuid03 \
+  ltp_setreuid04 \
+  ltp_setreuid05 \
+  ltp_setreuid06 \
+  ltp_setreuid07 \
   ltp_setrlimit01 \
   ltp_setrlimit02 \
   ltp_setrlimit03 \
@@ -1020,6 +1075,10 @@ ltp_packages := \
   ltp_setsockopt02 \
   ltp_settimeofday01 \
   ltp_settimeofday02 \
+  ltp_setuid01 \
+  ltp_setuid02 \
+  ltp_setuid03 \
+  ltp_setuid04 \
   ltp_setxattr01 \
   ltp_setxattr02 \
   ltp_setxattr03 \
