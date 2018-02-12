@@ -400,11 +400,8 @@ f00f
 eventfd01
 epoll_pwait01
 abs01
-io_setup01
 rt_sigsuspend01
-io_destroy01
 pidns12
-io_cancel01
 verify_caps_exec
 sigsuspend01
 pidns10
@@ -412,10 +409,8 @@ ksm05
 atof01
 trace_sched
 nextafter01
-io_submit01
 pidns17
 pidns20
-io_getevents01
 nfs05_make_tree
 test
 check_tray
