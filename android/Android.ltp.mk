@@ -301,10 +301,6 @@ module_prebuilt := testcases/bin/cpuset_load_balance_test.sh
 module_src_files := testcases/kernel/controllers/cpuset/cpuset_load_balance_test/cpuset_load_balance_test.sh
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/data/file01/in.bash
-module_src_files := testcases/commands/file/datafiles/in.bash
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/broken_ip6-plen
 module_src_files := testcases/network/stress/broken_ip/broken_ip6-plen
 include $(ltp_build_prebuilt)
@@ -325,8 +321,8 @@ module_prebuilt := testcases/data/mc_member/TooManyGroups
 module_src_files := testcases/network/multicast/mc_member/datafiles/TooManyGroups
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/nfs05
-module_src_files := testcases/network/nfs/nfs_stress/nfs05
+module_prebuilt := testcases/bin/macsec01.sh
+module_src_files := testcases/network/virt/macsec01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/udp6-multi-diffport01
@@ -2373,8 +2369,8 @@ module_prebuilt := testcases/bin/find_portbundle
 module_src_files := testcases/network/stress/ns-tools/find_portbundle
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/macsec01.sh
-module_src_files := testcases/network/virt/macsec01.sh
+module_prebuilt := testcases/bin/nfs05
+module_src_files := testcases/network/nfs/nfs_stress/nfs05
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/nfs06
@@ -2499,6 +2495,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-dsackoff14
 module_src_files := testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff14
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/data/file01/in.bash
+module_src_files := testcases/commands/file/datafiles/in.bash
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-sackoff06

@@ -135,10 +135,10 @@
 /* #undef HAVE_LIBACL */
 
 /* Define to 1 if you have libaio and it's headers installed. */
-/* #undef HAVE_LIBAIO */
+#define HAVE_LIBAIO 1
 
 /* Define to 1 if you have the <libaio.h> header file. */
-/* #undef HAVE_LIBAIO_H */
+#define HAVE_LIBAIO_H 1
 
 /* Define to 1 if you have libcap-2 installed. */
 #define HAVE_LIBCAP 1
