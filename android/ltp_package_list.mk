@@ -530,6 +530,11 @@ ltp_packages := \
   ltp_input04 \
   ltp_input05 \
   ltp_input06 \
+  ltp_io_cancel01 \
+  ltp_io_destroy01 \
+  ltp_io_getevents01 \
+  ltp_io_setup01 \
+  ltp_io_submit01 \
   ltp_iobw \
   ltp_ioctl01 \
   ltp_ioctl03 \
