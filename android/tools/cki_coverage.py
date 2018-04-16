@@ -323,6 +323,28 @@ class CKI_Coverage(object):
     print ("Total uncovered syscalls: %s out of %s" %
            (uncovered, len(self.cki_syscalls)))
 
+  def output_summary(self):
+    """Print a one line summary of the CKI syscall LTP coverage.
+
+    Pretty prints a one line summary of the CKI syscall coverage in LTP
+    for the specified architecture.
+    """
+    uncovered_with_test = 0
+    uncovered_without_test = 0
+    for syscall in self.cki_syscalls:
+      if (len(self.syscall_tests[syscall]) -
+          len(self.disabled_tests[syscall]) > 0):
+        continue
+      if (len(self.disabled_tests[syscall]) > 0):
+        uncovered_with_test += 1
+      else:
+        uncovered_without_test += 1
+    print ("arch, cki syscalls, uncovered with disabled test(s), "
+           "uncovered with no tests, total uncovered")
+    print ("%s, %s, %s, %s, %s" % (self._arch, len(self.cki_syscalls),
+                                uncovered_with_test, uncovered_without_test,
+                                uncovered_with_test + uncovered_without_test))
+
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Output list of system calls "
           "in the Common Kernel Interface and their VTS LTP coverage. If VTS "
@@ -332,6 +354,8 @@ if __name__ == "__main__":
   parser.add_argument("-l", action="store_true",
                       help="list CKI syscalls only, without coverage")
   parser.add_argument("-r", "--results", help="path to VTS test_result.xml")
+  parser.add_argument("-s", action="store_true",
+                      help="print one line summary of CKI coverage for arch")
   args = parser.parse_args()
   if args.arch not in gensyscalls.all_arches:
     print "Arch must be one of the following:"
@@ -340,7 +364,9 @@ if __name__ == "__main__":
 
   cki = gensyscalls.SysCallsTxtParser()
   cki.parse_file(os.path.join(bionic_libc_root, "SYSCALLS.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_APP.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_COMMON.TXT"))
+  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_SYSTEM.TXT"))
   cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_GLOBAL.TXT"))
   if args.l:
     for syscall in cki.syscalls:
@@ -360,5 +386,10 @@ if __name__ == "__main__":
   beta_string = ("*** WARNING: This script is still in development and may\n"
                  "*** report both false positives and negatives.")
   print beta_string
+
+  if args.s:
+    cki_cov.output_summary()
+    exit(0)
+
   cki_cov.output_results()
   print beta_string
