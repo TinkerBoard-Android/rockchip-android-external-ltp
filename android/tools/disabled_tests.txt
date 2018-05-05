@@ -457,3 +457,7 @@ getrusage03
 
 # input03 depends on /dev/input/mice which may not exist
 input03
+
+# Following test is flaky at best and renders the device unusable
+# after running.
+min_free_kbytes

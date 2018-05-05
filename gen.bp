@@ -7844,24 +7844,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_min_free_kbytes",
-    stem: "min_free_kbytes",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/mem/tunable/min_free_kbytes.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: [
-        "testcases/kernel/mem/include",
-        "testcases/kernel/include",
-        "include/old",
-    ],
-    static_libs: [
-        "libltp_mem",
-        "libltp_kerntest",
-        "libltp_ltp",
-    ],
-}
-
-cc_test {
     name: "ltp_mincore01",
     stem: "mincore01",
     defaults: ["ltp_test_defaults"],
