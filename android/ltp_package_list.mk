@@ -644,7 +644,6 @@ ltp_packages := \
   ltp_memtoy \
   ltp_migrate_pages01 \
   ltp_migrate_pages02 \
-  ltp_min_free_kbytes \
   ltp_mincore01 \
   ltp_mincore02 \
   ltp_mkdir01 \
