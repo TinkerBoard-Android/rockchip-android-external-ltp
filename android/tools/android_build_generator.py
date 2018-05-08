@@ -41,7 +41,7 @@ class BuildGenerator(object):
     '''A class to parse make output and convert the result to Android.ltp.mk modules.
 
     Attributes:
-        _bp_result: list of strings for blueprint file
+        _bp_result: directory of list of strings for blueprint file keyed by target name
         _mk_result: list of strings for makefile
         _custom_cflags: dict of string (module name) to lists of strings (cflags
             to add for said module)
@@ -51,7 +51,7 @@ class BuildGenerator(object):
     '''
 
     def __init__(self, custom_cflags):
-        self._bp_result = []
+        self._bp_result = {}
         self._mk_result = []
         self._custom_cflags = custom_cflags
         self._unused_custom_cflags = set(custom_cflags)
@@ -121,64 +121,67 @@ class BuildGenerator(object):
 
         # ltp_defaults already adds the include directory
         local_c_includes = [i for i in local_c_includes if i != 'include']
+        target_name = 'ltp_%s' % base_name
+        target_bp = []
 
-        self._packages.append('ltp_%s' % base_name)
+        self._packages.append(target_name)
 
-        self._bp_result.append('cc_test {')
-        self._bp_result.append('    name: "ltp_%s",' % base_name)
-        self._bp_result.append('    stem: "%s",' % base_name)
-        self._bp_result.append('    defaults: ["ltp_test_defaults"],')
+        target_bp.append('cc_test {')
+        target_bp.append('    name: "%s",' % target_name)
+        target_bp.append('    stem: "%s",' % base_name)
+        target_bp.append('    defaults: ["ltp_test_defaults"],')
 
         if len(local_src_files) == 1:
-            self._bp_result.append('    srcs: ["%s"],' % list(local_src_files)[0])
+            target_bp.append('    srcs: ["%s"],' % list(local_src_files)[0])
         else:
-            self._bp_result.append('    srcs: [')
+            target_bp.append('    srcs: [')
             for src in local_src_files:
-                self._bp_result.append('        "%s",' % src)
-            self._bp_result.append('    ],')
+                target_bp.append('        "%s",' % src)
+            target_bp.append('    ],')
 
         if len(local_cflags) == 1:
-            self._bp_result.append('    cflags: ["%s"],' % list(local_cflags)[0])
+            target_bp.append('    cflags: ["%s"],' % list(local_cflags)[0])
         elif len(local_cflags) > 1:
-            self._bp_result.append('    cflags: [')
+            target_bp.append('    cflags: [')
             for cflag in local_cflags:
-                self._bp_result.append('        "%s",' % cflag)
-            self._bp_result.append('    ],')
+                target_bp.append('        "%s",' % cflag)
+            target_bp.append('    ],')
 
         if len(local_c_includes) == 1:
-            self._bp_result.append('    local_include_dirs: ["%s"],' % list(local_c_includes)[0])
+            target_bp.append('    local_include_dirs: ["%s"],' % list(local_c_includes)[0])
         elif len(local_c_includes) > 1:
-            self._bp_result.append('    local_include_dirs: [')
+            target_bp.append('    local_include_dirs: [')
             for d in local_c_includes:
-                self._bp_result.append('        "%s",' % d)
-            self._bp_result.append('    ],')
+                target_bp.append('        "%s",' % d)
+            target_bp.append('    ],')
 
         bionic_builtin_libs = set(['m', 'rt', 'pthread'])
         filtered_libs = set(local_libraries).difference(bionic_builtin_libs)
 
         static_libraries = set(i for i in local_libraries if i in ltp_libs)
         if len(static_libraries) == 1:
-            self._bp_result.append('    static_libs: ["libltp_%s"],' % list(static_libraries)[0])
+            target_bp.append('    static_libs: ["libltp_%s"],' % list(static_libraries)[0])
         elif len(static_libraries) > 1:
-            self._bp_result.append('    static_libs: [')
+            target_bp.append('    static_libs: [')
             for lib in static_libraries:
-                self._bp_result.append('        "libltp_%s",' % lib)
-            self._bp_result.append('    ],')
+                target_bp.append('        "libltp_%s",' % lib)
+            target_bp.append('    ],')
 
         for lib in static_libraries:
             ltp_libs_used.add(lib)
 
         shared_libraries = set(i for i in filtered_libs if i not in ltp_libs)
         if len(shared_libraries) == 1:
-            self._bp_result.append('    shared_libs: ["lib%s"],' % list(shared_libraries)[0])
+            target_bp.append('    shared_libs: ["lib%s"],' % list(shared_libraries)[0])
         elif len(shared_libraries) > 1:
-            self._bp_result.append('    shared_libs: [')
+            target_bp.append('    shared_libs: [')
             for lib in shared_libraries:
-                self._bp_result.append('        "lib%s",' % lib)
-            self._bp_result.append('    ],')
+                target_bp.append('        "lib%s",' % lib)
+            target_bp.append('    ],')
 
-        self._bp_result.append('}')
-        self._bp_result.append('')
+        target_bp.append('}')
+        target_bp.append('')
+        self._bp_result[target_name] = target_bp
 
     def BuildStaticLibrary(self, ar_target, local_src_files, local_cflags,
                            local_c_includes):
@@ -190,30 +193,32 @@ class BuildGenerator(object):
             local_cflags: list of string
             local_c_includes: list of string
         '''
-        self._bp_result.append('cc_library_static {')
-        self._bp_result.append('    name: "libltp_%s",' %
-                              self.ArTargetToLibraryName(ar_target))
-        self._bp_result.append('    defaults: ["ltp_defaults"],')
+        target_name = 'libltp_%s' % self.ArTargetToLibraryName(ar_target)
+        target_bp = []
+        target_bp.append('cc_library_static {')
+        target_bp.append('    name: "%s",' % target_name)
+        target_bp.append('    defaults: ["ltp_defaults"],')
 
         if len(local_c_includes):
-            self._bp_result.append('    local_include_dirs: [')
+            target_bp.append('    local_include_dirs: [')
             for d in local_c_includes:
-                self._bp_result.append('        "%s",' % d)
-            self._bp_result.append('    ],')
+                target_bp.append('        "%s",' % d)
+            target_bp.append('    ],')
 
         if len(local_cflags):
-            self._bp_result.append('    cflags: [')
+            target_bp.append('    cflags: [')
             for cflag in local_cflags:
-                self._bp_result.append('        "%s",' % cflag)
-            self._bp_result.append('    ],')
+                target_bp.append('        "%s",' % cflag)
+            target_bp.append('    ],')
 
-        self._bp_result.append('    srcs: [')
+        target_bp.append('    srcs: [')
         for src in local_src_files:
-            self._bp_result.append('        "%s",' % src)
-        self._bp_result.append('    ],')
+            target_bp.append('        "%s",' % src)
+        target_bp.append('    ],')
 
-        self._bp_result.append('}')
-        self._bp_result.append('')
+        target_bp.append('}')
+        target_bp.append('')
+        self._bp_result[target_name] = target_bp
 
     def BuildPrebuilt(self, install_target, local_src_file):
         '''Build a prebuild module.
@@ -403,8 +408,10 @@ class BuildGenerator(object):
             output_path: string
         '''
         with open(output_path, 'a') as f:
-            f.write('\n'.join(self._bp_result))
-            self._bp_result = []
+            for k in sorted(self._bp_result.iterkeys()):
+                f.write('\n'.join(self._bp_result[k]))
+                f.write('\n')
+            self._bp_result = {}
 
     def WriteAndroidMk(self, output_path):
         '''Write parse result to make file.
