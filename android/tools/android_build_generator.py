@@ -42,7 +42,7 @@ class BuildGenerator(object):
 
     Attributes:
         _bp_result: directory of list of strings for blueprint file keyed by target name
-        _mk_result: list of strings for makefile
+        _mk_result: directory of list of strings for makefile keyed by target name
         _custom_cflags: dict of string (module name) to lists of strings (cflags
             to add for said module)
         _unused_custom_cflags: set of strings; tracks the modules with custom
@@ -52,7 +52,7 @@ class BuildGenerator(object):
 
     def __init__(self, custom_cflags):
         self._bp_result = {}
-        self._mk_result = []
+        self._mk_result = {}
         self._custom_cflags = custom_cflags
         self._unused_custom_cflags = set(custom_cflags)
         self._packages = []
@@ -227,15 +227,18 @@ class BuildGenerator(object):
             install_target: string
             local_src_file: string
         '''
-        self._mk_result.append('module_prebuilt := %s' % install_target)
-        self._mk_result.append('module_src_files := %s' % local_src_file)
+        base_name = os.path.basename(install_target)
+        mk_result = []
+        mk_result.append('module_prebuilt := %s' % install_target)
+        mk_result.append('module_src_files := %s' % local_src_file)
         module_dir = os.path.dirname(install_target)
         module_stem = os.path.basename(install_target)
         module = 'ltp_%s' % install_target.replace('/', '_')
         self._packages.append(module)
 
-        self._mk_result.append('include $(ltp_build_prebuilt)')
-        self._mk_result.append('')
+        mk_result.append('include $(ltp_build_prebuilt)')
+        mk_result.append('')
+        self._mk_result[base_name] = mk_result
 
     def HandleParsedRule(self, line, rules):
         '''Prepare parse rules.
@@ -420,8 +423,10 @@ class BuildGenerator(object):
             output_path: string
         '''
         with open(output_path, 'a') as f:
-            f.write('\n'.join(self._mk_result))
-            self._mk_result = []
+            for k in sorted(self._mk_result.iterkeys()):
+                f.write('\n'.join(self._mk_result[k]))
+                f.write('\n')
+            self._mk_result = {}
 
     def WritePackageList(self, output_path):
         '''Write parse result to package list file.
