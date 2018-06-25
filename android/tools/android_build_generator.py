@@ -155,7 +155,7 @@ class BuildGenerator(object):
                 target_bp.append('        "%s",' % d)
             target_bp.append('    ],')
 
-        bionic_builtin_libs = set(['m', 'rt', 'pthread'])
+        bionic_builtin_libs = set(['m', 'rt', 'pthread', 'util'])
         filtered_libs = set(local_libraries).difference(bionic_builtin_libs)
 
         static_libraries = set(i for i in local_libraries if i in ltp_libs)
