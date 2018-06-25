@@ -7029,6 +7029,24 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_ksm05",
+    stem: "ksm05",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/mem/ksm/ksm05.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/mem/include",
+        "testcases/kernel/include",
+        "include/old",
+    ],
+    static_libs: [
+        "libltp_mem",
+        "libltp_kerntest",
+        "libltp_ltp",
+    ],
+}
+
+cc_test {
     name: "ltp_ksm06",
     stem: "ksm06",
     defaults: ["ltp_test_defaults"],
