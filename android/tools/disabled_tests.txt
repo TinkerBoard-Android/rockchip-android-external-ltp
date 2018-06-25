@@ -1,4 +1,4 @@
-# disabled_gtests.txt: list of tests which cannot (currently) be built
+# disabled_tests.txt: list of tests which cannot (currently) be built
 # for Android/bionic
 
 # POSIX functions not implemented in bionic
@@ -396,24 +396,19 @@ gf13
 # Case designed only for i386
 f00f
 
-# The following test cases are disabled due to build error on AOSP
-eventfd01
-epoll_pwait01
+# build error due to use of <values.h> for MIN_INT
 abs01
-rt_sigsuspend01
-pidns12
-verify_caps_exec
-sigsuspend01
-pidns10
+
+# build error due to -Wnull-dereference
 ksm05
-atof01
-trace_sched
-nextafter01
-pidns17
-pidns20
-nfs05_make_tree
-test
-check_tray
+
+# build error due to dereference of sigset_t
+rt_sigsuspend01
+sigsuspend01
+
+# no index() in bionic yet
+verify_caps_exec
+
 # build error due to unavailability of eaccess()
 prot_hsymlinks
 setpriority01

@@ -93,6 +93,7 @@ cc_library_static {
     srcs: [
         "lib/tst_safe_sysv_ipc.c",
         "lib/tst_mkfs.c",
+        "lib/tst_resource.c",
         "lib/tst_path_has_mnt_flags.c",
         "lib/tst_process_state.c",
         "lib/tst_fs_type.c",
@@ -131,7 +132,6 @@ cc_library_static {
         "lib/tst_status.c",
         "lib/tst_cpu.c",
         "lib/safe_net.c",
-        "lib/tst_resource.c",
         "lib/tst_fs_link_count.c",
         "lib/tst_module.c",
         "lib/tst_fs_has_free.c",
@@ -506,6 +506,16 @@ cc_test {
     stem: "asyncio02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/asyncio/asyncio02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_atof01",
+    stem: "atof01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/misc/math/atof/atof01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -2095,6 +2105,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_epoll_pwait01",
+    stem: "epoll_pwait01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/epoll_pwait/epoll_pwait01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_epoll_wait01",
     stem: "epoll_wait01",
     defaults: ["ltp_test_defaults"],
@@ -2129,6 +2149,16 @@ cc_test {
     stem: "event_generator",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/connectors/pec/event_generator.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eventfd01",
+    stem: "eventfd01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/eventfd/eventfd01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -9119,6 +9149,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_nextafter01",
+    stem: "nextafter01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/misc/math/nextafter/nextafter01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_nfs01_open_files",
     stem: "nfs01_open_files",
     defaults: ["ltp_test_defaults"],
@@ -9138,6 +9178,16 @@ cc_test {
         "-D_FILE_OFFSET_BITS=64",
         "-D_LARGEFILE_SOURCE",
     ],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_nfs05_make_tree",
+    stem: "nfs05_make_tree",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/network/nfs/nfs_stress/nfs05_make_tree.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -14899,6 +14949,16 @@ cc_test {
     stem: "tpci",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/device-drivers/pci/tpci_user/tpci.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_trace_sched",
+    stem: "trace_sched",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/sched/tool/trace_sched.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],

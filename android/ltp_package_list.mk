@@ -47,6 +47,7 @@ ltp_packages := \
   ltp_asapi_02 \
   ltp_asapi_03 \
   ltp_asyncio02 \
+  ltp_atof01 \
   ltp_autogroup01 \
   ltp_bdflush01 \
   ltp_bind01 \
@@ -181,10 +182,12 @@ ltp_packages := \
   ltp_epoll_create1_01 \
   ltp_epoll_ctl01 \
   ltp_epoll_ctl02 \
+  ltp_epoll_pwait01 \
   ltp_epoll_wait01 \
   ltp_epoll_wait02 \
   ltp_epoll_wait03 \
   ltp_event_generator \
+  ltp_eventfd01 \
   ltp_eventfd2_01 \
   ltp_eventfd2_02 \
   ltp_eventfd2_03 \
@@ -755,8 +758,10 @@ ltp_packages := \
   ltp_netstress \
   ltp_newns \
   ltp_newuname01 \
+  ltp_nextafter01 \
   ltp_nfs01_open_files \
   ltp_nfs04_create_file \
+  ltp_nfs05_make_tree \
   ltp_nfs_flock \
   ltp_nfs_flock_dgen \
   ltp_nftw01 \
@@ -2144,6 +2149,7 @@ ltp_packages := \
   ltp_tomoyo_policy_memory_test \
   ltp_tomoyo_rewrite_test \
   ltp_tpci \
+  ltp_trace_sched \
   ltp_trerrno \
   ltp_truncate01 \
   ltp_truncate01_64 \
