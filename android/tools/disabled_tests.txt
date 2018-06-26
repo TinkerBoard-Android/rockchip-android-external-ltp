@@ -396,9 +396,6 @@ gf13
 # Case designed only for i386
 f00f
 
-# build error due to use of <values.h> for MIN_INT
-abs01
-
 # build error due to -Wnull-dereference
 ksm05
 
