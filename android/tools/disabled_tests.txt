@@ -9,9 +9,6 @@ ulimit01
 
 # Non-POSIX functions not implemented in bionic
 getcontext01
-llistxattr01
-llistxattr02
-llistxattr03
 mallopt01
 profil01
 stime01
