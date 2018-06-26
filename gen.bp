@@ -7291,6 +7291,36 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_llistxattr01",
+    stem: "llistxattr01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/llistxattr/llistxattr01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_llistxattr02",
+    stem: "llistxattr02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/llistxattr/llistxattr02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_llistxattr03",
+    stem: "llistxattr03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/llistxattr/llistxattr03.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_llseek01",
     stem: "llseek01",
     defaults: ["ltp_test_defaults"],
