@@ -165,6 +165,14 @@ module_prebuilt := testcases/bin/connector_test.sh
 module_src_files := testcases/kernel/connectors/connector_test.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/cp_tests.sh
+module_src_files := testcases/commands/cp/cp_tests.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cpio_tests.sh
+module_src_files := testcases/commands/cpio/cpio_tests.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/cpuacct.sh
 module_src_files := testcases/kernel/controllers/cpuacct/cpuacct.sh
 include $(ltp_build_prebuilt)
@@ -1163,6 +1171,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/memcg_use_hierarchy_test.sh
 module_src_files := testcases/kernel/controllers/memcg/functional/memcg_use_hierarchy_test.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/mkdir_tests.sh
+module_src_files := testcases/commands/mkdir/mkdir_tests.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/modaltr.sh
