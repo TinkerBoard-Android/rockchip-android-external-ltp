@@ -458,6 +458,7 @@ ltp_packages := \
   ltp_getgid01 \
   ltp_getgid03 \
   ltp_getgroups01 \
+  ltp_getgroups03 \
   ltp_gethostbyname_r01 \
   ltp_gethostname01 \
   ltp_getitimer01 \

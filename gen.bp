@@ -5626,6 +5626,20 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_getgroups03",
+    stem: "getgroups03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/getgroups/getgroups03.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/utils",
+        "testcases/kernel/syscalls/getgroups",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_gethostbyname_r01",
     stem: "gethostbyname_r01",
     defaults: ["ltp_test_defaults"],
