@@ -15,6 +15,7 @@
 
 ltp_packages := \
   ltp_abort01 \
+  ltp_abs01 \
   ltp_accept01 \
   ltp_accept4_01 \
   ltp_access01 \
