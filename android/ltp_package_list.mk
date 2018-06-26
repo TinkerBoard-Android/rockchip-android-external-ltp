@@ -577,6 +577,7 @@ ltp_packages := \
   ltp_ksm02 \
   ltp_ksm03 \
   ltp_ksm04 \
+  ltp_ksm05 \
   ltp_ksm06 \
   ltp_lchown01 \
   ltp_lchown02 \
