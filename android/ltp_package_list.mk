@@ -599,6 +599,9 @@ ltp_packages := \
   ltp_listxattr01 \
   ltp_listxattr02 \
   ltp_listxattr03 \
+  ltp_llistxattr01 \
+  ltp_llistxattr02 \
+  ltp_llistxattr03 \
   ltp_llseek01 \
   ltp_llseek02 \
   ltp_llseek03 \
