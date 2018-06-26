@@ -1248,6 +1248,8 @@ ltp_packages := \
   ltp_testcases_bin_clockdiff01.sh \
   ltp_testcases_bin_cmdlib.sh \
   ltp_testcases_bin_connector_test.sh \
+  ltp_testcases_bin_cp_tests.sh \
+  ltp_testcases_bin_cpio_tests.sh \
   ltp_testcases_bin_cpuacct.sh \
   ltp_testcases_bin_cpuhotplug01.sh \
   ltp_testcases_bin_cpuhotplug02.sh \
@@ -1557,6 +1559,7 @@ ltp_packages := \
   ltp_testcases_bin_memcg_test_4.sh \
   ltp_testcases_bin_memcg_usage_in_bytes_test.sh \
   ltp_testcases_bin_memcg_use_hierarchy_test.sh \
+  ltp_testcases_bin_mkdir_tests.sh \
   ltp_testcases_bin_modaltr.sh \
   ltp_testcases_bin_move_pages.sh \
   ltp_testcases_bin_myfunctions-io.sh \
