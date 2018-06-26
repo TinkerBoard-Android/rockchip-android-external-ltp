@@ -358,10 +358,6 @@ ioctl02
 growfiles
 pipeio
 
-# Require {get,set}grent()
-getgroups03
-getgroups03_16
-
 # Require mqueue
 mq_timedsend01
 mq_notify01
