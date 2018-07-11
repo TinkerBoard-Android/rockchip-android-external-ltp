@@ -52,11 +52,20 @@ import stable_tests as vts_stable
 
 bionic_libc_root = os.path.join(os.environ["ANDROID_BUILD_TOP"], "bionic/libc")
 
-unistd_h_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/include/uapi/asm-generic/unistd.h'
-arm64_unistd32_h_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/arm64/include/asm/unistd32.h'
-arm_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/arm/tools/syscall.tbl'
-x86_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/x86/entry/syscalls/syscall_32.tbl'
-x86_64_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/x86/entry/syscalls/syscall_64.tbl'
+src_url_start = 'https://git.kernel.org/pub/scm/linux/kernel/git/'
+tip_url = 'torvalds/linux.git/plain/'
+stable_url = 'stable/linux-stable.git/plain/'
+unistd_h = 'include/uapi/asm-generic/unistd.h'
+arm64_unistd32_h = 'arch/arm64/include/asm/unistd32.h'
+arm_syscall_tbl = 'arch/arm/tools/syscall.tbl'
+x86_syscall_tbl = 'arch/x86/entry/syscalls/syscall_32.tbl'
+x86_64_syscall_tbl = 'arch/x86/entry/syscalls/syscall_64.tbl'
+
+unistd_h_url = src_url_start
+arm64_unistd32_h_url = src_url_start
+arm_syscall_tbl_url = src_url_start
+x86_syscall_tbl_url = src_url_start
+x86_64_syscall_tbl_url = src_url_start
 
 
 class CKI_Coverage(object):
@@ -370,12 +379,30 @@ if __name__ == "__main__":
                       help="print one line summary of CKI coverage for arch")
   parser.add_argument("-f", action="store_true",
                       help="only check syscalls with known Android use")
+  parser.add_argument("-k", action="store_true",
+                      help="use lowest supported kernel version instead of tip")
 
   args = parser.parse_args()
   if args.arch is not None and args.arch not in gensyscalls.all_arches:
     print "Arch must be one of the following:"
     print gensyscalls.all_arches
     exit(-1)
+
+  if args.k:
+    minversion = "3.18"
+    print "Checking kernel version %s" % minversion
+    minversion = "?h=v" + minversion
+    unistd_h_url += stable_url + unistd_h + minversion
+    arm64_unistd32_h_url += stable_url + arm64_unistd32_h + minversion
+    arm_syscall_tbl_url += stable_url + arm_syscall_tbl + minversion
+    x86_syscall_tbl_url += stable_url + x86_syscall_tbl + minversion
+    x86_64_syscall_tbl_url += stable_url + x86_64_syscall_tbl + minversion
+  else:
+    unistd_h_url += tip_url + unistd_h
+    arm64_unistd32_h_url += tip_url + arm64_unistd32_h
+    arm_syscall_tbl_url += tip_url + arm_syscall_tbl
+    x86_syscall_tbl_url += tip_url + x86_syscall_tbl
+    x86_64_syscall_tbl_url += tip_url + x86_64_syscall_tbl
 
   cki = gensyscalls.SysCallsTxtParser()
   cki_cov = CKI_Coverage(args.arch)
