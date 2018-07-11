@@ -34,6 +34,7 @@ import os.path
 import re
 import sys
 import xml.etree.ElementTree as ET
+import subprocess
 
 if "ANDROID_BUILD_TOP" not in os.environ:
   print ("Please set up your Android build environment by running "
@@ -50,6 +51,12 @@ import disabled_tests as vts_disabled
 import stable_tests as vts_stable
 
 bionic_libc_root = os.path.join(os.environ["ANDROID_BUILD_TOP"], "bionic/libc")
+
+unistd_h_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/include/uapi/asm-generic/unistd.h'
+arm64_unistd32_h_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/arm64/include/asm/unistd32.h'
+arm_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/arm/tools/syscall.tbl'
+x86_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/x86/entry/syscalls/syscall_32.tbl'
+x86_64_syscall_tbl_url = 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/arch/x86/entry/syscalls/syscall_64.tbl'
 
 
 class CKI_Coverage(object):
@@ -117,55 +124,6 @@ class CKI_Coverage(object):
         if not test_match: continue
         self.disabled_in_ltp.append(test_match.group(1))
 
-  def parse_test_results(self, results):
-    """Parse xml from VTS output to collect LTP results.
-
-    Parse xml to collect pass/fail results for each LTP
-    test. A failure occurs if a test has a result other than pass or fail.
-
-    Args:
-      results: Path to VTS output XML file.
-    """
-    tree = ET.parse(results)
-    root = tree.getroot()
-    found = False
-
-    # find LTP module
-    for module in root.findall("Module"):
-      if module.attrib["name"] != "VtsKernelLtp": continue
-
-      # ARM arch and ABI strings don't match exactly, x86 and mips do.
-      if self._arch == "arm":
-        if not module.attrib["abi"].startswith("armeabi-"): continue
-      elif self._arch == "arm64":
-        if not module.attrib["abi"].startswith("arm64-"): continue
-      elif self._arch != module.attrib["abi"]: continue
-
-      # find LTP testcase
-      for testcase in module.findall("TestCase"):
-        if testcase.attrib["name"] != "KernelLtpTest": continue
-        found = True
-
-        # iterate over each LTP test
-        for test in testcase.findall("Test"):
-          test_re = re.compile(r"^syscalls.(\w+)_((32bit)|(64bit))$")
-          test_match = re.match(test_re, test.attrib["name"])
-          if not test_match: continue
-
-          test_name = test_match.group(1)
-
-          if test.attrib["result"] == "pass":
-            self.test_results[test_name] = "pass"
-          elif test.attrib["result"] == "fail":
-            self.test_results[test_name] = "fail"
-          else:
-            print ("Unknown VTS LTP test result for %s is %s" %
-                   (test_name, test.attrib["result"]))
-            sys.exit(-1)
-    if not found:
-      print "Error: LTP test results for arch %s not found in supplied test results." % self._arch
-      sys.exit(-1)
-
   def ltp_test_special_cases(self, syscall, test):
     """Detect special cases in syscall to LTP mapping.
 
@@ -209,7 +167,7 @@ class CKI_Coverage(object):
         in the CKI.
     """
     for syscall in syscalls:
-      if self._arch not in syscall:
+      if self._arch is not None and self._arch not in syscall:
         continue
       self.cki_syscalls.append(syscall["name"])
       self.syscall_tests[syscall["name"]] = []
@@ -235,14 +193,10 @@ class CKI_Coverage(object):
   def update_test_status(self):
     """Populate test configuration and output for all CKI syscalls.
 
-    Go through VTS test configuration and test results (if provided) to
-    populate data for all CKI syscalls.
+    Go through VTS test configuration to populate data for all CKI syscalls.
     """
     for syscall in self.cki_syscalls:
       self.disabled_tests[syscall] = []
-      self.skipped_tests[syscall] = []
-      self.failing_tests[syscall] = []
-      self.passing_tests[syscall] = []
       if not self.syscall_tests[syscall]:
         continue
       for test in self.syscall_tests[syscall]:
@@ -253,71 +207,8 @@ class CKI_Coverage(object):
           self.disabled_tests[syscall].append(test)
           continue
 
-        if not self.test_results:
-          continue
-
-        if test not in self.test_results:
-          self.skipped_tests[syscall].append(test)
-        elif self.test_results[test] == "fail":
-          self.failing_tests[syscall].append(test)
-        elif self.test_results[test] == "pass":
-          self.passing_tests[syscall].append(test)
-        else:
-          print ("Warning - could not resolve test %s status for syscall %s" %
-                 (test, syscall))
-
   def output_results(self):
-    """Pretty print the CKI syscall LTP coverage results.
-
-    Pretty prints a table of the CKI syscall LTP coverage, pointing out
-    syscalls which have no passing tests in VTS LTP.
-    """
-    if not self.test_results:
-      self.output_limited_results()
-      return
-    count = 0
-    uncovered = 0
-
-    print ""
-    print "         Covered Syscalls"
-    for syscall in self.cki_syscalls:
-      if not self.passing_tests[syscall]:
-        continue
-      if not count % 20:
-        print ("%25s   Disabled Skipped Failing Passing -------------" %
-               "-------------")
-      sys.stdout.write("%25s   %s        %s       %s       %s\n" %
-                       (syscall, len(self.disabled_tests[syscall]),
-                        len(self.skipped_tests[syscall]),
-                        len(self.failing_tests[syscall]),
-                        len(self.passing_tests[syscall])))
-      count += 1
-
-    count = 0
-    print "\n"
-    print "       Uncovered Syscalls"
-    for syscall in self.cki_syscalls:
-      if self.passing_tests[syscall]:
-        continue
-      if not count % 20:
-        print ("%25s   Disabled Skipped Failing Passing -------------" %
-               "-------------")
-      sys.stdout.write("%25s   %s        %s       %s       %s\n" %
-                       (syscall, len(self.disabled_tests[syscall]),
-                        len(self.skipped_tests[syscall]),
-                        len(self.failing_tests[syscall]),
-                        len(self.passing_tests[syscall])))
-      uncovered += 1
-      count += 1
-    print ("Total uncovered syscalls: %s out of %s" %
-           (uncovered, len(self.cki_syscalls)))
-
-  def output_limited_results(self):
-    """Pretty print the CKI syscall LTP coverage without VTS test results.
-
-    When no VTS test results are supplied then only the count of enabled
-    and disabled LTP tests may be shown.
-    """
+    """Pretty print the CKI syscall LTP coverage."""
     count = 0
     uncovered = 0
 
@@ -379,41 +270,133 @@ class CKI_Coverage(object):
                                 uncovered_with_test, uncovered_without_test,
                                 uncovered_with_test + uncovered_without_test))
 
+  def add_syscall(self, cki, syscall, arch):
+    """Note that a syscall has been seen for a particular arch."""
+    seen = False
+    for s in cki.syscalls:
+      if s["name"] == syscall:
+        s[arch]= True
+        seen = True
+        break
+    if not seen:
+      cki.syscalls.append({"name":syscall, arch:True})
+
+  def get_x86_64_kernel_syscalls(self, cki):
+    """Retrieve the list of syscalls for x86_64."""
+    proc = subprocess.Popen(['curl', x86_64_syscall_tbl_url], stdout=subprocess.PIPE)
+    while True:
+      line = proc.stdout.readline()
+      if line != b'':
+        test_re = re.compile(r"^\d+\s+\w+\s+(\w+)\s+(__x64_sys|__x32_compat_sys)")
+        test_match = re.match(test_re, line)
+        if test_match:
+          syscall = test_match.group(1)
+          self.add_syscall(cki, syscall, "x86_64")
+      else:
+        break
+
+  def get_x86_kernel_syscalls(self, cki):
+    """Retrieve the list of syscalls for x86."""
+    proc = subprocess.Popen(['curl', x86_syscall_tbl_url], stdout=subprocess.PIPE)
+    while True:
+      line = proc.stdout.readline()
+      if line != b'':
+        test_re = re.compile(r"^\d+\s+i386\s+(\w+)\s+sys_")
+        test_match = re.match(test_re, line)
+        if test_match:
+          syscall = test_match.group(1)
+          self.add_syscall(cki, syscall, "x86")
+      else:
+        break
+
+  def get_arm_kernel_syscalls(self, cki):
+    """Retrieve the list of syscalls for arm."""
+    proc = subprocess.Popen(['curl', arm_syscall_tbl_url], stdout=subprocess.PIPE)
+    while True:
+      line = proc.stdout.readline()
+      if line != b'':
+        test_re = re.compile(r"^\d+\s+\w+\s+(\w+)\s+sys_")
+        test_match = re.match(test_re, line)
+        if test_match:
+          syscall = test_match.group(1)
+          self.add_syscall(cki, syscall, "arm")
+      else:
+        break
+
+  def get_arm64_kernel_syscalls(self, cki):
+    """Retrieve the list of syscalls for arm64."""
+    # Add AArch64 syscalls
+    proc = subprocess.Popen(['curl', unistd_h_url], stdout=subprocess.PIPE)
+    while True:
+      line = proc.stdout.readline()
+      if line != b'':
+        test_re = re.compile(r"^#define __NR(3264)?_(\w+)\s+(\d+)$")
+        test_match = re.match(test_re, line)
+        if test_match:
+          syscall = test_match.group(2)
+          if (syscall == "sync_file_range2" or
+              syscall == "arch_specific_syscall" or
+              syscall == "syscalls"):
+              continue
+          self.add_syscall(cki, syscall, "arm64")
+      else:
+        break
+    # Add AArch32 syscalls
+    proc = subprocess.Popen(['curl', arm64_unistd32_h_url], stdout=subprocess.PIPE)
+    while True:
+      line = proc.stdout.readline()
+      if line != b'':
+        test_re = re.compile(r"^#define __NR(3264)?_(\w+)\s+(\d+)$")
+        test_match = re.match(test_re, line)
+        if test_match:
+          syscall = test_match.group(2)
+          self.add_syscall(cki, syscall, "arm64")
+      else:
+        break
+
+  def get_kernel_syscalls(self, cki, arch):
+    self.get_arm64_kernel_syscalls(cki)
+    self.get_arm_kernel_syscalls(cki)
+    self.get_x86_kernel_syscalls(cki)
+    self.get_x86_64_kernel_syscalls(cki)
+
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Output list of system calls "
-          "in the Common Kernel Interface and their VTS LTP coverage. If VTS "
-          "test output is supplied, output includes system calls which have "
-          "tests in VTS LTP, but the tests are skipped or are failing.")
-  parser.add_argument("arch", help="architecture of Android platform")
+          "in the Common Kernel Interface and their VTS LTP coverage.")
+  parser.add_argument("-a", "--arch", help="only show syscall CKI for specific arch")
   parser.add_argument("-l", action="store_true",
                       help="list CKI syscalls only, without coverage")
-  parser.add_argument("-r", "--results", help="path to VTS test_result.xml")
   parser.add_argument("-s", action="store_true",
                       help="print one line summary of CKI coverage for arch")
+  parser.add_argument("-f", action="store_true",
+                      help="only check syscalls with known Android use")
+
   args = parser.parse_args()
-  if args.arch not in gensyscalls.all_arches:
+  if args.arch is not None and args.arch not in gensyscalls.all_arches:
     print "Arch must be one of the following:"
     print gensyscalls.all_arches
     exit(-1)
 
   cki = gensyscalls.SysCallsTxtParser()
-  cki.parse_file(os.path.join(bionic_libc_root, "SYSCALLS.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_APP.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_COMMON.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_SYSTEM.TXT"))
-  cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_GLOBAL.TXT"))
+  cki_cov = CKI_Coverage(args.arch)
+
+  if args.f:
+    cki.parse_file(os.path.join(bionic_libc_root, "SYSCALLS.TXT"))
+    cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_APP.TXT"))
+    cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_COMMON.TXT"))
+    cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_SYSTEM.TXT"))
+    cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_GLOBAL.TXT"))
+  else:
+    cki_cov.get_kernel_syscalls(cki, args.arch)
+
   if args.l:
     for syscall in cki.syscalls:
-      if args.arch in syscall:
+      if args.arch is None or syscall[args.arch]:
         print syscall["name"]
     exit(0)
 
-  cki_cov = CKI_Coverage(args.arch)
-
   cki_cov.load_ltp_tests()
   cki_cov.load_ltp_disabled_tests()
-  if args.results:
-    cki_cov.parse_test_results(args.results)
   cki_cov.match_syscalls_to_tests(cki.syscalls)
   cki_cov.update_test_status()
 
