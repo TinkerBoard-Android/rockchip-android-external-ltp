@@ -16846,6 +16846,19 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_verify_caps_exec",
+    stem: "verify_caps_exec",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/security/filecaps/verify_caps_exec.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_GNU_SOURCE",
+    ],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_vfork",
     stem: "vfork",
     defaults: ["ltp_test_defaults"],

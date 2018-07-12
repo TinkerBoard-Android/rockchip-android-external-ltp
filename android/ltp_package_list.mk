@@ -2291,6 +2291,7 @@ ltp_packages := \
   ltp_utime06 \
   ltp_utimensat01 \
   ltp_utimes01 \
+  ltp_verify_caps_exec \
   ltp_vfork \
   ltp_vfork01 \
   ltp_vfork02 \
