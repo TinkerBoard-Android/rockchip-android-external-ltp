@@ -699,21 +699,24 @@ int safe_rename(const char *file, const int lineno, void (*cleanup_fn)(void),
 	return rval;
 }
 
-static const char *const fuse_fs_types[] = {
-	"exfat",
-	"ntfs",
+struct fuse_fs_type {
+	char const *fs_type;
+	int fallback;
+} fuse_fs_types[] = {
+	{ "exfat", 1 },
+	{ "ntfs", 0 },
 };
 
-static int is_fuse(const char *fs_type)
+static struct fuse_fs_type* find_fuse_fs_type(const char *fs_type)
 {
 	unsigned int i;
 
 	for (i = 0; i < ARRAY_SIZE(fuse_fs_types); i++) {
-		if (!strcmp(fuse_fs_types[i], fs_type))
-			return 1;
+		if (!strcmp(fuse_fs_types[i].fs_type, fs_type))
+			return &fuse_fs_types[i];
 	}
 
-	return 0;
+	return NULL;
 }
 
 int safe_mount(const char *file, const int lineno, void (*cleanup_fn)(void),
@@ -722,6 +725,7 @@ int safe_mount(const char *file, const int lineno, void (*cleanup_fn)(void),
 	       const void *data)
 {
 	int rval;
+	struct fuse_fs_type *fuse_fs_type = find_fuse_fs_type(filesystemtype);
 
 	/*
 	 * The FUSE filesystem executes mount.fuse helper, which tries to
@@ -730,7 +734,7 @@ int safe_mount(const char *file, const int lineno, void (*cleanup_fn)(void),
          *
 	 * The mount helpers are called mount.$fs_type.
 	 */
-	if (is_fuse(filesystemtype)) {
+	if (fuse_fs_type) {
 		char buf[1024];
 
 		tst_resm(TINFO, "Trying FUSE...");
@@ -741,9 +745,15 @@ int safe_mount(const char *file, const int lineno, void (*cleanup_fn)(void),
 		if (WIFEXITED(rval) && WEXITSTATUS(rval) == 0)
 			return 0;
 
-		tst_brkm(TBROK, cleanup_fn, "mount.%s failed with %i",
-			 filesystemtype, rval);
-		return -1;
+		if (fuse_fs_type->fallback) {
+			tst_resm(TINFO,
+				 "mount.%s failed with %i, falling back to mount()",
+				 filesystemtype, rval);
+		} else {
+			tst_brkm(TBROK, cleanup_fn, "mount.%s failed with %i",
+				 filesystemtype, rval);
+			return -1;
+		}
 	}
 
 	rval = mount(source, target, filesystemtype, mountflags, data);
