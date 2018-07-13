@@ -396,13 +396,6 @@ gf13
 # Case designed only for i386
 f00f
 
-# build error due to dereference of sigset_t
-rt_sigsuspend01
-sigsuspend01
-
-# no index() in bionic yet
-verify_caps_exec
-
 # build error due to unavailability of eaccess()
 prot_hsymlinks
 setpriority01

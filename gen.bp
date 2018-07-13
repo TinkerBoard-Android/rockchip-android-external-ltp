@@ -11940,6 +11940,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_rt_sigsuspend01",
+    stem: "rt_sigsuspend01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/rt_sigsuspend/rt_sigsuspend01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_rt_sigtimedwait01",
     stem: "rt_sigtimedwait01",
     defaults: ["ltp_test_defaults"],
@@ -14421,6 +14431,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_sigsuspend01",
+    stem: "sigsuspend01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/sigsuspend/sigsuspend01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_sigtimedwait01",
     stem: "sigtimedwait01",
     defaults: ["ltp_test_defaults"],
@@ -16821,6 +16841,19 @@ cc_test {
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/utimes/utimes01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_verify_caps_exec",
+    stem: "verify_caps_exec",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/security/filecaps/verify_caps_exec.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_GNU_SOURCE",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
