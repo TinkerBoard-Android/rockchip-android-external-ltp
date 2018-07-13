@@ -984,6 +984,7 @@ ltp_packages := \
   ltp_rt_sigprocmask01 \
   ltp_rt_sigprocmask02 \
   ltp_rt_sigqueueinfo01 \
+  ltp_rt_sigsuspend01 \
   ltp_rt_sigtimedwait01 \
   ltp_rtc01 \
   ltp_sbrk01 \
@@ -1175,6 +1176,7 @@ ltp_packages := \
   ltp_sigpending02 \
   ltp_sigprocmask01 \
   ltp_sigrelse01 \
+  ltp_sigsuspend01 \
   ltp_sigtimedwait01 \
   ltp_sigwait01 \
   ltp_sigwaitinfo01 \
@@ -2289,6 +2291,7 @@ ltp_packages := \
   ltp_utime06 \
   ltp_utimensat01 \
   ltp_utimes01 \
+  ltp_verify_caps_exec \
   ltp_vfork \
   ltp_vfork01 \
   ltp_vfork02 \
