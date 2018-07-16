@@ -443,3 +443,63 @@ input03
 # Following test is flaky at best and renders the device unusable
 # after running.
 min_free_kbytes
+
+# Disable prebuilts that have no dependency on existing tests. The following prebuilts are disabled
+# as the only script that uses it is testscripts/test_fs_bind.sh. We currently do not support 'testscripts'
+# build for Android.
+testcases/bin/fs_bind/bind/test01
+testcases/bin/fs_bind/bind/test02
+testcases/bin/fs_bind/bind/test03
+testcases/bin/fs_bind/bind/test04
+testcases/bin/fs_bind/bind/test05
+testcases/bin/fs_bind/bind/test06
+testcases/bin/fs_bind/bind/test07
+testcases/bin/fs_bind/bind/test07-2
+testcases/bin/fs_bind/bind/test08
+testcases/bin/fs_bind/bind/test09
+testcases/bin/fs_bind/bind/test13
+testcases/bin/fs_bind/bind/test17
+testcases/bin/fs_bind/bind/test20
+testcases/bin/fs_bind/bind/test21
+testcases/bin/fs_bind/bind/test22
+testcases/bin/fs_bind/bind/test23
+testcases/bin/fs_bind/bind/test24
+testcases/bin/fs_bind/cloneNS/test01
+testcases/bin/fs_bind/cloneNS/test02
+testcases/bin/fs_bind/cloneNS/test03
+testcases/bin/fs_bind/cloneNS/test04
+testcases/bin/fs_bind/cloneNS/test05
+testcases/bin/fs_bind/cloneNS/test06
+testcases/bin/fs_bind/cloneNS/test07
+testcases/bin/fs_bind/move/test01
+testcases/bin/fs_bind/move/test02
+testcases/bin/fs_bind/move/test03
+testcases/bin/fs_bind/move/test04
+testcases/bin/fs_bind/move/test05
+testcases/bin/fs_bind/move/test06
+testcases/bin/fs_bind/move/test07
+testcases/bin/fs_bind/move/test09
+testcases/bin/fs_bind/move/test10
+testcases/bin/fs_bind/move/test11
+testcases/bin/fs_bind/move/test12
+testcases/bin/fs_bind/move/test13
+testcases/bin/fs_bind/move/test14
+testcases/bin/fs_bind/move/test15
+testcases/bin/fs_bind/move/test16
+testcases/bin/fs_bind/move/test17
+testcases/bin/fs_bind/move/test18
+testcases/bin/fs_bind/move/test19
+testcases/bin/fs_bind/move/test20
+testcases/bin/fs_bind/move/test21
+testcases/bin/fs_bind/rbind/test08
+testcases/bin/fs_bind/rbind/test10
+testcases/bin/fs_bind/rbind/test11
+testcases/bin/fs_bind/rbind/test12
+testcases/bin/fs_bind/rbind/test14
+testcases/bin/fs_bind/rbind/test15
+testcases/bin/fs_bind/rbind/test16
+testcases/bin/fs_bind/rbind/test18
+testcases/bin/fs_bind/rbind/test19
+testcases/bin/fs_bind/rbind/test22
+testcases/bin/fs_bind/regression/test01
+testcases/bin/fs_bind/regression/test02
