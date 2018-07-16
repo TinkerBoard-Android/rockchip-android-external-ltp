@@ -1386,59 +1386,15 @@ ltp_packages := \
   ltp_testcases_bin_fs_bind_bin_makedir \
   ltp_testcases_bin_fs_bind_bin_setup \
   ltp_testcases_bin_fs_bind_bin_setupnslock \
-  ltp_testcases_bin_fs_bind_bind_test01 \
-  ltp_testcases_bin_fs_bind_bind_test02 \
-  ltp_testcases_bin_fs_bind_bind_test03 \
-  ltp_testcases_bin_fs_bind_bind_test04 \
-  ltp_testcases_bin_fs_bind_bind_test05 \
-  ltp_testcases_bin_fs_bind_bind_test06 \
-  ltp_testcases_bin_fs_bind_bind_test07 \
-  ltp_testcases_bin_fs_bind_bind_test07-2 \
-  ltp_testcases_bin_fs_bind_bind_test08 \
-  ltp_testcases_bin_fs_bind_bind_test09 \
   ltp_testcases_bin_fs_bind_bind_test10 \
   ltp_testcases_bin_fs_bind_bind_test11 \
   ltp_testcases_bin_fs_bind_bind_test12 \
-  ltp_testcases_bin_fs_bind_bind_test13 \
   ltp_testcases_bin_fs_bind_bind_test14 \
   ltp_testcases_bin_fs_bind_bind_test15 \
   ltp_testcases_bin_fs_bind_bind_test16 \
-  ltp_testcases_bin_fs_bind_bind_test17 \
   ltp_testcases_bin_fs_bind_bind_test18 \
   ltp_testcases_bin_fs_bind_bind_test19 \
-  ltp_testcases_bin_fs_bind_bind_test20 \
-  ltp_testcases_bin_fs_bind_bind_test21 \
-  ltp_testcases_bin_fs_bind_bind_test22 \
-  ltp_testcases_bin_fs_bind_bind_test23 \
-  ltp_testcases_bin_fs_bind_bind_test24 \
-  ltp_testcases_bin_fs_bind_cloneNS_test01 \
-  ltp_testcases_bin_fs_bind_cloneNS_test02 \
-  ltp_testcases_bin_fs_bind_cloneNS_test03 \
-  ltp_testcases_bin_fs_bind_cloneNS_test04 \
-  ltp_testcases_bin_fs_bind_cloneNS_test05 \
-  ltp_testcases_bin_fs_bind_cloneNS_test06 \
-  ltp_testcases_bin_fs_bind_cloneNS_test07 \
-  ltp_testcases_bin_fs_bind_move_test01 \
-  ltp_testcases_bin_fs_bind_move_test02 \
-  ltp_testcases_bin_fs_bind_move_test03 \
-  ltp_testcases_bin_fs_bind_move_test04 \
-  ltp_testcases_bin_fs_bind_move_test05 \
-  ltp_testcases_bin_fs_bind_move_test06 \
-  ltp_testcases_bin_fs_bind_move_test07 \
   ltp_testcases_bin_fs_bind_move_test08 \
-  ltp_testcases_bin_fs_bind_move_test09 \
-  ltp_testcases_bin_fs_bind_move_test10 \
-  ltp_testcases_bin_fs_bind_move_test11 \
-  ltp_testcases_bin_fs_bind_move_test12 \
-  ltp_testcases_bin_fs_bind_move_test13 \
-  ltp_testcases_bin_fs_bind_move_test14 \
-  ltp_testcases_bin_fs_bind_move_test15 \
-  ltp_testcases_bin_fs_bind_move_test16 \
-  ltp_testcases_bin_fs_bind_move_test17 \
-  ltp_testcases_bin_fs_bind_move_test18 \
-  ltp_testcases_bin_fs_bind_move_test19 \
-  ltp_testcases_bin_fs_bind_move_test20 \
-  ltp_testcases_bin_fs_bind_move_test21 \
   ltp_testcases_bin_fs_bind_move_test22 \
   ltp_testcases_bin_fs_bind_rbind_test01 \
   ltp_testcases_bin_fs_bind_rbind_test02 \
@@ -1448,21 +1404,11 @@ ltp_packages := \
   ltp_testcases_bin_fs_bind_rbind_test06 \
   ltp_testcases_bin_fs_bind_rbind_test07 \
   ltp_testcases_bin_fs_bind_rbind_test07-2 \
-  ltp_testcases_bin_fs_bind_rbind_test08 \
   ltp_testcases_bin_fs_bind_rbind_test09 \
-  ltp_testcases_bin_fs_bind_rbind_test10 \
-  ltp_testcases_bin_fs_bind_rbind_test11 \
-  ltp_testcases_bin_fs_bind_rbind_test12 \
   ltp_testcases_bin_fs_bind_rbind_test13 \
-  ltp_testcases_bin_fs_bind_rbind_test14 \
-  ltp_testcases_bin_fs_bind_rbind_test15 \
-  ltp_testcases_bin_fs_bind_rbind_test16 \
   ltp_testcases_bin_fs_bind_rbind_test17 \
-  ltp_testcases_bin_fs_bind_rbind_test18 \
-  ltp_testcases_bin_fs_bind_rbind_test19 \
   ltp_testcases_bin_fs_bind_rbind_test20 \
   ltp_testcases_bin_fs_bind_rbind_test21 \
-  ltp_testcases_bin_fs_bind_rbind_test22 \
   ltp_testcases_bin_fs_bind_rbind_test23 \
   ltp_testcases_bin_fs_bind_rbind_test24 \
   ltp_testcases_bin_fs_bind_rbind_test25 \
@@ -1480,8 +1426,6 @@ ltp_packages := \
   ltp_testcases_bin_fs_bind_rbind_test37 \
   ltp_testcases_bin_fs_bind_rbind_test38 \
   ltp_testcases_bin_fs_bind_rbind_test39 \
-  ltp_testcases_bin_fs_bind_regression_test01 \
-  ltp_testcases_bin_fs_bind_regression_test02 \
   ltp_testcases_bin_fs_bind_regression_test03 \
   ltp_testcases_bin_fs_di \
   ltp_testcases_bin_fs_inod \
