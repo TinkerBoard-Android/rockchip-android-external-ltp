@@ -397,6 +397,17 @@ class BuildGenerator(object):
                                     local_c_includes)
 
         for target in install:
+            # Check if the absolute path to the prebuilt (relative to LTP_ROOT)
+            # is disabled. This is helpful in case there are duplicates with basename
+            # of the prebuilt.
+            #  e.g.
+            #   ./ testcases / kernel / fs / fs_bind / move / test01
+            #   ./ testcases / kernel / fs / fs_bind / cloneNS / test01
+            #   ./ testcases / kernel / fs / fs_bind / regression / test01
+            #   ./ testcases / kernel / fs / fs_bind / rbind / test01
+            #   ./ testcases / kernel / fs / fs_bind / bind / test01
+            if target in disabled_tests:
+                continue
             if os.path.basename(target) in disabled_tests:
                 continue
             local_src_files = install[target]
