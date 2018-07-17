@@ -301,7 +301,8 @@ class BuildGenerator(object):
             "Please copy and paste them into disabled_tests.txt\n")
         for i in cc_libraries:
             if len(set(cc_libraries[i]).intersection(disabled_libs)) > 0:
-                print os.path.basename(i)
+                if not os.path.basename(i) in disabled_tests:
+                    print os.path.basename(i)
 
         print("Disabled_cflag tests: Test cases listed here are"
               "suggested to be disabled since they require a disabled cflag. "
