@@ -129,6 +129,12 @@ ltp_packages := \
   ltp_cpuctl_test04 \
   ltp_cpufreq_boost \
   ltp_cpuset01 \
+  ltp_cpuset_cpu_hog \
+  ltp_cpuset_list_compute \
+  ltp_cpuset_mem_hog \
+  ltp_cpuset_memory_pressure \
+  ltp_cpuset_sched_domains_check \
+  ltp_cpuset_syscall_test \
   ltp_crash01 \
   ltp_crash02 \
   ltp_creat01 \

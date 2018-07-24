@@ -416,14 +416,6 @@ f1.obj
 nmfile.obj
 nmfile2.obj
 
-# The following test cases are disabled due to a disabled library
-cpuset_syscall_test
-cpuset_list_compute
-cpuset_cpu_hog
-cpuset_mem_hog
-cpuset_sched_domains_check
-cpuset_memory_pressure
-
 # The following test cases are disabled due to a disabled cflags
 
 # TODO b/69263988
