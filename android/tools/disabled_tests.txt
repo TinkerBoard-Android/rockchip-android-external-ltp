@@ -495,3 +495,4 @@ testcases/bin/fs_bind/rbind/test19
 testcases/bin/fs_bind/rbind/test22
 testcases/bin/fs_bind/regression/test01
 testcases/bin/fs_bind/regression/test02
+testcases/bin/fs_bind/regression/test03
