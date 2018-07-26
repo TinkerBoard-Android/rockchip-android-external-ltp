@@ -1432,7 +1432,6 @@ ltp_packages := \
   ltp_testcases_bin_fs_bind_rbind_test37 \
   ltp_testcases_bin_fs_bind_rbind_test38 \
   ltp_testcases_bin_fs_bind_rbind_test39 \
-  ltp_testcases_bin_fs_bind_regression_test03 \
   ltp_testcases_bin_fs_di \
   ltp_testcases_bin_fs_inod \
   ltp_testcases_bin_fs_racer.sh \
