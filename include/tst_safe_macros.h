@@ -109,6 +109,18 @@ static inline int safe_dup(const char *file, const int lineno,
 #define SAFE_SETUID(uid) \
 	safe_setuid(__FILE__, __LINE__, NULL, (uid))
 
+int safe_setregid(const char *file, const int lineno,
+		  gid_t rgid, gid_t egid);
+
+#define SAFE_SETREGID(rgid, egid) \
+	safe_setregid(__FILE__, __LINE__, (rgid), (egid))
+
+int safe_setreuid(const char *file, const int lineno,
+		  uid_t ruid, uid_t euid);
+
+#define SAFE_SETREUID(ruid, euid) \
+	safe_setreuid(__FILE__, __LINE__, (ruid), (euid))
+
 #define SAFE_GETRESUID(ruid, euid, suid) \
 	safe_getresuid(__FILE__, __LINE__, NULL, (ruid), (euid), (suid))
 
@@ -201,18 +213,18 @@ pid_t safe_getpgid(const char *file, const int lineno, pid_t pid);
 	safe_readdir(__FILE__, __LINE__, NULL, (dirp))
 
 #define SAFE_IOCTL(fd, request, ...)                         \
-	({int ret = ioctl(fd, request, ##__VA_ARGS__);       \
-	  ret < 0 ?                                          \
+	({int tst_ret_ = ioctl(fd, request, ##__VA_ARGS__);  \
+	  tst_ret_ < 0 ?                                     \
 	   tst_brk(TBROK | TERRNO,                           \
 	            "ioctl(%i,%s,...) failed", fd, #request) \
-	 : ret;})
+	 : tst_ret_;})
 
 #define SAFE_FCNTL(fd, cmd, ...)                            \
-	({int ret = fcntl(fd, cmd, ##__VA_ARGS__);          \
-	  ret == -1 ?                                       \
+	({int tst_ret_ = fcntl(fd, cmd, ##__VA_ARGS__);     \
+	  tst_ret_ == -1 ?                                  \
 	   tst_brk(TBROK | TERRNO,                          \
 	            "fcntl(%i,%s,...) failed", fd, #cmd), 0 \
-	 : ret;})
+	 : tst_ret_;})
 
 /*
  * following functions are inline because the behaviour may depend on
@@ -396,6 +408,12 @@ static inline sighandler_t safe_signal(const char *file, const int lineno,
 
 #define SAFE_SIGNAL(signum, handler) \
 	safe_signal(__FILE__, __LINE__, (signum), (handler))
+
+int safe_sigaction(const char *file, const int lineno,
+                   int signum, const struct sigaction *act,
+                   struct sigaction *oldact);
+#define SAFE_SIGACTION(signum, act, oldact) \
+	safe_sigaction(__FILE__, __LINE__, (signum), (act), (oldact))
 
 #define SAFE_EXECLP(file, arg, ...) do {                   \
 	execlp((file), (arg), ##__VA_ARGS__);              \

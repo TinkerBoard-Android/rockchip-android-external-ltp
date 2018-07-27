@@ -25,7 +25,6 @@ TST_TOTAL=1
 
 virt_type="vlan"
 
-. test_net.sh
 . virt_lib.sh
 
 virt_add_delete_test "id 4094"

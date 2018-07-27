@@ -33,7 +33,6 @@ start_id=16700000
 # Destination address, can be unicast or multicast address
 vxlan_dst_addr="uni"
 
-. test_net.sh
 . virt_lib.sh
 
 # In average cases (with small packets less then 150 bytes) VxLAN slower

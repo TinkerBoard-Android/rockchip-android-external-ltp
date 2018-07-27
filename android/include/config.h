@@ -158,6 +158,9 @@
 /* Define to 1 if you have the <linux/can.h> header file. */
 #define HAVE_LINUX_CAN_H 1
 
+/* Define to 1 if you have the <linux/dccp.h> header file. */
+#define HAVE_LINUX_DCCP_H 1
+
 /* Define to 1 if you have the <linux/genetlink.h> header file. */
 #define HAVE_LINUX_GENETLINK_H 1
 
@@ -414,6 +417,9 @@
 /* Define to 1 if you have the `timerfd_settime' function. */
 #define HAVE_TIMERFD_SETTIME 1
 
+/* Define to 1 if you have the <tirpc/netconfig.h> header file. */
+/* #undef HAVE_TIRPC_NETCONFIG_H */
+
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
@@ -434,6 +440,9 @@
 
 /* Define to 1 if you have xfs quota */
 /* #undef HAVE_XFS_QUOTA */
+
+/* Error message when no NUMA support */
+#define NUMA_ERROR_MSG "test requires libnuma >= 2 and it's development packages"
 
 /* Name of package */
 #define PACKAGE "ltp"

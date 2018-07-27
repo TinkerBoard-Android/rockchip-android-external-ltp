@@ -63,6 +63,7 @@
 #include "old_device.h"
 #include "old_tmpdir.h"
 #include "tst_minmax.h"
+#include "tst_get_bad_addr.h"
 
 /*
  * Ensure that NUMSIGS is defined.
@@ -101,7 +102,7 @@
 #ifdef UCLINUX
 # define FORK_OR_VFORK			tst_vfork
 # define MAP_PRIVATE_EXCEPT_UCLINUX	0
-/* tst_flush() + vfork() */
+/* tst_old_flush() + vfork() */
 pid_t tst_vfork(void);
 #else
 # define FORK_OR_VFORK			tst_fork
@@ -175,10 +176,10 @@ void tst_brkm_(const char *file, const int lineno, int ttype,
 
 void tst_require_root(void);
 void tst_exit(void) LTP_ATTRIBUTE_NORETURN;
-void tst_flush(void);
+void tst_old_flush(void);
 
 /*
- * tst_flush() + fork
+ * tst_old_flush() + fork
  * NOTE: tst_fork() will reset T_exitval to 0 for child process.
  */
 pid_t tst_fork(void);
@@ -202,9 +203,6 @@ extern int tst_count;
 
 /* lib/tst_sig.c */
 void tst_sig(int fork_flag, void (*handler)(), void (*cleanup)());
-
-/* lib/get_high_address.c */
-char *get_high_address(void);
 
 /* lib/self_exec.c */
 void maybe_run_child(void (*child)(), const char *fmt, ...);

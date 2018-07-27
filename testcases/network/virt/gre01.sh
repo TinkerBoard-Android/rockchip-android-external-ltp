@@ -24,8 +24,6 @@ TCID=gre01
 TST_TOTAL=1
 TST_NEEDS_TMPDIR=1
 
-. test_net.sh
-
 virt_type="gre"
 [ "$TST_IPV6" ] && virt_type="ip6gre"
 
