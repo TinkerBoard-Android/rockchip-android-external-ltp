@@ -24,7 +24,6 @@ TST_TOTAL=4
 
 virt_type="macvlan"
 
-. test_net.sh
 . virt_lib.sh
 
 options="mode private,mode vepa,mode bridge,mode passthru"

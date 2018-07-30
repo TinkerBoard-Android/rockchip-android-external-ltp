@@ -71,7 +71,6 @@ acct01 acct01
 adjtimex01 adjtimex01
 adjtimex02 adjtimex02
 
-alarm01 alarm01
 alarm02 alarm02
 alarm03 alarm03
 alarm05 alarm05
@@ -425,13 +424,11 @@ mlockall01 mlockall01
 mlockall02 mlockall02
 mlockall03 mlockall03
 
-mkdir01 mkdir01
 mkdir02 mkdir02
 mkdir03 mkdir03
 mkdir04 mkdir04
 mkdir05 mkdir05
 mkdir05A symlink01 -T mkdir05
-mkdir08 mkdir08
 mkdir09 mkdir09
 
 mknod01 mknod01
@@ -589,6 +586,7 @@ pread03 pread03
 
 preadv01 preadv01
 preadv02 preadv02
+preadv03 preadv03
 
 profil01 profil01
 
@@ -611,6 +609,7 @@ pwrite04_64 pwrite04_64
 
 pwritev01 pwritev01
 pwritev02 pwritev02
+pwritev03 pwritev03
 
 read01 read01
 read02 read02
@@ -623,9 +622,7 @@ readdir21 readdir21
 
 readlink01A symlink01 -T readlink01
 readlink01 readlink01
-readlink02 readlink02
 readlink03 readlink03
-readlink04 readlink04
 
 readv01 readv01
 readv02 readv02
@@ -666,8 +663,6 @@ rmdir01 rmdir01
 rmdir02 rmdir02
 rmdir03 rmdir03
 rmdir03A symlink01 -T rmdir03
-rmdir04 rmdir04
-rmdir05 rmdir05
 
 sbrk01 sbrk01
 sbrk02 sbrk02
@@ -815,7 +810,6 @@ settimeofday01 settimeofday01
 settimeofday02 settimeofday02
 
 setuid01 setuid01
-setuid02 setuid02
 setuid03 setuid03
 setuid04 setuid04
 
@@ -915,7 +909,6 @@ sysconf01 sysconf01
 sysctl01 sysctl01
 sysctl03 sysctl03
 sysctl04 sysctl04
-sysctl05 sysctl05
 
 sysfs01 sysfs01
 sysfs02 sysfs02
@@ -965,7 +958,6 @@ uname03 uname03
 
 unlink01 symlink01 -T unlink01
 unlink05 unlink05
-unlink06 unlink06
 unlink07 unlink07
 unlink08 unlink08
 

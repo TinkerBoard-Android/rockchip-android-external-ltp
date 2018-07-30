@@ -38,7 +38,6 @@ ltp_packages := \
   ltp_aiocp \
   ltp_aiodio_append \
   ltp_aiodio_sparse \
-  ltp_alarm01 \
   ltp_alarm02 \
   ltp_alarm03 \
   ltp_alarm05 \
@@ -150,10 +149,14 @@ ltp_packages := \
   ltp_create_short_dirs \
   ltp_cve-2012-0957 \
   ltp_cve-2014-0196 \
+  ltp_cve-2015-3290 \
   ltp_cve-2016-10044 \
   ltp_cve-2016-4997 \
   ltp_cve-2016-7042 \
   ltp_cve-2016-7117 \
+  ltp_cve-2017-16939 \
+  ltp_cve-2017-17052 \
+  ltp_cve-2017-17053 \
   ltp_cve-2017-2618 \
   ltp_cve-2017-2671 \
   ltp_cve-2017-6951 \
@@ -534,13 +537,11 @@ ltp_packages := \
   ltp_hangup01 \
   ltp_ht_affinity \
   ltp_ht_enabled \
-  ltp_ht_interrupt \
   ltp_hugemmap01 \
   ltp_hugemmap02 \
   ltp_hugemmap04 \
   ltp_hugemmap06 \
   ltp_ima_boot_aggregate \
-  ltp_ima_measure \
   ltp_ima_mmap \
   ltp_in \
   ltp_in6_02 \
@@ -553,6 +554,8 @@ ltp_packages := \
   ltp_inotify04 \
   ltp_inotify05 \
   ltp_inotify06 \
+  ltp_inotify07 \
+  ltp_inotify08 \
   ltp_inotify_init1_01 \
   ltp_inotify_init1_02 \
   ltp_input01 \
@@ -683,12 +686,10 @@ ltp_packages := \
   ltp_migrate_pages02 \
   ltp_mincore01 \
   ltp_mincore02 \
-  ltp_mkdir01 \
   ltp_mkdir02 \
   ltp_mkdir03 \
   ltp_mkdir04 \
   ltp_mkdir05 \
-  ltp_mkdir08 \
   ltp_mkdir09 \
   ltp_mkdirat01 \
   ltp_mkdirat02 \
@@ -891,6 +892,8 @@ ltp_packages := \
   ltp_preadv01_64 \
   ltp_preadv02 \
   ltp_preadv02_64 \
+  ltp_preadv03 \
+  ltp_preadv03_64 \
   ltp_print_caps \
   ltp_proc01 \
   ltp_process_vm01 \
@@ -920,12 +923,16 @@ ltp_packages := \
   ltp_pwrite01_64 \
   ltp_pwrite02 \
   ltp_pwrite02_64 \
+  ltp_pwrite03 \
+  ltp_pwrite03_64 \
   ltp_pwrite04 \
   ltp_pwrite04_64 \
   ltp_pwritev01 \
   ltp_pwritev01_64 \
   ltp_pwritev02 \
   ltp_pwritev02_64 \
+  ltp_pwritev03 \
+  ltp_pwritev03_64 \
   ltp_quotactl01 \
   ltp_quotactl02 \
   ltp_quotactl03 \
@@ -935,6 +942,7 @@ ltp_packages := \
   ltp_read02 \
   ltp_read03 \
   ltp_read04 \
+  ltp_read_all \
   ltp_read_checkzero \
   ltp_readahead01 \
   ltp_readahead02 \
@@ -942,9 +950,7 @@ ltp_packages := \
   ltp_readdir02 \
   ltp_readdir21 \
   ltp_readlink01 \
-  ltp_readlink02 \
   ltp_readlink03 \
-  ltp_readlink04 \
   ltp_readlinkat01 \
   ltp_readlinkat02 \
   ltp_readv01 \
@@ -979,11 +985,10 @@ ltp_packages := \
   ltp_request_key01 \
   ltp_request_key02 \
   ltp_request_key03 \
+  ltp_request_key04 \
   ltp_rmdir01 \
   ltp_rmdir02 \
   ltp_rmdir03 \
-  ltp_rmdir04 \
-  ltp_rmdir05 \
   ltp_rt_sigaction01 \
   ltp_rt_sigaction02 \
   ltp_rt_sigaction03 \
@@ -1030,6 +1035,7 @@ ltp_packages := \
   ltp_sched_tc5 \
   ltp_sched_tc6 \
   ltp_sched_yield01 \
+  ltp_sctp_big_chunk \
   ltp_select01 \
   ltp_select02 \
   ltp_select03 \
@@ -1155,8 +1161,6 @@ ltp_packages := \
   ltp_settimeofday02 \
   ltp_setuid01 \
   ltp_setuid01_16 \
-  ltp_setuid02 \
-  ltp_setuid02_16 \
   ltp_setuid03 \
   ltp_setuid03_16 \
   ltp_setuid04 \
@@ -1252,7 +1256,6 @@ ltp_packages := \
   ltp_sysctl01 \
   ltp_sysctl03 \
   ltp_sysctl04 \
-  ltp_sysctl05 \
   ltp_sysfs01 \
   ltp_sysfs02 \
   ltp_sysfs03 \
@@ -1290,6 +1293,7 @@ ltp_packages := \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
   ltp_testcases_bin_assign_password.sh \
+  ltp_testcases_bin_bind_noport01.sh \
   ltp_testcases_bin_broken_ip4-checksum \
   ltp_testcases_bin_broken_ip4-dstaddr \
   ltp_testcases_bin_broken_ip4-fragment \
@@ -1503,6 +1507,7 @@ ltp_packages := \
   ltp_testcases_bin_icmp6-multi-diffnic07 \
   ltp_testcases_bin_if-addr-adddel \
   ltp_testcases_bin_if-addr-addlarge \
+  ltp_testcases_bin_if-lib.sh \
   ltp_testcases_bin_if-mtu-change \
   ltp_testcases_bin_if-route-adddel \
   ltp_testcases_bin_if-route-addlarge \
@@ -1609,17 +1614,13 @@ ltp_packages := \
   ltp_testcases_bin_route4-change-dst \
   ltp_testcases_bin_route4-change-gw \
   ltp_testcases_bin_route4-change-if \
-  ltp_testcases_bin_route4-ifdown \
   ltp_testcases_bin_route4-redirect \
   ltp_testcases_bin_route4-rmmod \
   ltp_testcases_bin_route6-change-dst \
   ltp_testcases_bin_route6-change-gw \
   ltp_testcases_bin_route6-change-if \
-  ltp_testcases_bin_route6-ifdown \
   ltp_testcases_bin_route6-redirect \
   ltp_testcases_bin_route6-rmmod \
-  ltp_testcases_bin_rpc01 \
-  ltp_testcases_bin_rpcinfo01 \
   ltp_testcases_bin_rsh01 \
   ltp_testcases_bin_run_capbounds.sh \
   ltp_testcases_bin_run_cpuctl_latency_test.sh \
@@ -1642,8 +1643,6 @@ ltp_packages := \
   ltp_testcases_bin_runpwtests_exclusive03.sh \
   ltp_testcases_bin_runpwtests_exclusive04.sh \
   ltp_testcases_bin_runpwtests_exclusive05.sh \
-  ltp_testcases_bin_rup01 \
-  ltp_testcases_bin_rusers01 \
   ltp_testcases_bin_rwtest \
   ltp_testcases_bin_sched_stress.sh \
   ltp_testcases_bin_sctp01.sh \
@@ -1677,6 +1676,7 @@ ltp_packages := \
   ltp_testcases_bin_stop_freeze_sleep_thaw_cont.sh \
   ltp_testcases_bin_stop_freeze_thaw_cont.sh \
   ltp_testcases_bin_stress_floppy \
+  ltp_testcases_bin_sysctl01.sh \
   ltp_testcases_bin_tcp4-multi-diffip01 \
   ltp_testcases_bin_tcp4-multi-diffip02 \
   ltp_testcases_bin_tcp4-multi-diffip03 \
@@ -2000,13 +2000,13 @@ ltp_packages := \
   ltp_testcases_bin_test_9_2.sh \
   ltp_testcases_bin_test_controllers.sh \
   ltp_testcases_bin_test_ioctl \
-  ltp_testcases_bin_test_net.sh \
-  ltp_testcases_bin_test_net_stress.sh \
   ltp_testcases_bin_test_robind.sh \
   ltp_testcases_bin_testall.sh \
   ltp_testcases_bin_tracepath01.sh \
   ltp_testcases_bin_traceroute01.sh \
   ltp_testcases_bin_tst_ansi_color.sh \
+  ltp_testcases_bin_tst_net.sh \
+  ltp_testcases_bin_tst_net_stress.sh \
   ltp_testcases_bin_tst_test.sh \
   ltp_testcases_bin_udp4-multi-diffip01 \
   ltp_testcases_bin_udp4-multi-diffip02 \
@@ -2124,8 +2124,6 @@ ltp_packages := \
   ltp_testcases_data_ld01_rf1.c \
   ltp_testcases_data_mc_member_ManyGroups \
   ltp_testcases_data_mc_member_TooManyGroups \
-  ltp_testcases_data_rpc01_file.1 \
-  ltp_testcases_data_rpc01_file.2 \
   ltp_testcases_data_stress_floppy_dd_file \
   ltp_testcases_data_stress_floppy_dumpdir_1K_file \
   ltp_testcases_data_unzip01_dir.out \
@@ -2188,7 +2186,6 @@ ltp_packages := \
   ltp_tst_dataroot03 \
   ltp_tst_device \
   ltp_tst_exit \
-  ltp_tst_flush \
   ltp_tst_fs_fill_hardlinks \
   ltp_tst_fs_fill_subdirs \
   ltp_tst_fs_has_free \
@@ -2226,7 +2223,6 @@ ltp_packages := \
   ltp_uname02 \
   ltp_uname03 \
   ltp_unlink05 \
-  ltp_unlink06 \
   ltp_unlink07 \
   ltp_unlink08 \
   ltp_unlinkat01 \
@@ -2271,6 +2267,7 @@ ltp_packages := \
   ltp_waitpid12 \
   ltp_waitpid13 \
   ltp_write01 \
+  ltp_write02 \
   ltp_write03 \
   ltp_write04 \
   ltp_write05 \

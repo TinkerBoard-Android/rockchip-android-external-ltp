@@ -19,7 +19,6 @@ add_key04 add_key04
 adjtimex01 adjtimex01
 adjtimex02 adjtimex02
 
-alarm01 alarm01
 alarm02 alarm02
 alarm03 alarm03
 alarm05 alarm05
@@ -478,6 +477,8 @@ inotify03 inotify03
 inotify04 inotify04
 inotify05 inotify05
 inotify06 inotify06
+inotify07 inotify07
+inotify08 inotify08
 
 fanotify01 fanotify01
 fanotify02 fanotify02
@@ -592,13 +593,11 @@ mlockall01 mlockall01
 mlockall02 mlockall02
 mlockall03 mlockall03
 
-mkdir01 mkdir01
 mkdir02 mkdir02
 mkdir03 mkdir03
 mkdir04 mkdir04
 mkdir05 mkdir05
 mkdir05A symlink01 -T mkdir05
-mkdir08 mkdir08
 mkdir09 mkdir09
 
 #mkdirat test cases
@@ -821,6 +820,8 @@ preadv01 preadv01
 preadv01_64 preadv01_64
 preadv02 preadv02
 preadv02_64 preadv02_64
+preadv03 preadv03
+preadv03_64 preadv03_64
 
 profil01 profil01
 
@@ -851,16 +852,20 @@ ptrace07 ptrace07
 
 pwrite01 pwrite01
 pwrite02 pwrite02
+pwrite03 pwrite03
 pwrite04 pwrite04
 
 pwrite01_64 pwrite01_64
 pwrite02_64 pwrite02_64
+pwrite03_64 pwrite03_64
 pwrite04_64 pwrite04_64
 
 pwritev01 pwritev01
 pwritev01_64 pwritev01_64
 pwritev02 pwritev02
 pwritev02_64 pwritev02_64
+pwritev03 pwritev03
+pwritev03_64 pwritev03_64
 
 quotactl01 quotactl01
 quotactl02 quotactl02
@@ -880,9 +885,7 @@ readdir21 readdir21
 
 readlink01A symlink01 -T readlink01
 readlink01 readlink01
-readlink02 readlink02
 readlink03 readlink03
-readlink04 readlink04
 
 #readlinkat test cases
 readlinkat01 readlinkat01
@@ -935,13 +938,12 @@ request_key01 request_key01
 request_key02 request_key02
 request_key03 request_key03
 cve-2017-6951 cve-2017-6951
+request_key04 request_key04
 
 rmdir01 rmdir01
 rmdir02 rmdir02
 rmdir03 rmdir03
 rmdir03A symlink01 -T rmdir03
-rmdir04 rmdir04
-rmdir05 rmdir05
 
 rt_sigaction01 rt_sigaction01
 rt_sigaction02 rt_sigaction02
@@ -1169,8 +1171,6 @@ settimeofday02 settimeofday02
 
 setuid01 setuid01
 setuid01_16 setuid01_16
-setuid02 setuid02
-setuid02_16 setuid02_16
 setuid03 setuid03
 setuid03_16 setuid03_16
 setuid04 setuid04
@@ -1313,7 +1313,6 @@ sysconf01 sysconf01
 sysctl01 sysctl01
 sysctl03 sysctl03
 sysctl04 sysctl04
-sysctl05 sysctl05
 
 sysfs01 sysfs01
 sysfs02 sysfs02
@@ -1381,7 +1380,6 @@ cve-2012-0957 cve-2012-0957
 
 unlink01 symlink01 -T unlink01
 unlink05 unlink05
-unlink06 unlink06
 unlink07 unlink07
 unlink08 unlink08
 
@@ -1454,6 +1452,7 @@ waitid01 waitid01
 waitid02 waitid02
 
 write01 write01
+write02 write02
 write03 write03
 write04 write04
 write05 write05

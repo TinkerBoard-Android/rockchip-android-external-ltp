@@ -711,6 +711,9 @@ static struct fuse_fs_type* find_fuse_fs_type(const char *fs_type)
 {
 	unsigned int i;
 
+	if (!fs_type)
+		return 0;
+
 	for (i = 0; i < ARRAY_SIZE(fuse_fs_types); i++) {
 		if (!strcmp(fuse_fs_types[i].fs_type, fs_type))
 			return &fuse_fs_types[i];
