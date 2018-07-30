@@ -19,12 +19,13 @@
 TCID=ipneigh01
 NUMLOOPS=${NUMLOOPS:-50}
 TST_TOTAL=2
-. test_net.sh
+TST_USE_LEGACY_API=1
+. tst_net.sh
 
 do_setup()
 {
 	tst_require_root
-	tst_check_cmds ip arp grep ping$TST_IPV6
+	tst_check_cmds arp grep ping$TST_IPV6
 }
 
 do_test()

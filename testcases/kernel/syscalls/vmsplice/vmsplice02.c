@@ -40,8 +40,6 @@
 #include "lapi/fcntl.h"
 #include "lapi/vmsplice.h"
 
-#include "limits_ltp.h"
-
 #define TESTFILE "testfile"
 
 #define TEST_BLOCK_SIZE 128

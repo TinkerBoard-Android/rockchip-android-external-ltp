@@ -1,6 +1,7 @@
 #!/bin/sh
 # Copyright (c) 2016 Red Hat Inc.,  All Rights Reserved.
 # Copyright (c) 2016 Oracle and/or its affiliates. All Rights Reserved.
+# Copyright (c) 2018 Petr Vorel <pvorel@suse.cz>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -19,8 +20,6 @@
 #
 #######################################################################
 
-. test_net.sh
-
 # Authenticated encryption with associated data
 AEALGO="rfc4106_128"
 # Encryption algorithm
@@ -33,15 +32,16 @@ CALGO="deflate"
 IPSEC_REQUESTS="500"
 IPSEC_SIZE_ARRAY="${IPSEC_SIZE_ARRAY:-10 100 1000 2000 10000 65000}"
 
-while getopts "hl:m:p:s:S:k:A:e:a:c:r:6" opt; do
-	case "$opt" in
+ipsec_lib_parse_args()
+{
+	case "$1" in
 	h)
 		echo "Usage:"
 		echo "h        help"
 		echo "l n      n is the number of test link when tests run"
 		echo "m x      x is ipsec mode, could be transport / tunnel"
 		echo "p x      x is ipsec protocol, could be ah / esp / comp"
-		echo "s x      x is icmp messge size array"
+		echo "s x      x is icmp message size array"
 		echo "S n      n is IPsec SPI value"
 		echo "k x      key for vti interface"
 		echo "A x      Authenticated encryption with associated data algorithm"
@@ -52,28 +52,31 @@ while getopts "hl:m:p:s:S:k:A:e:a:c:r:6" opt; do
 		echo "6        run over IPv6"
 		exit 0
 	;;
-	l) LINK_NUM=$OPTARG ;;
-	m) IPSEC_MODE=$OPTARG ;;
-	p) IPSEC_PROTO=$OPTARG ;;
-	s) IPSEC_SIZE_ARRAY="$OPTARG" ;;
-	S) SPI=$OPTARG ;;
-	k) VTI_KEY=$OPTARG ;;
-	A) AEALGO=$OPTARG ;;
-	e) EALGO=$OPTARG ;;
-	a) AALGO=$OPTARG ;;
-	c) CALGO=$OPTARG ;;
-	r) IPSEC_REQUESTS="$OPTARG" ;;
-	6) # skip, test_net library already processed it
-	;;
-	*) tst_brkm TBROK "unknown option: $opt" ;;
+	l) LINK_NUM=$2 ;;
+	m) IPSEC_MODE=$2 ;;
+	p) IPSEC_PROTO=$2 ;;
+	s) IPSEC_SIZE_ARRAY="$2" ;;
+	S) SPI=$2 ;;
+	k) VTI_KEY=$2 ;;
+	A) AEALGO=$2 ;;
+	e) EALGO=$2 ;;
+	a) AALGO=$2 ;;
+	c) CALGO=$2 ;;
+	r) IPSEC_REQUESTS="$2" ;;
+	*) tst_brkm TBROK "unknown option: $1" ;;
 	esac
-done
+}
+
+TST_OPTS="hl:m:p:s:S:k:A:e:a:c:r:"
+TST_PARSE_ARGS=ipsec_lib_parse_args
+TST_USE_LEGACY_API=1
+. tst_net.sh
 
 get_key()
 {
 	local bits=$1
-	local xdg_num=$(( $bits / 4 ))
-	echo "0x$(tr -dc "[:xdigit:]" < /dev/urandom | head -c$xdg_num)"
+	local bytes=$(( $bits / 8))
+	echo "0x$(hexdump -vn $bytes -e '1/1 "%02x"' /dev/urandom)"
 }
 
 case $AEALGO in

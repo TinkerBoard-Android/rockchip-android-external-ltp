@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (c) Linux Test Project, 2014-2017
+# Copyright (c) Linux Test Project, 2014-2018
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -102,7 +102,7 @@ tst_res()
 
 	tst_inc_res "$res"
 
-	printf "$TCID $TST_COUNT "
+	printf "$TST_ID $TST_COUNT "
 	tst_print_colored $res "$res: "
 	echo "$@"
 }
@@ -118,8 +118,9 @@ tst_brk()
 
 ROD_SILENT()
 {
-	tst_rod $@ > /dev/null 2>&1
+	local tst_out="$(tst_rod $@ 2>&1)"
 	if [ $? -ne 0 ]; then
+		echo "$tst_out"
 		tst_brk TBROK "$@ failed"
 	fi
 }
@@ -250,10 +251,11 @@ tst_run()
 	if [ -n "$TST_TEST_PATH" ]; then
 		for tst_i in $(grep TST_ "$TST_TEST_PATH" | sed 's/.*TST_//; s/[="} \t\/:`].*//'); do
 			case "$tst_i" in
-			SETUP|CLEANUP|TESTFUNC|ID|CNT);;
+			SETUP|CLEANUP|TESTFUNC|ID|CNT|MIN_KVER);;
 			OPTS|USAGE|PARSE_ARGS|POS_ARGS);;
 			NEEDS_ROOT|NEEDS_TMPDIR|NEEDS_DEVICE|DEVICE);;
 			NEEDS_CMDS|NEEDS_MODULE|MODPATH|DATAROOT);;
+			IPV6);;
 			*) tst_res TWARN "Reserved variable TST_$tst_i used!";;
 			esac
 		done
@@ -288,6 +290,11 @@ tst_run()
 
 	tst_check_cmds $TST_NEEDS_CMDS
 
+	if [ -n "$TST_MIN_KVER" ]; then
+		tst_kvcmp -lt "$TST_MIN_KVER" && \
+			tst_brk TCONF "test requires kernel $TST_MIN_KVER+"
+	fi
+
 	if [ "$TST_NEEDS_TMPDIR" = 1 ]; then
 		if [ -z "$TMPDIR" ]; then
 			export TMPDIR="/tmp"
@@ -304,13 +311,13 @@ tst_run()
 
 	if [ "$TST_NEEDS_DEVICE" = 1 ]; then
 		if [ -z ${TST_TMPDIR} ]; then
-			tst_brk "Use TST_NEEDS_TMPDIR must be set for TST_NEEDS_DEVICE"
+			tst_brk TBROK "Use TST_NEEDS_TMPDIR must be set for TST_NEEDS_DEVICE"
 		fi
 
 		TST_DEVICE=$(tst_device acquire)
 
 		if [ -z "$TST_DEVICE" ]; then
-			tst_brk "Failed to acquire device"
+			tst_brk TBROK "Failed to acquire device"
 		fi
 
 		TST_DEVICE_FLAG=1
@@ -369,41 +376,11 @@ tst_run()
 	tst_do_exit
 }
 
-if TST_TEST_PATH=$(which $0) 2>/dev/null; then
-	if ! grep -q tst_run "$TST_TEST_PATH"; then
-		tst_brk TBROK "Test $0 must call tst_run!"
-	fi
-fi
-
 if [ -z "$TST_ID" ]; then
 	filename=$(basename $0)
 	TST_ID=${filename%%.*}
 fi
 export TST_ID="$TST_ID"
-
-if [ -z "$TST_TESTFUNC" ]; then
-	tst_brk TBROK "TST_TESTFUNC is not defined"
-fi
-
-if [ -n "$TST_CNT" ]; then
-	if ! tst_is_int "$TST_CNT"; then
-		tst_brk TBROK "TST_CNT must be integer"
-	fi
-
-	if [ "$TST_CNT" -le 0 ]; then
-		tst_brk TBROK "TST_CNT must be > 0"
-	fi
-fi
-
-if [ -n "$TST_POS_ARGS" ]; then
-	if ! tst_is_int "$TST_POS_ARGS"; then
-		tst_brk TBROK "TST_POS_ARGS must be integer"
-	fi
-
-	if [ "$TST_POS_ARGS" -le 0 ]; then
-		tst_brk TBROK "TST_POS_ARGS must be > 0"
-	fi
-fi
 
 if [ -z "$LTPROOT" ]; then
 	export LTPROOT="$PWD"
@@ -412,24 +389,56 @@ else
 	export TST_DATAROOT="$LTPROOT/testcases/data/$TST_ID"
 fi
 
-TST_ARGS="$@"
-
-while getopts ":hi:$TST_OPTS" tst_name; do
-	case $tst_name in
-	'h') TST_PRINT_HELP=1;;
-	*);;
-	esac
-done
-
-shift $((OPTIND - 1))
-
-if [ -n "$TST_POS_ARGS" ]; then
-	if [ -z "$TST_PRINT_HELP" -a $# -ne "$TST_POS_ARGS" ]; then
-		tst_brk TBROK "Invalid number of positional paramters:"\
-			      "have ($@) $#, expected ${TST_POS_ARGS}"
+if [ -z "$TST_NO_DEFAULT_RUN" ]; then
+	if TST_TEST_PATH=$(which $0) 2>/dev/null; then
+		if ! grep -q tst_run "$TST_TEST_PATH"; then
+			tst_brk TBROK "Test $0 must call tst_run!"
+		fi
 	fi
-else
-	if [ -z "$TST_PRINT_HELP" -a $# -ne 0 ]; then
-		tst_brk TBROK "Unexpected positional arguments '$@'"
+
+	if [ -z "$TST_TESTFUNC" ]; then
+		tst_brk TBROK "TST_TESTFUNC is not defined"
+	fi
+
+	if [ -n "$TST_CNT" ]; then
+		if ! tst_is_int "$TST_CNT"; then
+			tst_brk TBROK "TST_CNT must be integer"
+		fi
+
+		if [ "$TST_CNT" -le 0 ]; then
+			tst_brk TBROK "TST_CNT must be > 0"
+		fi
+	fi
+
+	if [ -n "$TST_POS_ARGS" ]; then
+		if ! tst_is_int "$TST_POS_ARGS"; then
+			tst_brk TBROK "TST_POS_ARGS must be integer"
+		fi
+
+		if [ "$TST_POS_ARGS" -le 0 ]; then
+			tst_brk TBROK "TST_POS_ARGS must be > 0"
+		fi
+	fi
+
+	TST_ARGS="$@"
+
+	while getopts ":hi:$TST_OPTS" tst_name; do
+		case $tst_name in
+		'h') TST_PRINT_HELP=1;;
+		*);;
+		esac
+	done
+
+	shift $((OPTIND - 1))
+
+	if [ -n "$TST_POS_ARGS" ]; then
+		if [ -z "$TST_PRINT_HELP" -a $# -ne "$TST_POS_ARGS" ]; then
+			tst_brk TBROK "Invalid number of positional paramters:"\
+					  "have ($@) $#, expected ${TST_POS_ARGS}"
+		fi
+	else
+		if [ -z "$TST_PRINT_HELP" -a $# -ne 0 ]; then
+			tst_brk TBROK "Unexpected positional arguments '$@'"
+		fi
 	fi
 fi

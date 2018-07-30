@@ -50,19 +50,16 @@
 #include <sys/stat.h>
 #include <errno.h>
 #include <fcntl.h>
-#if HAVE_NUMA_H
-#include <numa.h>
-#endif
-#if HAVE_NUMAIF_H
-#include <numaif.h>
-#endif
 #include <signal.h>
 #include <stdio.h>
 #include <unistd.h>
 #include "mem.h"
 #include "ksm_common.h"
 
-#if defined(HAVE_NUMA_V2) && defined(HAVE_LINUX_MEMPOLICY_H)
+#ifdef HAVE_NUMA_V2
+#include <numaif.h>
+
+static int cpuset_mounted;
 
 static void verify_ksm(void)
 {
@@ -93,7 +90,8 @@ static void cleanup(void)
 
 	restore_max_page_sharing();
 
-	umount_mem(CPATH, CPATH_NEW);
+	if (cpuset_mounted)
+		umount_mem(CPATH, CPATH_NEW);
 }
 
 static void setup(void)
@@ -111,6 +109,7 @@ static void setup(void)
 	}
 
 	mount_mem("cpuset", "cpuset", NULL, CPATH, CPATH_NEW);
+	cpuset_mounted = 1;
 }
 
 static struct tst_test test = {
@@ -124,5 +123,5 @@ static struct tst_test test = {
 };
 
 #else
-	TST_TEST_TCONF("test requires libnuma >= 2 and it's development packages");
+	TST_TEST_TCONF(NUMA_ERROR_MSG);
 #endif

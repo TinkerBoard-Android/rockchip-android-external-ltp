@@ -1,5 +1,6 @@
 #!/bin/sh
 # Copyright (c) 2014-2017 Oracle and/or its affiliates. All Rights Reserved.
+# Copyright (c) 2018 Petr Vorel <pvorel@suse.cz>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -28,6 +29,31 @@
 #          them in cleanup function. See "start_vni" variable which can
 #          solve it.
 
+virt_lib_parse_args()
+{
+	case "$1" in
+	h)
+		echo "Usage:"
+		echo "h        help"
+		echo "i n      start ID to use"
+		echo "d x      VxLAN destination address, 'uni' or 'multi'"
+		echo "6        run over IPv6"
+		exit 0
+	;;
+	i) start_id=$2 ;;
+	d) vxlan_dst_addr=$2 ;;
+	*)
+		tst_brkm TBROK "unknown option: $1"
+	;;
+	esac
+}
+
+TST_OPTS="hi:d:"
+TST_PARSE_ARGS=virt_lib_parse_args
+
+TST_USE_LEGACY_API=1
+. tst_net.sh
+
 ip_local=$(tst_ipaddr)
 ip_virt_local="$(TST_IPV6= tst_ipaddr_un)"
 ip6_virt_local="$(TST_IPV6=6 tst_ipaddr_un)"
@@ -39,26 +65,6 @@ ip6_virt_remote="$(TST_IPV6=6 tst_ipaddr_un rhost)"
 # Max performance loss (%) for virtual devices during network load
 VIRT_PERF_THRESHOLD=${VIRT_PERF_THRESHOLD:-80}
 vxlan_dstport=0
-
-while getopts :hi:d:6 opt; do
-	case "$opt" in
-	h)
-		echo "Usage:"
-		echo "h        help"
-		echo "i n      start ID to use"
-		echo "d x      VxLAN destination address, 'uni' or 'multi'"
-		echo "6        run over IPv6"
-		exit 0
-	;;
-	i) start_id=$OPTARG ;;
-	d) vxlan_dst_addr=$OPTARG ;;
-	6) # skip, test_net library already processed it
-	;;
-	*)
-		tst_brkm TBROK "unknown option: $opt"
-	;;
-	esac
-done
 
 cleanup_vifaces()
 {
@@ -98,6 +104,7 @@ virt_add()
 	vlan|vxlan)
 		[ -z "$opt" ] && opt="id 4094"
 		[ "$vxlan_dstport" -eq 1 ] && opt="dstport 0 $opt"
+		[ "$virt_type" = "vxlan" ] && opt="$opt dev $(tst_iface)"
 	;;
 	geneve)
 		[ -z "$opt" ] && opt="id 4094 remote $(tst_ipaddr rhost)"
@@ -110,7 +117,7 @@ virt_add()
 
 	case $virt_type in
 	vxlan|geneve)
-		ip li add $vname type $virt_type $opt dev $(tst_iface)
+		ip li add $vname type $virt_type $opt
 	;;
 	gre|ip6gre)
 		ip -f inet$TST_IPV6 tu add $vname mode $virt_type $opt
@@ -126,7 +133,7 @@ virt_add_rhost()
 	local opt=""
 	case $virt_type in
 	vxlan|geneve)
-		opt="dev $(tst_iface rhost)"
+		[ "$virt_type" = "vxlan" ] && opt="dev $(tst_iface rhost)"
 		[ "$vxlan_dstport" -eq 1 ] && opt="$opt dstport 0"
 		tst_rhost_run -s -c "ip li add ltp_v0 type $virt_type $@ $opt"
 	;;
@@ -349,8 +356,8 @@ virt_netperf_msg_sizes()
 # OPTIONS - different options separated by comma.
 virt_test_01()
 {
-	start_id=${start_id:-"1"}
-	local opts=${1:-""}
+	start_id="${start_id:-1}"
+	local opts="${1:-}"
 	local n=0
 
 	while true; do
@@ -365,8 +372,6 @@ virt_test_01()
 		virt_check_cmd virt_add ltp_v0 id 0 $p || continue
 
 		virt_multiple_add_test "$p"
-
-		start_id=$(($start_id + $NS_TIMES))
 	done
 }
 
@@ -375,8 +380,8 @@ virt_test_01()
 # OPTIONS - different options separated by comma.
 virt_test_02()
 {
-	start_id=${start_id:-"1"}
-	local opts=${1:-""}
+	start_id="${start_id:-1}"
+	local opts="${1:-}"
 	local n=0
 
 	while true; do
