@@ -26,12 +26,11 @@ TST_TOTAL=1
 virt_type="vxlan"
 start_id=16700000
 
-. test_net.sh
 . virt_lib.sh
 
 [ "$TST_IPV6" ] && mult_addr="ff02::abc" || mult_addr="239.1.1.1"
 opt="group $mult_addr"
 
-virt_add_delete_test "id $start_id $opt dev $(tst_iface)"
+virt_add_delete_test "id $start_id $opt"
 
 tst_exit

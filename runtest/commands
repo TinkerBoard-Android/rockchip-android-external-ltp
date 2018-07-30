@@ -7,7 +7,6 @@ file01 file01.sh
 tar01  tar_tests.sh
 cron cron_tests.sh
 logrotate export TCdat=$LTPROOT/testcases/bin; logrotate_tests.sh
-mail export TCdat=$LTPROOT/testcases/bin; mail_tests.sh
 cpio01 cpio_tests.sh
 unzip01 unzip01.sh
 gzip01 gzip_tests.sh
@@ -15,9 +14,6 @@ cp01 cp_tests.sh
 ln01 ln_tests.sh
 mkdir01 mkdir_tests.sh
 mv01 mv_tests.sh
-sssd01 sssd01
-sssd02 sssd02
-sssd03 sssd03
 du01 du01.sh
 df01_ext2 df01.sh -f ext2
 df01_ext3 df01.sh -f ext3
@@ -44,3 +40,4 @@ wc01 wc01.sh
 keyctl01 keyctl01.sh
 gdb01 gdb01.sh
 unshare01 unshare01.sh
+sysctl01 sysctl01.sh

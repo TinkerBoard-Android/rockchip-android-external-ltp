@@ -27,6 +27,8 @@
 
 /* OOM */
 
+long overcommit = -1;
+
 static int alloc_mem(long int length, int testcase)
 {
 	char *s;
@@ -248,6 +250,15 @@ void save_max_page_sharing(void)
 
 void restore_max_page_sharing(void)
 {
+	/*
+	 * Documentation/vm/ksm.txt states that the minimum
+	 * value for max_page_sharing is 2, so on
+	 * max_page_sharing != 0 after save_max_page_sharing()
+	 * returns.
+	 */
+	if (!max_page_sharing)
+		return;
+
 	if (access(PATH_KSM "max_page_sharing", F_OK) == 0)
 	        FILE_PRINTF(PATH_KSM "max_page_sharing",
 	                         "%d", max_page_sharing);
@@ -266,33 +277,6 @@ static void check(char *path, long int value)
 			actual_val);
 	else
 		tst_res(TPASS, "%s is %ld.", path, actual_val);
-}
-
-static void wait_ksmd_full_scan(void)
-{
-	unsigned long full_scans, at_least_one_full_scan;
-	int count = 0;
-
-	SAFE_FILE_SCANF(PATH_KSM "full_scans", "%lu", &full_scans);
-	/*
-	 * The current scan is already in progress so we can't guarantee that
-	 * the get_user_pages() is called on every existing rmap_item if we
-	 * only waited for the remaining part of the scan.
-	 *
-	 * The actual merging happens after the unstable tree has been built so
-	 * we need to wait at least two full scans to guarantee merging, hence
-	 * wait full_scans to increment by 3 so that at least two full scans
-	 * will run.
-	 */
-	at_least_one_full_scan = full_scans + 3;
-	while (full_scans < at_least_one_full_scan) {
-		sleep(1);
-		count++;
-		SAFE_FILE_SCANF(PATH_KSM "full_scans", "%lu", &full_scans);
-	}
-
-	tst_res(TINFO, "ksm daemon takes %ds to run two full scans",
-		count);
 }
 
 static void final_group_check(int run, int pages_shared, int pages_sharing,

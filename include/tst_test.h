@@ -40,6 +40,7 @@
 #include "tst_clone.h"
 #include "tst_kernel.h"
 #include "tst_minmax.h"
+#include "tst_get_bad_addr.h"
 
 /*
  * Reports testcase result.
@@ -68,6 +69,9 @@ void tst_brk_(const char *file, const int lineno, int ttype,
 
 #define tst_brk(ttype, arg_fmt, ...) \
 	tst_brk_(__FILE__, __LINE__, (ttype), (arg_fmt), ##__VA_ARGS__)
+
+/* flush stderr and stdout */
+void tst_flush(void);
 
 pid_t safe_fork(const char *filename, unsigned int lineno);
 #define SAFE_FORK() \
