@@ -45,6 +45,10 @@ module_prebuilt := testcases/bin/assign_password.sh
 module_src_files := testcases/kernel/security/mmc_security/assign_password.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/bind_noport01.sh
+module_src_files := testcases/network/sockets/bind_noport01.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/broken_ip4-checksum
 module_src_files := testcases/network/stress/broken_ip/broken_ip4-checksum
 include $(ltp_build_prebuilt)
@@ -429,14 +433,6 @@ module_prebuilt := testcases/data/ext4-ffsb/ffsb-config7
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config7
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/data/rpc01/file.1
-module_src_files := testcases/network/rpc/basic_tests/rpc01/datafiles/file.1
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/rpc01/file.2
-module_src_files := testcases/network/rpc/basic_tests/rpc01/datafiles/file.2
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/file01.sh
 module_src_files := testcases/commands/file/file01.sh
 include $(ltp_build_prebuilt)
@@ -795,6 +791,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/if-addr-addlarge
 module_src_files := testcases/network/stress/interface/if-addr-addlarge
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/if-lib.sh
+module_src_files := testcases/network/stress/interface/if-lib.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/if-mtu-change
@@ -1325,10 +1325,6 @@ module_prebuilt := testcases/bin/route4-change-if
 module_src_files := testcases/network/stress/route/route4-change-if
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/route4-ifdown
-module_src_files := testcases/network/stress/route/route4-ifdown
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/route4-redirect
 module_src_files := testcases/network/stress/route/route4-redirect
 include $(ltp_build_prebuilt)
@@ -1349,24 +1345,12 @@ module_prebuilt := testcases/bin/route6-change-if
 module_src_files := testcases/network/stress/route/route6-change-if
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/route6-ifdown
-module_src_files := testcases/network/stress/route/route6-ifdown
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/route6-redirect
 module_src_files := testcases/network/stress/route/route6-redirect
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/route6-rmmod
 module_src_files := testcases/network/stress/route/route6-rmmod
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/rpc01
-module_src_files := testcases/network/rpc/basic_tests/rpc01/rpc01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/rpcinfo01
-module_src_files := testcases/network/rpc/basic_tests/rpcinfo/rpcinfo01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/rsh01
@@ -1455,14 +1439,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/runpwtests_exclusive05.sh
 module_src_files := testcases/kernel/power_management/runpwtests_exclusive05.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/rup01
-module_src_files := testcases/network/rpc/basic_tests/rup/rup01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/rusers01
-module_src_files := testcases/network/rpc/basic_tests/rusers/rusers01
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/rwtest
@@ -1603,6 +1579,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/stress_floppy
 module_src_files := testcases/kernel/io/stress_floppy/stress_floppy
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/sysctl01.sh
+module_src_files := testcases/commands/sysctl/sysctl01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp4-multi-diffip01
@@ -3061,14 +3041,6 @@ module_prebuilt := testcases/bin/test_ioctl
 module_src_files := testcases/kernel/syscalls/ioctl/test_ioctl
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/test_net.sh
-module_src_files := testcases/lib/test_net.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_net_stress.sh
-module_src_files := testcases/network/stress/ns-tools/test_net_stress.sh
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/test_robind.sh
 module_src_files := testcases/kernel/fs/fs_readonly/test_robind.sh
 include $(ltp_build_prebuilt)
@@ -3087,6 +3059,14 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tst_ansi_color.sh
 module_src_files := testcases/lib/tst_ansi_color.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tst_net.sh
+module_src_files := testcases/lib/tst_net.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tst_net_stress.sh
+module_src_files := testcases/network/stress/ns-tools/tst_net_stress.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tst_test.sh

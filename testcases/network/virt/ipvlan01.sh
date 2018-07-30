@@ -24,7 +24,6 @@ TST_TOTAL=2
 
 virt_type="ipvlan"
 
-. test_net.sh
 . virt_lib.sh
 
 options="mode l2,mode l3"

@@ -1,9 +1,14 @@
 language: c
 
+# BUILD="native": native builds
+# BUILD="32": 32-bit builds
+# BUILD="cross": cross compile build
+# TREE="out": out-of-tree build
+# NO INSTALL_PACKAGES variable: build with minimal dependencies
+
 matrix:
     include:
-
-        # normal native in-tree builds
+        ### native builds ###
         - os: linux
           env: BUILD="native" INSTALL_PACKAGES="$BUILD"
           compiler: gcc-5
@@ -13,7 +18,7 @@ matrix:
                   packages: ['gcc-5']
 
         - os: linux
-          env: BUILD="native" INSTALL_PACKAGES="$BUILD"
+          env: BUILD="native" TREE="out" INSTALL_PACKAGES="$BUILD"
           compiler: gcc-7
           addons:
               apt:
@@ -21,7 +26,7 @@ matrix:
                   packages: ['gcc-7']
 
         - os: linux
-          env: BUILD="native" INSTALL_PACKAGES="$BUILD"
+          env: BUILD="native" TREE="out"
           compiler: clang-4.0
           addons:
               apt:
@@ -36,7 +41,6 @@ matrix:
                   sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-5.0']
                   packages: ['clang-5.0']
 
-        # minimal build (some headers and libraries are missing)
         - os: linux
           env: BUILD="native"
           compiler: clang-3.9
@@ -45,7 +49,7 @@ matrix:
                   sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-3.9']
                   packages: ['clang-3.9']
 
-        # 32-bit in-tree cross-compile builds
+        ### 32-bit builds ###
         - os: linux
           env: BUILD="32" INSTALL_PACKAGES="$BUILD"
           compiler: gcc-4.9
@@ -55,23 +59,14 @@ matrix:
                   packages: ['gcc-4.9', 'gcc-4.9-multilib', 'linux-libc-dev:i386']
 
         - os: linux
-          env: BUILD="32" INSTALL_PACKAGES="$BUILD"
+          env: BUILD="32" TREE="out" INSTALL_PACKAGES="$BUILD"
           compiler: gcc-6
           addons:
               apt:
                   sources: ['ubuntu-toolchain-r-test']
                   packages: ['gcc-6', 'gcc-6-multilib', 'linux-libc-dev:i386']
 
-        # out-of-tree build
-        - os: linux
-          env: BUILD="out" INSTALL_PACKAGES="native"
-          compiler: gcc-7
-          addons:
-              apt:
-                  sources: ['ubuntu-toolchain-r-test']
-                  packages: ['gcc-7']
-
-        # cross-compile ARM builds
+        ### cross-compile builds ###
         - os: linux
           env: BUILD="cross" INSTALL_PACKAGES="$BUILD"
           compiler: arm-linux-gnueabihf-gcc
@@ -80,26 +75,46 @@ matrix:
                   packages: ['gcc-arm-linux-gnueabihf', 'libc6-dev-armhf-cross']
 
         - os: linux
-          env: BUILD="cross" INSTALL_PACKAGES="$BUILD"
+          env: BUILD="cross" TREE="out" INSTALL_PACKAGES="$BUILD"
           compiler: aarch64-linux-gnu-gcc
           addons:
               apt:
                   packages: ['gcc-aarch64-linux-gnu', 'libc6-dev-arm64-cross']
+
+        - os: linux
+          env: BUILD="cross" TREE="out"
+          compiler: powerpc64le-linux-gnu-gcc
+          addons:
+              apt:
+                  packages: ['gcc-powerpc64le-linux-gnu', 'libc6-dev-ppc64el-cross']
 
 notifications:
     email:
         secure: "b/xcA/K5OyQvPPnd0PRahTH5LJu8lgz8goGHvhXpHo+ZPsPgTDXNFo5cX9fSOkMuFKeoW8iGl0wOgK2+ptc8mbYDw277K4RFIHRHeV/KIoE1EzjQnEFiL8J0oHCAvDj12o0AXeriTyY9gICXKbR31Br6Zh5eKViDJe2OAGeHeDU="
 
 before_install:
+    # travis-ci/travis-ci#9112: remove all third party repositories except ubuntu-toolchain-r-test
+    - if [ -f /etc/apt/sources.list.d/ubuntu-toolchain-r-test*.list ]; then
+          cp -v /etc/apt/sources.list.d/ubuntu-toolchain-r-test*.list /tmp
+      ; fi
+    - sudo rm -fv /etc/apt/sources.list.d/*
+    - if [ -f /tmp/ubuntu-toolchain-r-test*.list ]; then
+          sudo cp -v /tmp/ubuntu-toolchain-r-test*.list /etc/apt/sources.list.d/
+      ; fi
+    - sudo apt update --option Acquire::Retries=100 --option Acquire::http::Timeout="60"
+
     # installing / removing dependencies
     - if [ "$INSTALL_PACKAGES" = "" ]; then
           sudo apt remove $(cat .travis.packages_native | grep -v -e 'libc6' -e 'libc6-dev' -e 'linux-libc-dev' -e 'libacl1')
-      ; elif [ "$INSTALL_PACKAGES" != "cross" ]; then
+      ; else
           sudo apt install -qq $(cat .travis.packages_native)
       ; fi
 
     - if [ "$INSTALL_PACKAGES" = "32" ]; then
           sudo apt install -qq $(cat .travis.packages_i386)
       ; fi
+    - if [ ! "$TREE" ]; then
+          TREE="in"
+      ; fi
 
-script: ./build.sh -t $BUILD -c $CC
+script: ./build.sh -o $TREE -t $BUILD -c $CC

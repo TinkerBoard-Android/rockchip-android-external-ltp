@@ -24,7 +24,6 @@
 #include <sys/mount.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <sys/time.h>
 
 #define TST_NO_DEFAULT_MAIN
 #include "tst_test.h"
@@ -34,6 +33,8 @@
 #include "tst_ansi_color.h"
 #include "tst_safe_stdio.h"
 #include "tst_timer_test.h"
+#include "tst_clocks.h"
+#include "tst_timer.h"
 
 #include "old_resource.h"
 #include "old_device.h"
@@ -214,6 +215,11 @@ static void print_result(const char *file, const int lineno, int ttype,
 	if (ttype & TTERRNO)
 		str_errno = tst_strerrno(TEST_ERRNO);
 
+	if (ttype & TRERRNO) {
+		ret = TEST_RETURN < 0 ? -(int)TEST_RETURN : (int)TEST_RETURN;
+		str_errno = tst_strerrno(ret);
+	}
+
 	ret = snprintf(str, size, "%s:%i: ", file, lineno);
 	str += ret;
 	size -= ret;
@@ -379,7 +385,7 @@ pid_t safe_fork(const char *filename, unsigned int lineno)
 	if (!tst_test->forks_child)
 		tst_brk(TBROK, "test.forks_child must be set!");
 
-	fflush(stdout);
+	tst_flush();
 
 	pid = fork();
 	if (pid < 0)
@@ -632,6 +638,7 @@ static int needs_tmpdir(void)
 {
 	return tst_test->needs_tmpdir ||
 	       tst_test->needs_device ||
+	       tst_test->mntpoint ||
 	       tst_test->resource_files ||
 	       tst_test->needs_checkpoints;
 }
@@ -689,11 +696,43 @@ static void assert_test_fn(void)
 		tst_brk(TBROK, "You can define tcnt only for test()");
 }
 
+static int prepare_and_mount_ro_fs(const char *dev,
+                                   const char *mntpoint,
+                                   const char *fs_type)
+{
+	char buf[PATH_MAX];
+
+	if (mount(dev, mntpoint, fs_type, 0, NULL)) {
+		tst_res(TINFO | TERRNO, "Can't mount %s at %s (%s)",
+			dev, mntpoint, fs_type);
+		return 1;
+	}
+
+	mntpoint_mounted = 1;
+
+	snprintf(buf, sizeof(buf), "%s/dir/", mntpoint);
+	SAFE_MKDIR(buf, 0777);
+
+	snprintf(buf, sizeof(buf), "%s/file", mntpoint);
+	SAFE_FILE_PRINTF(buf, "file content");
+	SAFE_CHMOD(buf, 0777);
+
+	SAFE_MOUNT(dev, mntpoint, fs_type, MS_REMOUNT | MS_RDONLY, NULL);
+
+	return 0;
+}
+
 static void prepare_device(void)
 {
 	if (tst_test->format_device) {
 		SAFE_MKFS(tdev.dev, tdev.fs_type, tst_test->dev_fs_opts,
 			  tst_test->dev_extra_opt);
+	}
+
+	if (tst_test->needs_rofs) {
+		prepare_and_mount_ro_fs(tdev.dev, tst_test->mntpoint,
+		                        tdev.fs_type);
+		return;
 	}
 
 	if (tst_test->mount_device) {
@@ -752,18 +791,13 @@ static void do_setup(int argc, char *argv[])
 
 	if (tst_test->needs_rofs) {
 		/* If we failed to mount read-only tmpfs. Fallback to
-		 * using a device with empty read-only filesystem.
+		 * using a device with read-only filesystem.
 		 */
-		if (mount(NULL, tst_test->mntpoint, "tmpfs", MS_RDONLY, NULL)) {
-			tst_res(TINFO | TERRNO, "Can't mount tmpfs read-only"
-				" at %s, setting up a device instead\n",
-				tst_test->mntpoint);
-			tst_test->mount_device = 1;
+		if (prepare_and_mount_ro_fs(NULL, tst_test->mntpoint, "tmpfs")) {
+			tst_res(TINFO, "Can't mount tmpfs read-only, "
+			        "falling back to block device...");
 			tst_test->needs_device = 1;
 			tst_test->format_device = 1;
-			tst_test->mnt_flags = MS_RDONLY;
-		} else {
-			mntpoint_mounted = 1;
 		}
 	}
 
@@ -853,11 +887,12 @@ static void run_tests(void)
 
 static unsigned long long get_time_ms(void)
 {
-	struct timeval tv;
+	struct timespec ts;
 
-	gettimeofday(&tv, NULL);
+	if (tst_clock_gettime(CLOCK_MONOTONIC, &ts))
+		tst_brk(TBROK | TERRNO, "tst_clock_gettime()");
 
-	return tv.tv_sec * 1000 + tv.tv_usec / 1000;
+	return tst_timespec_to_ms(ts);
 }
 
 static void add_paths(void)
@@ -1037,6 +1072,8 @@ static int run_tcases_per_fs(void)
 		tst_brk(TCONF, "There are no supported filesystems");
 
 	for (i = 0; filesystems[i]; i++) {
+
+		tst_res(TINFO, "Testing on %s", filesystems[i]);
 		tdev.fs_type = filesystems[i];
 
 		prepare_device();
@@ -1082,4 +1119,19 @@ void tst_run_tcases(int argc, char *argv[], struct tst_test *self)
 		ret = fork_testrun();
 
 	do_exit(ret);
+}
+
+
+void tst_flush(void)
+{
+	int rval;
+
+	rval = fflush(stderr);
+	if (rval != 0)
+		tst_brk(TBROK | TERRNO, "fflush(stderr) failed");
+
+	rval = fflush(stderr);
+	if (rval != 0)
+		tst_brk(TBROK | TERRNO, "fflush(stdout) failed");
+
 }
