@@ -67,6 +67,60 @@ arm_syscall_tbl_url = src_url_start
 x86_syscall_tbl_url = src_url_start
 x86_64_syscall_tbl_url = src_url_start
 
+# Syscalls which are either banned, optional, or deprecated, so not part of the
+# CKI.
+CKI_BLACKLIST = [
+        'fanotify_init',           # CONFIG_FANOTIFY
+        'fanotify_mark',           # CONFIG_FANOTIFY
+        'get_mempolicy',           # CONFIG_NUMA
+        'ipc',                     # CONFIG_SYSVIPC
+        'kcmp',                    # CONFIG_CHECKPOINT_RESTORE
+        'kexec_file_load',         # CONFIG_EXEC_FILE
+        'kexec_load',              # CONFIG_KEXEC
+        'mbind',                   # CONFIG_NUMA
+        'membarrier',              # CONFIG_MEMBARRIER
+        'migrate_pages',           # CONFIG_NUMA
+        'move_pages',              # CONFIG_MIGRATION
+        'mq_getsetattr',           # CONFIG_POSIX_MQUEUE
+        'mq_notify',               # CONFIG_POSIX_MQUEUE
+        'mq_open',                 # CONFIG_POSIX_MQUEUE
+        'mq_timedreceive',         # CONFIG_POSIX_MQUEUE
+        'mq_timedsend',            # CONFIG_POSIX_MQUEUE
+        'mq_unlink',               # CONFIG_POSIX_MQUEUE
+        'msgctl',                  # CONFIG_SYSVIPC
+        'msgget',                  # CONFIG_SYSVIPC
+        'msgrcv',                  # CONFIG_SYSVIPC
+        'msgsnd',                  # CONFIG_SYSVIPC
+        'name_to_handle_at',       # CONFIG_FHANDLE
+        'nfsservctl',              # not present after 3.1
+        'open_by_handle_at',       # CONFIG_FHANDLE
+        'pciconfig_iobase',        # not present for arm/x86
+        'pciconfig_read',          # CONFIG_PCI_SYSCALL
+        'pciconfig_write',         # CONFIG_PCI_SYSCALL
+        'pkey_alloc',              # CONFIG_MMU, added in 4.9
+        'pkey_free',               # CONFIG_MMU, added in 4.9
+        'pkey_mprotect',           # CONFIG_MMU, added in 4.9
+        'rseq',                    # CONFIG_RSEQ
+        'semctl',                  # CONFIG_SYSVIPC
+        'semget',                  # CONFIG_SYSVIPC
+        'semop',                   # CONFIG_SYSVIPC
+        'semtimedop',              # CONFIG_SYSVIPC
+        'set_mempolicy',           # CONFIG_NUMA
+        'sgetmask',                # CONFIG_SGETMASK_SYSCALL
+        'shmat',                   # CONFIG_SYSVIPC
+        'shmctl',                  # CONFIG_SYSVIPC
+        'shmdt',                   # CONFIG_SYSVIPC
+        'shmget',                  # CONFIG_SYSVIPC
+        'ssetmask',                # CONFIG_SGETMASK_SYSCALL
+        'syscall',                 # deprecated
+        '_sysctl',                 # CONFIG_SYSCTL_SYSCALL
+        'sysfs',                   # CONFIG_SYSFS_SYSCALL
+        'uselib',                  # CONFIG_USELIB
+        'userfaultfd',             # CONFIG_USERFAULTFD
+        'vm86',                    # CONFIG_X86_LEGACY_VM86
+        'vm86old',                 # CONFIG_X86_LEGACY_VM86
+        'vserver',                 # deprecated
+]
 
 class CKI_Coverage(object):
   """Determines current test coverage of CKI system calls in LTP.
@@ -290,6 +344,19 @@ class CKI_Coverage(object):
     if not seen:
       cki.syscalls.append({"name":syscall, arch:True})
 
+  def check_blacklist(self, cki, error_on_match):
+    unlisted_syscalls = []
+    for s in cki.syscalls:
+      if s["name"] in CKI_BLACKLIST:
+        if error_on_match:
+          print "Syscall %s found in both bionic CKI and blacklist!" % s["name"]
+          sys.exit()
+        else:
+          cki.syscalls.remove(s)
+      else:
+        unlisted_syscalls.append(s)
+    cki.syscalls = unlisted_syscalls
+
   def get_x86_64_kernel_syscalls(self, cki):
     """Retrieve the list of syscalls for x86_64."""
     proc = subprocess.Popen(['curl', x86_64_syscall_tbl_url], stdout=subprocess.PIPE)
@@ -413,8 +480,10 @@ if __name__ == "__main__":
     cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_COMMON.TXT"))
     cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_SYSTEM.TXT"))
     cki.parse_file(os.path.join(bionic_libc_root, "SECCOMP_WHITELIST_GLOBAL.TXT"))
+    cki_cov.check_blacklist(cki, True)
   else:
     cki_cov.get_kernel_syscalls(cki, args.arch)
+    cki_cov.check_blacklist(cki, False)
 
   if args.l:
     for syscall in cki.syscalls:
