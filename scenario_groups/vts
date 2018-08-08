@@ -23,12 +23,12 @@ math
 mm
 modules
 nptl
-numa
 pipes
 power_management_tests
 pty
 sched
+sched_low_mem
+securebits
 syscalls
 timers
-securebits
 tracing
