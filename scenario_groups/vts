@@ -5,6 +5,7 @@ commands
 connectors
 containers
 cpuhotplug
+cve
 dio
 fcntl-locktests_android
 filecaps
