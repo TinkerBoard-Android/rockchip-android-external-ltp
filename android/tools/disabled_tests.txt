@@ -191,26 +191,6 @@ du01.sh
 eject_check_tray
 eject-tests.sh
 file_test.sh
-# TODO(b/69117476): Enable ftrace_stress tests again
-ftrace_buffer_size_kb.h
-ftrace_current_tracer.sh
-ftrace_ftrace_enabled.sh
-ftrace_function_profile_enabled.sh
-ftrace_set_event.sh
-ftrace_set_ftrace_filter.sh
-ftrace_set_ftrace_pid.sh
-ftrace_stack_max_size.sh
-ftrace_stack_trace.sh
-ftrace_stress_test.sh
-ftrace_trace.sh
-ftrace_trace_clock.sh
-ftrace_trace_options.sh
-ftrace_trace_pipe.sh
-ftrace_trace_stat.sh
-ftrace_tracing_cpumask.sh
-ftrace_tracing_enabled.sh
-ftrace_tracing_max_latency.sh
-ftrace_tracing_on.sh
 insmod01.sh
 keyctl01.sh
 ld01
