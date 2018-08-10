@@ -621,6 +621,18 @@ module_prebuilt := testcases/bin/ftrace_stress/ftrace_buffer_size_kb.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_buffer_size_kb.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_current_tracer.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_current_tracer.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_ftrace_enabled.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_function_profile_enabled.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_function_profile_enabled.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/ftrace_lib.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_lib.sh
 include $(ltp_build_prebuilt)
@@ -631,6 +643,66 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftrace_regression02.sh
 module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_regression02.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_event.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_event.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_ftrace_filter.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_filter.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_set_ftrace_pid.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_pid.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_stack_max_size.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_max_size.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_stack_trace.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_trace.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress_test.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress_test.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_clock.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_clock.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_options.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_options.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_pipe.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_pipe.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_trace_stat.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_stat.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_cpumask.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_cpumask.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_enabled.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_enabled.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_max_latency.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_max_latency.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/ftrace_stress/ftrace_tracing_on.sh
+module_src_files := testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_on.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/gdb01.sh
