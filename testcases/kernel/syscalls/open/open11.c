@@ -48,6 +48,7 @@
 
 #include "tst_test.h"
 
+#define MNTPOINT "mntpoint"
 #define T_REG "t_reg"			/* regular file with content */
 #define T_REG_EMPTY "t_reg_empty"	/* empty regular file */
 #define T_LINK_REG "t_link_reg"		/* hard link to T_REG */
@@ -55,7 +56,7 @@
 #define T_SYMLINK_REG "t_symlink_reg"	/* symlink to T_REG */
 #define T_DIR "t_dir"			/* test dir */
 #define T_SYMLINK_DIR "t_symlink_dir"	/* symlink to T_DIR */
-#define T_DEV "t_dev"			/* test device special file */
+#define T_DEV MNTPOINT"/t_dev"		/* test device special file */
 
 #define T_MSG "this is a test string"
 
@@ -279,12 +280,12 @@ static void verify_open(unsigned int n)
 	int fd;
 
 	TEST(open(tc[n].path, tc[n].flags, tc[n].mode));
-	fd = TST_RET;
+	fd = TEST_RETURN;
 
 	if (fd > 0)
 		SAFE_CLOSE(fd);
 
-	if (tc[n].err == -1 || TST_ERR == tc[n].err) {
+	if (tc[n].err == -1 || TEST_ERRNO == tc[n].err) {
 		tst_res(TPASS, "%s", tc[n].desc);
 		return;
 	}
@@ -318,6 +319,7 @@ static struct tst_test test = {
 	.tcnt = ARRAY_SIZE(tc),
 	.setup = setup,
 	.test = verify_open,
-	.needs_tmpdir = 1,
+	.needs_devfs = 1,
+	.mntpoint = MNTPOINT,
 	.needs_root = 1,
 };
