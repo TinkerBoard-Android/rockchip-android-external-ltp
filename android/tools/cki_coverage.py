@@ -215,6 +215,9 @@ class CKI_Coverage(object):
       test_re = re.compile(r"^fstatat\d+$")
       if re.match(test_re, test):
         return True
+    if syscall in ("arm_sync_file_range", "sync_file_range2") and \
+      test.startswith("sync_file_range"):
+      return True
 
     return False
 
