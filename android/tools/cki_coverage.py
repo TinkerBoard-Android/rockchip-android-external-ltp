@@ -203,7 +203,8 @@ class CKI_Coverage(object):
     """
     if syscall == "clock_nanosleep" and test == "clock_nanosleep2_01":
       return True
-    if syscall == "fadvise" and test.startswith("posix_fadvise"):
+    if syscall in ("arm_fadvise64_", "fadvise64_") and \
+      test.startswith("posix_fadvise"):
       return True
     if syscall == "futex" and test.startswith("futex_"):
       return True
