@@ -29,6 +29,7 @@ asyncio02 asyncio02
 
 bind01 bind01
 bind02 bind02
+bind03 bind03
 
 bdflush01 bdflush01
 
@@ -145,8 +146,9 @@ execve01 execve01
 execve02 execve02
 execve03 execve03
 execve04 execve04
-execve05 execve05 20 $LTPROOT/testcases/bin/execve05 $LTPROOT/testcases/bin/execve05 4
+execve05 execve05 -i 5 -n 32
 execvp01 execvp01
+execveat03 execveat03
 
 exit01 exit01
 exit02 exit02
@@ -162,6 +164,9 @@ fallocate02 fallocate02
 fallocate03 fallocate03
 fallocate04 fallocate04
 fallocate05 fallocate05
+
+fsetxattr01 fsetxattr01
+fsetxattr02 fsetxattr02
 
 #posix_fadvise test cases
 posix_fadvise01                      posix_fadvise01
@@ -183,7 +188,6 @@ fchmod03 fchmod03
 fchmod04 fchmod04
 fchmod05 fchmod05
 fchmod06 fchmod06
-fchmod07 fchmod07
 
 #fchmodat test cases
 fchmodat01 fchmodat01
@@ -279,6 +283,10 @@ fcntl36_64 fcntl36_64
 fdatasync01 fdatasync01
 fdatasync02 fdatasync02
 
+fgetxattr01 fgetxattr01
+fgetxattr02 fgetxattr02
+fgetxattr03 fgetxattr03
+
 flistxattr01 flistxattr01
 flistxattr02 flistxattr02
 flistxattr03 flistxattr03
@@ -287,7 +295,6 @@ flock01 flock01
 flock02 flock02
 flock03 flock03
 flock04 flock04
-flock05 flock05
 flock06 flock06
 
 fmtmsg01 fmtmsg01
@@ -479,6 +486,7 @@ inotify05 inotify05
 inotify06 inotify06
 inotify07 inotify07
 inotify08 inotify08
+inotify09 inotify09
 
 fanotify01 fanotify01
 fanotify02 fanotify02
@@ -488,6 +496,7 @@ fanotify05 fanotify05
 fanotify06 fanotify06
 fanotify07 fanotify07
 fanotify08 fanotify08
+fanotify09 fanotify09
 
 ioperm01 ioperm01
 ioperm02 ioperm02
@@ -588,6 +597,7 @@ memcpy01 memcpy01
 
 migrate_pages01 migrate_pages01
 migrate_pages02 migrate_pages02
+migrate_pages03 migrate_pages03
 
 mlockall01 mlockall01
 mlockall02 mlockall02
@@ -623,6 +633,10 @@ mlock02 mlock02
 mlock03 mlock03 -i 20
 mlock04 mlock04
 
+mlock201 mlock201
+mlock202 mlock202
+mlock203 mlock203
+
 qmm01 mmap001 -m 1
 mmap01 mmap01
 mmap02 mmap02
@@ -652,17 +666,17 @@ mount04 mount04
 mount05 mount05
 mount06 mount06
 
-move_pages01 move_pages.sh 01
-move_pages02 move_pages.sh 02
-move_pages03 cd $LTPROOT/testcases/bin && chown root move_pages03 && chmod 04755 move_pages03 && move_pages.sh 03
-move_pages04 move_pages.sh 04
-move_pages05 move_pages.sh 05
-move_pages06 move_pages.sh 06
-move_pages07 move_pages.sh 07
-move_pages08 move_pages.sh 08
-move_pages09 move_pages.sh 09
-move_pages10 move_pages.sh 10
-move_pages11 cd $LTPROOT/testcases/bin && chown root move_pages11 && chmod 04755 move_pages11 && move_pages.sh 11
+move_pages01 move_pages01
+move_pages02 move_pages02
+move_pages03 move_pages03
+move_pages04 move_pages04
+move_pages05 move_pages05
+move_pages06 move_pages06
+move_pages07 move_pages07
+move_pages08 move_pages08
+move_pages09 move_pages09
+move_pages10 move_pages10
+move_pages11 move_pages11
 move_pages12 move_pages12
 
 mprotect01 mprotect01
@@ -687,15 +701,11 @@ msgctl01 msgctl01
 msgctl02 msgctl02
 msgctl03 msgctl03
 msgctl04 msgctl04
-msgctl05 msgctl05
-msgctl06 msgctl06
-msgctl07 msgctl07
-msgctl08 msgctl08
-msgctl09 msgctl09
-msgctl10 msgctl10
-msgctl11 msgctl11
+msgstress01 msgstress01
+msgstress02 msgstress02
+msgstress03 msgstress03
+msgstress04 msgstress04
 msgctl12 msgctl12
-msgctl13 msgctl13
 
 msgget01 msgget01
 msgget02 msgget02
@@ -724,7 +734,6 @@ munlock01 munlock01
 munlock02 munlock02
 
 munlockall01 munlockall01
-munlockall02 munlockall02
 
 munmap01 munmap01
 munmap02 munmap02
@@ -774,6 +783,7 @@ madvise06 madvise06
 madvise07 madvise07
 madvise08 madvise08
 madvise09 madvise09
+madvise10 madvise10
 
 newuname01 newuname01
 
@@ -808,6 +818,7 @@ ppoll01 ppoll01
 
 prctl01 prctl01
 prctl02 prctl02
+prctl03 prctl03
 
 pread01 pread01
 pread01_64 pread01_64
@@ -894,6 +905,8 @@ readlinkat02 readlinkat02
 readv01 readv01
 readv02 readv02
 readv03 readv03
+
+realpath01 realpath01
 
 reboot01 reboot01
 reboot02 reboot02
@@ -1188,6 +1201,7 @@ shmctl01 shmctl01
 shmctl02 shmctl02
 shmctl03 shmctl03
 shmctl04 shmctl04
+shmctl05 shmctl05
 
 shmdt01 shmdt01
 shmdt02 shmdt02
@@ -1480,5 +1494,13 @@ futex_wait_bitset02 futex_wait_bitset02
 
 memfd_create01 memfd_create01
 memfd_create02 memfd_create02
+memfd_create03 memfd_create03
+memfd_create04 memfd_create04
 
 copy_file_range01 copy_file_range01
+
+statx01 statx01
+statx02 statx02
+statx03 statx03
+statx04 statx04
+statx05 statx05

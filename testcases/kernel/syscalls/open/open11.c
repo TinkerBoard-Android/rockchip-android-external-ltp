@@ -280,12 +280,12 @@ static void verify_open(unsigned int n)
 	int fd;
 
 	TEST(open(tc[n].path, tc[n].flags, tc[n].mode));
-	fd = TEST_RETURN;
+	fd = TST_RET;
 
 	if (fd > 0)
 		SAFE_CLOSE(fd);
 
-	if (tc[n].err == -1 || TEST_ERRNO == tc[n].err) {
+	if (tc[n].err == -1 || TST_ERR == tc[n].err) {
 		tst_res(TPASS, "%s", tc[n].desc);
 		return;
 	}

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2015 Linux Test Project
+ * Copyright (c) 2010-2018 Linux Test Project
  * Copyright (c) 2011-2015 Cyril Hrubis <chrubis@suse.cz>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -30,6 +30,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <grp.h>
 
 #include "safe_macros_fn.h"
 
@@ -46,6 +47,10 @@
 
 #define SAFE_CREAT(pathname, mode) \
 	safe_creat(__FILE__, __LINE__, NULL, (pathname), (mode))
+
+#define SAFE_CHROOT(path) \
+	safe_chroot(__FILE__, __LINE__, (path))
+int safe_chroot(const char *file, const int lineno, const char *path);
 
 #define SAFE_DIRNAME(path) \
 	safe_dirname(__FILE__, __LINE__, NULL, (path))
@@ -431,6 +436,11 @@ int safe_getpriority(const char *file, const int lineno, int which, id_t who);
 #define SAFE_GETPRIORITY(which, who) \
 	safe_getpriority(__FILE__, __LINE__, (which), (who))
 
+struct group *safe_getgrnam(const char *file, const int lineno,
+			    const char *name);
+#define SAFE_GETGRNAM(name) \
+	safe_getgrnam(__FILE__, __LINE__, (name))
+
 int safe_setxattr(const char *file, const int lineno, const char *path,
             const char *name, const void *value, size_t size, int flags);
 #define SAFE_SETXATTR(path, name, value, size, flags) \
@@ -451,6 +461,16 @@ int safe_removexattr(const char *file, const int lineno, const char *path,
 #define SAFE_REMOVEXATTR(path, name) \
 	safe_removexattr(__FILE__, __LINE__, (path), (name))
 
+int safe_lremovexattr(const char *file, const int lineno, const char *path,
+		const char *name);
+#define SAFE_LREMOVEXATTR(path, name) \
+	safe_lremovexattr(__FILE__, __LINE__, (path), (name))
+
+int safe_fremovexattr(const char *file, const int lineno, int fd,
+		const char *name);
+#define SAFE_FREMOVEXATTR(fd, name) \
+	safe_fremovexattr(__FILE__, __LINE__, (fd), (name))
+
 int safe_fsync(const char *file, const int lineno, int fd);
 #define SAFE_FSYNC(fd) safe_fsync(__FILE__, __LINE__, (fd))
 
@@ -461,6 +481,19 @@ int safe_mknod(const char *file, const int lineno, const char *pathname,
 	mode_t mode, dev_t dev);
 #define SAFE_MKNOD(pathname, mode, dev) \
 	safe_mknod(__FILE__, __LINE__, (pathname), (mode), (dev))
+
+int safe_mlock(const char *file, const int lineno, const char *addr,
+	size_t len);
+#define SAFE_MLOCK(addr, len) safe_mlock(__FILE__, __LINE__, (addr), (len))
+
+int safe_munlock(const char *file, const int lineno, const char *addr,
+	size_t len);
+#define SAFE_MUNLOCK(addr, len) safe_munlock(__FILE__, __LINE__, (addr), (len))
+
+int safe_mincore(const char *file, const int lineno, void *start,
+	size_t length, unsigned char *vec);
+#define SAFE_MINCORE(start, length, vec) \
+	safe_mincore(__FILE__, __LINE__, (start), (length), (vec))
 
 int safe_fanotify_init(const char *file, const int lineno,
 	unsigned int flags, unsigned int event_f_flags);
