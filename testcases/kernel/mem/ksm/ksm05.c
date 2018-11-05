@@ -52,7 +52,7 @@
 
 #ifdef HAVE_MADV_MERGEABLE
 
-static int ksm_run_orig;
+static int ksm_run_orig = -1;
 static void sighandler(int sig);
 
 static void test_ksm(void)
@@ -67,7 +67,7 @@ static void test_ksm(void)
 	sa.sa_handler = sighandler;
 	sa.sa_flags = 0;
 	TEST(sigaction(SIGSEGV, &sa, NULL));
-	if (TEST_RETURN == -1)
+	if (TST_RET == -1)
 		tst_brk(TBROK | TRERRNO,
 				"SIGSEGV signal setup failed");
 
@@ -107,7 +107,8 @@ static void setup(void)
 static void cleanup(void)
 {
 	/* restore /sys/kernel/mm/ksm/run value */
-	FILE_PRINTF(PATH_KSM "run", "%d", ksm_run_orig);
+	if (ksm_run_orig > 0)
+		FILE_PRINTF(PATH_KSM "run", "%d", ksm_run_orig);
 }
 
 static struct tst_test test = {

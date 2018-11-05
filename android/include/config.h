@@ -227,6 +227,9 @@
 /* Define to 1 if you have MREMAP_FIXED in <sys/mman.h>. */
 #define HAVE_MREMAP_FIXED 1
 
+/* Define to 1 if you have the <netconfig.h> header file. */
+/* #undef HAVE_NETCONFIG_H */
+
 /* Define to 1 if you have the <numaif.h> header file. */
 /* #undef HAVE_NUMAIF_H */
 
@@ -325,6 +328,12 @@
 
 /* Define to 1 if `ssi_signo' is a member of `struct signalfd_siginfo'. */
 #define HAVE_STRUCT_SIGNALFD_SIGINFO_SSI_SIGNO 1
+
+/* Define to 1 if 'struct statx' defined via sys/stat.h */
+#define HAVE_STRUCT_STATX 1
+
+/* Define to 1 if 'struct statx_timestamp' defined via sys/stat.h */
+#define HAVE_STRUCT_STATX_TIMESTAMP 1
 
 /* Define to 1 if `freepages_count' is a member of `struct taskstats'. */
 #define HAVE_STRUCT_TASKSTATS_FREEPAGES_COUNT 1

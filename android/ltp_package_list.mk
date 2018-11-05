@@ -52,6 +52,7 @@ ltp_packages := \
   ltp_bdflush01 \
   ltp_bind01 \
   ltp_bind02 \
+  ltp_bind03 \
   ltp_block_dev \
   ltp_brk01 \
   ltp_cacheflush01 \
@@ -222,6 +223,8 @@ ltp_packages := \
   ltp_execve04 \
   ltp_execve05 \
   ltp_execve_child \
+  ltp_execveat03 \
+  ltp_execveat_child \
   ltp_execvp01 \
   ltp_execvp01_child \
   ltp_exit01 \
@@ -246,6 +249,7 @@ ltp_packages := \
   ltp_fanotify06 \
   ltp_fanotify07 \
   ltp_fanotify08 \
+  ltp_fanotify09 \
   ltp_fchdir01 \
   ltp_fchdir02 \
   ltp_fchdir03 \
@@ -255,7 +259,6 @@ ltp_packages := \
   ltp_fchmod04 \
   ltp_fchmod05 \
   ltp_fchmod06 \
-  ltp_fchmod07 \
   ltp_fchmodat01 \
   ltp_fchown01 \
   ltp_fchown01_16 \
@@ -343,6 +346,9 @@ ltp_packages := \
   ltp_fcntl36_64 \
   ltp_fdatasync01 \
   ltp_fdatasync02 \
+  ltp_fgetxattr01 \
+  ltp_fgetxattr02 \
+  ltp_fgetxattr03 \
   ltp_flistxattr01 \
   ltp_flistxattr02 \
   ltp_flistxattr03 \
@@ -355,7 +361,6 @@ ltp_packages := \
   ltp_flock02 \
   ltp_flock03 \
   ltp_flock04 \
-  ltp_flock05 \
   ltp_flock06 \
   ltp_fork01 \
   ltp_fork02 \
@@ -379,6 +384,8 @@ ltp_packages := \
   ltp_frag \
   ltp_fs_fill \
   ltp_fs_perms \
+  ltp_fsetxattr01 \
+  ltp_fsetxattr02 \
   ltp_fstat01 \
   ltp_fstat01_64 \
   ltp_fstat02 \
@@ -556,6 +563,7 @@ ltp_packages := \
   ltp_inotify06 \
   ltp_inotify07 \
   ltp_inotify08 \
+  ltp_inotify09 \
   ltp_inotify_init1_01 \
   ltp_inotify_init1_02 \
   ltp_input01 \
@@ -658,6 +666,7 @@ ltp_packages := \
   ltp_madvise07 \
   ltp_madvise08 \
   ltp_madvise09 \
+  ltp_madvise10 \
   ltp_max_map_count \
   ltp_mbind01 \
   ltp_mc_member_test \
@@ -680,10 +689,13 @@ ltp_packages := \
   ltp_memctl_test01 \
   ltp_memfd_create01 \
   ltp_memfd_create02 \
+  ltp_memfd_create03 \
+  ltp_memfd_create04 \
   ltp_memset01 \
   ltp_memtoy \
   ltp_migrate_pages01 \
   ltp_migrate_pages02 \
+  ltp_migrate_pages03 \
   ltp_mincore01 \
   ltp_mincore02 \
   ltp_mkdir02 \
@@ -708,6 +720,9 @@ ltp_packages := \
   ltp_mlock02 \
   ltp_mlock03 \
   ltp_mlock04 \
+  ltp_mlock201 \
+  ltp_mlock202 \
+  ltp_mlock203 \
   ltp_mlockall01 \
   ltp_mlockall02 \
   ltp_mlockall03 \
@@ -782,7 +797,6 @@ ltp_packages := \
   ltp_munlock01 \
   ltp_munlock02 \
   ltp_munlockall01 \
-  ltp_munlockall02 \
   ltp_munmap01 \
   ltp_munmap02 \
   ltp_munmap03 \
@@ -848,6 +862,7 @@ ltp_packages := \
   ltp_pause01 \
   ltp_pause02 \
   ltp_pause03 \
+  ltp_pcrypt_aead01 \
   ltp_pec_listener \
   ltp_perf_event_open01 \
   ltp_perf_event_open02 \
@@ -882,6 +897,7 @@ ltp_packages := \
   ltp_ppoll01 \
   ltp_prctl01 \
   ltp_prctl02 \
+  ltp_prctl03 \
   ltp_pread01 \
   ltp_pread01_64 \
   ltp_pread02 \
@@ -919,6 +935,7 @@ ltp_packages := \
   ltp_ptrace05 \
   ltp_ptrace07 \
   ltp_pty01 \
+  ltp_pty02 \
   ltp_pwrite01 \
   ltp_pwrite01_64 \
   ltp_pwrite02 \
@@ -956,6 +973,7 @@ ltp_packages := \
   ltp_readv01 \
   ltp_readv02 \
   ltp_readv03 \
+  ltp_realpath01 \
   ltp_reboot01 \
   ltp_reboot02 \
   ltp_recv01 \
@@ -1169,6 +1187,7 @@ ltp_packages := \
   ltp_setxattr02 \
   ltp_setxattr03 \
   ltp_sgetmask01 \
+  ltp_shmctl05 \
   ltp_sigaction01 \
   ltp_sigaction02 \
   ltp_sigaltstack01 \
@@ -1228,6 +1247,11 @@ ltp_packages := \
   ltp_statfs03_64 \
   ltp_statvfs01 \
   ltp_statvfs02 \
+  ltp_statx01 \
+  ltp_statx02 \
+  ltp_statx03 \
+  ltp_statx04 \
+  ltp_statx05 \
   ltp_stream01 \
   ltp_stream02 \
   ltp_stream03 \
@@ -1287,12 +1311,17 @@ ltp_packages := \
   ltp_test15 \
   ltp_test16 \
   ltp_test17 \
+  ltp_test18 \
   ltp_test_6_2 \
+  ltp_test_exec \
+  ltp_test_exec_child \
   ltp_testcases_bin_acl_test01 \
   ltp_testcases_bin_add_ipv6addr \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
   ltp_testcases_bin_assign_password.sh \
+  ltp_testcases_bin_bbr01.sh \
+  ltp_testcases_bin_bbr02.sh \
   ltp_testcases_bin_bind_noport01.sh \
   ltp_testcases_bin_broken_ip4-checksum \
   ltp_testcases_bin_broken_ip4-dstaddr \
@@ -1553,6 +1582,7 @@ ltp_packages := \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macsec01.sh \
   ltp_testcases_bin_macsec02.sh \
+  ltp_testcases_bin_macsec_lib.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
   ltp_testcases_bin_mc_cmds \
@@ -1598,7 +1628,6 @@ ltp_packages := \
   ltp_testcases_bin_memcg_use_hierarchy_test.sh \
   ltp_testcases_bin_mkdir_tests.sh \
   ltp_testcases_bin_modaltr.sh \
-  ltp_testcases_bin_move_pages.sh \
   ltp_testcases_bin_myfunctions-io.sh \
   ltp_testcases_bin_myfunctions.sh \
   ltp_testcases_bin_net_cmdlib.sh \
@@ -2003,6 +2032,7 @@ ltp_packages := \
   ltp_testcases_bin_tcp6-uni-winscale12 \
   ltp_testcases_bin_tcp6-uni-winscale13 \
   ltp_testcases_bin_tcp6-uni-winscale14 \
+  ltp_testcases_bin_tcp_cc_lib.sh \
   ltp_testcases_bin_tcp_fastopen_run.sh \
   ltp_testcases_bin_tcp_ipsec.sh \
   ltp_testcases_bin_tcp_ipsec_vti.sh \
@@ -2195,6 +2225,7 @@ ltp_packages := \
   ltp_truncate03_64 \
   ltp_tst_brk \
   ltp_tst_brkm \
+  ltp_tst_check_drivers \
   ltp_tst_checkpoint \
   ltp_tst_checkpoint_wait_timeout \
   ltp_tst_checkpoint_wake_timeout \
@@ -2204,10 +2235,12 @@ ltp_packages := \
   ltp_tst_dataroot03 \
   ltp_tst_device \
   ltp_tst_exit \
+  ltp_tst_expiration_timer \
   ltp_tst_fs_fill_hardlinks \
   ltp_tst_fs_fill_subdirs \
   ltp_tst_fs_has_free \
   ltp_tst_get_unused_port \
+  ltp_tst_getconf \
   ltp_tst_kvcmp \
   ltp_tst_ncpus \
   ltp_tst_ncpus_conf \
@@ -2228,6 +2261,7 @@ ltp_packages := \
   ltp_tst_strerrno \
   ltp_tst_strsig \
   ltp_tst_strstatus \
+  ltp_tst_supported_fs \
   ltp_tst_tmpdir_test \
   ltp_uaccess \
   ltp_umask01 \

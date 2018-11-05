@@ -39,8 +39,7 @@ MCAST_IPV6_ADDR="${MCAST_IPV6_ADDR_PREFIX}:1"
 netstress_setup()
 {
 	TST_NEEDS_ROOT=1
-	tst_check_cmds pgrep pkill
-	trap "tst_brk TBROK 'test interrupted'" INT
+	tst_test_cmds pgrep pkill
 }
 
 # Cleanup for tests using netstress.
@@ -115,7 +114,7 @@ make_background_tcp_traffic()
 	pgrep -x netstress > /dev/null && return
 
 	local ip="${1:-$(tst_ipaddr)}"
-	local port=$(tst_get_unused_port ipv${ipver} stream)
+	local port=$(tst_get_unused_port ipv${TST_IPVER} stream)
 
 	netstress -R 3 -g $port > /dev/null 2>&1 &
 	tst_rhost_run -b -c "netstress -l -H $ip -g $port"
