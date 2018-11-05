@@ -9,6 +9,8 @@ core
 .gdbinit
 lib*.a
 *.pyc
+.cache.mk
+*.dwo
 
 /aclocal.m4
 autom4te.cache

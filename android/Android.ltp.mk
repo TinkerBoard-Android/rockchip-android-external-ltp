@@ -45,6 +45,14 @@ module_prebuilt := testcases/bin/assign_password.sh
 module_src_files := testcases/kernel/security/mmc_security/assign_password.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/bbr01.sh
+module_src_files := testcases/network/tcp_cc/bbr01.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/bbr02.sh
+module_src_files := testcases/network/tcp_cc/bbr02.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/bind_noport01.sh
 module_src_files := testcases/network/sockets/bind_noport01.sh
 include $(ltp_build_prebuilt)
@@ -314,7 +322,7 @@ module_src_files := testcases/network/stress/dccp/dccp_ipsec_vti.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/dctcp01.sh
-module_src_files := testcases/network/dctcp/dctcp01.sh
+module_src_files := testcases/network/tcp_cc/dctcp01.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/stress_floppy/dd_file
@@ -1057,6 +1065,10 @@ module_prebuilt := testcases/bin/macsec02.sh
 module_src_files := testcases/network/virt/macsec02.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/macsec_lib.sh
+module_src_files := testcases/network/virt/macsec_lib.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/macvlan01.sh
 module_src_files := testcases/network/virt/macvlan01.sh
 include $(ltp_build_prebuilt)
@@ -1251,10 +1263,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/modaltr.sh
 module_src_files := testcases/kernel/fs/fs-bench/modaltr.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/move_pages.sh
-module_src_files := testcases/kernel/syscalls/move_pages/move_pages.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/myfunctions-io.sh
@@ -2887,6 +2895,10 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp6-uni-winscale14
 module_src_files := testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale14
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/tcp_cc_lib.sh
+module_src_files := testcases/network/tcp_cc/tcp_cc_lib.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/tcp_fastopen_run.sh

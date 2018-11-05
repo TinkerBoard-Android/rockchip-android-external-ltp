@@ -19,6 +19,7 @@ vhangup01
 vhangup02
 
 # Test SysV IPC, which is not allowed in Android kernels.
+
 cve-2017-5669
 hugeshmat01
 hugeshmat02
@@ -74,14 +75,19 @@ msgsnd03
 msgsnd04
 msgsnd05
 msgsnd06
+msgstress01
+msgstress02
+msgstress03
+msgstress04
 remap_file_pages01
 remap_file_pages02
 sem01
 sem02
+sem_comm
+sem_nstest
 semaphore_test_01
 semaphore_test_02
 semaphore_test_03
-sem_comm
 semctl01
 semctl02
 semctl03
@@ -94,20 +100,20 @@ semget02
 semget03
 semget05
 semget06
-sem_nstest
 semop01
 semop02
 semop03
 semop04
 semop05
 semtest_2ns
-setns02
 set_thread_area01
+setns02
+shm_comm
+shm_test
 shmat01
 shmat02
 shmat03
 shmat1
-shm_comm
 shmctl01
 shmctl02
 shmctl03
@@ -137,8 +143,6 @@ shmt07
 shmt08
 shmt09
 shmt10
-shm_test
-
 # Require SysV IPC, but don't directly test it -- these could potentially be
 # wrapped with ashmem
 cpuset_memory_test

@@ -1,23 +1,11 @@
 #!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (c) 2014-2017 Oracle and/or its affiliates. All Rights Reserved.
 # Copyright (c) 2016-2018 Petr Vorel <pvorel@suse.cz>
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of
-# the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it would be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write the Free Software Foundation,
-# Inc.,  51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-#
 # Author: Alexey Kodanev <alexey.kodanev@oracle.com>
-#
+
+[ -n "$TST_LIB_NET_LOADED" ] && return 0
+TST_LIB_NET_LOADED=1
 
 TST_OPTS="6$TST_OPTS"
 TST_PARSE_ARGS_CALLER="$TST_PARSE_ARGS"
@@ -29,11 +17,12 @@ TST_SETUP="tst_net_setup"
 
 # Blank for an IPV4 test; 6 for an IPV6 test.
 TST_IPV6=${TST_IPV6:-}
+TST_IPVER=${TST_IPV6:-4}
 
 tst_net_parse_args()
 {
 	case $1 in
-	6) TST_IPV6=6;;
+	6) TST_IPV6=6 TST_IPVER=6;;
 	*) $TST_PARSE_ARGS_CALLER "$1" "$2";;
 	esac
 }
@@ -41,7 +30,7 @@ tst_net_parse_args()
 tst_net_read_opts()
 {
 	local OPTIND
-	while getopts "$TST_OPTS" opt; do
+	while getopts ":$TST_OPTS" opt; do
 		$TST_PARSE_ARGS "$opt" "$OPTARG"
 	done
 }
@@ -68,18 +57,27 @@ tst_net_remote_tmpdir()
 
 tst_net_setup()
 {
-	ipver=${TST_IPV6:-4}
 	tst_net_remote_tmpdir
 	[ -n "$TST_SETUP_CALLER" ] && $TST_SETUP_CALLER
 }
 
-if [ -z "$TST_LIB_LOADED" ]; then
-	[ -n "$TST_USE_LEGACY_API" ] && . test.sh || . tst_test.sh
+[ -n "$TST_USE_LEGACY_API" ] && . test.sh || . tst_test.sh
+
+if [ "$TST_PARSE_ARGS_CALLER" = "$TST_PARSE_ARGS" ]; then
+	tst_res TWARN "TST_PARSE_ARGS_CALLER same as TST_PARSE_ARGS, unset it ($TST_PARSE_ARGS)"
+	unset TST_PARSE_ARGS_CALLER
+fi
+if [ "$TST_SETUP_CALLER" = "$TST_SETUP" ]; then
+	tst_res TWARN "TST_SETUP_CALLER same as TST_SETUP, unset it ($TST_SETUP)"
+	unset TST_SETUP_CALLER
+fi
+if [ "$TST_USAGE_CALLER" = "$TST_USAGE" ]; then
+	tst_res TWARN "TST_USAGE_CALLER same as TST_USAGE, unset it ($TST_USAGE)"
+	unset TST_USAGE_CALLER
 fi
 
 if [ -n "$TST_USE_LEGACY_API" ]; then
 	tst_net_read_opts "$@"
-	ipver=${TST_IPV6:-4}
 fi
 
 # old vs. new API compatibility layer
@@ -98,7 +96,7 @@ tst_require_root_()
 
 init_ltp_netspace()
 {
-	tst_check_cmds ip
+	tst_test_cmds ip
 	tst_require_root_
 
 	local pid=
@@ -255,6 +253,8 @@ tst_get_hwaddrs()
 # LINK: link number starting from 0. Default value is '0'.
 tst_hwaddr()
 {
+	tst_test_cmds awk
+
 	local type="${1:-lhost}"
 	local link_num="${2:-0}"
 	local hwaddrs=
@@ -269,6 +269,8 @@ tst_hwaddr()
 # LINK: link number starting from 0. Default value is '0'.
 tst_iface()
 {
+	tst_test_cmds awk
+
 	local type="${1:-lhost}"
 	local link_num="${2:-0}"
 	link_num="$(( $link_num + 1 ))"
@@ -414,7 +416,7 @@ tst_add_ipaddr()
 # LINK: link number starting from 0. Default value is '0'.
 tst_restore_ipaddr()
 {
-	tst_check_cmds ip
+	tst_test_cmds ip
 	tst_require_root_
 
 	local type="${1:-lhost}"
@@ -479,6 +481,10 @@ tst_netload()
 	# number of server replies after which TCP connection is closed
 	local s_replies="${TST_NETLOAD_MAX_SRV_REPLIES:-500000}"
 	local s_opts=
+
+	if [ ! "$TST_NEEDS_TMPDIR" = 1 ]; then
+		tst_brk_ TBROK "Using tst_netload requires setting TST_NEEDS_TMPDIR=1"
+	fi
 
 	OPTIND=0
 	while getopts :a:H:d:n:N:r:R:S:b:t:T:fFe:m:A: opt; do
@@ -567,7 +573,7 @@ tst_ping()
 	local cmd="ping$TST_IPV6"
 	local ret=0
 
-	tst_check_cmds $cmd
+	tst_test_cmds $cmd
 
 	# ping cmd use 56 as default message size
 	for size in ${msg_sizes:-"56"}; do
@@ -639,12 +645,12 @@ tst_set_sysctl()
 	[ "$TST_USE_NETNS" = "yes" ] && add_opt="-e"
 
 	if [ "$safe" ]; then
-		ROD sysctl -qw $name=$value
+		ROD sysctl -q -w $name=$value
 	else
-		sysctl -qw $name=$value
+		sysctl -q -w $name=$value
 	fi
 
-	tst_rhost_run $safe -c "sysctl -qw $add_opt $name=$value"
+	tst_rhost_run $safe -c "sysctl -q -w $add_opt $name=$value"
 }
 
 tst_cleanup_rhost()

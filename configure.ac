@@ -37,6 +37,7 @@ AC_CHECK_HEADERS([ \
     keyutils.h \
     linux/can.h \
     linux/dccp.h \
+    linux/cryptouser.h \
     linux/genetlink.h \
     linux/keyctl.h \
     linux/if_packet.h \
@@ -196,8 +197,10 @@ LTP_CHECK_FSTATAT
 LTP_CHECK_MKNODAT
 LTP_CHECK_READLINKAT
 LTP_CHECK_OPENAT
+LTP_CHECK_EXECVEAT
 LTP_CHECK_RENAMEAT
 LTP_CHECK_RENAMEAT2
+LTP_CHECK_STATX
 LTP_CHECK_FALLOCATE
 LTP_CHECK_SYSCALL_FCNTL
 LTP_CHECK_SYSCALL_PERF_EVENT_OPEN
