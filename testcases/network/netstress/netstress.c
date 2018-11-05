@@ -283,7 +283,8 @@ static int client_recv(char *buf, int srv_msg_len, struct sock_info *i)
 
 	if (errno == ETIME && sock_type != SOCK_STREAM) {
 		if (++(i->etime_cnt) > max_etime_cnt)
-			tst_brk(TFAIL, "protocol timeout: %dms", i->timeout);
+			tst_brk(TFAIL, "client requests timeout %d times, last timeout %dms",
+				i->etime_cnt, i->timeout);
 		/* Increase timeout in poll up to 3.2 sec */
 		if (i->timeout < 3000)
 			i->timeout <<= 1;
@@ -837,6 +838,8 @@ static void set_protocol_type(void)
 		proto_type = TYPE_DCCP;
 	else if (!strcmp(type, "sctp"))
 		proto_type = TYPE_SCTP;
+	else
+		tst_brk(TBROK, "Invalid proto_type: '%s'", type);
 }
 
 static void setup(void)
@@ -909,7 +912,9 @@ static void setup(void)
 		case TYPE_DCCP:
 		case TYPE_UDP:
 		case TYPE_UDP_LITE:
-			tst_res(TINFO, "max timeout errors %d", max_etime_cnt);
+			if (max_etime_cnt >= client_max_requests)
+				max_etime_cnt = client_max_requests - 1;
+			tst_res(TINFO, "maximum allowed timeout errors %d", max_etime_cnt);
 			wait_timeout = 100;
 		}
 	} else {
@@ -952,11 +957,11 @@ static void setup(void)
 		protocol = IPPROTO_UDPLITE;
 	break;
 	case TYPE_DCCP: {
-		/* dccp module can be blacklisted, load it manually */
-		static const char * const argv[] = {"modprobe", "dccp", NULL};
+		/* dccp* modules can be blacklisted, load them manually */
+		const char * const argv[] = {"modprobe", "dccp_ipv6", NULL};
 
 		if (tst_run_cmd(argv, NULL, NULL, 1))
-			tst_brk(TCONF, "Failed to load DCCP module");
+			tst_brk(TCONF, "Failed to load dccp_ipv6 module");
 
 		tst_res(TINFO, "DCCP %s", (client_mode) ? "client" : "server");
 		fastopen_api = fastopen_sapi = NULL;
@@ -988,7 +993,7 @@ static struct tst_option options[] = {
 	{"S:", &source_addr, "-S x     Source address to bind"},
 	{"g:", &tcp_port, "-g x     x - server port"},
 	{"b:", &barg, "-b x     x - low latency busy poll timeout"},
-	{"T:", &type, "-T x     tcp (default), udp, dccp, sctp"},
+	{"T:", &type, "-T x     tcp (default), udp, udp_lite, dccp, sctp"},
 	{"z", &zcopy, "-z       enable SO_ZEROCOPY\n"},
 
 	{"H:", &server_addr, "Client:\n-H x     Server name or IP address"},
@@ -997,7 +1002,7 @@ static struct tst_option options[] = {
 	{"r:", &rarg, "-r x     Number of client requests"},
 	{"n:", &narg, "-n x     Client message size"},
 	{"N:", &Narg, "-N x     Server message size"},
-	{"m:", &Targ, "-m x     Reply timeout in microsec."},
+	{"m:", &Targ, "-m x     Receive timeout in milliseconds (not used by UDP/DCCP client)"},
 	{"d:", &rpath, "-d x     x is a path to file where result is saved"},
 	{"A:", &Aarg, "-A x     x max payload length (generated randomly)\n"},
 

@@ -131,7 +131,6 @@ fchmod03 fchmod03
 fchmod04 fchmod04
 fchmod05 fchmod05
 fchmod06 fchmod06
-fchmod07 fchmod07
 
 fchown01 fchown01
 fchown02 fchown02
@@ -179,7 +178,6 @@ flock01 flock01
 flock02 flock02
 flock03 flock03
 flock04 flock04
-flock05 flock05
 flock06 flock06
 
 fmtmsg01 fmtmsg01
@@ -221,6 +219,7 @@ getcwd01 getcwd01
 getcwd02 getcwd02
 getcwd03 getcwd03
 getcwd04 getcwd04
+getcwd05 getcwd05
 
 getdents01 getdents01
 getdents02 getdents02
@@ -370,6 +369,10 @@ mknod09 mknod09
 mlock01 mlock01
 mlock02 mlock02
 
+mlock201 mlock201
+mlock202 mlock202
+mlock203 mlock203
+
 qmm01 mmap001 -m 1
 mmap01 mmap01
 mmap02 mmap02
@@ -400,11 +403,8 @@ msgctl01 msgctl01
 msgctl02 msgctl02
 msgctl03 msgctl03
 msgctl04 msgctl04
-msgctl05 msgctl05
-msgctl06 msgctl06
-msgctl07 msgctl07
-msgctl08 msgctl08
-msgctl09 msgctl09
+msgstress01 msgstress01
+msgstress02 msgstress02
 
 msgget01 msgget01
 msgget02 msgget02
@@ -431,7 +431,6 @@ munlock01 munlock01
 munlock02 munlock02
 
 munlockall01 munlockall01
-munlockall02 munlockall02
 
 munmap01 munmap01
 munmap02 munmap02
@@ -486,6 +485,7 @@ poll01 poll01
 
 prctl01 prctl01
 prctl02 prctl02
+prctl03 prctl03
 
 pread01 pread01
 pread02 pread02

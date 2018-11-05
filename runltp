@@ -570,77 +570,34 @@ main()
       INSTANCES="$INSTANCES -O ${TMP}"
     }
 
-    [ "$RUN_NETEST" -eq 1 ] && \
-    {
-        [ -z "$RHOST" ] || [ -z "$PASSWD" ] && \
-        {
-            [ -z "$RHOST" ] && \
-            {
-                printf "INFO: Enter RHOST = 'name of the remote host machine'"
-                printf "\n-> "
-                read RHOST
-            }
-
-            [ -z "$PASSWD" ] && \
-            {
-                printf "\nINFO: "
-                printf "Enter PASSWD = 'root passwd of the remote host machine'"
-                printf "\n-> "
-                read PASSWD
-            }
-            export RHOST=$RHOST
-            export PASSWD=$PASSWD
-            echo "WARNING: security of $RHOST may be compromised"
-        }
-    }
-
     # If user does not provide a command file select a default set of testcases
     # to execute.
-    if [ -z "$CMDFILES" ] && [ -z "$CMDFILEADDR" ]
-    then
-        cat <<-EOF >&1
+    if [ -z "$CMDFILES" ] && [ -z "$CMDFILEADDR" ]; then
 
-    INFO: no command files were provided. Will execute the following
-          runtest scenario files:
-
-`cat $LTPROOT/scenario_groups/default | tr '\012' ' '`
-
-	EOF
-
-	SCENARIO_LISTS="$LTPROOT/scenario_groups/default"
+        SCENARIO_LISTS="$LTPROOT/scenario_groups/default"
         if [ "$RUN_NETEST" -eq 1 ]; then
-            SCENARIO_LISTS="$SCENARIO_LISTS $LTPROOT/scenario_groups/network"
+            SCENARIO_LISTS="$LTPROOT/scenario_groups/network"
         fi
 
-    # DO NOT INDENT/DEDENT!
-        if [ -n "$SCENARIO_LISTS" ]; then
-            # Insurance to make sure that the first element in the pipe
-            # completed successfully.
-            cat_ok_sentinel=$TMP/cat_ok.$$
-	    (cat $SCENARIO_LISTS && touch "$cat_ok_sentinel") | \
-                while read scenfile; do
+        cat <<-EOF >&1
+INFO: no command files were provided. Executing following runtest scenario files:
+`cat $SCENARIO_LISTS | tr '\012' ' '`
 
-                    scenfile=${LTPROOT}/runtest/$scenfile
+EOF
+        cat_ok_sentinel=$TMP/cat_ok.$$
+        touch "$cat_ok_sentinel"
+        cat $SCENARIO_LISTS | while read scenfile; do
+            scenfile=${LTPROOT}/runtest/$scenfile
+            [ -f "$scenfile" ] || continue
 
-                    # Skip over non-existent scenario files; things are
-                    # robust enough now that the build will fail if these
-                    # files don't exist.
-                    [ -f "$scenfile" ] || continue
-
-                    cat $scenfile >> "$TMP/alltests" || {
-                        echo "FATAL: unable to append to command file"
-                        rm -Rf "$TMP"
-                        rm -f "$cat_ok_sentinel"
-                        exit 1
-                    }
-
-                done
-
-            rm -f "$cat_ok_sentinel"
-
-        fi
-    # ^^DO NOT INDENT/DEDENT!^^
-
+            cat $scenfile >> "$TMP/alltests" || {
+                echo "FATAL: unable to append to command file"
+                rm -Rf "$TMP"
+                rm -f "$cat_ok_sentinel"
+                exit 1
+            }
+        done
+        rm -f "$cat_ok_sentinel"
     fi
 
     [ -n "$CMDFILES" ] && \
@@ -944,9 +901,9 @@ main()
            else
               echo "Cannot Gunzip TAR File: ./$TAR_FILE_NAME"
            fi
-           if [ -e /usr/bin/mutt ] ; then                          ## This is a better mail client than others
+           if which mutt >/dev/null 2>&1; then
               echo "Starting mailing reports to: $EMAIL_TO, file: ./$TAR_FILE_NAME.gz"
-              mutt -a ./$TAR_FILE_NAME.gz -s "LTP Reports on $test_start_time" $EMAIL_TO < /dev/null
+              mutt -a ./$TAR_FILE_NAME.gz -s "LTP Reports on $test_start_time" -- $EMAIL_TO < /dev/null
               if [ $? -eq 0 ]; then
                  echo "Reports Successfully mailed to: $EMAIL_TO"
               else

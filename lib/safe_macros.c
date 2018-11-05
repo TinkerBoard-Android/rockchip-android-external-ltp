@@ -934,6 +934,48 @@ int safe_removexattr(const char *file, const int lineno, const char *path,
 	return rval;
 }
 
+int safe_lremovexattr(const char *file, const int lineno, const char *path,
+		const char *name)
+{
+	int rval;
+
+	rval = lremovexattr(path, name);
+
+	if (rval) {
+		if (errno == ENOTSUP) {
+			tst_brkm(TCONF, NULL,
+				"%s:%d: no xattr support in fs or mounted "
+				"without user_xattr option", file, lineno);
+		}
+
+		tst_brkm(TBROK | TERRNO, NULL, "%s:%d: lremovexattr() failed",
+			file, lineno);
+	}
+
+	return rval;
+}
+
+int safe_fremovexattr(const char *file, const int lineno, int fd,
+		const char *name)
+{
+	int rval;
+
+	rval = fremovexattr(fd, name);
+
+	if (rval) {
+		if (errno == ENOTSUP) {
+			tst_brkm(TCONF, NULL,
+				"%s:%d: no xattr support in fs or mounted "
+				"without user_xattr option", file, lineno);
+		}
+
+		tst_brkm(TBROK | TERRNO, NULL, "%s:%d: fremovexattr() failed",
+			file, lineno);
+	}
+
+	return rval;
+}
+
 int safe_fsync(const char *file, const int lineno, int fd)
 {
 	int rval;
@@ -970,6 +1012,48 @@ int safe_mknod(const char *file, const int lineno, const char *pathname,
 	if (rval == -1) {
 		tst_brkm(TBROK | TERRNO, NULL,
 			 "%s:%d: mknod() failed", file, lineno);
+	}
+
+	return rval;
+}
+
+int safe_mlock(const char *file, const int lineno, const void *addr,
+	size_t len)
+{
+	int rval;
+
+	rval = mlock(addr, len);
+	if (rval == -1) {
+		tst_brkm(TBROK | TERRNO, NULL,
+			 "%s:%d: mlock() failed", file, lineno);
+	}
+
+	return rval;
+}
+
+int safe_munlock(const char *file, const int lineno, const void *addr,
+	size_t len)
+{
+	int rval;
+
+	rval = munlock(addr, len);
+	if (rval == -1) {
+		tst_brkm(TBROK | TERRNO, NULL,
+			 "%s:%d: munlock() failed", file, lineno);
+	}
+
+	return rval;
+}
+
+int safe_mincore(const char *file, const int lineno, void *start,
+	size_t length, unsigned char *vec)
+{
+	int rval;
+
+	rval = mincore(start, length, vec);
+	if (rval == -1) {
+		tst_brkm(TBROK | TERRNO, NULL,
+			 "%s:%d: mincore() failed", file, lineno);
 	}
 
 	return rval;
