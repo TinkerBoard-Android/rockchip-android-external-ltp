@@ -177,11 +177,7 @@ void setup(void)
 		tst_brkm(TBROK, cleanup,
 			 "Couldn't find uid of nobody: %s", strerror(errno));
 
-#ifdef ANDROID
-	bin_group = getgrnam("everybody");
-#else
 	bin_group = getgrnam("bin");
-#endif
 	if (!bin_group)
 		tst_brkm(TBROK, cleanup,
 			 "Couldn't find gid of bin: %s", strerror(errno));

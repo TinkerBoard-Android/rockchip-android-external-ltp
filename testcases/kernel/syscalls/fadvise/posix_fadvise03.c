@@ -57,11 +57,7 @@ void cleanup();
 
 TCID_DEFINE(posix_fadvise03);
 
-#ifndef ANDROID
 char fname[] = "/bin/cat";	/* test executable to open */
-#else
-char fname[] = "/system/bin/cat";	/* test executable to open */
-#endif
 int fd = -1;			/* initialized in open */
 
 int expected_error = EINVAL;
