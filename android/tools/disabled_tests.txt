@@ -106,7 +106,6 @@ semop03
 semop04
 semop05
 semtest_2ns
-set_thread_area01
 setns02
 shm_comm
 shm_test
