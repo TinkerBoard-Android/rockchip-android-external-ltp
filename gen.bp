@@ -13144,6 +13144,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_set_thread_area01",
+    stem: "set_thread_area01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/set_thread_area/set_thread_area01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_set_tid_address01",
     stem: "set_tid_address01",
     defaults: ["ltp_test_defaults"],
