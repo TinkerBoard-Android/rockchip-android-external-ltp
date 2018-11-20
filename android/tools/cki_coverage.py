@@ -219,6 +219,8 @@ class CKI_Coverage(object):
     if syscall in ("arm_sync_file_range", "sync_file_range2") and \
       test.startswith("sync_file_range"):
       return True
+    if syscall == "get_thread_area" and test == "set_thread_area01":
+      return True
 
     return False
 
