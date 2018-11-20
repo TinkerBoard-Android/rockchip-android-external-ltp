@@ -221,6 +221,8 @@ class CKI_Coverage(object):
       return True
     if syscall == "get_thread_area" and test == "set_thread_area01":
       return True
+    if syscall in ("epoll_ctl", "epoll_create") and test == "epoll-ltp":
+      return True
 
     return False
 
@@ -256,6 +258,11 @@ class CKI_Coverage(object):
           # up in VTS.
           if ltp_syscall_name == "ioctl":
             test = "ioctl01_02"
+          # Likewise LTP has a test named epoll01, which is built as an
+          # executable named epoll-ltp, and tests the epoll_{create,ctl}
+          # syscalls.
+          if test == "epoll-ltp":
+            test = "epoll01"
           self.syscall_tests[syscall["name"]].append(test)
     self.cki_syscalls.sort()
 
