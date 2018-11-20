@@ -1079,6 +1079,7 @@ ltp_packages := \
   ltp_sendto01 \
   ltp_sendto02 \
   ltp_set_robust_list01 \
+  ltp_set_thread_area01 \
   ltp_set_tid_address01 \
   ltp_setdomainname01 \
   ltp_setdomainname02 \
