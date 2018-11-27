@@ -520,6 +520,7 @@ ltp_packages := \
   ltp_getresuid03 \
   ltp_getrlimit01 \
   ltp_getrlimit02 \
+  ltp_getrlimit03 \
   ltp_getrusage01 \
   ltp_getrusage02 \
   ltp_getrusage03_child \
