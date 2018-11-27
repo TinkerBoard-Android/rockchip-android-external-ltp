@@ -229,6 +229,8 @@ class CKI_Coverage(object):
       return True
     if syscall in ("epoll_ctl", "epoll_create") and test == "epoll-ltp":
       return True
+    if syscall in ("prlimit", "ugetrlimit") and test == "getrlimit03":
+      return True
 
     return False
 
