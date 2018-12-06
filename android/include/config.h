@@ -320,6 +320,9 @@
 /* Define to 1 if the system has the type `struct pt_regs'. */
 #define HAVE_STRUCT_PT_REGS 1
 
+/* Define to 1 if the system has the type `struct rlimit64'. */
+#define HAVE_STRUCT_RLIMIT64 1
+
 /* Define to 1 if `sa_sigaction' is a member of `struct sigaction'. */
 #define HAVE_STRUCT_SIGACTION_SA_SIGACTION 1
 
