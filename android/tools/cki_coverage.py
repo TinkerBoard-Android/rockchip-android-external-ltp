@@ -137,8 +137,9 @@ class CKI_Coverage(object):
   coverage when in fact they do.
   """
 
-  LTP_SYSCALL_ROOT = os.path.join(os.environ["ANDROID_BUILD_TOP"],
-                                  "external/ltp/testcases/kernel/syscalls")
+  LTP_KERNEL_ROOT = os.path.join(os.environ["ANDROID_BUILD_TOP"],
+                                 "external/ltp/testcases/kernel")
+  LTP_KERNEL_TESTSUITES = ["syscalls", "timers"]
   DISABLED_IN_LTP_PATH = os.path.join(os.environ["ANDROID_BUILD_TOP"],
                         "external/ltp/android/tools/disabled_tests.txt")
 
@@ -166,11 +167,16 @@ class CKI_Coverage(object):
 
     Load the list of all syscall tests existing in LTP.
     """
-    for path, dirs, files in os.walk(self.LTP_SYSCALL_ROOT):
+    for testsuite in self.LTP_KERNEL_TESTSUITES:
+      self.__load_ltp_testsuite(testsuite)
+
+  def __load_ltp_testsuite(self, testsuite):
+    root = os.path.join(self.LTP_KERNEL_ROOT, testsuite)
+    for path, dirs, files in os.walk(root):
       for filename in files:
         basename, ext = os.path.splitext(filename)
         if ext != ".c": continue
-        self.ltp_full_set.append("syscalls.%s" % basename)
+        self.ltp_full_set.append("%s.%s" % (testsuite, basename))
 
   def load_ltp_disabled_tests(self):
     """Load the list of LTP tests not being compiled.
