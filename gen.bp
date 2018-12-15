@@ -112,7 +112,7 @@ cc_library_static {
     srcs: [
         "lib/tst_safe_sysv_ipc.c",
         "lib/tst_mkfs.c",
-        "lib/tst_resource.c",
+        "lib/tst_path_has_mnt_flags.c",
         "lib/tst_process_state.c",
         "lib/tst_fs_type.c",
         "lib/tst_fill_fs.c",
@@ -128,7 +128,7 @@ cc_library_static {
         "lib/safe_stdio.c",
         "lib/tst_sig_proc.c",
         "lib/tst_crypto.c",
-        "lib/tst_path_has_mnt_flags.c",
+        "lib/tst_device.c",
         "lib/safe_macros.c",
         "lib/tst_tmpdir.c",
         "lib/random_range.c",
@@ -140,7 +140,6 @@ cc_library_static {
         "lib/self_exec.c",
         "lib/tst_supported_fs_types.c",
         "lib/tst_run_cmd.c",
-        "lib/tst_device.c",
         "lib/tst_taint.c",
         "lib/parse_opts.c",
         "lib/tst_checksum.c",
@@ -154,6 +153,7 @@ cc_library_static {
         "lib/tst_status.c",
         "lib/tst_cpu.c",
         "lib/safe_net.c",
+        "lib/tst_resource.c",
         "lib/tst_fs_link_count.c",
         "lib/tst_module.c",
         "lib/tst_fs_has_free.c",
@@ -2285,6 +2285,90 @@ cc_test {
     stem: "dup3_02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/dup3/dup3_02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_big_to_small",
+    stem: "eas_big_to_small",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/eas_big_to_small.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_one_big_task",
+    stem: "eas_one_big_task",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/eas_one_big_task.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_one_small_task",
+    stem: "eas_one_small_task",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/eas_one_small_task.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_small_big_toggle",
+    stem: "eas_small_big_toggle",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/eas_small_big_toggle.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_small_to_big",
+    stem: "eas_small_to_big",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/eas_small_to_big.c",
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_eas_two_big_three_small",
+    stem: "eas_two_big_three_small",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/eas_two_big_three_small.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -12415,6 +12499,48 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_sched_boost",
+    stem: "sched_boost",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sched_boost.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_cfs_prio",
+    stem: "sched_cfs_prio",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sched_cfs_prio.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_dl_runtime",
+    stem: "sched_dl_runtime",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sched_dl_runtime.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_sched_driver",
     stem: "sched_driver",
     defaults: ["ltp_test_defaults"],
@@ -12542,6 +12668,62 @@ cc_test {
     stem: "sched_getscheduler02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/sched_getscheduler/sched_getscheduler02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_latency_dl",
+    stem: "sched_latency_dl",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sched_latency_dl.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_latency_rt",
+    stem: "sched_latency_rt",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sched_latency_rt.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_prio_3_fifo",
+    stem: "sched_prio_3_fifo",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+        "testcases/kernel/sched/eas/sched_prio_3_fifo.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sched_prio_3_rr",
+    stem: "sched_prio_3_rr",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+        "testcases/kernel/sched/eas/sched_prio_3_rr.c",
+    ],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -15491,6 +15673,48 @@ cc_test {
     stem: "string01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/string/string01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sugov_latency",
+    stem: "sugov_latency",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sugov_latency.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sugov_stale_util",
+    stem: "sugov_stale_util",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sugov_stale_util.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sugov_wakeups",
+    stem: "sugov_wakeups",
+    defaults: ["ltp_test_defaults"],
+    srcs: [
+        "testcases/kernel/sched/eas/util.c",
+        "testcases/kernel/sched/eas/sugov_wakeups.c",
+        "testcases/kernel/sched/eas/trace_parse.c",
+    ],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
