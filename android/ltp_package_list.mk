@@ -192,6 +192,12 @@ ltp_packages := \
   ltp_dup205 \
   ltp_dup3_01 \
   ltp_dup3_02 \
+  ltp_eas_big_to_small \
+  ltp_eas_one_big_task \
+  ltp_eas_one_small_task \
+  ltp_eas_small_big_toggle \
+  ltp_eas_small_to_big \
+  ltp_eas_two_big_three_small \
   ltp_endian_switch01 \
   ltp_epoll-ltp \
   ltp_epoll_create1_01 \
@@ -1020,6 +1026,9 @@ ltp_packages := \
   ltp_sbrk01 \
   ltp_sbrk02 \
   ltp_sbrk03 \
+  ltp_sched_boost \
+  ltp_sched_cfs_prio \
+  ltp_sched_dl_runtime \
   ltp_sched_driver \
   ltp_sched_get_priority_max01 \
   ltp_sched_get_priority_max02 \
@@ -1033,6 +1042,10 @@ ltp_packages := \
   ltp_sched_getparam03 \
   ltp_sched_getscheduler01 \
   ltp_sched_getscheduler02 \
+  ltp_sched_latency_dl \
+  ltp_sched_latency_rt \
+  ltp_sched_prio_3_fifo \
+  ltp_sched_prio_3_rr \
   ltp_sched_rr_get_interval01 \
   ltp_sched_rr_get_interval02 \
   ltp_sched_rr_get_interval03 \
@@ -1261,6 +1274,9 @@ ltp_packages := \
   ltp_stream05 \
   ltp_stress_cd \
   ltp_string01 \
+  ltp_sugov_latency \
+  ltp_sugov_stale_util \
+  ltp_sugov_wakeups \
   ltp_support_numa \
   ltp_swapoff01 \
   ltp_swapoff02 \
