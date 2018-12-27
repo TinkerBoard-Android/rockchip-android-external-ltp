@@ -80,7 +80,6 @@ msgstress02
 msgstress03
 msgstress04
 remap_file_pages01
-remap_file_pages02
 sem01
 sem02
 sem_comm
