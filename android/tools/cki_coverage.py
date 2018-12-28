@@ -70,6 +70,7 @@ x86_64_syscall_tbl_url = src_url_start
 # Syscalls which are either banned, optional, or deprecated, so not part of the
 # CKI.
 CKI_BLACKLIST = [
+        'acct',                    # CONFIG_BSD_PROCESS_ACCT
         'fanotify_init',           # CONFIG_FANOTIFY
         'fanotify_mark',           # CONFIG_FANOTIFY
         'get_mempolicy',           # CONFIG_NUMA
