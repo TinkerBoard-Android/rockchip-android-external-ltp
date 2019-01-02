@@ -378,8 +378,6 @@ class CKI_Coverage(object):
         if error_on_match:
           print "Syscall %s found in both bionic CKI and blacklist!" % s["name"]
           sys.exit()
-        else:
-          cki.syscalls.remove(s)
       else:
         unlisted_syscalls.append(s)
     cki.syscalls = unlisted_syscalls
