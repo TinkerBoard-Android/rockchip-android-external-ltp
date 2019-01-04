@@ -287,10 +287,13 @@ class CKI_Coverage(object):
         continue
       for full_test_name in self.syscall_tests[syscall]:
         _, test = full_test_name.split('.')
+        # The VTS LTP stable list is composed of tuples of the test name and
+        # a boolean flag indicating whether it is mandatory.
+        stable_vts_ltp_testnames = [i[0] for i in self.stable_in_vts_ltp]
         if (test in self.disabled_in_ltp or
             full_test_name in self.disabled_in_vts_ltp or
-            ("%s_32bit" % full_test_name not in self.stable_in_vts_ltp and
-             "%s_64bit" % full_test_name not in self.stable_in_vts_ltp)):
+            ("%s_32bit" % full_test_name not in stable_vts_ltp_testnames and
+             "%s_64bit" % full_test_name not in stable_vts_ltp_testnames)):
           self.disabled_tests[syscall].append(full_test_name)
           continue
 
