@@ -54,7 +54,7 @@ bionic_libc_root = os.path.join(os.environ["ANDROID_BUILD_TOP"], "bionic/libc")
 
 src_url_start = 'https://git.kernel.org/pub/scm/linux/kernel/git/'
 tip_url = 'torvalds/linux.git/plain/'
-stable_url = 'stable/linux-stable.git/plain/'
+stable_url = 'stable/linux.git/plain/'
 unistd_h = 'include/uapi/asm-generic/unistd.h'
 arm64_unistd32_h = 'arch/arm64/include/asm/unistd32.h'
 arm_syscall_tbl = 'arch/arm/tools/syscall.tbl'
@@ -510,7 +510,7 @@ if __name__ == "__main__":
     exit(-1)
 
   if args.k:
-    minversion = "3.18"
+    minversion = "4.9"
     print "Checking kernel version %s" % minversion
     minversion = "?h=v" + minversion
     unistd_h_url += stable_url + unistd_h + minversion
