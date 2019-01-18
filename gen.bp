@@ -6515,7 +6515,10 @@ cc_test {
     stem: "getrlimit03",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/getrlimit/getrlimit03.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
+    cflags: [
+        "-D_LARGEFILE64_SOURCE",
+        "-D_FORTIFY_SOURCE=2",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -12112,6 +12115,16 @@ cc_test {
         "testcases/kernel/syscalls/utils",
         "include/old",
     ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_remap_file_pages02",
+    stem: "remap_file_pages02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/remap_file_pages/remap_file_pages02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
