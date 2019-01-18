@@ -988,6 +988,7 @@ ltp_packages := \
   ltp_recvmsg01 \
   ltp_recvmsg02 \
   ltp_recvmsg03 \
+  ltp_remap_file_pages02 \
   ltp_removexattr01 \
   ltp_removexattr02 \
   ltp_rename01 \
