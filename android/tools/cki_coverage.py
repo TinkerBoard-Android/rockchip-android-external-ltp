@@ -203,12 +203,28 @@ class CKI_Coverage(object):
       A boolean indicating whether the given syscall is tested
       by the given testcase.
     """
-    if syscall == "clock_nanosleep" and test == "clock_nanosleep2_01":
-      return True
+    compat_syscalls = [ "chown32", "fchown32", "getegid32", "geteuid32",
+            "getgid32", "getgroups32", "getuid32", "lchown32",
+            "setfsgid32", "setfsuid32", "setgid32", "setgroups32",
+            "setregid32", "setresgid32", "setresuid32", "setreuid32",
+            "setuid32"]
+    if syscall in compat_syscalls:
+        test_re = re.compile(r"^%s\d+$" % syscall[0:-2])
+        if re.match(test_re, test):
+            return True
     if syscall in ("arm_fadvise64_", "fadvise64_") and \
       test.startswith("posix_fadvise"):
       return True
+    if syscall in ("arm_sync_file_range", "sync_file_range2") and \
+      test.startswith("sync_file_range"):
+      return True
+    if syscall == "clock_nanosleep" and test == "clock_nanosleep2_01":
+      return True
+    if syscall in ("epoll_ctl", "epoll_create") and test == "epoll-ltp":
+      return True
     if syscall == "futex" and test.startswith("futex_"):
+      return True
+    if syscall == "get_thread_area" and test == "set_thread_area01":
       return True
     if syscall == "inotify_add_watch" or syscall == "inotify_rm_watch":
       test_re = re.compile(r"^inotify\d+$")
@@ -218,13 +234,6 @@ class CKI_Coverage(object):
       test_re = re.compile(r"^fstatat\d+$")
       if re.match(test_re, test):
         return True
-    if syscall in ("arm_sync_file_range", "sync_file_range2") and \
-      test.startswith("sync_file_range"):
-      return True
-    if syscall == "get_thread_area" and test == "set_thread_area01":
-      return True
-    if syscall in ("epoll_ctl", "epoll_create") and test == "epoll-ltp":
-      return True
     if syscall in ("prlimit", "ugetrlimit") and test == "getrlimit03":
       return True
 
