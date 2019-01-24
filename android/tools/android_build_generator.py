@@ -394,6 +394,10 @@ class BuildGenerator(object):
             if len(set(local_cflags).intersection(disabled_cflags)) > 0:
                 continue
 
+            local_src_files = sorted(local_src_files)
+            local_cflags = sorted(local_cflags)
+            local_c_includes = sorted(local_c_includes)
+
             self.BuildStaticLibrary(target, local_src_files, local_cflags,
                                     local_c_includes)
 
