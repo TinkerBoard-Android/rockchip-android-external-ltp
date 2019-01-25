@@ -212,6 +212,8 @@ class CKI_Coverage(object):
         test_re = re.compile(r"^%s\d+$" % syscall[0:-2])
         if re.match(test_re, test):
             return True
+    if syscall == "_llseek" and test.startswith("llseek"):
+      return True
     if syscall in ("arm_fadvise64_", "fadvise64_") and \
       test.startswith("posix_fadvise"):
       return True
@@ -229,6 +231,11 @@ class CKI_Coverage(object):
     if syscall == "inotify_add_watch" or syscall == "inotify_rm_watch":
       test_re = re.compile(r"^inotify\d+$")
       if re.match(test_re, test):
+        return True
+    inotify_init_tests = [ "inotify01", "inotify02", "inotify03", "inotify04" ]
+    if syscall == "inotify_init" and test in inotify_init_tests:
+        return True
+    if syscall == "lsetxattr" and test.startswith("lgetxattr"):
         return True
     if syscall == "newfstatat":
       test_re = re.compile(r"^fstatat\d+$")
