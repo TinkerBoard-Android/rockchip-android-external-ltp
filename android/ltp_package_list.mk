@@ -519,11 +519,17 @@ ltp_packages := \
   ltp_getrandom03 \
   ltp_getrandom04 \
   ltp_getresgid01 \
+  ltp_getresgid01_16 \
   ltp_getresgid02 \
+  ltp_getresgid02_16 \
   ltp_getresgid03 \
+  ltp_getresgid03_16 \
   ltp_getresuid01 \
+  ltp_getresuid01_16 \
   ltp_getresuid02 \
+  ltp_getresuid02_16 \
   ltp_getresuid03 \
+  ltp_getresuid03_16 \
   ltp_getrlimit01 \
   ltp_getrlimit02 \
   ltp_getrlimit03 \
