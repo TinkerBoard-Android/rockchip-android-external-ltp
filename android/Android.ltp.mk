@@ -25,10 +25,6 @@ module_prebuilt := testcases/data/mc_member/TooManyGroups
 module_src_files := testcases/network/multicast/mc_member/datafiles/TooManyGroups
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/bin/acl_test01
-module_src_files := testcases/kernel/fs/acls/acl_test01
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/bin/add_ipv6addr
 module_src_files := testcases/network/stress/ns-tools/add_ipv6addr
 include $(ltp_build_prebuilt)
@@ -131,6 +127,38 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cgroup_fj_stress.sh
 module_src_files := testcases/kernel/controllers/cgroup_fj/cgroup_fj_stress.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_lib.sh
+module_src_files := testcases/kernel/controllers/cgroup_lib.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_10_1.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_10_1.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_10_2.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_10_2.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_3_1.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_3_1.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_3_2.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_3_2.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_6_1.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_6_1.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_9_1.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_9_1.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/cgroup_regression_9_2.sh
+module_src_files := testcases/kernel/controllers/cgroup/cgroup_regression_9_2.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/cgroup_regression_test.sh
@@ -603,22 +631,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftp01
 module_src_files := testcases/network/tcp_cmds/ftp/ftp01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftp02
-module_src_files := testcases/network/tcp_cmds/ftp/ftp02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftp03
-module_src_files := testcases/network/tcp_cmds/ftp/ftp03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftp04
-module_src_files := testcases/network/tcp_cmds/ftp/ftp04
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ftp05
-module_src_files := testcases/network/tcp_cmds/ftp/ftp05
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ftp_setup
@@ -1265,6 +1277,26 @@ module_prebuilt := testcases/bin/modaltr.sh
 module_src_files := testcases/kernel/fs/fs-bench/modaltr.sh
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/mpls01.sh
+module_src_files := testcases/network/mpls/mpls01.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/mpls02.sh
+module_src_files := testcases/network/mpls/mpls02.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/mpls03.sh
+module_src_files := testcases/network/mpls/mpls03.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/mpls04.sh
+module_src_files := testcases/network/mpls/mpls04.sh
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/bin/mpls_lib.sh
+module_src_files := testcases/network/mpls/mpls_lib.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/myfunctions-io.sh
 module_src_files := testcases/kernel/controllers/io-throttle/myfunctions-io.sh
 include $(ltp_build_prebuilt)
@@ -1557,6 +1589,10 @@ module_prebuilt := testcases/bin/fs_bind/bin/setupnslock
 module_src_files := testcases/kernel/fs/fs_bind/bin/setupnslock
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/bin/sit01.sh
+module_src_files := testcases/network/virt/sit01.sh
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/bin/smack_common.sh
 module_src_files := testcases/kernel/security/smack/smack_common.sh
 include $(ltp_build_prebuilt)
@@ -1619,34 +1655,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/ssh-stress03-rmt
 module_src_files := testcases/network/stress/ssh/ssh-stress03-rmt
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh01
-module_src_files := testcases/network/tcp_cmds/ssh/ssh01
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh01_s1
-module_src_files := testcases/network/tcp_cmds/ssh/ssh01_s1
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh02
-module_src_files := testcases/network/tcp_cmds/ssh/ssh02
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh02_s1
-module_src_files := testcases/network/tcp_cmds/ssh/ssh02_s1
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh03
-module_src_files := testcases/network/tcp_cmds/ssh/ssh03
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh03_s1
-module_src_files := testcases/network/tcp_cmds/ssh/ssh03_s1
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/ssh_setup
-module_src_files := testcases/network/tcp_cmds/ssh/ssh_setup
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/stop_freeze_sleep_thaw_cont.sh
@@ -3087,34 +3095,6 @@ include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/fs_bind/rbind/test39
 module_src_files := testcases/kernel/fs/fs_bind/rbind/test39
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_10_1.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_10_1.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_10_2.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_10_2.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_3_1.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_3_1.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_3_2.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_3_2.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_6_1.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_6_1.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_9_1.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_9_1.sh
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/bin/test_9_2.sh
-module_src_files := testcases/kernel/controllers/cgroup/test_9_2.sh
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/bin/test_controllers.sh

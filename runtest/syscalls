@@ -105,6 +105,10 @@ creat06 creat06
 creat07 creat07
 creat08 creat08
 
+delete_module01 delete_module01
+delete_module02 delete_module02
+delete_module03 delete_module03
+
 dup01 dup01
 dup02 dup02
 dup03 dup03
@@ -148,6 +152,8 @@ execve03 execve03
 execve04 execve04
 execve05 execve05 -i 5 -n 32
 execvp01 execvp01
+execveat01 execveat01
+execveat02 execveat02
 execveat03 execveat03
 
 exit01 exit01
@@ -315,6 +321,9 @@ fork14 fork14
 
 fpathconf01 fpathconf01
 
+fremovexattr01 fremovexattr01
+fremovexattr02 fremovexattr02
+
 fstat01 fstat01
 fstat01_64 fstat01_64
 fstat02 fstat02
@@ -468,6 +477,7 @@ getxattr01 getxattr01
 getxattr02 getxattr02
 getxattr03 getxattr03
 getxattr04 getxattr04
+getxattr05 getxattr05
 
 #Needs tty device.
 #ioctl01 ioctl01 -D /dev/tty0
@@ -504,6 +514,8 @@ fanotify06 fanotify06
 fanotify07 fanotify07
 fanotify08 fanotify08
 fanotify09 fanotify09
+fanotify10 fanotify10
+fanotify11 fanotify11
 
 ioperm01 ioperm01
 ioperm02 ioperm02
@@ -579,6 +591,8 @@ llistxattr03 llistxattr03
 llseek01 llseek01
 llseek02 llseek02
 llseek03 llseek03
+
+lremovexattr01 lremovexattr01
 
 lseek01 lseek01
 lseek02 lseek02
@@ -841,6 +855,11 @@ preadv02_64 preadv02_64
 preadv03 preadv03
 preadv03_64 preadv03_64
 
+preadv201 preadv201
+preadv201_64 preadv201_64
+preadv202 preadv202
+preadv202_64 preadv202_64
+
 profil01 profil01
 
 process_vm_readv01 process_vm01 -r
@@ -957,8 +976,8 @@ renameat202 renameat202 -i 10
 request_key01 request_key01
 request_key02 request_key02
 request_key03 request_key03
-cve-2017-6951 cve-2017-6951
 request_key04 request_key04
+request_key05 request_key05
 
 rmdir01 rmdir01
 rmdir02 rmdir02
@@ -1184,7 +1203,7 @@ setsid01 setsid01
 
 setsockopt01 setsockopt01
 setsockopt02 setsockopt02
-cve-2016-4997 cve-2016-4997
+setsockopt03 setsockopt03
 
 settimeofday01 settimeofday01
 settimeofday02 settimeofday02
@@ -1202,7 +1221,7 @@ setxattr03 setxattr03
 
 shmat01 shmat01
 shmat02 shmat02
-cve-2017-5669 cve-2017-5669
+shmat03 shmat03
 
 shmctl01 shmctl01
 shmctl02 shmctl02
@@ -1397,7 +1416,7 @@ umask01 umask01
 uname01 uname01
 uname02 uname02
 uname03 uname03
-cve-2012-0957 cve-2012-0957
+uname04 uname04
 
 unlink01 symlink01 -T unlink01
 unlink05 unlink05
@@ -1511,3 +1530,6 @@ statx02 statx02
 statx03 statx03
 statx04 statx04
 statx05 statx05
+statx06 statx06
+
+membarrier01 membarrier01

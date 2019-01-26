@@ -1,6 +1,7 @@
 #!/bin/sh
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (c) 2014-2018 Oracle and/or its affiliates. All Rights Reserved.
+# Copyright (c) 2018 Petr Vorel <pvorel@suse.cz>
 # Copyright (c) International Business Machines  Corp., 2001
 #
 # Author:       Manoj Iyer, manjo@mail.utexas.edu
@@ -29,12 +30,8 @@ setup_dhcpd_conf()
 
 start_dhcpd()
 {
-	dhcpd -$TST_IPVER $iface0 > tst_dhcpd.err 2>&1
-	if [ $? -ne 0 ]; then
-		cat tst_dhcpd.err
-		tst_brk TBROK "Failed to start dhcpd"
-	fi
-
+	touch tst_hdcpd.lease
+	dhcpd -lf tst_hdcpd.lease -$TST_IPVER $iface0 > tst_dhcpd.err 2>&1
 }
 
 start_dhcp()
@@ -75,6 +72,11 @@ cleanup_dhcp()
 print_dhcp_log()
 {
 	cat tst_dhcpd.err
+}
+
+print_dhcp_version()
+{
+	dhcpd --version 2>&1
 }
 
 tst_run
