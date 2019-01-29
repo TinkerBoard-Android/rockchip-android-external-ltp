@@ -13,8 +13,6 @@ mallopt01
 profil01
 stime01
 stime02
-ustat01
-ustat02
 
 # Test SysV IPC, which is not allowed in Android kernels.
 
