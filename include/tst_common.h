@@ -65,4 +65,7 @@
 	ERET;								\
 })
 
+#define TST_BRK_SUPPORTS_ONLY_TCONF_TBROK(condition) \
+	do { ((void)sizeof(char[1 - 2 * !!(condition)])); } while (0)
+
 #endif /* TST_COMMON_H__ */

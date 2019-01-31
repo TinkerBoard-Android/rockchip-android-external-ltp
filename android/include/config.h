@@ -43,34 +43,6 @@
    you don't. */
 #define HAVE_DECL_MADV_MERGEABLE 1
 
-/* Define to 1 if you have the declaration of `MPOL_BIND', and to 0 if you
-   don't. */
-#define HAVE_DECL_MPOL_BIND 0
-
-/* Define to 1 if you have the declaration of `MPOL_DEFAULT', and to 0 if you
-   don't. */
-#define HAVE_DECL_MPOL_DEFAULT 0
-
-/* Define to 1 if you have the declaration of `MPOL_F_ADDR', and to 0 if you
-   don't. */
-#define HAVE_DECL_MPOL_F_ADDR 0
-
-/* Define to 1 if you have the declaration of `MPOL_F_MEMS_ALLOWED', and to 0
-   if you don't. */
-#define HAVE_DECL_MPOL_F_MEMS_ALLOWED 0
-
-/* Define to 1 if you have the declaration of `MPOL_F_NODE', and to 0 if you
-   don't. */
-#define HAVE_DECL_MPOL_F_NODE 0
-
-/* Define to 1 if you have the declaration of `MPOL_INTERLEAVE', and to 0 if
-   you don't. */
-#define HAVE_DECL_MPOL_INTERLEAVE 0
-
-/* Define to 1 if you have the declaration of `MPOL_PREFERRED', and to 0 if
-   you don't. */
-#define HAVE_DECL_MPOL_PREFERRED 0
-
 /* Define to 1 if you have the declaration of `PR_CAPBSET_DROP', and to 0 if
    you don't. */
 #define HAVE_DECL_PR_CAPBSET_DROP 1
@@ -91,14 +63,14 @@
    you don't. */
 #define HAVE_DECL_PTRACE_SETOPTIONS 1
 
-/* Define to 1 if you have the <dmapi.h> header file. */
-/* #undef HAVE_DMAPI_H */
-
 /* Define to 1 if the system has the type `enum kcmp_type'. */
 #define HAVE_ENUM_KCMP_TYPE 1
 
 /* Define to 1 if you have the `epoll_pwait' function. */
 #define HAVE_EPOLL_PWAIT 1
+
+/* Define to 1 if you have the `execveat' function. */
+/* #undef HAVE_EXECVEAT */
 
 /* Define to 1 if you have the `fallocate' function. */
 #define HAVE_FALLOCATE 1
@@ -117,12 +89,12 @@
 #define HAVE_FS_IOC_FLAGS 1
 
 /* Define to 1 if you have the <ifaddrs.h> header file. */
-/* #undef HAVE_IFADDRS_H */
+#define HAVE_IFADDRS_H 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
-/* Define to 1 if you have the `io_set_eventfd' function. */
+/* Define to 1 if you have `io_set_eventfd' function. */
 /* #undef HAVE_IO_SET_EVENTFD */
 
 /* Define to 1 if you have the `kcmp' function. */
@@ -131,7 +103,7 @@
 /* Define to 1 if you have the <keyutils.h> header file. */
 /* #undef HAVE_KEYUTILS_H */
 
-/* Define to 1 if you have libacl installed. */
+/* Define to 1 if you have libacl and it's headers installed */
 /* #undef HAVE_LIBACL */
 
 /* Define to 1 if you have libaio and it's headers installed. */
@@ -157,6 +129,9 @@
 
 /* Define to 1 if you have the <linux/can.h> header file. */
 #define HAVE_LINUX_CAN_H 1
+
+/* Define to 1 if you have the <linux/cryptouser.h> header file. */
+#define HAVE_LINUX_CRYPTOUSER_H 1
 
 /* Define to 1 if you have the <linux/dccp.h> header file. */
 #define HAVE_LINUX_DCCP_H 1
@@ -221,26 +196,23 @@
 /* Define to 1 if you have the `modify_ldt' function. */
 /* #undef HAVE_MODIFY_LDT */
 
-/* define to 1 if you have all constants required to use mbind tests */
-/* #undef HAVE_MPOL_CONSTANTS */
-
 /* Define to 1 if you have MREMAP_FIXED in <sys/mman.h>. */
 #define HAVE_MREMAP_FIXED 1
 
 /* Define to 1 if you have the <netconfig.h> header file. */
 /* #undef HAVE_NETCONFIG_H */
 
+/* Define to 1 if you have the <netinet/sctp.h> header file. */
+/* #undef HAVE_NETINET_SCTP_H */
+
 /* Define to 1 if you have the <numaif.h> header file. */
 /* #undef HAVE_NUMAIF_H */
-
-/* define to 1 if you have 'numa_alloc_onnode' function */
-/* #undef HAVE_NUMA_ALLOC_ONNODE */
 
 /* Define to 1 if you have the <numa.h> header file. */
 /* #undef HAVE_NUMA_H */
 
-/* define to 1 if you have 'numa_move_pages' function */
-/* #undef HAVE_NUMA_MOVE_PAGES */
+/* Define to 1 if you have libnuma and it's headers version >= 2 installed. */
+/* #undef HAVE_NUMA_V2 */
 
 /* Define to 1 if you have the `openat' function. */
 #define HAVE_OPENAT 1
@@ -253,6 +225,9 @@
 
 /* Define to 1 if you have the `preadv' function. */
 #define HAVE_PREADV 1
+
+/* Define to 1 if you have the `preadv2' function. */
+/* #undef HAVE_PREADV2 */
 
 /* Define to 1 if you have the `profil' function. */
 #define HAVE_PROFIL 1
@@ -279,7 +254,7 @@
 /* #undef HAVE_RENAMEAT2 */
 
 /* Define to 1 if you have the <selinux/selinux.h> header file. */
-#define HAVE_SELINUX_SELINUX_H
+#define HAVE_SELINUX_SELINUX_H 1
 
 /* Define to 1 if you have the `signalfd' function. */
 #define HAVE_SIGNALFD 1
@@ -289,6 +264,9 @@
 
 /* Define to 1 if you have the `splice' function. */
 #define HAVE_SPLICE 1
+
+/* Define to 1 if you have the `statx' function. */
+/* #undef HAVE_STATX */
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
@@ -314,6 +292,9 @@
 /* Define to 1 if the system has the type `struct modify_ldt_ldt_s'. */
 /* #undef HAVE_STRUCT_MODIFY_LDT_LDT_S */
 
+/* Define to 1 if `aux_head' is a member of `struct perf_event_mmap_page'. */
+#define HAVE_STRUCT_PERF_EVENT_MMAP_PAGE_AUX_HEAD 1
+
 /* Define to 1 if the system has the type `struct ptrace_peeksiginfo_args'. */
 #define HAVE_STRUCT_PTRACE_PEEKSIGINFO_ARGS 1
 
@@ -332,10 +313,10 @@
 /* Define to 1 if `ssi_signo' is a member of `struct signalfd_siginfo'. */
 #define HAVE_STRUCT_SIGNALFD_SIGINFO_SSI_SIGNO 1
 
-/* Define to 1 if 'struct statx' defined via sys/stat.h */
+/* Define to 1 if the system has the type `struct statx'. */
 #define HAVE_STRUCT_STATX 1
 
-/* Define to 1 if 'struct statx_timestamp' defined via sys/stat.h */
+/* Define to 1 if the system has the type `struct statx_timestamp'. */
 #define HAVE_STRUCT_STATX_TIMESTAMP 1
 
 /* Define to 1 if `freepages_count' is a member of `struct taskstats'. */
@@ -387,9 +368,6 @@
 /* Define to 1 if you have the <sys/inotify.h> header file. */
 #define HAVE_SYS_INOTIFY_H 1
 
-/* Define to 1 if you have the <sys/jfsdmapi.h> header file. */
-/* #undef HAVE_SYS_JFSDMAPI_H */
-
 /* Define to 1 if you have the <sys/prctl.h> header file. */
 #define HAVE_SYS_PRCTL_H 1
 
@@ -398,6 +376,9 @@
 
 /* Define to 1 if you have the <sys/reg.h> header file. */
 #define HAVE_SYS_REG_H 1
+
+/* Define to 1 if you have the <sys/shm.h> header file. */
+#define HAVE_SYS_SHM_H 1
 
 /* Define to 1 if you have the <sys/signalfd.h> header file. */
 #define HAVE_SYS_SIGNALFD_H 1
@@ -412,7 +393,7 @@
 #define HAVE_SYS_TYPES_H 1
 
 /* Define to 1 if you have the <sys/ustat.h> header file. */
-/* #undef HAVE_SYS_USTAT_H 1 */
+/* #undef HAVE_SYS_USTAT_H */
 
 /* Define to 1 if you have the <sys/xattr.h> header file. */
 #define HAVE_SYS_XATTR_H 1
@@ -439,7 +420,7 @@
 #define HAVE_UNSHARE 1
 
 /* Define to 1 if you have the `ustat' function. */
-/* #undef HAVE_USTAT 1 */
+/* #undef HAVE_USTAT */
 
 /* Define to 1 if you have utimensat(2) */
 #define HAVE_UTIMENSAT 1
