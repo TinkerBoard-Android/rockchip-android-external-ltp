@@ -153,6 +153,7 @@ cc_library_static {
         "lib/tst_sig_proc.c",
         "lib/tst_status.c",
         "lib/tst_supported_fs_types.c",
+        "lib/tst_sys_conf.c",
         "lib/tst_taint.c",
         "lib/tst_test.c",
         "lib/tst_timer.c",
@@ -274,24 +275,6 @@ cc_test {
     stem: "acl1",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/network/nfsv4/acl/acl1.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: ["include/old"],
-}
-
-cc_test {
-    name: "ltp_acl_file_test",
-    stem: "acl_file_test",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/fs/acls/acl_file_test.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: ["include/old"],
-}
-
-cc_test {
-    name: "ltp_acl_link_test",
-    stem: "acl_link_test",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/fs/acls/acl_link_test.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
 }
@@ -728,6 +711,45 @@ cc_test {
     stem: "cgroup_fj_proc",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/controllers/cgroup_fj/cgroup_fj_proc.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/controllers/libcontrollers",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_cgroup_regression_6_2",
+    stem: "cgroup_regression_6_2",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/controllers/cgroup/cgroup_regression_6_2.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/controllers/libcontrollers",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_cgroup_regression_fork_processes",
+    stem: "cgroup_regression_fork_processes",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/controllers/cgroup/cgroup_regression_fork_processes.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/controllers/libcontrollers",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_cgroup_regression_getdelays",
+    stem: "cgroup_regression_getdelays",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/controllers/cgroup/cgroup_regression_getdelays.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: [
         "testcases/kernel/controllers/libcontrollers",
@@ -1737,10 +1759,10 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_cve-2012-0957",
-    stem: "cve-2012-0957",
+    name: "ltp_crypto_user01",
+    stem: "crypto_user01",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/cve/cve-2012-0957.c"],
+    srcs: ["testcases/kernel/crypto/crypto_user01.c"],
     cflags: [
         "-D_GNU_SOURCE",
         "-D_FORTIFY_SOURCE=2",
@@ -1780,19 +1802,6 @@ cc_test {
     stem: "cve-2016-10044",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/cve/cve-2016-10044.c"],
-    cflags: [
-        "-D_GNU_SOURCE",
-        "-D_FORTIFY_SOURCE=2",
-    ],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_cve-2016-4997",
-    stem: "cve-2016-4997",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/cve/cve-2016-4997.c"],
     cflags: [
         "-D_GNU_SOURCE",
         "-D_FORTIFY_SOURCE=2",
@@ -1893,19 +1902,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_cve-2017-6951",
-    stem: "cve-2017-6951",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/cve/cve-2017-6951.c"],
-    cflags: [
-        "-D_GNU_SOURCE",
-        "-D_FORTIFY_SOURCE=2",
-    ],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_data_space",
     stem: "data_space",
     defaults: ["ltp_test_defaults"],
@@ -1919,7 +1915,7 @@ cc_test {
     name: "ltp_delete_module01",
     stem: "delete_module01",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/module/delete_module/delete_module01.c"],
+    srcs: ["testcases/kernel/syscalls/delete_module/delete_module01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -1929,7 +1925,7 @@ cc_test {
     name: "ltp_delete_module02",
     stem: "delete_module02",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/module/delete_module/delete_module02.c"],
+    srcs: ["testcases/kernel/syscalls/delete_module/delete_module02.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -1939,7 +1935,7 @@ cc_test {
     name: "ltp_delete_module03",
     stem: "delete_module03",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/module/delete_module/delete_module03.c"],
+    srcs: ["testcases/kernel/syscalls/delete_module/delete_module03.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -2685,6 +2681,26 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_execveat01",
+    stem: "execveat01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/execveat/execveat01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_execveat02",
+    stem: "execveat02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/execveat/execveat02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_execveat03",
     stem: "execveat03",
     defaults: ["ltp_test_defaults"],
@@ -2699,6 +2715,16 @@ cc_test {
     stem: "execveat_child",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/execveat/execveat_child.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_execveat_errno",
+    stem: "execveat_errno",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/execveat/execveat_errno.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -2947,6 +2973,39 @@ cc_test {
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/fanotify/fanotify09.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fanotify10",
+    stem: "fanotify10",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fanotify/fanotify10.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fanotify11",
+    stem: "fanotify11",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fanotify/fanotify11.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fanout01",
+    stem: "fanout01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/network/packet/fanout01.c"],
+    cflags: [
+        "-D_GNU_SOURCE",
+        "-D_FORTIFY_SOURCE=2",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -4853,19 +4912,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_fork_processes",
-    stem: "fork_processes",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/controllers/cgroup/fork_processes.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: [
-        "testcases/kernel/controllers/libcontrollers",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_fpathconf01",
     stem: "fpathconf01",
     defaults: ["ltp_test_defaults"],
@@ -4906,6 +4952,26 @@ cc_test {
         "-D_FORTIFY_SOURCE=2",
     ],
     local_include_dirs: ["include/old"],
+}
+
+cc_test {
+    name: "ltp_fremovexattr01",
+    stem: "fremovexattr01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fremovexattr/fremovexattr01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fremovexattr02",
+    stem: "fremovexattr02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fremovexattr/fremovexattr02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
 }
 
 cc_test {
@@ -5930,19 +5996,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_getdelays",
-    stem: "getdelays",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/controllers/cgroup/getdelays.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: [
-        "testcases/kernel/controllers/libcontrollers",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_getdents01",
     stem: "getdents01",
     defaults: ["ltp_test_defaults"],
@@ -6866,6 +6919,16 @@ cc_test {
     stem: "getxattr04",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/getxattr/getxattr04.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_getxattr05",
+    stem: "getxattr05",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/getxattr/getxattr05.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -8178,6 +8241,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_lremovexattr01",
+    stem: "lremovexattr01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/lremovexattr/lremovexattr01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_lseek01",
     stem: "lseek01",
     defaults: ["ltp_test_defaults"],
@@ -8570,6 +8643,16 @@ cc_test {
         "testcases/kernel/controllers/libcontrollers",
         "include/old",
     ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_membarrier01",
+    stem: "membarrier01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/membarrier/membarrier01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
@@ -11359,6 +11442,70 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_preadv201",
+    stem: "preadv201",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/preadv2/preadv201.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/preadv2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_preadv201_64",
+    stem: "preadv201_64",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/preadv2/preadv201.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_FILE_OFFSET_BITS=64",
+        "-DTST_USE_NEWER64_SYSCALL=1",
+    ],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+        "testcases/kernel/syscalls/preadv2",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_preadv202",
+    stem: "preadv202",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/preadv2/preadv202.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/preadv2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_preadv202_64",
+    stem: "preadv202_64",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/preadv2/preadv202.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_FILE_OFFSET_BITS=64",
+        "-DTST_USE_NEWER64_SYSCALL=1",
+    ],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+        "testcases/kernel/syscalls/preadv2",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_print_caps",
     stem: "print_caps",
     defaults: ["ltp_test_defaults"],
@@ -11514,6 +11661,16 @@ cc_test {
         "testcases/kernel/syscalls/utils",
         "include/old",
     ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_pt_test",
+    stem: "pt_test",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/tracing/pt_test/pt_test.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
@@ -12479,6 +12636,16 @@ cc_test {
     stem: "request_key04",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/request_key/request_key04.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_request_key05",
+    stem: "request_key05",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/request_key/request_key05.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
@@ -14822,6 +14989,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_setsockopt03",
+    stem: "setsockopt03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/setsockopt/setsockopt03.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_settimeofday01",
     stem: "settimeofday01",
     defaults: ["ltp_test_defaults"],
@@ -15748,6 +15925,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_statx06",
+    stem: "statx06",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/statx/statx06.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_stream01",
     stem: "stream01",
     defaults: ["ltp_test_defaults"],
@@ -16410,15 +16597,12 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_test_6_2",
-    stem: "test_6_2",
+    name: "ltp_test19",
+    stem: "test19",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/controllers/cgroup/test_6_2.c"],
+    srcs: ["lib/newlib_tests/test19.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
-    local_include_dirs: [
-        "testcases/kernel/controllers/libcontrollers",
-        "include/old",
-    ],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
@@ -17568,6 +17752,19 @@ cc_test {
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/uname/uname03.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_uname04",
+    stem: "uname04",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/uname/uname04.c"],
+    cflags: [
+        "-D_GNU_SOURCE",
+        "-D_FORTIFY_SOURCE=2",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }

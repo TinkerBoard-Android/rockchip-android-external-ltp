@@ -1468,6 +1468,43 @@ first missing driver.
 Since it relies on modprobe command, the check will be skipped if the command
 itself is not available on the system.
 
+2.2.27 Saving & restoring /proc|sys values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+LTP library can be instructed to save and restore value of specified
+(/proc|sys) files. This is achieved by initialized tst_test struct
+field 'save_restore'. It is a NULL terminated array of strings where
+each string represents a file, whose value is saved at the beginning
+and restored at the end of the test. Only first line of a specified
+file is saved and restored.
+
+Pathnames can be optionally prefixed to specify how strictly (during
+'store') are handled files that don't exist:
+  (no prefix) - test ends with TCONF
+  '?'         - test prints info message and continues
+  '!'         - test ends with TBROK
+
+'restore' is always strict and will TWARN if it encounters any error.
+
+Example:
+
+static const char *save_restore[] = {
+	"/proc/sys/kernel/core_pattern",
+	NULL,
+};
+
+static void setup(void)
+{
+	FILE_PRINTF("/proc/sys/kernel/core_pattern", "/mypath");
+}
+
+static struct tst_test test = {
+	...
+	.setup = setup,
+	.save_restore = save_restore,
+};
+
+
 2.3 Writing a testcase in shell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1523,6 +1560,9 @@ The '$TST_CLEANUP' may be called even in the middle of the setup and must be
 able to clean up correctly even in this situation. The easiest solution for
 this is to keep track of what was initialized and act accordingly in the
 cleanup.
+
+WARNING: Similar to the C library, calling tst_brk() in the $TST_CLEANUP does
+         not exit the test and 'TBROK' is converted to 'TWARN'.
 
 Notice also the 'tst_run' function called at the end of the test that actually
 starts the test.

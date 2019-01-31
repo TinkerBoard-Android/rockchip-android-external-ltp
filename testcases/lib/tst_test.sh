@@ -41,6 +41,7 @@ trap "tst_brk TBROK 'test interrupted'" INT
 _tst_do_exit()
 {
 	local ret=0
+	TST_DO_EXIT=1
 
 	if [ -n "$TST_SETUP_STARTED" -a -n "$TST_CLEANUP" -a \
 	     -z "$TST_NO_CLEANUP" ]; then
@@ -57,6 +58,11 @@ _tst_do_exit()
 		cd "$LTPROOT"
 		rm -r "$TST_TMPDIR"
 		[ "$TST_TMPDIR_RHOST" = 1 ] && tst_cleanup_rhost
+	fi
+
+	if [ -n "$_tst_setup_timer_pid" ]; then
+		kill $_tst_setup_timer_pid 2>/dev/null
+		wait $_tst_setup_timer_pid 2>/dev/null
 	fi
 
 	if [ $TST_FAIL -gt 0 ]; then
@@ -117,6 +123,11 @@ tst_brk()
 {
 	local res=$1
 	shift
+
+	if [ "$TST_DO_EXIT" = 1 ]; then
+		tst_res TWARN "$@"
+		return
+	fi
 
 	tst_res "$res" "$@"
 	_tst_do_exit
@@ -347,6 +358,24 @@ _tst_rescmp()
 	fi
 }
 
+
+_tst_setup_timer()
+{
+	LTP_TIMEOUT_MUL=${LTP_TIMEOUT_MUL:-1}
+
+	local sec=$((300 * LTP_TIMEOUT_MUL))
+	local h=$((sec / 3600))
+	local m=$((sec / 60 % 60))
+	local s=$((sec % 60))
+	local pid=$$
+
+	tst_res TINFO "timeout per run is ${h}h ${m}m ${s}s"
+
+	sleep $sec && tst_res TBROK "test killed, timeout! If you are running on slow machine, try exporting LTP_TIMEOUT_MUL > 1" && kill -9 -$pid &
+
+	_tst_setup_timer_pid=$!
+}
+
 tst_run()
 {
 	local _tst_i
@@ -359,7 +388,7 @@ tst_run()
 			case "$_tst_i" in
 			SETUP|CLEANUP|TESTFUNC|ID|CNT|MIN_KVER);;
 			OPTS|USAGE|PARSE_ARGS|POS_ARGS);;
-			NEEDS_ROOT|NEEDS_TMPDIR|NEEDS_DEVICE|DEVICE);;
+			NEEDS_ROOT|NEEDS_TMPDIR|TMPDIR|NEEDS_DEVICE|DEVICE);;
 			NEEDS_CMDS|NEEDS_MODULE|MODPATH|DATAROOT);;
 			NEEDS_DRIVERS);;
 			IPV6|IPVER|TEST_DATA|TEST_DATA_IFS);;
@@ -405,6 +434,8 @@ tst_run()
 		tst_kvcmp -lt "$TST_MIN_KVER" && \
 			tst_brk TCONF "test requires kernel $TST_MIN_KVER+"
 	fi
+
+	_tst_setup_timer
 
 	if [ "$TST_NEEDS_TMPDIR" = 1 ]; then
 		if [ -z "$TMPDIR" ]; then

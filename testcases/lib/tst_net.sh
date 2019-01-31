@@ -131,7 +131,8 @@ init_ltp_netspace()
 # -b run in background
 # -B run in background and save output to $TST_TMPDIR/bg.cmd
 # -s safe option, if something goes wrong, will exit with TBROK
-# -c specify command to run
+# -c specify command to run (this must be binary, not shell buildin/function)
+# RETURN: 0 on success, 1 on failure
 tst_rhost_run()
 {
 	local pre_cmd=
@@ -189,6 +190,61 @@ tst_rhost_run()
 	[ -z "$out" -a -n "$output" ] && echo "$output"
 
 	return $ret
+}
+
+# Run command on both lhost and rhost.
+# tst_net_run [-s] [-l LPARAM] [-r RPARAM] [ -q ] CMD [ARG [ARG2]]
+# Options:
+# -l LPARAM: parameter passed to CMD in lhost
+# -r RPARAM: parameter passed to CMD in rhost
+# -q: quiet mode (suppress failure warnings)
+# CMD: command to run (this must be binary, not shell buildin/function due
+# tst_rhost_run() limitation)
+# RETURN: 0 on success, 1 on missing CMD or exit code on lhost or rhost
+tst_net_run()
+{
+	local cmd
+	local lparams
+	local rparams
+	local lsafe
+	local rsafe
+	local lret
+	local rret
+	local quiet
+
+	local OPTIND
+	while getopts l:qr:s opt; do
+		case "$opt" in
+		l) lparams="$OPTARG" ;;
+		q) quiet=1 ;;
+		r) rparams="$OPTARG" ;;
+		s) lsafe="ROD"; rsafe="-s" ;;
+		*) tst_brk_ TBROK "tst_net_run: unknown option: $OPTARG" ;;
+		esac
+	done
+	shift $((OPTIND - 1))
+	cmd="$1"
+	shift
+
+	if [ -z "$cmd" ]; then
+		[ -n "$lsafe" ] && \
+			tst_brk_ TBROK "tst_net_run: command not defined"
+		tst_res_ TWARN "tst_net_run: command not defined"
+		return 1
+	fi
+
+	$lsafe $cmd $lparams $@
+	lret=$?
+	tst_rhost_run $rsafe -c "$cmd $rparams $@"
+	rret=$?
+
+	if [ -z "$quiet" ]; then
+		[ $lret -ne 0 ] && tst_res_ TWARN "tst_net_run: lhost command failed: $lret"
+		[ $rret -ne 0 ] && tst_res_ TWARN "tst_net_run: rhost command failed: $rret"
+	fi
+
+	[ $lret -ne 0 ] && return $lret
+	return $rret
 }
 
 EXPECT_RHOST_PASS()
@@ -487,7 +543,7 @@ tst_netload()
 	fi
 
 	OPTIND=0
-	while getopts :a:H:d:n:N:r:R:S:b:t:T:fFe:m:A: opt; do
+	while getopts :a:H:d:n:N:r:R:S:b:t:T:fFe:m:A:D: opt; do
 		case "$opt" in
 		a) c_num="$OPTARG" ;;
 		H) c_opts="${c_opts}-H $OPTARG "
@@ -508,6 +564,7 @@ tst_netload()
 		f) cs_opts="${cs_opts}-f " ;;
 		F) cs_opts="${cs_opts}-F " ;;
 		e) expect_res="$OPTARG" ;;
+		D) cs_opts="${cs_opts}-D $OPTARG " ;;
 		*) tst_brk_ TBROK "tst_netload: unknown option: $OPTARG" ;;
 		esac
 	done
@@ -558,7 +615,7 @@ tst_netload()
 
 # tst_ping [IFACE] [DST ADDR] [MESSAGE SIZE ARRAY]
 # Check icmp connectivity
-# IFACE: source interface name
+# IFACE: source interface name or IP address
 # DST ADDR: destination IPv4 or IPv6 address
 # MESSAGE SIZE ARRAY: message size array
 tst_ping()
@@ -569,10 +626,11 @@ tst_ping()
 	local src_iface="${1:-$(tst_iface)}"
 	local dst_addr="${2:-$(tst_ipaddr rhost)}"; shift $(( $# >= 2 ? 2 : 0 ))
 	local msg_sizes="$*"
-	local msg="tst_ping IPv${TST_IPV6:-4} iface $src_iface, msg_size"
-	local cmd="ping$TST_IPV6"
+	local msg="tst_ping $dst_addr iface/saddr $src_iface, msg_size"
+	local cmd="ping"
 	local ret=0
 
+	echo "$dst_addr" | grep -q ':' && cmd="ping6"
 	tst_test_cmds $cmd
 
 	# ping cmd use 56 as default message size
@@ -641,16 +699,10 @@ tst_set_sysctl()
 	local safe=
 	[ "$3" = "safe" ] && safe="-s"
 
-	local add_opt=
-	[ "$TST_USE_NETNS" = "yes" ] && add_opt="-e"
+	local rparam=
+	[ "$TST_USE_NETNS" = "yes" ] && rparam="-r '-e'"
 
-	if [ "$safe" ]; then
-		ROD sysctl -q -w $name=$value
-	else
-		sysctl -q -w $name=$value
-	fi
-
-	tst_rhost_run $safe -c "sysctl -q -w $add_opt $name=$value"
+	tst_net_run $safe $rparam "sysctl -q -w $name=$value"
 }
 
 tst_cleanup_rhost()
@@ -755,4 +807,15 @@ export RHOST_HWADDRS="${RHOST_HWADDRS:-$(tst_get_hwaddrs rhost)}"
 
 if [ -n "$TST_USE_LEGACY_API" ]; then
 	tst_net_remote_tmpdir
+fi
+
+if [ -z "$TST_USE_LEGACY_API" ] && ! tst_cmd_available ping6; then
+	ping6()
+	{
+		ping -6 $@
+	}
+	if [ -z "$ping6_warn_printed" ]; then
+		tst_res_ TINFO "ping6 binary/symlink is missing, using workaround. Please, report missing ping6 to your distribution."
+		export ping6_warn_printed=1
+	fi
 fi
