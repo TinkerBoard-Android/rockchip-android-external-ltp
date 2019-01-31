@@ -446,6 +446,15 @@ struct group *safe_getgrnam_fallback(const char *file, const int lineno,
 #define SAFE_GETGRNAM_FALLBACK(name, fallback) \
 	safe_getgrnam_fallback(__FILE__, __LINE__, (name), (fallback))
 
+struct group *safe_getgrgid(const char *file, const int lineno, gid_t gid);
+#define SAFE_GETGRGID(gid) \
+	safe_getgrgid(__FILE__, __LINE__, (gid))
+
+ssize_t safe_getxattr(const char *file, const int lineno, const char *path,
+	const char *name, void *value, size_t size);
+#define SAFE_GETXATTR(path, name, value, size) \
+	safe_getxattr(__FILE__, __LINE__, (path), (name), (value), (size))
+
 int safe_setxattr(const char *file, const int lineno, const char *path,
             const char *name, const void *value, size_t size, int flags);
 #define SAFE_SETXATTR(path, name, value, size, flags) \
