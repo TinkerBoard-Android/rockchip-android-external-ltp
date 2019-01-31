@@ -176,14 +176,14 @@ int main(int argc, char **argv)
 	} else {
 		for (i = 0; i < (MSGMNI / maxnprocs); i++) {
 			nprocs = maxnprocs;
-			dotest_iteration(i*(MSGMNI / maxnprocs));
+			dotest_iteration(i * maxnprocs);
 		}
 
 		nprocs = MSGMNI % maxnprocs;
-		dotest_iteration(i*(MSGMNI / maxnprocs));
+		dotest_iteration(i * maxnprocs);
 	}
 
-	tst_resm(TPASS, "msgctl11 ran successfully!");
+	tst_resm(TPASS, "Test ran successfully!");
 
 	cleanup();
 	tst_exit();
