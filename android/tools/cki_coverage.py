@@ -113,6 +113,7 @@ CKI_BLACKLIST = [
         'shmdt',                   # CONFIG_SYSVIPC
         'shmget',                  # CONFIG_SYSVIPC
         'ssetmask',                # CONFIG_SGETMASK_SYSCALL
+        'stime',                   # deprecated
         'syscall',                 # deprecated
         '_sysctl',                 # CONFIG_SYSCTL_SYSCALL
         'sysfs',                   # CONFIG_SYSFS_SYSCALL
