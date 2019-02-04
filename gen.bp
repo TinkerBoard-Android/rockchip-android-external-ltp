@@ -17953,6 +17953,26 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_vhangup01",
+    stem: "vhangup01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/vhangup/vhangup01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_vhangup02",
+    stem: "vhangup02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/vhangup/vhangup02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_vma01",
     stem: "vma01",
     defaults: ["ltp_test_defaults"],

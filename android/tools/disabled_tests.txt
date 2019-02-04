@@ -15,8 +15,6 @@ stime01
 stime02
 ustat01
 ustat02
-vhangup01
-vhangup02
 
 # Test SysV IPC, which is not allowed in Android kernels.
 
