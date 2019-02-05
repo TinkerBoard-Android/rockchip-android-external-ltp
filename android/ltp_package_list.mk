@@ -2329,6 +2329,8 @@ ltp_packages := \
   ltp_vfork \
   ltp_vfork01 \
   ltp_vfork02 \
+  ltp_vhangup01 \
+  ltp_vhangup02 \
   ltp_vma01 \
   ltp_vma02 \
   ltp_vma03 \
