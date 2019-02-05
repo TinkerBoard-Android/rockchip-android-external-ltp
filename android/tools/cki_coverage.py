@@ -204,10 +204,10 @@ class CKI_Coverage(object):
       by the given testcase.
     """
     compat_syscalls = [ "chown32", "fchown32", "getegid32", "geteuid32",
-            "getgid32", "getgroups32", "getuid32", "lchown32",
-            "setfsgid32", "setfsuid32", "setgid32", "setgroups32",
-            "setregid32", "setresgid32", "setresuid32", "setreuid32",
-            "setuid32"]
+            "getgid32", "getgroups32", "getresgid32", "getresuid32",
+            "getuid32", "lchown32", "setfsgid32", "setfsuid32", "setgid32",
+            "setgroups32", "setregid32", "setresgid32", "setresuid32",
+            "setreuid32", "setuid32"]
     if syscall in compat_syscalls:
         test_re = re.compile(r"^%s\d+$" % syscall[0:-2])
         if re.match(test_re, test):
