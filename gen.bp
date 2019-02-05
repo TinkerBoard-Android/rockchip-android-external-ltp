@@ -17830,6 +17830,26 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_ustat01",
+    stem: "ustat01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ustat/ustat01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ustat02",
+    stem: "ustat02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ustat/ustat02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_utime01",
     stem: "utime01",
     defaults: ["ltp_test_defaults"],
