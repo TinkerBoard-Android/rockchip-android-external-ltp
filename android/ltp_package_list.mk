@@ -2317,6 +2317,8 @@ ltp_packages := \
   ltp_unlinkat01 \
   ltp_unshare01 \
   ltp_unshare02 \
+  ltp_ustat01 \
+  ltp_ustat02 \
   ltp_utime01 \
   ltp_utime02 \
   ltp_utime03 \
