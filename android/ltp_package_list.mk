@@ -1288,7 +1288,6 @@ ltp_packages := \
   ltp_statx02 \
   ltp_statx03 \
   ltp_statx04 \
-  ltp_statx05 \
   ltp_statx06 \
   ltp_stream01 \
   ltp_stream02 \
