@@ -244,6 +244,9 @@ class CKI_Coverage(object):
         return True
     if syscall in ("prlimit", "ugetrlimit") and test == "getrlimit03":
       return True
+    shutdown_tests = [ "send01", "sendmsg01", "sendto01" ]
+    if syscall == "shutdown" and test in shutdown_tests:
+        return True
 
     return False
 
