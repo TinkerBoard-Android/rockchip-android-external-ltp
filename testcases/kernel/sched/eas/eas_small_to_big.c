@@ -32,7 +32,7 @@ static void *task_fn(void *arg LTP_ATTRIBUTE_UNUSED)
 {
 	task_tid = gettid();
 
-	printf("Small task executing for %dms...\n", BURN_SEC);
+	printf("Small task executing for %ds...\n", BURN_SEC);
 	burn(BURN_SEC * USEC_PER_SEC, 1);
 
 	printf("Changing to big task...\n");
@@ -142,7 +142,7 @@ static void run(void)
 
 	tst_res(TINFO, "Maximum incorrect cluster time percentage: %d%%",
 		MAX_INCORRECT_CLUSTER_PCT);
-	tst_res(TINFO, "Maximum downmigration latency: %d usec",
+	tst_res(TINFO, "Maximum upmigration latency: %d usec",
 		MAX_UPMIGRATE_LATENCY_US);
 
 	/* configure and enable tracing */
