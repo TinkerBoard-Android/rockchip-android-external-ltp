@@ -74,10 +74,12 @@ CKI_BLACKLIST = [
         'fanotify_init',           # CONFIG_FANOTIFY
         'fanotify_mark',           # CONFIG_FANOTIFY
         'get_mempolicy',           # CONFIG_NUMA
+        'init_module',             # b/112470257 (use finit_module)
         'ipc',                     # CONFIG_SYSVIPC
         'kcmp',                    # CONFIG_CHECKPOINT_RESTORE
         'kexec_file_load',         # CONFIG_EXEC_FILE
         'kexec_load',              # CONFIG_KEXEC
+        'lookup_dcookie',          # b/112474343 (requires kernel module)
         'mbind',                   # CONFIG_NUMA
         'membarrier',              # CONFIG_MEMBARRIER
         'migrate_pages',           # CONFIG_NUMA
@@ -123,6 +125,13 @@ CKI_BLACKLIST = [
         'vm86old',                 # CONFIG_X86_LEGACY_VM86
         'vserver',                 # deprecated
 ]
+
+EXTERNAL_TESTS = [ ("bpf", "libbpf_android/BpfLoadTest.cpp"),
+                   ("bpf", "libbpf_android/BpfMapTest.cpp"),
+                   ("bpf", "netd/libbpf/BpfMapTest.cpp"),
+                   ("bpf", "api/bpf_native_test/BpfTest.cpp"),
+                   ("seccomp", "kselftest/seccomp_bpf")
+                 ]
 
 class CKI_Coverage(object):
   """Determines current test coverage of CKI system calls in LTP.
@@ -289,6 +298,9 @@ class CKI_Coverage(object):
           if full_test_name == "syscalls.epoll-ltp":
             full_test_name = "syscalls.epoll01"
           self.syscall_tests[syscall["name"]].append(full_test_name)
+      for e in EXTERNAL_TESTS:
+        if e[0] == syscall["name"]:
+          self.syscall_tests[syscall["name"]].append(e[1])
     self.cki_syscalls.sort(key=lambda tup: tup["name"])
 
   def update_test_status(self):
@@ -301,6 +313,8 @@ class CKI_Coverage(object):
       if not self.syscall_tests[syscall["name"]]:
         continue
       for full_test_name in self.syscall_tests[syscall["name"]]:
+        if full_test_name in [t[1] for t in EXTERNAL_TESTS]:
+          continue
         _, test = full_test_name.split('.')
         # The VTS LTP stable list is composed of tuples of the test name and
         # a boolean flag indicating whether it is mandatory.
