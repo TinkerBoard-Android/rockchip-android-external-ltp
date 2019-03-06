@@ -1038,6 +1038,7 @@ ltp_packages := \
   ltp_rt_sigaction01 \
   ltp_rt_sigaction02 \
   ltp_rt_sigaction03 \
+  ltp_rt_sigpending02 \
   ltp_rt_sigprocmask01 \
   ltp_rt_sigprocmask02 \
   ltp_rt_sigqueueinfo01 \
