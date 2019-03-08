@@ -12775,6 +12775,16 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_rt_tgsigqueueinfo01",
+    stem: "rt_tgsigqueueinfo01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/rt_tgsigqueueinfo/rt_tgsigqueueinfo01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_rtc01",
     stem: "rtc01",
     defaults: ["ltp_test_defaults"],
@@ -16221,6 +16231,16 @@ cc_test {
     stem: "sync_file_range01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/sync_file_range/sync_file_range01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_syncfs01",
+    stem: "syncfs01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/syncfs/syncfs01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
