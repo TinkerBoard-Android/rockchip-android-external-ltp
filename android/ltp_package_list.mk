@@ -1044,6 +1044,7 @@ ltp_packages := \
   ltp_rt_sigqueueinfo01 \
   ltp_rt_sigsuspend01 \
   ltp_rt_sigtimedwait01 \
+  ltp_rt_tgsigqueueinfo01 \
   ltp_rtc01 \
   ltp_sbrk01 \
   ltp_sbrk02 \
@@ -1316,6 +1317,7 @@ ltp_packages := \
   ltp_sync01 \
   ltp_sync02 \
   ltp_sync_file_range01 \
+  ltp_syncfs01 \
   ltp_syscall01 \
   ltp_sysconf01 \
   ltp_sysctl01 \
