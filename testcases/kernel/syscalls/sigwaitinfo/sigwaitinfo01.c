@@ -443,8 +443,10 @@ struct test_desc {
 	{
 	test_masked_matching, my_rt_sigtimedwait, SIGTERM},
 	    /* 4: Simultaneous realtime signals are delivered in the order of increasing signal number */
+#if !(defined(ANDROID) && !defined(__LP64__))
 	{
 	test_masked_matching_rt, my_rt_sigtimedwait, -1},
+#endif
 #endif
 #if defined TEST_SIGWAIT
 	{
