@@ -130,6 +130,7 @@ EXTERNAL_TESTS = [ ("bpf", "libbpf_android/BpfLoadTest.cpp"),
                    ("bpf", "libbpf_android/BpfMapTest.cpp"),
                    ("bpf", "netd/libbpf/BpfMapTest.cpp"),
                    ("bpf", "api/bpf_native_test/BpfTest.cpp"),
+                   ("clock_adjtime", "kselftest/timers/valid-adjtimex.c"),
                    ("seccomp", "kselftest/seccomp_bpf")
                  ]
 
@@ -252,6 +253,8 @@ class CKI_Coverage(object):
       if re.match(test_re, test):
         return True
     if syscall in ("prlimit", "ugetrlimit") and test == "getrlimit03":
+      return True
+    if syscall == "rt_sigtimedwait" and test == "sigwaitinfo01":
       return True
     shutdown_tests = [ "send01", "sendmsg01", "sendto01" ]
     if syscall == "shutdown" and test in shutdown_tests:
