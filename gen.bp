@@ -356,20 +356,17 @@ cc_test {
     name: "ltp_aio01",
     stem: "aio01",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/io/aio/aio01/aio01.c"],
+    srcs: ["testcases/kernel/io/aio/aio01.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
 cc_test {
-    name: "ltp_aio_tio",
-    stem: "aio_tio",
+    name: "ltp_aio02",
+    stem: "aio02",
     defaults: ["ltp_test_defaults"],
-    srcs: [
-        "testcases/kernel/io/aio/aio02/aio_tio.c",
-        "testcases/kernel/io/aio/aio02/main.c",
-    ],
+    srcs: ["testcases/kernel/io/aio/aio02.c"],
     cflags: [
         "-D_FORTIFY_SOURCE=2",
         "-D_GNU_SOURCE",

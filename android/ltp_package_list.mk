@@ -32,7 +32,7 @@ ltp_packages := \
   ltp_adjtimex02 \
   ltp_aio-stress \
   ltp_aio01 \
-  ltp_aio_tio \
+  ltp_aio02 \
   ltp_aiocp \
   ltp_aiodio_append \
   ltp_aiodio_sparse \
