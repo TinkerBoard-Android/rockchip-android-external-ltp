@@ -12076,6 +12076,70 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_pwritev201",
+    stem: "pwritev201",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/pwritev2/pwritev201.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/pwritev2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_pwritev201_64",
+    stem: "pwritev201_64",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/pwritev2/pwritev201.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_FILE_OFFSET_BITS=64",
+        "-DTST_USE_NEWER64_SYSCALL=1",
+    ],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/pwritev2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_pwritev202",
+    stem: "pwritev202",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/pwritev2/pwritev202.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/pwritev2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_pwritev202_64",
+    stem: "pwritev202_64",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/pwritev2/pwritev202.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_FILE_OFFSET_BITS=64",
+        "-DTST_USE_NEWER64_SYSCALL=1",
+    ],
+    local_include_dirs: [
+        "testcases/kernel/syscalls/pwritev2",
+        "testcases/kernel/syscalls/utils",
+        "include/old",
+    ],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_quotactl01",
     stem: "quotactl01",
     defaults: ["ltp_test_defaults"],
