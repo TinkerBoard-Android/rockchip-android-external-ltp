@@ -357,7 +357,10 @@ cc_test {
     stem: "aio01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/io/aio/aio01.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-D_GNU_SOURCE",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
