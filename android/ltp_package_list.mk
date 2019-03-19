@@ -976,6 +976,10 @@ ltp_packages := \
   ltp_pwritev02_64 \
   ltp_pwritev03 \
   ltp_pwritev03_64 \
+  ltp_pwritev201 \
+  ltp_pwritev201_64 \
+  ltp_pwritev202 \
+  ltp_pwritev202_64 \
   ltp_quotactl01 \
   ltp_quotactl02 \
   ltp_quotactl03 \
