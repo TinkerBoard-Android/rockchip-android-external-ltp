@@ -16769,6 +16769,36 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_tgkill01",
+    stem: "tgkill01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/tgkill/tgkill01.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_tgkill02",
+    stem: "tgkill02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/tgkill/tgkill02.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_tgkill03",
+    stem: "tgkill03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/tgkill/tgkill03.c"],
+    cflags: ["-D_FORTIFY_SOURCE=2"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_thp01",
     stem: "thp01",
     defaults: ["ltp_test_defaults"],
@@ -17410,7 +17440,7 @@ cc_test {
     name: "ltp_tst_device",
     stem: "tst_device",
     defaults: ["ltp_test_defaults"],
-    srcs: ["lib/tests/tst_device.c"],
+    srcs: ["testcases/lib/tst_device.c"],
     cflags: ["-D_FORTIFY_SOURCE=2"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
