@@ -2222,6 +2222,9 @@ ltp_packages := \
   ltp_testsf_c6 \
   ltp_testsf_s \
   ltp_testsf_s6 \
+  ltp_tgkill01 \
+  ltp_tgkill02 \
+  ltp_tgkill03 \
   ltp_thp01 \
   ltp_thp02 \
   ltp_thp03 \
