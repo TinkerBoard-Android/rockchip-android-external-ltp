@@ -376,7 +376,6 @@ f00f
 
 # build error due to unavailability of eaccess()
 prot_hsymlinks
-setpriority01
 
 # The following test prebuilds are disabled due to build error on AOSP
 ldmain.obj
