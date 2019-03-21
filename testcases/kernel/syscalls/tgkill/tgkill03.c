@@ -76,7 +76,9 @@ static const struct testcase {
 	{ "Invalid tgid", &invalid_pid, &parent_tid, SIGUSR1, EINVAL },
 	{ "Invalid tid", &parent_tgid, &invalid_pid, SIGUSR1, EINVAL },
 	{ "Invalid signal", &parent_tgid, &parent_tid, -1, EINVAL },
-	{ "Defunct tid", &parent_tgid, &defunct_tid, SIGUSR1, ESRCH },
+/* b/112483690
+ *	{ "Defunct tid", &parent_tgid, &defunct_tid, SIGUSR1, ESRCH },
+ */
 	{ "Defunct tgid", &defunct_tid, &child_tid, SIGUSR1, ESRCH },
 	{ "Valid tgkill call", &parent_tgid, &child_tid, SIGUSR1, 0 },
 };
