@@ -12779,8 +12779,11 @@ cc_test {
     name: "ltp_rt_sigpending02",
     stem: "rt_sigpending02",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/rt_sigpending/rt_sigpending02.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
+    srcs: ["testcases/kernel/syscalls/sigpending/sigpending02.c"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-DTEST_RT_SIGPENDING",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -15404,7 +15407,10 @@ cc_test {
     stem: "sigpending02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/sigpending/sigpending02.c"],
-    cflags: ["-D_FORTIFY_SOURCE=2"],
+    cflags: [
+        "-D_FORTIFY_SOURCE=2",
+        "-DTEST_SIGPENDING",
+    ],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
