@@ -904,6 +904,7 @@ ltp_packages := \
   ltp_pipe11 \
   ltp_pipe2_01 \
   ltp_pipe2_02 \
+  ltp_pivot_root01 \
   ltp_pm_get_sched_values \
   ltp_poll01 \
   ltp_poll02 \
@@ -1096,9 +1097,21 @@ ltp_packages := \
   ltp_sched_yield01 \
   ltp_sctp_big_chunk \
   ltp_select01 \
+  ltp_select01_SYS__newselect \
+  ltp_select01_SYS_pselect6 \
+  ltp_select01_SYS_select \
   ltp_select02 \
+  ltp_select02_SYS__newselect \
+  ltp_select02_SYS_pselect6 \
+  ltp_select02_SYS_select \
   ltp_select03 \
+  ltp_select03_SYS__newselect \
+  ltp_select03_SYS_pselect6 \
+  ltp_select03_SYS_select \
   ltp_select04 \
+  ltp_select04_SYS__newselect \
+  ltp_select04_SYS_pselect6 \
+  ltp_select04_SYS_select \
   ltp_send01 \
   ltp_sendfile02 \
   ltp_sendfile02_64 \
@@ -1116,6 +1129,7 @@ ltp_packages := \
   ltp_sendfile08_64 \
   ltp_sendfile09 \
   ltp_sendfile09_64 \
+  ltp_sendmmsg01 \
   ltp_sendmsg01 \
   ltp_sendto01 \
   ltp_sendto02 \
@@ -1168,6 +1182,7 @@ ltp_packages := \
   ltp_setpgid03_child \
   ltp_setpgrp01 \
   ltp_setpgrp02 \
+  ltp_setpriority01 \
   ltp_setpriority02 \
   ltp_setregid01 \
   ltp_setregid01_16 \
