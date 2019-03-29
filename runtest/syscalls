@@ -832,6 +832,8 @@ pipe11 pipe11
 pipe2_01 pipe2_01
 pipe2_02 pipe2_02
 
+pivot_root01 pivot_root01
+
 poll01 poll01
 poll02 poll02
 
@@ -1041,9 +1043,21 @@ sched_getattr01 sched_getattr01
 sched_getattr02 sched_getattr02
 
 select01 select01
+select01_SYS__newselect select01_SYS__newselect
+select01_SYS_select select01_SYS_select
+select01_SYS_pselect6 select01_SYS_pselect6
 select02 select02
+select02_SYS__newselect select02_SYS__newselect
+select02_SYS_select select02_SYS_select
+select02_SYS_pselect6 select02_SYS_pselect6
 select03 select03
+select03_SYS__newselect select03_SYS__newselect
+select03_SYS_select select03_SYS_select
+select03_SYS_pselect6 select03_SYS_pselect6
 select04 select04
+select04_SYS__newselect select04_SYS__newselect
+select04_SYS_select select04_SYS_select
+select04_SYS_pselect6 select04_SYS_pselect6
 
 semctl01 semctl01
 semctl02 semctl02
@@ -1087,6 +1101,8 @@ sendfile09_64 sendfile09_64
 
 sendmsg01 sendmsg01
 sendmsg02 sendmsg02
+
+sendmmsg01 sendmmsg01
 
 sendto01 sendto01
 sendto02 sendto02

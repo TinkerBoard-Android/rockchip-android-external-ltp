@@ -21,11 +21,10 @@
  */
 #include <unistd.h>
 #include <errno.h>
-#include <sys/time.h>
-#include <sys/types.h>
 #include <fcntl.h>
 
 #include "tst_timer_test.h"
+#include "select.h"
 
 static int fds[2];
 
@@ -66,7 +65,7 @@ static void cleanup(void)
 }
 
 static struct tst_test test = {
-	.scall = "select()",
+	.scall = str_expand(SELECT_TEST_SYSCALL) "()",
 	.sample = sample_fn,
 	.setup = setup,
 	.cleanup = cleanup,
