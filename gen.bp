@@ -15150,6 +15150,6494 @@ cc_test {
     static_libs: ["libltp_ltp"],
 }
 
+sh_test {
+    name: "ltp_testcases_bin_add_ipv6addr",
+    src: "testcases/network/stress/ns-tools/add_ipv6addr",
+    sub_dir: "ltp/testcases/bin",
+    filename: "add_ipv6addr",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_arping01.sh",
+    src: "testcases/network/tcp_cmds/arping/arping01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "arping01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ask_password.sh",
+    src: "testcases/kernel/security/mmc_security/ask_password.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ask_password.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_assign_password.sh",
+    src: "testcases/kernel/security/mmc_security/assign_password.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "assign_password.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_bbr01.sh",
+    src: "testcases/network/tcp_cc/bbr01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "bbr01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_bbr02.sh",
+    src: "testcases/network/tcp_cc/bbr02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "bbr02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_bind_noport01.sh",
+    src: "testcases/network/sockets/bind_noport01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "bind_noport01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-checksum",
+    src: "testcases/network/stress/broken_ip/broken_ip4-checksum",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-checksum",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-dstaddr",
+    src: "testcases/network/stress/broken_ip/broken_ip4-dstaddr",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-dstaddr",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-fragment",
+    src: "testcases/network/stress/broken_ip/broken_ip4-fragment",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-fragment",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-ihl",
+    src: "testcases/network/stress/broken_ip/broken_ip4-ihl",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-ihl",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-protcol",
+    src: "testcases/network/stress/broken_ip/broken_ip4-protcol",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-protcol",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-totlen",
+    src: "testcases/network/stress/broken_ip/broken_ip4-totlen",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-totlen",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip4-version",
+    src: "testcases/network/stress/broken_ip/broken_ip4-version",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip4-version",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip6-dstaddr",
+    src: "testcases/network/stress/broken_ip/broken_ip6-dstaddr",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip6-dstaddr",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip6-nexthdr",
+    src: "testcases/network/stress/broken_ip/broken_ip6-nexthdr",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip6-nexthdr",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip6-plen",
+    src: "testcases/network/stress/broken_ip/broken_ip6-plen",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip6-plen",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip6-version",
+    src: "testcases/network/stress/broken_ip/broken_ip6-version",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip6-version",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_busy_poll01.sh",
+    src: "testcases/network/busy_poll/busy_poll01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "busy_poll01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_busy_poll02.sh",
+    src: "testcases/network/busy_poll/busy_poll02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "busy_poll02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_busy_poll03.sh",
+    src: "testcases/network/busy_poll/busy_poll03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "busy_poll03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_busy_poll_lib.sh",
+    src: "testcases/network/busy_poll/busy_poll_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "busy_poll_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_can_run_tests.sh",
+    src: "testcases/network/can/filter-tests/can_run_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "can_run_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_fj_common.sh",
+    src: "testcases/kernel/controllers/cgroup_fj/cgroup_fj_common.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_fj_common.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_fj_function.sh",
+    src: "testcases/kernel/controllers/cgroup_fj/cgroup_fj_function.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_fj_function.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_fj_stress.sh",
+    src: "testcases/kernel/controllers/cgroup_fj/cgroup_fj_stress.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_fj_stress.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_lib.sh",
+    src: "testcases/kernel/controllers/cgroup_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_10_1.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_10_1.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_10_1.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_10_2.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_10_2.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_10_2.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_3_1.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_3_1.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_3_1.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_3_2.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_3_2.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_3_2.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_6_1.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_6_1.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_6_1.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_9_1.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_9_1.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_9_1.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_9_2.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_9_2.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_9_2.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cgroup_regression_test.sh",
+    src: "testcases/kernel/controllers/cgroup/cgroup_regression_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cgroup_regression_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_change_password.sh",
+    src: "testcases/kernel/security/mmc_security/change_password.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "change_password.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_check_envval",
+    src: "testcases/network/stress/ns-tools/check_envval",
+    sub_dir: "ltp/testcases/bin",
+    filename: "check_envval",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_check_icmpv4_connectivity",
+    src: "testcases/network/stress/ns-tools/check_icmpv4_connectivity",
+    sub_dir: "ltp/testcases/bin",
+    filename: "check_icmpv4_connectivity",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_check_icmpv6_connectivity",
+    src: "testcases/network/stress/ns-tools/check_icmpv6_connectivity",
+    sub_dir: "ltp/testcases/bin",
+    filename: "check_icmpv6_connectivity",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_check_netem",
+    src: "testcases/network/stress/ns-tools/check_netem",
+    sub_dir: "ltp/testcases/bin",
+    filename: "check_netem",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_check_setkey",
+    src: "testcases/network/stress/ns-tools/check_setkey",
+    sub_dir: "ltp/testcases/bin",
+    filename: "check_setkey",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_clockdiff01.sh",
+    src: "testcases/network/tcp_cmds/clockdiff/clockdiff01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "clockdiff01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cmdlib.sh",
+    src: "testcases/lib/cmdlib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cmdlib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_connector_test.sh",
+    src: "testcases/kernel/connectors/connector_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "connector_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cp_tests.sh",
+    src: "testcases/commands/cp/cp_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cp_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpio_tests.sh",
+    src: "testcases/commands/cpio/cpio_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpio_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuacct.sh",
+    src: "testcases/kernel/controllers/cpuacct/cpuacct.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuacct.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug01.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug02.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug03.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug04.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug04.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug04.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug05.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug05.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug05.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug06.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug06.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug06.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug07.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/functional/cpuhotplug07.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug07.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_do_disk_write_loop",
+    src: "testcases/kernel/hotplug/cpu_hotplug/tools/cpuhotplug_do_disk_write_loop",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_do_disk_write_loop",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_do_kcompile_loop",
+    src: "testcases/kernel/hotplug/cpu_hotplug/tools/cpuhotplug_do_kcompile_loop",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_do_kcompile_loop",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_do_spin_loop",
+    src: "testcases/kernel/hotplug/cpu_hotplug/tools/cpuhotplug_do_spin_loop",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_do_spin_loop",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_hotplug.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/include/cpuhotplug_hotplug.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_hotplug.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_report_proc_interrupts",
+    src: "testcases/kernel/hotplug/cpu_hotplug/tools/cpuhotplug_report_proc_interrupts",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_report_proc_interrupts",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuhotplug_testsuite.sh",
+    src: "testcases/kernel/hotplug/cpu_hotplug/include/cpuhotplug_testsuite.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuhotplug_testsuite.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_base_ops_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_base_ops_test/cpuset_base_ops_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_base_ops_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_exclusive_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_exclusive_test/cpuset_exclusive_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_exclusive_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_funcs.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_funcs.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_funcs.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_hierarchy_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_hierarchy_test/cpuset_hierarchy_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_hierarchy_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_hotplug_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_hotplug_test/cpuset_hotplug_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_hotplug_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_inherit_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_inherit_test/cpuset_inherit_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_inherit_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_load_balance_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_load_balance_test/cpuset_load_balance_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_load_balance_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_memory_pressure_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_memory_pressure_test/cpuset_memory_pressure_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_memory_pressure_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_memory_spread_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_memory_spread_test/cpuset_memory_spread_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_memory_spread_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_memory_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_memory_test/cpuset_memory_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_memory_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_regression_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_regression_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_regression_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_sched_domains_test.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_load_balance_test/cpuset_sched_domains_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_sched_domains_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_cpuset_syscall_testset.sh",
+    src: "testcases/kernel/controllers/cpuset/cpuset_syscall_test/cpuset_syscall_testset.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "cpuset_syscall_testset.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_create_file",
+    src: "testcases/network/stress/ns-tools/create_file",
+    sub_dir: "ltp/testcases/bin",
+    filename: "create_file",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_daemonlib.sh",
+    src: "testcases/lib/daemonlib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "daemonlib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_data",
+    src: "testcases/kernel/sched/clisrv/data",
+    sub_dir: "ltp/testcases/bin",
+    filename: "data",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dccp01.sh",
+    src: "testcases/network/dccp/dccp01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dccp01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dccp_ipsec.sh",
+    src: "testcases/network/stress/dccp/dccp_ipsec.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dccp_ipsec.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dccp_ipsec_vti.sh",
+    src: "testcases/network/stress/dccp/dccp_ipsec_vti.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dccp_ipsec_vti.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dctcp01.sh",
+    src: "testcases/network/tcp_cc/dctcp01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dctcp01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dhcp_lib.sh",
+    src: "testcases/network/dhcp/dhcp_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dhcp_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dhcpd_tests.sh",
+    src: "testcases/network/dhcp/dhcpd_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dhcpd_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dns-stress",
+    src: "testcases/network/stress/dns/dns-stress",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dns-stress",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dns-stress-lib.sh",
+    src: "testcases/network/stress/dns/dns-stress-lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dns-stress-lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dns-stress01-rmt",
+    src: "testcases/network/stress/dns/dns-stress01-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dns-stress01-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dns-stress02-rmt",
+    src: "testcases/network/stress/dns/dns-stress02-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dns-stress02-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dnsmasq_tests.sh",
+    src: "testcases/network/dhcp/dnsmasq_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dnsmasq_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_dynamic_debug01.sh",
+    src: "testcases/kernel/tracing/dynamic_debug/dynamic_debug01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "dynamic_debug01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4-alloc-test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-delalloc-mballoc/ext4-alloc-test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4-alloc-test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_funcs.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4_funcs.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_funcs.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_get_inode_version.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-inode-version/ext4_get_inode_version.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_get_inode_version.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_inode_version_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-inode-version/ext4_inode_version_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_inode_version_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_journal_checksum.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-journal-checksum/ext4_journal_checksum.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_journal_checksum.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_nsec_timestamps_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-nsec-timestamps/ext4_nsec_timestamps_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_nsec_timestamps_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_online_defrag_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-online-defrag/ext4_online_defrag_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_online_defrag_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_persist_prealloc_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-persist-prealloc/ext4_persist_prealloc_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_persist_prealloc_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_subdir_limit_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-subdir-limit/ext4_subdir_limit_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_subdir_limit_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ext4_uninit_groups_test.sh",
+    src: "testcases/kernel/fs/ext4-new-features/ext4-uninit-groups/ext4_uninit_groups_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ext4_uninit_groups_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_file01.sh",
+    src: "testcases/commands/file/file01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "file01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_filecapstest.sh",
+    src: "testcases/kernel/security/filecaps/filecapstest.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "filecapstest.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_find_portbundle",
+    src: "testcases/network/stress/ns-tools/find_portbundle",
+    sub_dir: "ltp/testcases/bin",
+    filename: "find_portbundle",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_force_erase.sh",
+    src: "testcases/kernel/security/mmc_security/force_erase.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "force_erase.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fork_freeze.sh",
+    src: "testcases/kernel/controllers/freezer/fork_freeze.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fork_freeze.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_cancel.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_cancel.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_cancel.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_kill_thaw.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_kill_thaw.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_kill_thaw.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_move_thaw.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_move_thaw.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_move_thaw.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_self_thaw.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_self_thaw.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_self_thaw.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_sleep_thaw.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_sleep_thaw.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_sleep_thaw.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_thaw.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_thaw.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_thaw.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_freeze_write_freezing.sh",
+    src: "testcases/kernel/controllers/freezer/freeze_write_freezing.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "freeze_write_freezing.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs-bench-test.sh",
+    src: "testcases/kernel/fs/fs-bench/fs-bench-test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs-bench-test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs-bench-test2.sh",
+    src: "testcases/kernel/fs/fs-bench/fs-bench-test2.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs-bench-test2.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bin_check_prop",
+    src: "testcases/kernel/fs/fs_bind/bin/check_prop",
+    sub_dir: "ltp/testcases/bin/fs_bind/bin",
+    filename: "check_prop",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bin_lockfile",
+    src: "testcases/kernel/fs/fs_bind/bin/lockfile",
+    sub_dir: "ltp/testcases/bin/fs_bind/bin",
+    filename: "lockfile",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bin_makedir",
+    src: "testcases/kernel/fs/fs_bind/bin/makedir",
+    sub_dir: "ltp/testcases/bin/fs_bind/bin",
+    filename: "makedir",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bin_setup",
+    src: "testcases/kernel/fs/fs_bind/bin/setup",
+    sub_dir: "ltp/testcases/bin/fs_bind/bin",
+    filename: "setup",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bin_setupnslock",
+    src: "testcases/kernel/fs/fs_bind/bin/setupnslock",
+    sub_dir: "ltp/testcases/bin/fs_bind/bin",
+    filename: "setupnslock",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test10",
+    src: "testcases/kernel/fs/fs_bind/bind/test10",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test11",
+    src: "testcases/kernel/fs/fs_bind/bind/test11",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test12",
+    src: "testcases/kernel/fs/fs_bind/bind/test12",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test14",
+    src: "testcases/kernel/fs/fs_bind/bind/test14",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test15",
+    src: "testcases/kernel/fs/fs_bind/bind/test15",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test15",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test16",
+    src: "testcases/kernel/fs/fs_bind/bind/test16",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test16",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test18",
+    src: "testcases/kernel/fs/fs_bind/bind/test18",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test18",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_bind_test19",
+    src: "testcases/kernel/fs/fs_bind/bind/test19",
+    sub_dir: "ltp/testcases/bin/fs_bind/bind",
+    filename: "test19",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_move_test08",
+    src: "testcases/kernel/fs/fs_bind/move/test08",
+    sub_dir: "ltp/testcases/bin/fs_bind/move",
+    filename: "test08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_move_test22",
+    src: "testcases/kernel/fs/fs_bind/move/test22",
+    sub_dir: "ltp/testcases/bin/fs_bind/move",
+    filename: "test22",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test01",
+    src: "testcases/kernel/fs/fs_bind/rbind/test01",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test02",
+    src: "testcases/kernel/fs/fs_bind/rbind/test02",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test03",
+    src: "testcases/kernel/fs/fs_bind/rbind/test03",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test04",
+    src: "testcases/kernel/fs/fs_bind/rbind/test04",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test05",
+    src: "testcases/kernel/fs/fs_bind/rbind/test05",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test06",
+    src: "testcases/kernel/fs/fs_bind/rbind/test06",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test07",
+    src: "testcases/kernel/fs/fs_bind/rbind/test07",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test07-2",
+    src: "testcases/kernel/fs/fs_bind/rbind/test07-2",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test07-2",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test09",
+    src: "testcases/kernel/fs/fs_bind/rbind/test09",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test13",
+    src: "testcases/kernel/fs/fs_bind/rbind/test13",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test17",
+    src: "testcases/kernel/fs/fs_bind/rbind/test17",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test17",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test20",
+    src: "testcases/kernel/fs/fs_bind/rbind/test20",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test20",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test21",
+    src: "testcases/kernel/fs/fs_bind/rbind/test21",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test21",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test23",
+    src: "testcases/kernel/fs/fs_bind/rbind/test23",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test23",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test24",
+    src: "testcases/kernel/fs/fs_bind/rbind/test24",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test24",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test25",
+    src: "testcases/kernel/fs/fs_bind/rbind/test25",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test25",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test26",
+    src: "testcases/kernel/fs/fs_bind/rbind/test26",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test26",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test27",
+    src: "testcases/kernel/fs/fs_bind/rbind/test27",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test27",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test28",
+    src: "testcases/kernel/fs/fs_bind/rbind/test28",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test28",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test29",
+    src: "testcases/kernel/fs/fs_bind/rbind/test29",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test29",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test30",
+    src: "testcases/kernel/fs/fs_bind/rbind/test30",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test30",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test31",
+    src: "testcases/kernel/fs/fs_bind/rbind/test31",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test31",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test32",
+    src: "testcases/kernel/fs/fs_bind/rbind/test32",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test32",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test33",
+    src: "testcases/kernel/fs/fs_bind/rbind/test33",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test33",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test34",
+    src: "testcases/kernel/fs/fs_bind/rbind/test34",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test34",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test35",
+    src: "testcases/kernel/fs/fs_bind/rbind/test35",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test35",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test36",
+    src: "testcases/kernel/fs/fs_bind/rbind/test36",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test36",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test37",
+    src: "testcases/kernel/fs/fs_bind/rbind/test37",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test37",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test38",
+    src: "testcases/kernel/fs/fs_bind/rbind/test38",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test38",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_bind_rbind_test39",
+    src: "testcases/kernel/fs/fs_bind/rbind/test39",
+    sub_dir: "ltp/testcases/bin/fs_bind/rbind",
+    filename: "test39",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_di",
+    src: "testcases/kernel/fs/fs_di/fs_di",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_di",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_inod",
+    src: "testcases/kernel/fs/fs_inod/fs_inod",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_inod",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer.sh",
+    src: "testcases/kernel/fs/racer/fs_racer.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_dir_create.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_dir_create.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_dir_create.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_dir_test.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_dir_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_dir_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_concat.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_concat.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_concat.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_create.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_create.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_create.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_link.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_link.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_link.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_list.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_list.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_list.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_rename.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_rename.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_rename.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_rm.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_rm.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_rm.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fs_racer_file_symlink.sh",
+    src: "testcases/kernel/fs/racer/fs_racer_file_symlink.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fs_racer_file_symlink.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fsx.sh",
+    src: "testcases/network/nfs/fsx-linux/fsx.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fsx.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fsxtest",
+    src: "testcases/kernel/fs/fsx-linux/fsxtest",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fsxtest",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_fsxtest02",
+    src: "testcases/kernel/fs/fsx-linux/fsxtest02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "fsxtest02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-download-stress",
+    src: "testcases/network/stress/ftp/ftp-download-stress",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-download-stress",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-download-stress01-rmt",
+    src: "testcases/network/stress/ftp/ftp-download-stress01-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-download-stress01-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-download-stress02-rmt",
+    src: "testcases/network/stress/ftp/ftp-download-stress02-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-download-stress02-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-upload-stress",
+    src: "testcases/network/stress/ftp/ftp-upload-stress",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-upload-stress",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-upload-stress01-rmt",
+    src: "testcases/network/stress/ftp/ftp-upload-stress01-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-upload-stress01-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp-upload-stress02-rmt",
+    src: "testcases/network/stress/ftp/ftp-upload-stress02-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp-upload-stress02-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp01",
+    src: "testcases/network/tcp_cmds/ftp/ftp01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftp_setup",
+    src: "testcases/network/tcp_cmds/ftp/ftp_setup",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftp_setup",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_lib.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftrace_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_regression01.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_regression01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftrace_regression01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_regression02.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_regression02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftrace_regression02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_buffer_size_kb.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_buffer_size_kb.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_buffer_size_kb.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_current_tracer.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_current_tracer.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_current_tracer.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_ftrace_enabled.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_ftrace_enabled.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_ftrace_enabled.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_function_profile_enabled.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_function_profile_enabled.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_function_profile_enabled.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_set_event.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_event.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_set_event.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_set_ftrace_filter.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_filter.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_set_ftrace_filter.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_set_ftrace_pid.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_set_ftrace_pid.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_set_ftrace_pid.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_stack_max_size.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_max_size.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_stack_max_size.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_stack_trace.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_stack_trace.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_stack_trace.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_trace.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_trace.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_trace_clock.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_clock.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_trace_clock.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_trace_options.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_options.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_trace_options.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_trace_pipe.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_pipe.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_trace_pipe.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_trace_stat.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_trace_stat.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_trace_stat.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_tracing_cpumask.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_cpumask.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_tracing_cpumask.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_tracing_enabled.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_enabled.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_tracing_enabled.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_tracing_max_latency.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_max_latency.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_tracing_max_latency.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_ftrace_tracing_on.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress/ftrace_tracing_on.sh",
+    sub_dir: "ltp/testcases/bin/ftrace_stress",
+    filename: "ftrace_tracing_on.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ftrace_stress_test.sh",
+    src: "testcases/kernel/tracing/ftrace_test/ftrace_stress_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ftrace_stress_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_gdb01.sh",
+    src: "testcases/commands/gdb/gdb01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "gdb01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_geneve01.sh",
+    src: "testcases/network/virt/geneve01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "geneve01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_get_ifname",
+    src: "testcases/network/stress/ns-tools/get_ifname",
+    sub_dir: "ltp/testcases/bin",
+    filename: "get_ifname",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_gre01.sh",
+    src: "testcases/network/virt/gre01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "gre01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_host01",
+    src: "testcases/network/tcp_cmds/host/host01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "host01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_http-stress",
+    src: "testcases/network/stress/http/http-stress",
+    sub_dir: "ltp/testcases/bin",
+    filename: "http-stress",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_http-stress01-rmt",
+    src: "testcases/network/stress/http/http-stress01-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "http-stress01-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_http-stress02-rmt",
+    src: "testcases/network/stress/http/http-stress02-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "http-stress02-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp-uni-basic.sh",
+    src: "testcases/network/stress/icmp/icmp-uni-basic.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp-uni-basic.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp-uni-vti.sh",
+    src: "testcases/network/stress/icmp/icmp-uni-vti.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp-uni-vti.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip01",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip02",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip03",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip04",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip05",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip06",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffip07",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp4-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic01",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic02",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic03",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic04",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic05",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic06",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp4-multi-diffnic07",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp4-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp4-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip01",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip02",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip03",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip04",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip05",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip06",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffip07",
+    src: "testcases/network/stress/icmp/multi-diffip/icmp6-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic01",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic02",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic03",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic04",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic05",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic06",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_icmp6-multi-diffnic07",
+    src: "testcases/network/stress/icmp/multi-diffnic/icmp6-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "icmp6-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-addr-adddel",
+    src: "testcases/network/stress/interface/if-addr-adddel",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-addr-adddel",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-addr-addlarge",
+    src: "testcases/network/stress/interface/if-addr-addlarge",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-addr-addlarge",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-lib.sh",
+    src: "testcases/network/stress/interface/if-lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-mtu-change",
+    src: "testcases/network/stress/interface/if-mtu-change",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-mtu-change",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-route-adddel",
+    src: "testcases/network/stress/interface/if-route-adddel",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-route-adddel",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-route-addlarge",
+    src: "testcases/network/stress/interface/if-route-addlarge",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-route-addlarge",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if-updown",
+    src: "testcases/network/stress/interface/if-updown",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if-updown",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_if4-addr-change",
+    src: "testcases/network/stress/interface/if4-addr-change",
+    sub_dir: "ltp/testcases/bin",
+    filename: "if4-addr-change",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ima_measurements.sh",
+    src: "testcases/kernel/security/integrity/ima/tests/ima_measurements.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ima_measurements.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ima_policy.sh",
+    src: "testcases/kernel/security/integrity/ima/tests/ima_policy.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ima_policy.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ima_setup.sh",
+    src: "testcases/kernel/security/integrity/ima/tests/ima_setup.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ima_setup.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ima_tpm.sh",
+    src: "testcases/kernel/security/integrity/ima/tests/ima_tpm.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ima_tpm.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ima_violations.sh",
+    src: "testcases/kernel/security/integrity/ima/tests/ima_violations.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ima_violations.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_initialize_if",
+    src: "testcases/network/stress/ns-tools/initialize_if",
+    sub_dir: "ltp/testcases/bin",
+    filename: "initialize_if",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ip_tests.sh",
+    src: "testcases/network/iproute/ip_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ip_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ipneigh01.sh",
+    src: "testcases/network/tcp_cmds/ipneigh/ipneigh01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ipneigh01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ipsec_lib.sh",
+    src: "testcases/network/stress/ipsec/ipsec_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ipsec_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_iptables_tests.sh",
+    src: "testcases/network/iptables/iptables_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "iptables_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ipvlan01.sh",
+    src: "testcases/network/virt/ipvlan01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ipvlan01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_isofs.sh",
+    src: "testcases/kernel/fs/iso9660/isofs.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "isofs.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_killall_icmp_traffic",
+    src: "testcases/network/stress/ns-tools/killall_icmp_traffic",
+    sub_dir: "ltp/testcases/bin",
+    filename: "killall_icmp_traffic",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_killall_tcp_traffic",
+    src: "testcases/network/stress/ns-tools/killall_tcp_traffic",
+    sub_dir: "ltp/testcases/bin",
+    filename: "killall_tcp_traffic",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_killall_udp_traffic",
+    src: "testcases/network/stress/ns-tools/killall_udp_traffic",
+    sub_dir: "ltp/testcases/bin",
+    filename: "killall_udp_traffic",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_libcgroup_freezer",
+    src: "testcases/kernel/controllers/freezer/libcgroup_freezer",
+    sub_dir: "ltp/testcases/bin",
+    filename: "libcgroup_freezer",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_linktest.sh",
+    src: "testcases/kernel/fs/linktest/linktest.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "linktest.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ln_tests.sh",
+    src: "testcases/commands/ln/ln_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ln_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_lock_torture.sh",
+    src: "testcases/kernel/device-drivers/locking/lock_torture.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "lock_torture.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ltpSockets.sh",
+    src: "testcases/network/sockets/ltpSockets.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ltpSockets.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macsec01.sh",
+    src: "testcases/network/virt/macsec01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macsec01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macsec02.sh",
+    src: "testcases/network/virt/macsec02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macsec02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macsec_lib.sh",
+    src: "testcases/network/virt/macsec_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macsec_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macvlan01.sh",
+    src: "testcases/network/virt/macvlan01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macvlan01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macvtap01.sh",
+    src: "testcases/network/virt/macvtap01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macvtap01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mc_cmds",
+    src: "testcases/network/multicast/mc_cmds/mc_cmds",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mc_cmds",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mc_commo",
+    src: "testcases/network/multicast/mc_commo/mc_commo",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mc_commo",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mc_member",
+    src: "testcases/network/multicast/mc_member/mc_member",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mc_member",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mc_opts",
+    src: "testcases/network/multicast/mc_opts/mc_opts",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mc_opts",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast-group-multiple-socket",
+    src: "testcases/network/stress/multicast/grp-operation/mcast-group-multiple-socket",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast-group-multiple-socket",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast-group-same-group",
+    src: "testcases/network/stress/multicast/grp-operation/mcast-group-same-group",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast-group-same-group",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast-group-single-socket",
+    src: "testcases/network/stress/multicast/grp-operation/mcast-group-single-socket",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast-group-single-socket",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast-group-source-filter",
+    src: "testcases/network/stress/multicast/grp-operation/mcast-group-source-filter",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast-group-source-filter",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast-lib.sh",
+    src: "testcases/network/stress/multicast/grp-operation/mcast-lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast-lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-pktfld01",
+    src: "testcases/network/stress/multicast/packet-flood/mcast4-pktfld01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-pktfld01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-pktfld02",
+    src: "testcases/network/stress/multicast/packet-flood/mcast4-pktfld02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-pktfld02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld01",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld02",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld03",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld04",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld05",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast4-queryfld06",
+    src: "testcases/network/stress/multicast/query-flood/mcast4-queryfld06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast4-queryfld06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-pktfld01",
+    src: "testcases/network/stress/multicast/packet-flood/mcast6-pktfld01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-pktfld01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-pktfld02",
+    src: "testcases/network/stress/multicast/packet-flood/mcast6-pktfld02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-pktfld02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld01",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld02",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld03",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld04",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld05",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mcast6-queryfld06",
+    src: "testcases/network/stress/multicast/query-flood/mcast6-queryfld06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mcast6-queryfld06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_control_test.sh",
+    src: "testcases/kernel/controllers/memcg/control/memcg_control_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_control_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_failcnt.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_failcnt.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_failcnt.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_force_empty.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_force_empty.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_force_empty.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_lib.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_limit_in_bytes.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_limit_in_bytes.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_limit_in_bytes.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_max_usage_in_bytes_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_max_usage_in_bytes_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_max_usage_in_bytes_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_memsw_limit_in_bytes_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_memsw_limit_in_bytes_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_memsw_limit_in_bytes_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_move_charge_at_immigrate_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_move_charge_at_immigrate_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_move_charge_at_immigrate_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_regression_test.sh",
+    src: "testcases/kernel/controllers/memcg/regression/memcg_regression_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_regression_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_stat_rss.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_stat_rss.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_stat_rss.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_stat_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_stat_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_stat_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_stress_test.sh",
+    src: "testcases/kernel/controllers/memcg/stress/memcg_stress_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_stress_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_subgroup_charge.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_subgroup_charge.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_subgroup_charge.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_test_4.sh",
+    src: "testcases/kernel/controllers/memcg/regression/memcg_test_4.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_test_4.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_usage_in_bytes_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_usage_in_bytes_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_usage_in_bytes_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_memcg_use_hierarchy_test.sh",
+    src: "testcases/kernel/controllers/memcg/functional/memcg_use_hierarchy_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "memcg_use_hierarchy_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mkdir_tests.sh",
+    src: "testcases/commands/mkdir/mkdir_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mkdir_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_modaltr.sh",
+    src: "testcases/kernel/fs/fs-bench/modaltr.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "modaltr.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mpls01.sh",
+    src: "testcases/network/mpls/mpls01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mpls01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mpls02.sh",
+    src: "testcases/network/mpls/mpls02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mpls02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mpls03.sh",
+    src: "testcases/network/mpls/mpls03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mpls03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mpls04.sh",
+    src: "testcases/network/mpls/mpls04.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mpls04.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_mpls_lib.sh",
+    src: "testcases/network/mpls/mpls_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "mpls_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_myfunctions-io.sh",
+    src: "testcases/kernel/controllers/io-throttle/myfunctions-io.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "myfunctions-io.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_myfunctions.sh",
+    src: "testcases/kernel/controllers/memctl/myfunctions.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "myfunctions.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_net_cmdlib.sh",
+    src: "testcases/lib/net_cmdlib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "net_cmdlib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_netstat01",
+    src: "testcases/network/tcp_cmds/netstat/netstat01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "netstat01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs01",
+    src: "testcases/network/nfs/nfs_stress/nfs01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs02",
+    src: "testcases/network/nfs/nfs_stress/nfs02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs03",
+    src: "testcases/network/nfs/nfs_stress/nfs03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs04",
+    src: "testcases/network/nfs/nfs_stress/nfs04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs05",
+    src: "testcases/network/nfs/nfs_stress/nfs05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs06",
+    src: "testcases/network/nfs/nfs_stress/nfs06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfs_lib.sh",
+    src: "testcases/network/nfs/nfs_stress/nfs_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfs_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfslock01",
+    src: "testcases/network/nfs/nfslock01/nfslock01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfslock01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_nfsstat01",
+    src: "testcases/network/nfs/nfsstat01/nfsstat01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "nfsstat01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ns-echoclient",
+    src: "testcases/network/stress/ns-tools/ns-echoclient",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ns-echoclient",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_numa01.sh",
+    src: "testcases/kernel/numa/numa01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "numa01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_output_ipsec_conf",
+    src: "testcases/network/stress/ns-tools/output_ipsec_conf",
+    sub_dir: "ltp/testcases/bin",
+    filename: "output_ipsec_conf",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_parameters.sh",
+    src: "testcases/kernel/controllers/cpuctl/parameters.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "parameters.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pids.sh",
+    src: "testcases/kernel/controllers/pids/pids.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pids.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ping01.sh",
+    src: "testcases/network/tcp_cmds/ping/ping01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ping01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ping02.sh",
+    src: "testcases/network/tcp_cmds/ping/ping02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ping02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pm_cpu_consolidation.py",
+    src: "testcases/kernel/power_management/pm_cpu_consolidation.py",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pm_cpu_consolidation.py",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pm_ilb_test.py",
+    src: "testcases/kernel/power_management/pm_ilb_test.py",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pm_ilb_test.py",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pm_include.sh",
+    src: "testcases/kernel/power_management/pm_include.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pm_include.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pm_sched_domain.py",
+    src: "testcases/kernel/power_management/pm_sched_domain.py",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pm_sched_domain.py",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_pm_sched_mc.py",
+    src: "testcases/kernel/power_management/lib/pm_sched_mc.py",
+    sub_dir: "ltp/testcases/bin",
+    filename: "pm_sched_mc.py",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_quota_remount_test01.sh",
+    src: "testcases/kernel/fs/quota_remount/quota_remount_test01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "quota_remount_test01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_rcp01",
+    src: "testcases/network/tcp_cmds/rcp/rcp01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "rcp01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_rcu_torture.sh",
+    src: "testcases/kernel/device-drivers/rcu/rcu_torture.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "rcu_torture.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_remove_password.sh",
+    src: "testcases/kernel/security/mmc_security/remove_password.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "remove_password.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_rlogin01",
+    src: "testcases/network/tcp_cmds/rlogin/rlogin01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "rlogin01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route4-change-dst",
+    src: "testcases/network/stress/route/route4-change-dst",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route4-change-dst",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route4-change-gw",
+    src: "testcases/network/stress/route/route4-change-gw",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route4-change-gw",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route4-change-if",
+    src: "testcases/network/stress/route/route4-change-if",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route4-change-if",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route4-redirect",
+    src: "testcases/network/stress/route/route4-redirect",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route4-redirect",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route4-rmmod",
+    src: "testcases/network/stress/route/route4-rmmod",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route4-rmmod",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route6-change-dst",
+    src: "testcases/network/stress/route/route6-change-dst",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route6-change-dst",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route6-change-gw",
+    src: "testcases/network/stress/route/route6-change-gw",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route6-change-gw",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route6-change-if",
+    src: "testcases/network/stress/route/route6-change-if",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route6-change-if",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route6-redirect",
+    src: "testcases/network/stress/route/route6-redirect",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route6-redirect",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_route6-rmmod",
+    src: "testcases/network/stress/route/route6-rmmod",
+    sub_dir: "ltp/testcases/bin",
+    filename: "route6-rmmod",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_rsh01",
+    src: "testcases/network/tcp_cmds/rsh/rsh01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "rsh01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_capbounds.sh",
+    src: "testcases/kernel/security/cap_bound/run_capbounds.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_capbounds.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_cpuctl_latency_test.sh",
+    src: "testcases/kernel/controllers/cpuctl/run_cpuctl_latency_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_cpuctl_latency_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_cpuctl_stress_test.sh",
+    src: "testcases/kernel/controllers/cpuctl/run_cpuctl_stress_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_cpuctl_stress_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_cpuctl_test.sh",
+    src: "testcases/kernel/controllers/cpuctl/run_cpuctl_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_cpuctl_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_cpuctl_test_fj.sh",
+    src: "testcases/kernel/controllers/cpuctl_fj/run_cpuctl_test_fj.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_cpuctl_test_fj.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_freezer.sh",
+    src: "testcases/kernel/controllers/freezer/run_freezer.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_freezer.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_io_throttle_test.sh",
+    src: "testcases/kernel/controllers/io-throttle/run_io_throttle_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_io_throttle_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_memctl_test.sh",
+    src: "testcases/kernel/controllers/memctl/run_memctl_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_memctl_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_pec_test",
+    src: "testcases/kernel/connectors/pec/run_pec_test",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_pec_test",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_run_sched_cliserv.sh",
+    src: "testcases/kernel/sched/clisrv/run_sched_cliserv.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "run_sched_cliserv.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests01.sh",
+    src: "testcases/kernel/power_management/runpwtests01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests02.sh",
+    src: "testcases/kernel/power_management/runpwtests02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests03.sh",
+    src: "testcases/kernel/power_management/runpwtests03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests04.sh",
+    src: "testcases/kernel/power_management/runpwtests04.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests04.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests05.sh",
+    src: "testcases/kernel/power_management/runpwtests05.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests05.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests06.sh",
+    src: "testcases/kernel/power_management/runpwtests06.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests06.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests_exclusive01.sh",
+    src: "testcases/kernel/power_management/runpwtests_exclusive01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests_exclusive01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests_exclusive02.sh",
+    src: "testcases/kernel/power_management/runpwtests_exclusive02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests_exclusive02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests_exclusive03.sh",
+    src: "testcases/kernel/power_management/runpwtests_exclusive03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests_exclusive03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests_exclusive04.sh",
+    src: "testcases/kernel/power_management/runpwtests_exclusive04.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests_exclusive04.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_runpwtests_exclusive05.sh",
+    src: "testcases/kernel/power_management/runpwtests_exclusive05.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "runpwtests_exclusive05.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_rwtest",
+    src: "testcases/kernel/fs/doio/rwtest",
+    sub_dir: "ltp/testcases/bin",
+    filename: "rwtest",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sched_stress.sh",
+    src: "testcases/kernel/sched/sched_stress/sched_stress.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sched_stress.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sctp01.sh",
+    src: "testcases/network/sctp/sctp01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sctp01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sctp_ipsec.sh",
+    src: "testcases/network/stress/sctp/sctp_ipsec.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sctp_ipsec.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sctp_ipsec_vti.sh",
+    src: "testcases/network/stress/sctp/sctp_ipsec_vti.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sctp_ipsec_vti.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sendfile01",
+    src: "testcases/network/tcp_cmds/sendfile/sendfile01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sendfile01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_set_ipv4addr",
+    src: "testcases/network/stress/ns-tools/set_ipv4addr",
+    sub_dir: "ltp/testcases/bin",
+    filename: "set_ipv4addr",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sit01.sh",
+    src: "testcases/network/virt/sit01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sit01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_common.sh",
+    src: "testcases/kernel/security/smack/smack_common.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_common.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_file_access.sh",
+    src: "testcases/kernel/security/smack/smack_file_access.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_file_access.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_ambient.sh",
+    src: "testcases/kernel/security/smack/smack_set_ambient.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_ambient.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_cipso.sh",
+    src: "testcases/kernel/security/smack/smack_set_cipso.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_cipso.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_current.sh",
+    src: "testcases/kernel/security/smack/smack_set_current.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_current.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_direct.sh",
+    src: "testcases/kernel/security/smack/smack_set_direct.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_direct.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_doi.sh",
+    src: "testcases/kernel/security/smack/smack_set_doi.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_doi.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_load.sh",
+    src: "testcases/kernel/security/smack/smack_set_load.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_load.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_netlabel.sh",
+    src: "testcases/kernel/security/smack/smack_set_netlabel.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_netlabel.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smack_set_onlycap.sh",
+    src: "testcases/kernel/security/smack/smack_set_onlycap.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smack_set_onlycap.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smt_smp_affinity.sh",
+    src: "testcases/kernel/sched/hyperthreading/ht_affinity/smt_smp_affinity.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smt_smp_affinity.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_smt_smp_enabled.sh",
+    src: "testcases/kernel/sched/hyperthreading/ht_enabled/smt_smp_enabled.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "smt_smp_enabled.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ssh-stress",
+    src: "testcases/network/stress/ssh/ssh-stress",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ssh-stress",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ssh-stress01-rmt",
+    src: "testcases/network/stress/ssh/ssh-stress01-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ssh-stress01-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ssh-stress02-rmt",
+    src: "testcases/network/stress/ssh/ssh-stress02-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ssh-stress02-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_ssh-stress03-rmt",
+    src: "testcases/network/stress/ssh/ssh-stress03-rmt",
+    sub_dir: "ltp/testcases/bin",
+    filename: "ssh-stress03-rmt",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_stop_freeze_sleep_thaw_cont.sh",
+    src: "testcases/kernel/controllers/freezer/stop_freeze_sleep_thaw_cont.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "stop_freeze_sleep_thaw_cont.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_stop_freeze_thaw_cont.sh",
+    src: "testcases/kernel/controllers/freezer/stop_freeze_thaw_cont.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "stop_freeze_thaw_cont.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_stress_floppy",
+    src: "testcases/kernel/io/stress_floppy/stress_floppy",
+    sub_dir: "ltp/testcases/bin",
+    filename: "stress_floppy",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_sysctl01.sh",
+    src: "testcases/commands/sysctl/sysctl01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "sysctl01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip01",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip02",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip03",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip04",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip05",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip06",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip07",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip08",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip09",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip10",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip11",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip12",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip13",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffip14",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp4-multi-diffip14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffip14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic01",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic02",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic03",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic04",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic05",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic06",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic07",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic08",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic09",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic10",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic11",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic12",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic13",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffnic14",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp4-multi-diffnic14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffnic14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport01",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport02",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport03",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport04",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport05",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport06",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport07",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport08",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport09",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport10",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport11",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport12",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport13",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-diffport14",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp4-multi-diffport14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-diffport14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport01",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport02",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport03",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport04",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport05",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport06",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport07",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport08",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport09",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport10",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport11",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport12",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport13",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-multi-sameport14",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp4-multi-sameport14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-multi-sameport14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic01",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic02",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic03",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic04",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic05",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic06",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic07",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic08",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic09",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic10",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic11",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic12",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic13",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-basic14",
+    src: "testcases/network/stress/tcp/uni-basic/tcp4-uni-basic14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-basic14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff01",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff02",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff03",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff04",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff05",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff06",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff07",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff08",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff09",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff10",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff11",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff12",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff13",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-dsackoff14",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp4-uni-dsackoff14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-dsackoff14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup01",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup02",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup03",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup04",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup05",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup06",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup07",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup08",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup09",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup10",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup11",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup12",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup13",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-pktlossdup14",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp4-uni-pktlossdup14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-pktlossdup14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff01",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff02",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff03",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff04",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff05",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff06",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff07",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff08",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff09",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff10",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff11",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff12",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff13",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-sackoff14",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp4-uni-sackoff14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-sackoff14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend01",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend02",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend03",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend04",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend05",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend06",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend07",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend08",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend09",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend10",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend11",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend12",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend13",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-smallsend14",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp4-uni-smallsend14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-smallsend14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso01",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso02",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso03",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso04",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso05",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso06",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso07",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso08",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso09",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso10",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso11",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso12",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso13",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-tso14",
+    src: "testcases/network/stress/tcp/uni-tso/tcp4-uni-tso14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-tso14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale01",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale02",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale03",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale04",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale05",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale06",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale07",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale08",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale09",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale10",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale11",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale12",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale13",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp4-uni-winscale14",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp4-uni-winscale14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp4-uni-winscale14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip01",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip02",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip03",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip04",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip05",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip06",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip07",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip08",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip09",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip10",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip11",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip12",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip13",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffip14",
+    src: "testcases/network/stress/tcp/multi-diffip/tcp6-multi-diffip14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffip14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic01",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic02",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic03",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic04",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic05",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic06",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic07",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic08",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic09",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic10",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic11",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic12",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic13",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffnic14",
+    src: "testcases/network/stress/tcp/multi-diffnic/tcp6-multi-diffnic14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffnic14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport01",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport02",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport03",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport04",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport05",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport06",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport07",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport08",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport09",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport10",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport11",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport12",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport13",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-diffport14",
+    src: "testcases/network/stress/tcp/multi-diffport/tcp6-multi-diffport14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-diffport14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport01",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport02",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport03",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport04",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport05",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport06",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport07",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport08",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport09",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport10",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport11",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport12",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport13",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-multi-sameport14",
+    src: "testcases/network/stress/tcp/multi-sameport/tcp6-multi-sameport14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-multi-sameport14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic01",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic02",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic03",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic04",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic05",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic06",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic07",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic08",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic09",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic10",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic11",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic12",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic13",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-basic14",
+    src: "testcases/network/stress/tcp/uni-basic/tcp6-uni-basic14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-basic14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff01",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff02",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff03",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff04",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff05",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff06",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff07",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff08",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff09",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff10",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff11",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff12",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff13",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-dsackoff14",
+    src: "testcases/network/stress/tcp/uni-dsackoff/tcp6-uni-dsackoff14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-dsackoff14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup01",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup02",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup03",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup04",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup05",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup06",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup07",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup08",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup09",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup10",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup11",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup12",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup13",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-pktlossdup14",
+    src: "testcases/network/stress/tcp/uni-pktlossdup/tcp6-uni-pktlossdup14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-pktlossdup14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff01",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff02",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff03",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff04",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff05",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff06",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff07",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff08",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff09",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff10",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff11",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff12",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff13",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-sackoff14",
+    src: "testcases/network/stress/tcp/uni-sackoff/tcp6-uni-sackoff14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-sackoff14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend01",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend02",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend03",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend04",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend05",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend06",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend07",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend08",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend09",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend10",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend11",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend12",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend13",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-smallsend14",
+    src: "testcases/network/stress/tcp/uni-smallsend/tcp6-uni-smallsend14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-smallsend14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso01",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso02",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso03",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso04",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso05",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso06",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso07",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso08",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso09",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso10",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso11",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso12",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso13",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-tso14",
+    src: "testcases/network/stress/tcp/uni-tso/tcp6-uni-tso14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-tso14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale01",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale02",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale03",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale04",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale05",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale06",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale07",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale08",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale08",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale08",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale09",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale09",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale09",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale10",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale10",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale10",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale11",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale11",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale11",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale12",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale12",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale12",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale13",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale13",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale13",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp6-uni-winscale14",
+    src: "testcases/network/stress/tcp/uni-winscale/tcp6-uni-winscale14",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp6-uni-winscale14",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp_cc_lib.sh",
+    src: "testcases/network/tcp_cc/tcp_cc_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp_cc_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp_fastopen_run.sh",
+    src: "testcases/network/tcp_fastopen/tcp_fastopen_run.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp_fastopen_run.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp_ipsec.sh",
+    src: "testcases/network/stress/tcp/tcp_ipsec.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp_ipsec.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcp_ipsec_vti.sh",
+    src: "testcases/network/stress/tcp/tcp_ipsec_vti.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcp_ipsec_vti.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tcpdump01",
+    src: "testcases/network/tcp_cmds/tcpdump/tcpdump01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tcpdump01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_telnet01",
+    src: "testcases/network/tcp_cmds/telnet/telnet01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "telnet01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_test.sh",
+    src: "testcases/lib/test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_test_controllers.sh",
+    src: "testcases/kernel/controllers/test_controllers.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "test_controllers.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_test_ioctl",
+    src: "testcases/kernel/syscalls/ioctl/test_ioctl",
+    sub_dir: "ltp/testcases/bin",
+    filename: "test_ioctl",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_test_robind.sh",
+    src: "testcases/kernel/fs/fs_readonly/test_robind.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "test_robind.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_testall.sh",
+    src: "testcases/kernel/security/tomoyo/testall.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "testall.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tracepath01.sh",
+    src: "testcases/network/tcp_cmds/tracepath/tracepath01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tracepath01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_traceroute01.sh",
+    src: "testcases/network/traceroute/traceroute01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "traceroute01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tst_ansi_color.sh",
+    src: "testcases/lib/tst_ansi_color.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tst_ansi_color.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tst_net.sh",
+    src: "testcases/lib/tst_net.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tst_net.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tst_net_stress.sh",
+    src: "testcases/network/stress/ns-tools/tst_net_stress.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tst_net_stress.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_tst_test.sh",
+    src: "testcases/lib/tst_test.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tst_test.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip01",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip02",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip03",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip04",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip05",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip06",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffip07",
+    src: "testcases/network/stress/udp/multi-diffip/udp4-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic01",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic02",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic03",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic04",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic05",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic06",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffnic07",
+    src: "testcases/network/stress/udp/multi-diffnic/udp4-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport01",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport02",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport03",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport04",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport05",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport06",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-multi-diffport07",
+    src: "testcases/network/stress/udp/multi-diffport/udp4-multi-diffport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-multi-diffport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic01",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic02",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic03",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic04",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic05",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic06",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp4-uni-basic07",
+    src: "testcases/network/stress/udp/uni-basic/udp4-uni-basic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp4-uni-basic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip01",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip02",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip03",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip04",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip05",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip06",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffip07",
+    src: "testcases/network/stress/udp/multi-diffip/udp6-multi-diffip07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffip07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic01",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic02",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic03",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic04",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic05",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic06",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffnic07",
+    src: "testcases/network/stress/udp/multi-diffnic/udp6-multi-diffnic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffnic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport01",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport02",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport03",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport04",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport05",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport06",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-multi-diffport07",
+    src: "testcases/network/stress/udp/multi-diffport/udp6-multi-diffport07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-multi-diffport07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic01",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic01",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic01",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic02",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic02",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic02",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic03",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic03",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic03",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic04",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic04",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic04",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic05",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic05",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic05",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic06",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic06",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic06",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp6-uni-basic07",
+    src: "testcases/network/stress/udp/uni-basic/udp6-uni-basic07",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp6-uni-basic07",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp_ipsec.sh",
+    src: "testcases/network/stress/udp/udp_ipsec.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp_ipsec.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_udp_ipsec_vti.sh",
+    src: "testcases/network/stress/udp/udp_ipsec_vti.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "udp_ipsec_vti.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_unshare01.sh",
+    src: "testcases/commands/unshare/unshare01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "unshare01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_unzip01.sh",
+    src: "testcases/commands/unzip/unzip01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "unzip01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_utimensat_tests.sh",
+    src: "testcases/kernel/syscalls/utimensat/utimensat_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "utimensat_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vfork_freeze.sh",
+    src: "testcases/kernel/controllers/freezer/vfork_freeze.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vfork_freeze.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_virt_lib.sh",
+    src: "testcases/network/virt/virt_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "virt_lib.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vlan01.sh",
+    src: "testcases/network/virt/vlan01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vlan01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vlan02.sh",
+    src: "testcases/network/virt/vlan02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vlan02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vlan03.sh",
+    src: "testcases/network/virt/vlan03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vlan03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vma05.sh",
+    src: "testcases/kernel/mem/vma/vma05.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vma05.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vxlan01.sh",
+    src: "testcases/network/virt/vxlan01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vxlan01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vxlan02.sh",
+    src: "testcases/network/virt/vxlan02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vxlan02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vxlan03.sh",
+    src: "testcases/network/virt/vxlan03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vxlan03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_write_freezing.sh",
+    src: "testcases/kernel/controllers/freezer/write_freezing.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "write_freezing.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_xinetd_tests.sh",
+    src: "testcases/network/xinetd/xinetd_tests.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "xinetd_tests.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_zram01.sh",
+    src: "testcases/kernel/device-drivers/zram/zram01.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "zram01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_zram02.sh",
+    src: "testcases/kernel/device-drivers/zram/zram02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "zram02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_zram_lib.sh",
+    src: "testcases/kernel/device-drivers/zram/zram_lib.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "zram_lib.sh",
+    compile_multilib: "both",
+}
+
 cc_test {
     name: "ltp_testsf_c",
     stem: "testsf_c",
