@@ -20,7 +20,7 @@
 TST_TESTFUNC="test"
 TST_SETUP_CALLER="$TST_SETUP"
 TST_SETUP="ima_setup"
-TST_CLEANUP="ima_cleanup"
+TST_CLEANUP="${TST_CLEANUP:-ima_cleanup}"
 TST_NEEDS_TMPDIR=1
 TST_NEEDS_ROOT=1
 
@@ -28,7 +28,7 @@ TST_NEEDS_ROOT=1
 
 SYSFS="/sys"
 UMOUNT=
-FS_TYPE="ext3"
+TST_FS_TYPE="ext3"
 
 mount_helper()
 {
@@ -53,15 +53,9 @@ mount_loop_device()
 {
 	local ret
 
-	tst_test_cmds mkfs.$FS_TYPE
-	tst_mkfs $FS_TYPE $TST_DEVICE
-	ROD_SILENT mkdir -p mntpoint
-	mount ${TST_DEVICE} mntpoint
-	ret=$?
-	if [ $ret -ne 0 ]; then
-		tst_brk TBROK "failed to mount device (mount exit = $ret)"
-	fi
-	cd mntpoint
+	tst_mkfs
+	tst_mount
+	cd $TST_MNTPOINT
 }
 
 print_ima_config()

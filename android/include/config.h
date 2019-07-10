@@ -353,6 +353,9 @@
 /* Define to 1 if you have __sync_add_and_fetch */
 #define HAVE_SYNC_ADD_AND_FETCH 1
 
+/* Define to 1 if you have the `sync_file_range' function. */
+#define HAVE_SYNC_FILE_RANGE 1
+
 /* Define to 1 if you have the <sys/acl.h> header file. */
 /* #undef HAVE_SYS_ACL_H */
 
