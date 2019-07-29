@@ -152,6 +152,42 @@ static inline struct timespec tst_timespec_add_us(struct timespec t,
 }
 
 /*
+ * Adds two timespec structures.
+ */
+static inline struct timespec tst_timespec_add(struct timespec t1,
+                                               struct timespec t2)
+{
+	struct timespec res;
+
+	res.tv_sec = t1.tv_sec + t2.tv_sec;
+	res.tv_nsec = t1.tv_nsec + t2.tv_nsec;
+
+	if (res.tv_nsec >= 1000000000) {
+		res.tv_sec++;
+		res.tv_nsec -= 1000000000;
+	}
+
+	return res;
+}
+
+/*
+ * Subtracts us microseconds from t.
+ */
+static inline struct timespec tst_timespec_sub_us(struct timespec t,
+                                                  long long us)
+{
+	t.tv_sec -= us / 1000000;
+	t.tv_nsec -= (us % 1000000) * 1000;
+
+	if (t.tv_nsec < 0) {
+		t.tv_sec--;
+		t.tv_nsec += 1000000000;
+	}
+
+	return t;
+}
+
+/*
  * Returns difference between two timespec structures.
  */
 static inline struct timespec tst_timespec_diff(struct timespec t1,
@@ -295,5 +331,10 @@ static inline long long tst_timer_elapsed_us(void)
 {
 	return tst_timespec_to_us(tst_timer_elapsed());
 }
+
+/*
+ * Returns a string containing given clock type name
+ */
+const char *tst_clock_name(clockid_t);
 
 #endif /* TST_TIMER */
