@@ -107,6 +107,7 @@ cc_library_static {
         "lib/safe_stdio.c",
         "lib/self_exec.c",
         "lib/tlibio.c",
+        "lib/tst_af_alg.c",
         "lib/tst_ansi_color.c",
         "lib/tst_checkpoint.c",
         "lib/tst_checksum.c",
@@ -121,6 +122,7 @@ cc_library_static {
         "lib/tst_fs_link_count.c",
         "lib/tst_fs_type.c",
         "lib/tst_get_bad_addr.c",
+        "lib/tst_kconfig.c",
         "lib/tst_kernel.c",
         "lib/tst_kvercmp.c",
         "lib/tst_mkfs.c",
@@ -146,6 +148,19 @@ cc_library_static {
         "lib/tst_timer_test.c",
         "lib/tst_tmpdir.c",
         "lib/tst_virt.c",
+        "lib/tst_wallclock.c",
+    ],
+}
+
+cc_library_static {
+    name: "libltp_ltpnuma",
+    defaults: ["ltp_defaults"],
+    local_include_dirs: [
+        "include",
+        "include/old",
+    ],
+    srcs: [
+        "libs/libltpnuma/tst_numa.c",
     ],
 }
 
@@ -302,6 +317,56 @@ cc_test {
     stem: "adjtimex02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/adjtimex/adjtimex02.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_af_alg01",
+    stem: "af_alg01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/crypto/af_alg01.c"],
+    cflags: ["-D_GNU_SOURCE"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_af_alg03",
+    stem: "af_alg03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/crypto/af_alg03.c"],
+    cflags: ["-D_GNU_SOURCE"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_af_alg04",
+    stem: "af_alg04",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/crypto/af_alg04.c"],
+    cflags: ["-D_GNU_SOURCE"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_af_alg05",
+    stem: "af_alg05",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/crypto/af_alg05.c"],
+    cflags: ["-D_GNU_SOURCE"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_af_alg06",
+    stem: "af_alg06",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/crypto/af_alg06.c"],
+    cflags: ["-D_GNU_SOURCE"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -942,6 +1007,24 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_clock_adjtime01",
+    stem: "clock_adjtime01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/clock_adjtime/clock_adjtime01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_clock_adjtime02",
+    stem: "clock_adjtime02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/clock_adjtime/clock_adjtime02.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_clock_getres01",
     stem: "clock_getres01",
     defaults: ["ltp_test_defaults"],
@@ -954,28 +1037,20 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_clock_gettime02",
-    stem: "clock_gettime02",
+    name: "ltp_clock_gettime01",
+    stem: "clock_gettime01",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/timers/clock_gettime/clock_gettime02.c"],
-    cflags: ["-D_GNU_SOURCE"],
-    local_include_dirs: [
-        "testcases/kernel/timers/include",
-        "include/old",
-    ],
+    srcs: ["testcases/kernel/syscalls/clock_gettime/clock_gettime01.c"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
 cc_test {
-    name: "ltp_clock_gettime03",
-    stem: "clock_gettime03",
+    name: "ltp_clock_gettime02",
+    stem: "clock_gettime02",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/timers/clock_gettime/clock_gettime03.c"],
-    cflags: ["-D_GNU_SOURCE"],
-    local_include_dirs: [
-        "testcases/kernel/timers/include",
-        "include/old",
-    ],
+    srcs: ["testcases/kernel/syscalls/clock_gettime/clock_gettime02.c"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
@@ -1007,28 +1082,20 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_clock_settime02",
-    stem: "clock_settime02",
+    name: "ltp_clock_settime01",
+    stem: "clock_settime01",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/timers/clock_settime/clock_settime02.c"],
-    cflags: ["-D_GNU_SOURCE"],
-    local_include_dirs: [
-        "testcases/kernel/timers/include",
-        "include/old",
-    ],
+    srcs: ["testcases/kernel/syscalls/clock_settime/clock_settime01.c"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
 cc_test {
-    name: "ltp_clock_settime03",
-    stem: "clock_settime03",
+    name: "ltp_clock_settime02",
+    stem: "clock_settime02",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/timers/clock_settime/clock_settime03.c"],
-    cflags: ["-D_GNU_SOURCE"],
-    local_include_dirs: [
-        "testcases/kernel/timers/include",
-        "include/old",
-    ],
+    srcs: ["testcases/kernel/syscalls/clock_settime/clock_settime02.c"],
+    local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
 
@@ -2669,6 +2736,24 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_fanotify12",
+    stem: "fanotify12",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fanotify/fanotify12.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fanotify_child",
+    stem: "fanotify_child",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fanotify/fanotify_child.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_fanout01",
     stem: "fanout01",
     defaults: ["ltp_test_defaults"],
@@ -4092,6 +4177,15 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_fdatasync03",
+    stem: "fdatasync03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fdatasync/fdatasync03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_fgetxattr01",
     stem: "fgetxattr01",
     defaults: ["ltp_test_defaults"],
@@ -4691,6 +4785,15 @@ cc_test {
     stem: "fsync03",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/fsync/fsync03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_fsync04",
+    stem: "fsync04",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/fsync/fsync04.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -6641,6 +6744,78 @@ cc_test {
     stem: "ioctl07",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/ioctl/ioctl07.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl08",
+    stem: "ioctl08",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl08.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns01",
+    stem: "ioctl_ns01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns02",
+    stem: "ioctl_ns02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns02.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns03",
+    stem: "ioctl_ns03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns04",
+    stem: "ioctl_ns04",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns04.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns05",
+    stem: "ioctl_ns05",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns05.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns06",
+    stem: "ioctl_ns06",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns06.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_ioctl_ns07",
+    stem: "ioctl_ns07",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/ioctl/ioctl_ns07.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -11037,15 +11212,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_readdir02",
-    stem: "readdir02",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/readdir/readdir02.c"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_readdir21",
     stem: "readdir21",
     defaults: ["ltp_test_defaults"],
@@ -12473,6 +12639,54 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_set_mempolicy01",
+    stem: "set_mempolicy01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/set_mempolicy/set_mempolicy01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: [
+        "libltp_ltp",
+        "libltp_ltpnuma",
+    ],
+}
+
+cc_test {
+    name: "ltp_set_mempolicy02",
+    stem: "set_mempolicy02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/set_mempolicy/set_mempolicy02.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: [
+        "libltp_ltp",
+        "libltp_ltpnuma",
+    ],
+}
+
+cc_test {
+    name: "ltp_set_mempolicy03",
+    stem: "set_mempolicy03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/set_mempolicy/set_mempolicy03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: [
+        "libltp_ltp",
+        "libltp_ltpnuma",
+    ],
+}
+
+cc_test {
+    name: "ltp_set_mempolicy04",
+    stem: "set_mempolicy04",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/set_mempolicy/set_mempolicy04.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: [
+        "libltp_ltp",
+        "libltp_ltpnuma",
+    ],
+}
+
+cc_test {
     name: "ltp_set_robust_list01",
     stem: "set_robust_list01",
     defaults: ["ltp_test_defaults"],
@@ -13644,6 +13858,15 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_setrlimit06",
+    stem: "setrlimit06",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/setrlimit/setrlimit06.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_setsid01",
     stem: "setsid01",
     defaults: ["ltp_test_defaults"],
@@ -14245,36 +14468,6 @@ cc_test {
 }
 
 cc_test {
-    name: "ltp_stat02",
-    stem: "stat02",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat02.c"],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/stat",
-        "testcases/kernel/syscalls/utils",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_stat02_64",
-    stem: "stat02_64",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat02.c"],
-    cflags: [
-        "-D_FILE_OFFSET_BITS=64",
-        "-DTST_USE_NEWER64_SYSCALL=1",
-    ],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/utils",
-        "testcases/kernel/syscalls/stat",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
     name: "ltp_stat03",
     stem: "stat03",
     defaults: ["ltp_test_defaults"],
@@ -14292,66 +14485,6 @@ cc_test {
     stem: "stat03_64",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/stat/stat03.c"],
-    cflags: [
-        "-D_FILE_OFFSET_BITS=64",
-        "-DTST_USE_NEWER64_SYSCALL=1",
-    ],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/utils",
-        "testcases/kernel/syscalls/stat",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_stat05",
-    stem: "stat05",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat05.c"],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/stat",
-        "testcases/kernel/syscalls/utils",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_stat05_64",
-    stem: "stat05_64",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat05.c"],
-    cflags: [
-        "-D_FILE_OFFSET_BITS=64",
-        "-DTST_USE_NEWER64_SYSCALL=1",
-    ],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/utils",
-        "testcases/kernel/syscalls/stat",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_stat06",
-    stem: "stat06",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat06.c"],
-    local_include_dirs: [
-        "testcases/kernel/syscalls/stat",
-        "testcases/kernel/syscalls/utils",
-        "include/old",
-    ],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_stat06_64",
-    stem: "stat06_64",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/stat/stat06.c"],
     cflags: [
         "-D_FILE_OFFSET_BITS=64",
         "-DTST_USE_NEWER64_SYSCALL=1",
@@ -14513,6 +14646,15 @@ cc_test {
     stem: "statx06",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/statx/statx06.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_statx07",
+    stem: "statx07",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/statx/statx07.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -14773,10 +14915,28 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_sync03",
+    stem: "sync03",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/sync/sync03.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_sync_file_range01",
     stem: "sync_file_range01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/sync_file_range/sync_file_range01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_sync_file_range02",
+    stem: "sync_file_range02",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/sync_file_range/sync_file_range02.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -15150,6 +15310,15 @@ cc_test {
     static_libs: ["libltp_ltp"],
 }
 
+cc_test {
+    name: "ltp_test_kconfig",
+    stem: "test_kconfig",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["lib/newlib_tests/test_kconfig.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
 sh_test {
     name: "ltp_testcases_bin_add_ipv6addr",
     src: "testcases/network/stress/ns-tools/add_ipv6addr",
@@ -15207,90 +15376,98 @@ sh_test {
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-checksum",
-    src: "testcases/network/stress/broken_ip/broken_ip4-checksum",
+    name: "ltp_testcases_bin_binfmt_misc01.sh",
+    src: "testcases/kernel/fs/binfmt_misc/binfmt_misc01.sh",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-checksum",
+    filename: "binfmt_misc01.sh",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-dstaddr",
-    src: "testcases/network/stress/broken_ip/broken_ip4-dstaddr",
+    name: "ltp_testcases_bin_binfmt_misc02.sh",
+    src: "testcases/kernel/fs/binfmt_misc/binfmt_misc02.sh",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-dstaddr",
+    filename: "binfmt_misc02.sh",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-fragment",
-    src: "testcases/network/stress/broken_ip/broken_ip4-fragment",
+    name: "ltp_testcases_bin_binfmt_misc_lib.sh",
+    src: "testcases/kernel/fs/binfmt_misc/binfmt_misc_lib.sh",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-fragment",
+    filename: "binfmt_misc_lib.sh",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-ihl",
-    src: "testcases/network/stress/broken_ip/broken_ip4-ihl",
+    name: "ltp_testcases_bin_broken_ip-checksum",
+    src: "testcases/network/stress/broken_ip/broken_ip-checksum",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-ihl",
+    filename: "broken_ip-checksum",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-protcol",
-    src: "testcases/network/stress/broken_ip/broken_ip4-protcol",
+    name: "ltp_testcases_bin_broken_ip-dstaddr",
+    src: "testcases/network/stress/broken_ip/broken_ip-dstaddr",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-protcol",
+    filename: "broken_ip-dstaddr",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-totlen",
-    src: "testcases/network/stress/broken_ip/broken_ip4-totlen",
+    name: "ltp_testcases_bin_broken_ip-fragment",
+    src: "testcases/network/stress/broken_ip/broken_ip-fragment",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-totlen",
+    filename: "broken_ip-fragment",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip4-version",
-    src: "testcases/network/stress/broken_ip/broken_ip4-version",
+    name: "ltp_testcases_bin_broken_ip-ihl",
+    src: "testcases/network/stress/broken_ip/broken_ip-ihl",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip4-version",
+    filename: "broken_ip-ihl",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip6-dstaddr",
-    src: "testcases/network/stress/broken_ip/broken_ip6-dstaddr",
+    name: "ltp_testcases_bin_broken_ip-nexthdr",
+    src: "testcases/network/stress/broken_ip/broken_ip-nexthdr",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip6-dstaddr",
+    filename: "broken_ip-nexthdr",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip6-nexthdr",
-    src: "testcases/network/stress/broken_ip/broken_ip6-nexthdr",
+    name: "ltp_testcases_bin_broken_ip-plen",
+    src: "testcases/network/stress/broken_ip/broken_ip-plen",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip6-nexthdr",
+    filename: "broken_ip-plen",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip6-plen",
-    src: "testcases/network/stress/broken_ip/broken_ip6-plen",
+    name: "ltp_testcases_bin_broken_ip-protcol",
+    src: "testcases/network/stress/broken_ip/broken_ip-protcol",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip6-plen",
+    filename: "broken_ip-protcol",
     compile_multilib: "both",
 }
 
 sh_test {
-    name: "ltp_testcases_bin_broken_ip6-version",
-    src: "testcases/network/stress/broken_ip/broken_ip6-version",
+    name: "ltp_testcases_bin_broken_ip-totlen",
+    src: "testcases/network/stress/broken_ip/broken_ip-totlen",
     sub_dir: "ltp/testcases/bin",
-    filename: "broken_ip6-version",
+    filename: "broken_ip-totlen",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_broken_ip-version",
+    src: "testcases/network/stress/broken_ip/broken_ip-version",
+    sub_dir: "ltp/testcases/bin",
+    filename: "broken_ip-version",
     compile_multilib: "both",
 }
 
@@ -16783,6 +16960,14 @@ sh_test {
 }
 
 sh_test {
+    name: "ltp_testcases_bin_geneve02.sh",
+    src: "testcases/network/virt/geneve02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "geneve02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
     name: "ltp_testcases_bin_get_ifname",
     src: "testcases/network/stress/ns-tools/get_ifname",
     sub_dir: "ltp/testcases/bin",
@@ -16795,6 +16980,14 @@ sh_test {
     src: "testcases/network/virt/gre01.sh",
     sub_dir: "ltp/testcases/bin",
     filename: "gre01.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_gre02.sh",
+    src: "testcases/network/virt/gre02.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "gre02.sh",
     compile_multilib: "both",
 }
 
@@ -17307,6 +17500,14 @@ sh_test {
     src: "testcases/network/virt/macsec02.sh",
     sub_dir: "ltp/testcases/bin",
     filename: "macsec02.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_macsec03.sh",
+    src: "testcases/network/virt/macsec03.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "macsec03.sh",
     compile_multilib: "both",
 }
 
@@ -21031,6 +21232,14 @@ sh_test {
 }
 
 sh_test {
+    name: "ltp_testcases_bin_tst_security.sh",
+    src: "testcases/lib/tst_security.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "tst_security.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
     name: "ltp_testcases_bin_tst_test.sh",
     src: "testcases/lib/tst_test.sh",
     sub_dir: "ltp/testcases/bin",
@@ -21595,6 +21804,14 @@ sh_test {
     src: "testcases/network/virt/vxlan03.sh",
     sub_dir: "ltp/testcases/bin",
     filename: "vxlan03.sh",
+    compile_multilib: "both",
+}
+
+sh_test {
+    name: "ltp_testcases_bin_vxlan04.sh",
+    src: "testcases/network/virt/vxlan04.sh",
+    sub_dir: "ltp/testcases/bin",
+    filename: "vxlan04.sh",
     compile_multilib: "both",
 }
 
@@ -22223,7 +22440,7 @@ cc_test {
     name: "ltp_tst_checkpoint",
     stem: "tst_checkpoint",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/lib/tst_checkpoint.c"],
+    srcs: ["lib/tests/tst_checkpoint.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -22286,7 +22503,7 @@ cc_test {
     name: "ltp_tst_device",
     stem: "tst_device",
     defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/lib/tst_device.c"],
+    srcs: ["lib/tests/tst_device.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -22579,6 +22796,15 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_umip_basic_test",
+    stem: "umip_basic_test",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/security/umip/umip_basic_test.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_umount01",
     stem: "umount01",
     defaults: ["ltp_test_defaults"],
@@ -22724,6 +22950,15 @@ cc_test {
 }
 
 cc_test {
+    name: "ltp_userfaultfd01",
+    stem: "userfaultfd01",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["testcases/kernel/syscalls/userfaultfd/userfaultfd01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
     name: "ltp_ustat01",
     stem: "ustat01",
     defaults: ["ltp_test_defaults"],
@@ -22809,6 +23044,15 @@ cc_test {
     stem: "utimes01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/utimes/utimes01.c"],
+    local_include_dirs: ["include/old"],
+    static_libs: ["libltp_ltp"],
+}
+
+cc_test {
+    name: "ltp_variant",
+    stem: "variant",
+    defaults: ["ltp_test_defaults"],
+    srcs: ["lib/newlib_tests/variant.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
