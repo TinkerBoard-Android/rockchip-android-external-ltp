@@ -24,3 +24,5 @@ test19
 tst_expiration_timer
 test_exec
 test_exec_child
+test_kconfig
+variant

@@ -221,7 +221,7 @@ pid_t safe_getpgid(const char *file, const int lineno, pid_t pid);
 	({int tst_ret_ = ioctl(fd, request, ##__VA_ARGS__);  \
 	  tst_ret_ < 0 ?                                     \
 	   tst_brk(TBROK | TERRNO,                           \
-	            "ioctl(%i,%s,...) failed", fd, #request) \
+	            "ioctl(%i,%s,...) failed", fd, #request), 0 \
 	 : tst_ret_;})
 
 #define SAFE_FCNTL(fd, cmd, ...)                            \
@@ -525,5 +525,8 @@ int safe_personality(const char *filename, unsigned int lineno,
 			name, value, overwrite);		\
 	}							\
 	} while (0)
+
+void safe_unshare(const char *file, const int lineno, int flags);
+#define SAFE_UNSHARE(flags) safe_unshare(__FILE__, __LINE__, (flags))
 
 #endif /* SAFE_MACROS_H__ */
