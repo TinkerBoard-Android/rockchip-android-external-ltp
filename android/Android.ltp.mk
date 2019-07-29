@@ -73,6 +73,14 @@ module_prebuilt := testcases/data/ext4-ffsb/ffsb-config7
 module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config7
 include $(ltp_build_prebuilt)
 
+module_prebuilt := testcases/data/binfmt_misc02/file.extension
+module_src_files := testcases/kernel/fs/binfmt_misc/datafiles/file.extension
+include $(ltp_build_prebuilt)
+
+module_prebuilt := testcases/data/binfmt_misc02/file.magic
+module_src_files := testcases/kernel/fs/binfmt_misc/datafiles/file.magic
+include $(ltp_build_prebuilt)
+
 module_prebuilt := testcases/data/ar01/file1.in
 module_src_files := testcases/commands/ar/datafiles/file1.in
 include $(ltp_build_prebuilt)
@@ -174,11 +182,11 @@ module_src_files := testcases/commands/ld/datafiles/main.c
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/ima_policy/measure.policy
-module_src_files := testcases/kernel/security/integrity/ima/policy/measure.policy
+module_src_files := testcases/kernel/security/integrity/ima/datafiles/measure.policy
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/ima_policy/measure.policy-invalid
-module_src_files := testcases/kernel/security/integrity/ima/policy/measure.policy-invalid
+module_src_files := testcases/kernel/security/integrity/ima/datafiles/measure.policy-invalid
 include $(ltp_build_prebuilt)
 
 module_prebuilt := testcases/data/ld01/rd1.c
