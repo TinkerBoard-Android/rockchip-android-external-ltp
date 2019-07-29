@@ -74,10 +74,19 @@ chroot02 chroot02
 chroot03 chroot03
 chroot04 chroot04
 
+clock_adjtime01 clock_adjtime01
+clock_adjtime02 clock_adjtime02
+
 clock_getres01 clock_getres01
 clock_nanosleep01 clock_nanosleep01
 clock_nanosleep02 clock_nanosleep02
 clock_nanosleep2_01 clock_nanosleep2_01
+
+clock_gettime01 clock_gettime01
+clock_gettime02 clock_gettime02
+
+clock_settime01 clock_settime01
+clock_settime02 clock_settime02
 
 clone01 clone01
 clone02 clone02
@@ -288,6 +297,7 @@ fcntl36_64 fcntl36_64
 
 fdatasync01 fdatasync01
 fdatasync02 fdatasync02
+fdatasync03 fdatasync03
 
 fgetxattr01 fgetxattr01
 fgetxattr02 fgetxattr02
@@ -344,6 +354,7 @@ fstatfs02_64 fstatfs02_64
 fsync01 fsync01
 fsync02 fsync02
 fsync03 fsync03
+fsync04 fsync04
 
 ftruncate01 ftruncate01
 ftruncate01_64 ftruncate01_64
@@ -491,6 +502,15 @@ ioctl05      ioctl05
 ioctl06      ioctl06
 
 ioctl07      ioctl07
+ioctl08      ioctl08
+
+ioctl_ns01 ioctl_ns01
+ioctl_ns02 ioctl_ns02
+ioctl_ns03 ioctl_ns03
+ioctl_ns04 ioctl_ns04
+ioctl_ns05 ioctl_ns05
+ioctl_ns06 ioctl_ns06
+ioctl_ns07 ioctl_ns07
 
 inotify_init1_01 inotify_init1_01
 inotify_init1_02 inotify_init1_02
@@ -516,6 +536,7 @@ fanotify08 fanotify08
 fanotify09 fanotify09
 fanotify10 fanotify10
 fanotify11 fanotify11
+fanotify12 fanotify12
 
 ioperm01 ioperm01
 ioperm02 ioperm02
@@ -924,7 +945,6 @@ readahead01 readahead01
 readahead02 readahead02
 
 readdir01 readdir01
-readdir02 readdir02
 readdir21 readdir21
 
 readlink01A symlink01 -T readlink01
@@ -1218,6 +1238,7 @@ setrlimit02 setrlimit02
 setrlimit03 setrlimit03
 setrlimit04 setrlimit04
 setrlimit05 setrlimit05
+setrlimit06 setrlimit06
 
 set_robust_list01 set_robust_list01
 set_thread_area01 set_thread_area01
@@ -1293,6 +1314,7 @@ sigsuspend01 sigsuspend01
 
 sigtimedwait01 sigtimedwait01
 
+sigwait01 sigwait01
 sigwaitinfo01 sigwaitinfo01
 
 socket01 socket01
@@ -1321,16 +1343,10 @@ ssetmask01 ssetmask01
 
 stat01 stat01
 stat01_64 stat01_64
-stat02 stat02
-stat02_64 stat02_64
 stat03 stat03
 stat03_64 stat03_64
 stat04 symlink01 -T stat04
 stat04_64 symlink01 -T stat04_64
-stat05 stat05
-stat05_64 stat05_64
-stat06 stat06
-stat06_64 stat06_64
 
 statfs01 statfs01
 statfs01_64 statfs01_64
@@ -1368,11 +1384,15 @@ symlinkat01 symlinkat01
 
 sync01 sync01
 sync02 sync02
+sync03 sync03
+
+syncfs01 syncfs01
 
 syncfs01 syncfs01
 
 #testcases for sync_file_range
 sync_file_range01 sync_file_range01
+sync_file_range02 sync_file_range02
 
 syscall01 syscall01
 
@@ -1474,6 +1494,8 @@ umount2_01 umount2_01
 umount2_02 umount2_02
 umount2_03 umount2_03
 
+userfaultfd01 userfaultfd01
+
 ustat01 ustat01
 ustat02 ustat02
 
@@ -1563,5 +1585,6 @@ statx03 statx03
 statx04 statx04
 statx05 statx05
 statx06 statx06
+statx07 statx07
 
 membarrier01 membarrier01

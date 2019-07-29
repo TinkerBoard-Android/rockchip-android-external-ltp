@@ -59,6 +59,14 @@ tst_net_setup()
 {
 	tst_net_remote_tmpdir
 	[ -n "$TST_SETUP_CALLER" ] && $TST_SETUP_CALLER
+
+	if [ -z "$NS_ICMP_SENDER_DATA_MAXSIZE" ]; then
+		if [ "$TST_IPV6" ]; then
+			NS_ICMP_SENDER_DATA_MAXSIZE="$NS_ICMPV6_SENDER_DATA_MAXSIZE"
+		else
+			NS_ICMP_SENDER_DATA_MAXSIZE="$NS_ICMPV4_SENDER_DATA_MAXSIZE"
+		fi
+	fi
 }
 
 [ -n "$TST_USE_LEGACY_API" ] && . test.sh || . tst_test.sh
@@ -573,7 +581,7 @@ tst_netload()
 	[ "$setup_srchost" = 1 ] && s_opts="${s_opts}-S $hostopt "
 
 	local expect_ret=0
-	[ "$expect_res" != "pass" ] && expect_ret=1
+	[ "$expect_res" != "pass" ] && expect_ret=3
 
 	tst_rhost_run -c "pkill -9 netstress\$"
 	s_opts="${cs_opts}${s_opts}-R $s_replies -B $TST_TMPDIR"
@@ -590,25 +598,36 @@ tst_netload()
 	c_opts="${cs_opts}${c_opts}-a $c_num -r $c_requests -d $rfile -g $port"
 
 	tst_res_ TINFO "run client 'netstress -l $c_opts'"
-	netstress -l $c_opts > tst_netload.log 2>&1 || ret=1
+	netstress -l $c_opts > tst_netload.log 2>&1 || ret=$?
 	tst_rhost_run -c "pkill -9 netstress\$"
 
-	if [ "$expect_ret" -ne "$ret" ]; then
-		tst_dump_rhost_cmd
-		cat tst_netload.log
-		tst_brk_ TFAIL "expected '$expect_res' but ret: '$ret'"
+	if [ "$expect_ret" -ne 0 ]; then
+		if [ $((ret & expect_ret)) -ne 0 ]; then
+			tst_res_ TPASS "netstress failed as expected"
+		else
+			tst_res_ TFAIL "expected '$expect_res' but ret: '$ret'"
+		fi
+		return $ret
 	fi
 
-	if [ "$ret" -eq 0 ]; then
-		if [ ! -f $rfile ]; then
-			tst_dump_rhost_cmd
-			cat tst_netload.log
-			tst_brk_ TFAIL "can't read $rfile"
-		fi
-		tst_res_ TPASS "netstress passed, time spent '$(cat $rfile)' ms"
-	else
-		tst_res_ TPASS "netstress failed as expected"
+	if [ "$ret" -ne 0 ]; then
+		tst_dump_rhost_cmd
+		cat tst_netload.log
+		[ $((ret & 3)) -ne 0 ] && \
+			tst_brk_ TFAIL "expected '$expect_res' but ret: '$ret'"
+		[ $((ret & 32)) -ne 0 ] && \
+			tst_brk_ TCONF "not supported configuration"
+		[ $((ret & 4)) -ne 0 ] && \
+			tst_res_ TWARN "netstress has warnings"
 	fi
+
+	if [ ! -f $rfile ]; then
+		tst_dump_rhost_cmd
+		cat tst_netload.log
+		tst_brk_ TFAIL "can't read $rfile"
+	fi
+
+	tst_res_ TPASS "netstress passed, time spent '$(cat $rfile)' ms"
 
 	return $ret
 }
@@ -658,7 +677,6 @@ tst_icmp()
 	local opts=
 	local num=
 	local ret=0
-	local ver="${TST_IPV6:-4}"
 
 	OPTIND=0
 	while getopts :t:s: opt; do
@@ -678,12 +696,12 @@ tst_icmp()
 	opts="${opts}-M $(tst_hwaddr rhost) -t $timeout"
 
 	for size in $msg_sizes; do
-		ns-icmpv${ver}_sender -s $size $opts
+		ns-icmpv${TST_IPVER}_sender -s $size $opts
 		ret=$?
 		if [ $ret -eq 0 ]; then
-			tst_res_ TPASS "'ns-icmpv${ver}_sender -s $size $opts' pass"
+			tst_res_ TPASS "'ns-icmpv${TST_IPVER}_sender -s $size $opts' pass"
 		else
-			tst_res_ TFAIL "'ns-icmpv${ver}_sender -s $size $opts' fail"
+			tst_res_ TFAIL "'ns-icmpv${TST_IPVER}_sender -s $size $opts' fail"
 			break
 		fi
 	done
@@ -708,6 +726,13 @@ tst_set_sysctl()
 tst_cleanup_rhost()
 {
 	tst_rhost_run -c "rm -rf $TST_TMPDIR"
+}
+
+tst_default_max_pkt()
+{
+	local mtu="$(cat /sys/class/net/$(tst_iface)/mtu)"
+
+	echo "$((mtu + mtu / 10))"
 }
 
 # Management Link
@@ -797,10 +822,14 @@ export MCASTNUM_HEAVY="${MCASTNUM_HEAVY:-4000}"
 # want to use more ifaces.
 export LHOST_IFACES="${LHOST_IFACES:-eth0}"
 export RHOST_IFACES="${RHOST_IFACES:-eth0}"
-
+# Maximum payload size for 'virt' performance tests, by default eqauls to 1.1 * MTU
+export TST_NET_MAX_PKT="${TST_NET_MAX_PKT:-$(tst_default_max_pkt)}"
 # Set corresponding HW addresses, e.g. "00:00:00:00:00:01 00:00:00:00:00:02"
 export LHOST_HWADDRS="${LHOST_HWADDRS:-$(tst_get_hwaddrs lhost)}"
 export RHOST_HWADDRS="${RHOST_HWADDRS:-$(tst_get_hwaddrs rhost)}"
+
+export NS_ICMPV4_SENDER_DATA_MAXSIZE=1472
+export NS_ICMPV6_SENDER_DATA_MAXSIZE=1452
 
 # More information about network parameters can be found
 # in the following document: testcases/network/stress/README
