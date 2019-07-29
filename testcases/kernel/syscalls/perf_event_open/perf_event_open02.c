@@ -82,7 +82,6 @@ int TST_TOTAL = 1;
 #define MAX_CTRS	1000
 #define LOOPS		100000000
 
-static int count_hardware_counters(void);
 static void setup(void);
 static void verify(void);
 static void cleanup(void);
@@ -142,6 +141,7 @@ struct read_format {
 	unsigned long long time_running;
 };
 
+#ifndef __s390__
 static int count_hardware_counters(void)
 {
 	struct perf_event_attr hw_event;
@@ -215,6 +215,7 @@ static int count_hardware_counters(void)
 
 	return hwctrs;
 }
+#endif
 
 static void setup(void)
 {
@@ -233,8 +234,19 @@ static void setup(void)
 
 	TEST_PAUSE;
 
+#ifdef __s390__
+	/*
+	 * On s390 the "time_enabled" and "time_running" values are always the
+	 * same, therefore count_hardware_counters() does not work.
+	 *
+	 * There are distinct/dedicated counters that can be used independently.
+	 * Use the dedicated counter for instructions here.
+	 */
+	n = nhw = 1;
+#else
 	nhw = count_hardware_counters();
 	n = nhw + 4;
+#endif
 
 	memset(&hw_event, 0, sizeof(struct perf_event_attr));
 	memset(&tsk_event, 0, sizeof(struct perf_event_attr));
@@ -256,9 +268,20 @@ static void setup(void)
 		tsk_event.disabled = 0;
 		for (i = 0; i < n; ++i) {
 			hwfd[i] = perf_event_open(&hw_event, 0, -1, -1, 0);
-			tskfd[i] = perf_event_open(&tsk_event, 0, -1,
-						   hwfd[i], 0);
-			if (tskfd[i] == -1 || hwfd[i] == -1) {
+			if (hwfd[i] == -1) {
+				if (errno == ENOENT || errno == ENODEV) {
+					tst_brkm(TCONF | TERRNO, cleanup,
+						"PERF_COUNT_HW_INSTRUCTIONS not supported");
+				}
+				tst_brkm(TBROK | TERRNO, cleanup,
+					 "perf_event_open failed");
+			}
+			tskfd[i] = perf_event_open(&tsk_event, 0, -1, hwfd[i], 0);
+			if (tskfd[i] == -1) {
+				if (errno == ENOENT || errno == ENODEV) {
+					tst_brkm(TCONF | TERRNO, cleanup,
+						"PERF_COUNT_SW_TASK_CLOCK not supported");
+				}
 				tst_brkm(TBROK | TERRNO, cleanup,
 					 "perf_event_open failed");
 			}

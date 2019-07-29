@@ -1033,6 +1033,16 @@ results in 'umount(2)' failing with 'EBUSY'.
 IMPORTANT: All testcases should use 'tst_umount()' instead of 'umount(2)' to
            umount filesystems.
 
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+unsigned long tst_dev_bytes_written(const char *dev);
+-------------------------------------------------------------------------------
+
+This function reads test block device stat file (/sys/block/<device>/stat) and
+returns the bytes written since the last invocation of this function.
+
 2.2.15 Formatting a device with a filesystem
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1141,6 +1151,24 @@ int tst_dir_is_empty(const char *dir, int verbose);
 Returns non-zero if directory is empty and zero otherwise.
 
 Directory is considered empty if it contains only '.' and '..'.
+
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+int tst_fill_fd(int fd, char pattern, size_t bs, size_t bcount);
+-------------------------------------------------------------------------------
+
+Fill a file with specified pattern using file descriptor.
+
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+int tst_fill_file(const char *path, char pattern, size_t bs, size_t bcount);
+-------------------------------------------------------------------------------
+
+Creates/ovewrites a file with specified pattern using file path.
 
 2.2.18 Getting an unused PID number
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1442,7 +1470,7 @@ setup(). The function will generate a TCONF if the requested flags are not
 fully supported on the running kernel, and TBROK if either a zero mask was
 supplied or if the kernel is already tainted before executing the test.
 
-Then you can call tst_taint_check() during run(), which returns 0 or the 
+Then you can call tst_taint_check() during run(), which returns 0 or the
 tainted flags set in /proc/sys/kernel/tainted as specified earlier.
 
 Depending on your kernel version, not all tainted-flags will be supported.
@@ -1503,6 +1531,142 @@ static struct tst_test test = {
 	.setup = setup,
 	.save_restore = save_restore,
 };
+
+2.2.28 Parsing kernel .config
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Generally testcases should attempt to autodetect as much kernel features as
+possible based on the currently running kernel. We do have tst_check_driver()
+to check if functionality that could be compiled as kernel module is present
+on the system, disabled syscalls can be detected by checking for 'ENOSYS'
+errno etc.
+
+However in rare cases core kernel features couldn't be detected based on the
+kernel userspace API and we have to resort to kernel .config parsing.
+
+For this cases the test should set the 'NULL' terminated needs_kconfig array
+of kernel config options required for the test. The config option can be
+specified either as plain "CONFIG_FOO" in which case it's sufficient for the
+test continue if it's set to any value (typically =y or =m). Or with a value
+as "CONFIG_FOO=bar" in which case the value has to match as well. The test is
+aborted with 'TCONF' if any of the required options were not set.
+
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+static const char *kconfigs[] = {
+	"CONFIG_X86_INTEL_UMIP",
+	NULL
+};
+
+static struct tst_test test = {
+	...
+	.needs_kconfigs = kconfigs,
+	...
+};
+-------------------------------------------------------------------------------
+
+2.2.29 Changing the Wall Clock Time during test execution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are some tests that, for different reasons, might need to change the
+system-wide clock time. Whenever this happens, it is imperative that the clock
+is restored, at the end of test's execution, taking in consideration the amount
+of time elapsed during that test.
+
+In order for that to happen, struct tst_test has a variable called
+"restore_wallclock" that should be set to "1" so LTP knows it should: (1)
+initialize a monotonic clock during test setup phase and (2) use that monotonic
+clock to fix the system-wide clock time at the test cleanup phase.
+
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+static void setup(void)
+{
+	...
+}
+
+static void run(void)
+{
+	...
+}
+
+sturct tst_test test = {
+	...
+	.setup = setup,
+	.test_all = run,
+	.restore_wallclock = 1,
+	...
+};
+-------------------------------------------------------------------------------
+
+2.2.29 Testing similar syscalls in one test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases kernel has several very similar syscalls that do either the same
+or very similar job. This is most noticeable on i386 where we commonly have
+two or three syscall versions. That is because i386 was first platform that
+Linux was developed on and because of that most mistakes in API happened there
+as well. However this is not limited to i386 at all, it's quite common that
+version two syscall has added missing flags parameters or so.
+
+In such cases it does not make much sense to copy&paste the test code over and
+over, rather than that the test library provides support for test variants.
+The idea behind test variants is simple, we run the test several times each
+time with different syscall variant.
+
+The implementation consist of test_variant integer that, if set, denotes number
+of test variants. The test is then forked and executed test_variant times each
+time with different value in global tst_variant variable.
+
+[source,c]
+-------------------------------------------------------------------------------
+#include "tst_test.h"
+
+static int do_foo(void)
+{
+	switch (tst_variant) {
+	case 0:
+		return foo();
+	case 1:
+		return syscall(__NR_foo);
+	}
+
+	return -1;
+}
+
+static void run(void)
+{
+	...
+
+	TEST(do_foo);
+
+	...
+}
+
+static void setup(void)
+{
+	switch (tst_variant) {
+	case 0:
+		tst_res(TINFO, "Testing foo variant 1");
+	break;
+	case 1:
+		tst_res(TINFO, "Testing foo variant 2");
+	break;
+	}
+}
+
+sturct tst_test test = {
+	...
+	.setup = setup,
+	.test_all = run,
+	.test_variants = 2,
+	...
+};
+-------------------------------------------------------------------------------
 
 
 2.3 Writing a testcase in shell
@@ -1934,43 +2098,29 @@ The 'tst_mkfs' helper will format device with the filesystem.
 -------------------------------------------------------------------------------
 # format test device with ext2
 tst_mkfs ext2 $TST_DEVICE
+# default params are $TST_FS_TYPE $TST_DEVICE
+tst_mkfs
+# optional parameters
+tst_mkfs ext4 /dev/device -T largefile
 -------------------------------------------------------------------------------
 
-Umounting filesystems
-+++++++++++++++++++++
+Mounting and unmounting filesystems
++++++++++++++++++++++++++++++++++++
 
-The 'tst_umount' helper is a safe way to umount a filesystem.
+The 'tst_mount' and 'tst_umount' helpers are a safe way to mount/umount
+a filesystem.
 
-If the path passed to the function is not mounted (present in '/proc/mounts')
+The 'tst_mount' mounts '$TST_DEVICE' of '$TST_FS_TYPE' (optional) to
+'$TST_MNTPOINT' (defaults to mntpoint), optionally using the
+'$TST_MNT_PARAMS'. The '$TST_MNTPOINT' directory is created if it didn't
+exist prior to the function call.
+
+If the path passed to the 'tst_umount' is not mounted (present in '/proc/mounts')
 it's noop.
-
 Otherwise it retries to umount the filesystem a few times on a failure, which
 is a workaround since there are a daemons dumb enough to probe all newly
 mounted filesystems, which prevents them from umounting shortly after they
 were mounted.
-
-Running commands as different user with 'su'
-++++++++++++++++++++++++++++++++++++++++++++
-
-While some distributions retain paths added to +$PATH+ when doing
-+su user -c "command"+ this does not work at least in Debian. If you want to
-run LTP binaries as a different user you must use 'tst_su' instead which sets
-up +$PATH+ and the runs the command.
-
-.Run test child binary as a test user
-[source,sh]
--------------------------------------------------------------------------------
-#!/bin/sh
-TCID=foo01
-. test.sh
-
-tst_su testusr foo01_child
-if [ $? -ne 0 ]; then
-	tst_resm TFAIL "foo failed"
-else
-	tst_resm TPASS "foo passed"
-fi
--------------------------------------------------------------------------------
 
 ROD and ROD_SILENT
 ++++++++++++++++++

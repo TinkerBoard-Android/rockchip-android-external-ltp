@@ -88,7 +88,8 @@ static char *server_addr	= "localhost";
 static char *source_addr;
 static char *server_bg;
 static int busy_poll		= -1;
-static int max_etime_cnt = 12; /* ~30 sec max timeout if no connection */
+static int max_etime_cnt = 21; /* ~60 sec max timeout if no connection */
+static int max_eshutdown_cnt = 10;
 static int max_pmtu_err = 10;
 
 enum {
@@ -142,11 +143,13 @@ struct sock_info {
 	socklen_t raddr_len;
 	int etime_cnt;
 	int pmtu_err_cnt;
+	int eshutdown_cnt;
 	int timeout;
 };
 
 static char *zcopy;
 static int send_flags = MSG_NOSIGNAL;
+static char *reuse_port;
 
 static void init_socket_opts(int sd)
 {
@@ -286,14 +289,22 @@ static int client_recv(char *buf, int srv_msg_len, struct sock_info *i)
 		return 0;
 	}
 
-	if (errno == ETIME && sock_type != SOCK_STREAM) {
-		if (++(i->etime_cnt) > max_etime_cnt)
-			tst_brk(TFAIL, "client requests timeout %d times, last timeout %dms",
-				i->etime_cnt, i->timeout);
-		/* Increase timeout in poll up to 3.2 sec */
-		if (i->timeout < 3000)
-			i->timeout <<= 1;
-		return 0;
+	if (sock_type != SOCK_STREAM) {
+		if (errno == ETIME) {
+			if (++(i->etime_cnt) > max_etime_cnt)
+				tst_brk(TFAIL, "client requests timeout %d times, last timeout %dms",
+					i->etime_cnt, i->timeout);
+			/* Increase timeout in poll up to 3.2 sec */
+			if (i->timeout < 3000)
+				i->timeout <<= 1;
+			return 0;
+		}
+		if (errno == ESHUTDOWN) {
+			if (++(i->eshutdown_cnt) > max_eshutdown_cnt)
+				tst_brk(TFAIL, "too many zero-length msgs");
+			tst_res(TINFO, "%d-length msg on sock %d", len, i->fd);
+			return 0;
+		}
 	}
 
 	SAFE_CLOSE(i->fd);
@@ -308,6 +319,8 @@ static void bind_before_connect(int sd)
 
 	if (bind_no_port)
 		SAFE_SETSOCKOPT_INT(sd, SOL_IP, IP_BIND_ADDRESS_NO_PORT, 1);
+	if (reuse_port)
+		SAFE_SETSOCKOPT_INT(sd, SOL_SOCKET, SO_REUSEPORT, 1);
 
 	SAFE_BIND(sd, local_addrinfo->ai_addr, local_addrinfo->ai_addrlen);
 
@@ -674,6 +687,8 @@ static void server_init(void)
 	/* IPv6 socket is also able to access IPv4 protocol stack */
 	sfd = SAFE_SOCKET(family, sock_type, protocol);
 	SAFE_SETSOCKOPT_INT(sfd, SOL_SOCKET, SO_REUSEADDR, 1);
+	if (reuse_port)
+		SAFE_SETSOCKOPT_INT(sfd, SOL_SOCKET, SO_REUSEPORT, 1);
 
 	tst_res(TINFO, "assigning a name to the server socket...");
 	SAFE_BIND(sfd, local_addrinfo->ai_addr, local_addrinfo->ai_addrlen);
@@ -937,13 +952,14 @@ static void setup(void)
 		}
 	}
 
+	if (zcopy)
+		send_flags |= MSG_ZEROCOPY;
+
 	switch (proto_type) {
 	case TYPE_TCP:
 		tst_res(TINFO, "TCP %s is using %s TCP API.",
 			(client_mode) ? "client" : "server",
 			(fastopen_api) ? "Fastopen" : "old");
-		if (zcopy)
-			send_flags |= MSG_ZEROCOPY;
 		check_tfo_value();
 	break;
 	case TYPE_UDP:
@@ -996,6 +1012,7 @@ static struct tst_option options[] = {
 	{"b:", &barg, "-b x     x - low latency busy poll timeout"},
 	{"T:", &type, "-T x     tcp (default), udp, udp_lite, dccp, sctp"},
 	{"z", &zcopy, "-z       enable SO_ZEROCOPY"},
+	{"P:", &reuse_port, "-P       enable SO_REUSEPORT"},
 	{"D:", &dev, "-d x     bind to device x\n"},
 
 	{"H:", &server_addr, "Client:\n-H x     Server name or IP address"},

@@ -30,6 +30,11 @@ ltp_packages := \
   ltp_add_key04 \
   ltp_adjtimex01 \
   ltp_adjtimex02 \
+  ltp_af_alg01 \
+  ltp_af_alg03 \
+  ltp_af_alg04 \
+  ltp_af_alg05 \
+  ltp_af_alg06 \
   ltp_aio-stress \
   ltp_aio01 \
   ltp_aio02 \
@@ -93,14 +98,16 @@ ltp_packages := \
   ltp_chroot02 \
   ltp_chroot03 \
   ltp_chroot04 \
+  ltp_clock_adjtime01 \
+  ltp_clock_adjtime02 \
   ltp_clock_getres01 \
+  ltp_clock_gettime01 \
   ltp_clock_gettime02 \
-  ltp_clock_gettime03 \
   ltp_clock_nanosleep01 \
   ltp_clock_nanosleep02 \
   ltp_clock_nanosleep2_01 \
+  ltp_clock_settime01 \
   ltp_clock_settime02 \
-  ltp_clock_settime03 \
   ltp_clone01 \
   ltp_clone02 \
   ltp_clone03 \
@@ -260,6 +267,8 @@ ltp_packages := \
   ltp_fanotify09 \
   ltp_fanotify10 \
   ltp_fanotify11 \
+  ltp_fanotify12 \
+  ltp_fanotify_child \
   ltp_fanout01 \
   ltp_fchdir01 \
   ltp_fchdir02 \
@@ -357,6 +366,7 @@ ltp_packages := \
   ltp_fcntl36_64 \
   ltp_fdatasync01 \
   ltp_fdatasync02 \
+  ltp_fdatasync03 \
   ltp_fgetxattr01 \
   ltp_fgetxattr02 \
   ltp_fgetxattr03 \
@@ -415,6 +425,7 @@ ltp_packages := \
   ltp_fsync01 \
   ltp_fsync02 \
   ltp_fsync03 \
+  ltp_fsync04 \
   ltp_ftest01 \
   ltp_ftest02 \
   ltp_ftest03 \
@@ -602,6 +613,14 @@ ltp_packages := \
   ltp_ioctl05 \
   ltp_ioctl06 \
   ltp_ioctl07 \
+  ltp_ioctl08 \
+  ltp_ioctl_ns01 \
+  ltp_ioctl_ns02 \
+  ltp_ioctl_ns03 \
+  ltp_ioctl_ns04 \
+  ltp_ioctl_ns05 \
+  ltp_ioctl_ns06 \
+  ltp_ioctl_ns07 \
   ltp_iogen \
   ltp_ioperm01 \
   ltp_ioperm02 \
@@ -995,7 +1014,6 @@ ltp_packages := \
   ltp_readahead01 \
   ltp_readahead02 \
   ltp_readdir01 \
-  ltp_readdir02 \
   ltp_readdir21 \
   ltp_readlink01 \
   ltp_readlink03 \
@@ -1133,6 +1151,10 @@ ltp_packages := \
   ltp_sendmsg01 \
   ltp_sendto01 \
   ltp_sendto02 \
+  ltp_set_mempolicy01 \
+  ltp_set_mempolicy02 \
+  ltp_set_mempolicy03 \
+  ltp_set_mempolicy04 \
   ltp_set_robust_list01 \
   ltp_set_thread_area01 \
   ltp_set_tid_address01 \
@@ -1229,6 +1251,7 @@ ltp_packages := \
   ltp_setrlimit03 \
   ltp_setrlimit04 \
   ltp_setrlimit05 \
+  ltp_setrlimit06 \
   ltp_setsid01 \
   ltp_setsockopt01 \
   ltp_setsockopt02 \
@@ -1289,14 +1312,8 @@ ltp_packages := \
   ltp_stack_space \
   ltp_stat01 \
   ltp_stat01_64 \
-  ltp_stat02 \
-  ltp_stat02_64 \
   ltp_stat03 \
   ltp_stat03_64 \
-  ltp_stat05 \
-  ltp_stat05_64 \
-  ltp_stat06 \
-  ltp_stat06_64 \
   ltp_statfs01 \
   ltp_statfs01_64 \
   ltp_statfs02 \
@@ -1310,6 +1327,7 @@ ltp_packages := \
   ltp_statx03 \
   ltp_statx04 \
   ltp_statx06 \
+  ltp_statx07 \
   ltp_stream01 \
   ltp_stream02 \
   ltp_stream03 \
@@ -1335,7 +1353,9 @@ ltp_packages := \
   ltp_symlinkat01 \
   ltp_sync01 \
   ltp_sync02 \
+  ltp_sync03 \
   ltp_sync_file_range01 \
+  ltp_sync_file_range02 \
   ltp_syncfs01 \
   ltp_syscall01 \
   ltp_sysconf01 \
@@ -1377,6 +1397,7 @@ ltp_packages := \
   ltp_test19 \
   ltp_test_exec \
   ltp_test_exec_child \
+  ltp_test_kconfig \
   ltp_testcases_bin_add_ipv6addr \
   ltp_testcases_bin_arping01.sh \
   ltp_testcases_bin_ask_password.sh \
@@ -1384,17 +1405,18 @@ ltp_packages := \
   ltp_testcases_bin_bbr01.sh \
   ltp_testcases_bin_bbr02.sh \
   ltp_testcases_bin_bind_noport01.sh \
-  ltp_testcases_bin_broken_ip4-checksum \
-  ltp_testcases_bin_broken_ip4-dstaddr \
-  ltp_testcases_bin_broken_ip4-fragment \
-  ltp_testcases_bin_broken_ip4-ihl \
-  ltp_testcases_bin_broken_ip4-protcol \
-  ltp_testcases_bin_broken_ip4-totlen \
-  ltp_testcases_bin_broken_ip4-version \
-  ltp_testcases_bin_broken_ip6-dstaddr \
-  ltp_testcases_bin_broken_ip6-nexthdr \
-  ltp_testcases_bin_broken_ip6-plen \
-  ltp_testcases_bin_broken_ip6-version \
+  ltp_testcases_bin_binfmt_misc01.sh \
+  ltp_testcases_bin_binfmt_misc02.sh \
+  ltp_testcases_bin_binfmt_misc_lib.sh \
+  ltp_testcases_bin_broken_ip-checksum \
+  ltp_testcases_bin_broken_ip-dstaddr \
+  ltp_testcases_bin_broken_ip-fragment \
+  ltp_testcases_bin_broken_ip-ihl \
+  ltp_testcases_bin_broken_ip-nexthdr \
+  ltp_testcases_bin_broken_ip-plen \
+  ltp_testcases_bin_broken_ip-protcol \
+  ltp_testcases_bin_broken_ip-totlen \
+  ltp_testcases_bin_broken_ip-version \
   ltp_testcases_bin_busy_poll01.sh \
   ltp_testcases_bin_busy_poll02.sh \
   ltp_testcases_bin_busy_poll03.sh \
@@ -1581,8 +1603,10 @@ ltp_packages := \
   ltp_testcases_bin_ftrace_stress_test.sh \
   ltp_testcases_bin_gdb01.sh \
   ltp_testcases_bin_geneve01.sh \
+  ltp_testcases_bin_geneve02.sh \
   ltp_testcases_bin_get_ifname \
   ltp_testcases_bin_gre01.sh \
+  ltp_testcases_bin_gre02.sh \
   ltp_testcases_bin_host01 \
   ltp_testcases_bin_http-stress \
   ltp_testcases_bin_http-stress01-rmt \
@@ -1647,6 +1671,7 @@ ltp_packages := \
   ltp_testcases_bin_ltpSockets.sh \
   ltp_testcases_bin_macsec01.sh \
   ltp_testcases_bin_macsec02.sh \
+  ltp_testcases_bin_macsec03.sh \
   ltp_testcases_bin_macsec_lib.sh \
   ltp_testcases_bin_macvlan01.sh \
   ltp_testcases_bin_macvtap01.sh \
@@ -2112,6 +2137,7 @@ ltp_packages := \
   ltp_testcases_bin_tst_ansi_color.sh \
   ltp_testcases_bin_tst_net.sh \
   ltp_testcases_bin_tst_net_stress.sh \
+  ltp_testcases_bin_tst_security.sh \
   ltp_testcases_bin_tst_test.sh \
   ltp_testcases_bin_udp4-multi-diffip01 \
   ltp_testcases_bin_udp4-multi-diffip02 \
@@ -2183,6 +2209,7 @@ ltp_packages := \
   ltp_testcases_bin_vxlan01.sh \
   ltp_testcases_bin_vxlan02.sh \
   ltp_testcases_bin_vxlan03.sh \
+  ltp_testcases_bin_vxlan04.sh \
   ltp_testcases_bin_write_freezing.sh \
   ltp_testcases_bin_xinetd_tests.sh \
   ltp_testcases_bin_zram01.sh \
@@ -2193,6 +2220,8 @@ ltp_packages := \
   ltp_testcases_data_ar01_file2.in \
   ltp_testcases_data_ar01_file3.in \
   ltp_testcases_data_ar01_file4.in \
+  ltp_testcases_data_binfmt_misc02_file.extension \
+  ltp_testcases_data_binfmt_misc02_file.magic \
   ltp_testcases_data_ext4-ffsb_ffsb-config0 \
   ltp_testcases_data_ext4-ffsb_ffsb-config1 \
   ltp_testcases_data_ext4-ffsb_ffsb-config2 \
@@ -2325,6 +2354,7 @@ ltp_packages := \
   ltp_tst_tmpdir_test \
   ltp_uaccess \
   ltp_umask01 \
+  ltp_umip_basic_test \
   ltp_umount01 \
   ltp_umount02 \
   ltp_umount03 \
@@ -2341,6 +2371,7 @@ ltp_packages := \
   ltp_unlinkat01 \
   ltp_unshare01 \
   ltp_unshare02 \
+  ltp_userfaultfd01 \
   ltp_ustat01 \
   ltp_ustat02 \
   ltp_utime01 \
@@ -2351,6 +2382,7 @@ ltp_packages := \
   ltp_utime06 \
   ltp_utimensat01 \
   ltp_utimes01 \
+  ltp_variant \
   ltp_verify_caps_exec \
   ltp_vfork \
   ltp_vfork01 \

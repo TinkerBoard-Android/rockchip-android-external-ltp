@@ -1,18 +1,7 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 /*
  * Copyright (c) 2015-2016 Cyril Hrubis <chrubis@suse.cz>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (c) Linux Test Project, 2016-2019
  */
 
 #ifndef TST_TEST_H__
@@ -24,6 +13,7 @@
 
 #include <unistd.h>
 #include <limits.h>
+#include <string.h>
 
 #include "tst_common.h"
 #include "tst_res_flags.h"
@@ -114,6 +104,8 @@ int tst_parse_int(const char *str, int *val, int min, int max);
 int tst_parse_long(const char *str, long *val, long min, long max);
 int tst_parse_float(const char *str, float *val, float min, float max);
 
+extern unsigned int tst_variant;
+
 struct tst_test {
 	/* number of tests available in test() function */
 	unsigned int tcnt;
@@ -135,6 +127,7 @@ struct tst_test {
 	int needs_rofs:1;
 	int child_needs_reinit:1;
 	int needs_devfs:1;
+	int restore_wallclock:1;
 	/*
 	 * If set the test function will be executed for all available
 	 * filesystems and the current filesytem type would be set in the
@@ -144,6 +137,16 @@ struct tst_test {
 	 * to the test function.
 	 */
 	int all_filesystems:1;
+
+	/*
+	 * If set non-zero denotes number of test variant, the test is executed
+	 * variants times each time with tst_variant set to different number.
+	 *
+	 * This allows us to run the same test for different settings. The
+	 * intended use is to test different syscall wrappers/variants but the
+	 * API is generic and does not limit the usage in any way.
+	 */
+	unsigned int test_variants;
 
 	/* Minimal device size in megabytes */
 	unsigned int dev_min_size;
@@ -186,6 +189,12 @@ struct tst_test {
 	 * before setup and restore after cleanup
 	 */
 	const char * const *save_restore;
+
+	/*
+	 * NULL terminated array of kernel config options required for the
+	 * test.
+	 */
+	const char *const *needs_kconfigs;
 };
 
 /*
@@ -206,6 +215,13 @@ void tst_reinit(void);
 	do { \
 		errno = 0; \
 		TST_RET = SCALL; \
+		TST_ERR = errno; \
+	} while (0)
+
+#define TEST_VOID(SCALL) \
+	do { \
+		errno = 0; \
+		SCALL; \
 		TST_ERR = errno; \
 	} while (0)
 
@@ -235,6 +251,12 @@ const char *tst_strstatus(int status);
 
 unsigned int tst_timeout_remaining(void);
 void tst_set_timeout(int timeout);
+
+
+/*
+ * Returns path to the test temporary directory in a newly allocated buffer.
+ */
+char *tst_get_tmpdir(void);
 
 #ifndef TST_NO_DEFAULT_MAIN
 
