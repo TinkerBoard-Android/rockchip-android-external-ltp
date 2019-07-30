@@ -12179,37 +12179,6 @@ cc_test {
     stem: "select01",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/select/select01.c"],
-    cflags: ["-DSYSCALL_SELECT_LIBC"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select01_SYS__newselect",
-    stem: "select01_SYS__newselect",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select01.c"],
-    cflags: ["-DSYSCALL_SELECT__NEWSELECT"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select01_SYS_pselect6",
-    stem: "select01_SYS_pselect6",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select01.c"],
-    cflags: ["-DSYSCALL_SELECT_PSELECT6"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select01_SYS_select",
-    stem: "select01_SYS_select",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select01.c"],
-    cflags: ["-DSYSCALL_SELECT_SELECT"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -12219,37 +12188,6 @@ cc_test {
     stem: "select02",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/select/select02.c"],
-    cflags: ["-DSYSCALL_SELECT_LIBC"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select02_SYS__newselect",
-    stem: "select02_SYS__newselect",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select02.c"],
-    cflags: ["-DSYSCALL_SELECT__NEWSELECT"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select02_SYS_pselect6",
-    stem: "select02_SYS_pselect6",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select02.c"],
-    cflags: ["-DSYSCALL_SELECT_PSELECT6"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select02_SYS_select",
-    stem: "select02_SYS_select",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select02.c"],
-    cflags: ["-DSYSCALL_SELECT_SELECT"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -12259,37 +12197,6 @@ cc_test {
     stem: "select03",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/select/select03.c"],
-    cflags: ["-DSYSCALL_SELECT_LIBC"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select03_SYS__newselect",
-    stem: "select03_SYS__newselect",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select03.c"],
-    cflags: ["-DSYSCALL_SELECT__NEWSELECT"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select03_SYS_pselect6",
-    stem: "select03_SYS_pselect6",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select03.c"],
-    cflags: ["-DSYSCALL_SELECT_PSELECT6"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select03_SYS_select",
-    stem: "select03_SYS_select",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select03.c"],
-    cflags: ["-DSYSCALL_SELECT_SELECT"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
@@ -12299,37 +12206,6 @@ cc_test {
     stem: "select04",
     defaults: ["ltp_test_defaults"],
     srcs: ["testcases/kernel/syscalls/select/select04.c"],
-    cflags: ["-DSYSCALL_SELECT_LIBC"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select04_SYS__newselect",
-    stem: "select04_SYS__newselect",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select04.c"],
-    cflags: ["-DSYSCALL_SELECT__NEWSELECT"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select04_SYS_pselect6",
-    stem: "select04_SYS_pselect6",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select04.c"],
-    cflags: ["-DSYSCALL_SELECT_PSELECT6"],
-    local_include_dirs: ["include/old"],
-    static_libs: ["libltp_ltp"],
-}
-
-cc_test {
-    name: "ltp_select04_SYS_select",
-    stem: "select04_SYS_select",
-    defaults: ["ltp_test_defaults"],
-    srcs: ["testcases/kernel/syscalls/select/select04.c"],
-    cflags: ["-DSYSCALL_SELECT_SELECT"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
