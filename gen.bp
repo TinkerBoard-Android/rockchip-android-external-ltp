@@ -127,7 +127,6 @@ cc_library_static {
         "lib/tst_kvercmp.c",
         "lib/tst_mkfs.c",
         "lib/tst_module.c",
-        "lib/tst_net.c",
         "lib/tst_parse_opts.c",
         "lib/tst_path_has_mnt_flags.c",
         "lib/tst_pid.c",
@@ -22435,8 +22434,7 @@ cc_test {
     name: "ltp_tst_get_unused_port",
     stem: "tst_get_unused_port",
     defaults: ["ltp_test_defaults"],
-    srcs: ["tools/apicmds/ltpapicmd.c"],
-    cflags: ["-D_GNU_SOURCE"],
+    srcs: ["testcases/lib/tst_get_unused_port.c"],
     local_include_dirs: ["include/old"],
     static_libs: ["libltp_ltp"],
 }
