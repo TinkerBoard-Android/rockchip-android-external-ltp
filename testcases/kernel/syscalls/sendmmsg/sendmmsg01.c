@@ -5,7 +5,6 @@
 
 #define _GNU_SOURCE
 #include <netinet/ip.h>
-#include <semaphore.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,8 +17,6 @@
 
 #define BUFSIZE 16
 #define VLEN 2
-
-static sem_t send_sem;
 
 static void *sender_thread(LTP_ATTRIBUTE_UNUSED void *arg)
 {
@@ -53,8 +50,6 @@ static void *sender_thread(LTP_ATTRIBUTE_UNUSED void *arg)
 	msg[1].msg_hdr.msg_iov = &msg2;
 	msg[1].msg_hdr.msg_iovlen = 1;
 
-	sem_wait(&send_sem);
-
 	retval = sendmmsg(send_sockfd, msg, 2, 0);
 	if (retval < 0)
 		tst_brk(TFAIL|TTERRNO, "sendmmsg failed");
@@ -78,8 +73,6 @@ static void *receiver_thread(LTP_ATTRIBUTE_UNUSED void *arg)
 	addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
 	addr.sin_port = htons(1234);
 	SAFE_BIND(receive_sockfd, (struct sockaddr *)&addr, sizeof(addr));
-
-	sem_post(&send_sem);
 
 	memset(msgs, 0, sizeof(msgs));
 	for (i = 0; i < VLEN; i++) {
@@ -118,8 +111,6 @@ static void run(void)
 {
 	pthread_t sender;
 	pthread_t receiver;
-
-	sem_init(&send_sem, 0, 0);
 
 	SAFE_PTHREAD_CREATE(&sender, NULL, sender_thread, NULL);
 	SAFE_PTHREAD_CREATE(&receiver, NULL, receiver_thread, NULL);
