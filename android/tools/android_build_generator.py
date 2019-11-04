@@ -322,6 +322,12 @@ class BuildGenerator(object):
         ltp_libs_used = set()
         ltp_names_used = set()
 
+        # Remove -Wno-error from cflags, we don't want to print warnings.
+        # Silence individual warnings in ltp_defaults or fix them.
+        for target in cc_flags:
+            if '-Wno-error' in cc_flags[target]:
+                cc_flags[target].remove('-Wno-error')
+
         print(
             "Disabled lib tests: Test cases listed here are"
             "suggested to be disabled since they require a disabled library. "
