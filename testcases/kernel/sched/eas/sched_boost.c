@@ -128,8 +128,13 @@ static void check_results(void)
 				i, test_boost[i], test_utils[i],
 				target_util - TEST_MARGIN,
 				target_util + TEST_MARGIN);
+		else
+			tst_res(TPASS, "Test %i (boost %d) passed with "
+				"util %d (allowed %d - %d).\n",
+				i, test_boost[i], test_utils[i],
+				target_util - TEST_MARGIN,
+				target_util + TEST_MARGIN);
 	}
-	tst_res(TPASS, "Boosted utilizations within expected range.");
 }
 
 static void run(void)
