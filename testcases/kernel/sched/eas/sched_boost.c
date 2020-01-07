@@ -139,6 +139,9 @@ static void run(void)
 	sem_init(&test_sem, 0, 0);
 	sem_init(&result_sem, 0, 0);
 
+	if (access("/dev/stune", R_OK))
+		tst_brk(TCONF, "schedtune not detected");
+
 	test_cpu = tst_ncpus() - 1;
 	printf("Running %ld tests for %d sec\n", NUM_TESTS,
 	       TEST_LENGTH_USEC / USEC_PER_SEC);
@@ -149,14 +152,24 @@ static void run(void)
 	 * kernel/sched/tune.c needs to be increased.
 	 */
 	SAFE_MKDIR(STUNE_TEST_PATH, 0777);
-	SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.colocate",
-			 "0");
-	SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.prefer_idle",
-			 "0");
-	SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.sched_boost_enabled",
-			 "1");
-	SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.sched_boost_no_override",
-			 "0");
+	if (access(STUNE_TEST_PATH "/schedtune.colocate", W_OK) != -1) {
+		SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.colocate",
+				 "0");
+	}
+	if (access(STUNE_TEST_PATH "/schedtune.prefer_idle", W_OK) != -1) {
+		SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.prefer_idle",
+				 "0");
+	}
+	if (access(STUNE_TEST_PATH "/schedtune.sched_boost_enabled", W_OK) !=
+	    -1) {
+		SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.sched_boost_enabled",
+				 "1");
+	}
+	if (access(STUNE_TEST_PATH "/schedtune.sched_boost_no_override",
+		   W_OK) != -1) {
+		SAFE_FILE_PRINTF(STUNE_TEST_PATH "/schedtune.sched_boost_no_override",
+				 "0");
+	}
 
 	SAFE_PTHREAD_CREATE(&test_thread, NULL, test_fn, NULL);
 
