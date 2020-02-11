@@ -137,7 +137,14 @@ static int attach_device(const char *dev, const char *file)
 	int dev_fd, file_fd;
 	struct loop_info loopinfo;
 
-	dev_fd = open(dev, O_RDWR);
+	/* b/148978487 */
+	int attach_tries = 3;
+	while (attach_tries--) {
+		dev_fd = open(dev, O_RDWR);
+		if (dev_fd >= 0)
+			break;
+		usleep(50000);
+	}
 	if (dev_fd < 0) {
 		tst_resm(TWARN | TERRNO, "open('%s', O_RDWR) failed", dev);
 		return 1;
