@@ -160,6 +160,10 @@ runtime disabled in VTS. The staging and stable sets should normally all be
 passing. If something is failing there it should either be fixed with priority
 or disabled until it can be fixed.
 
+If the runtime of LTP changes significantly be sure to update the runtime-hint
+and test-timeout parameters to VTS in
+`test/vts-testcase/kernel/ltp/stable/AndroidTest.xml`.
+
 How do I see or get notified about recent VTS LTP results?
 ----------------------------------------------------------
 
