@@ -47,7 +47,7 @@ static void asm_sidt(void)
 	unsigned char val[IDT_LEN];
 
 	memset(val, 0, sizeof(val));
-	tst_res(TINFO, "TEST sidt, sidt result save at [%p]\n", val);
+	tst_res(TINFO, "TEST sidt, sidt result save at [%p]", val);
 	asm volatile("sidt %0\n" : "=m" (val));
 	exit(0);
 }
@@ -56,7 +56,7 @@ static void asm_sldt(void)
 {
 	unsigned long val;
 
-	tst_res(TINFO, "TEST sldt, sldt result save at [%p]\n", &val);
+	tst_res(TINFO, "TEST sldt, sldt result save at [%p]", &val);
 	asm volatile("sldt %0\n" : "=m" (val));
 	exit(0);
 }
@@ -65,7 +65,7 @@ static void asm_smsw(void)
 {
 	unsigned long val;
 
-	tst_res(TINFO, "TEST smsw, smsw result save at [%p]\n", &val);
+	tst_res(TINFO, "TEST smsw, smsw result save at [%p]", &val);
 	asm volatile("smsw %0\n" : "=m" (val));
 	exit(0);
 }
@@ -74,7 +74,7 @@ static void asm_str(void)
 {
 	unsigned long val;
 
-	tst_res(TINFO, "TEST str, str result save at [%p]\n", &val);
+	tst_res(TINFO, "TEST str, str result save at [%p]", &val);
 	asm volatile("str %0\n" : "=m" (val));
 	exit(0);
 }
@@ -86,6 +86,8 @@ static void verify_umip_instruction(unsigned int n)
 
 	pid = SAFE_FORK();
 	if (pid == 0) {
+		tst_no_corefile(0);
+
 		switch (n) {
 		case 0:
 			asm_sgdt();
@@ -109,6 +111,25 @@ static void verify_umip_instruction(unsigned int n)
 	}
 
 	SAFE_WAITPID(pid, &status, 0);
+
+	switch (n) {
+	case 0:
+	case 1:
+	case 3:
+		/* after linux kernel v5.4 mainline, 64bit SGDT SIDT SMSW will return
+		   dummy value and not trigger SIGSEGV due to kernel code change */
+		if ((tst_kvercmp(5, 4, 0)) >= 0) {
+			tst_res(TINFO, "Linux kernel version is v5.4 or after than v5.4");
+			if (WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV) {
+				tst_res(TFAIL, "Got SIGSEGV");
+				return;
+			}
+			tst_res(TPASS, "Didn't receive SIGSEGV, child exited with %s",
+				tst_strstatus(status));
+			return;
+		} else
+			tst_res(TINFO, "Linux kernel version is before than v5.4");
+	}
 
 	if (WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV) {
 		tst_res(TPASS, "Got SIGSEGV");

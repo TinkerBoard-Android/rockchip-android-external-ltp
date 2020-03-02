@@ -1,21 +1,7 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 /*
  * Copyright (c) 2014-2016 Oracle and/or its affiliates. All Rights Reserved.
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it would be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  * Author: Alexey Kodanev <alexey.kodanev@oracle.com>
- *
  */
 
 #include <pthread.h>
@@ -84,7 +70,7 @@ static int server_max_requests	= 3;
 static int client_max_requests	= 10;
 static int clients_num;
 static char *tcp_port;
-static char *server_addr	= "localhost";
+static char *server_addr;
 static char *source_addr;
 static char *server_bg;
 static int busy_poll		= -1;
@@ -115,7 +101,7 @@ static int sfd;
 static int wait_timeout = 60000;
 
 /* in the end test will save time result in this file */
-static char *rpath = "tfo_result";
+static char *rpath;
 static char *port_path = "netstress_port";
 static char *log_path = "netstress.log";
 
@@ -531,7 +517,8 @@ static void client_run(void)
 		SAFE_CLOSE(cfd);
 	}
 	/* the script tcp_fastopen_run.sh will remove it */
-	SAFE_FILE_PRINTF(rpath, "%ld", clnt_time);
+	if (rpath)
+		SAFE_FILE_PRINTF(rpath, "%ld", clnt_time);
 
 	tst_res(TPASS, "test completed");
 }
@@ -881,6 +868,9 @@ static void setup(void)
 	if (tst_parse_int(Aarg, &max_rand_msg_len, 10, max_msg_len))
 		tst_brk(TBROK, "Invalid max random payload size '%s'", Aarg);
 
+	if (!server_addr)
+		server_addr = "localhost";
+
 	if (max_rand_msg_len) {
 		max_rand_msg_len -= min_msg_len;
 		unsigned int seed = max_rand_msg_len ^ client_max_requests;
@@ -1013,7 +1003,7 @@ static struct tst_option options[] = {
 	{"T:", &type, "-T x     tcp (default), udp, udp_lite, dccp, sctp"},
 	{"z", &zcopy, "-z       enable SO_ZEROCOPY"},
 	{"P:", &reuse_port, "-P       enable SO_REUSEPORT"},
-	{"D:", &dev, "-d x     bind to device x\n"},
+	{"D:", &dev, "-D x     bind to device x\n"},
 
 	{"H:", &server_addr, "Client:\n-H x     Server name or IP address"},
 	{"l", &client_mode, "-l       Become client, default is server"},
