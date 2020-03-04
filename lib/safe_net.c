@@ -322,6 +322,22 @@ int safe_listen(const char *file, const int lineno, void (cleanup_fn)(void),
 	return rval;
 }
 
+int safe_accept(const char *file, const int lineno, void (cleanup_fn)(void),
+		int sockfd, struct sockaddr *addr, socklen_t *addrlen)
+{
+	int rval;
+
+	rval = accept(sockfd, addr, addrlen);
+
+	if (rval < 0) {
+		tst_brkm(TBROK | TERRNO, cleanup_fn,
+			"%s:%d: accept(%d, %p, %d) failed", file, lineno,
+			sockfd, addr, *addrlen);
+	}
+
+	return rval;
+}
+
 int safe_connect(const char *file, const int lineno, void (cleanup_fn)(void),
 		 int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 {
@@ -373,6 +389,9 @@ int safe_gethostname(const char *file, const int lineno,
 	return rval;
 }
 
+/*
+ * @return port in network byte order.
+ */
 unsigned short tst_get_unused_port(const char *file, const int lineno,
 	      void (cleanup_fn)(void), unsigned short family, int type)
 {

@@ -11,6 +11,7 @@
  *     Generate enough events without reading them and check that overflow
  *     event is generated.
  */
+#define _GNU_SOURCE
 #include "config.h"
 
 #include <stdio.h>
@@ -126,7 +127,6 @@ static struct tst_test test = {
 	.setup = setup,
 	.cleanup = cleanup,
 	.needs_root = 1,
-	.needs_tmpdir = 1,
 	.mount_device = 1,
 	.mntpoint = MOUNT_PATH,
 };

@@ -10,6 +10,12 @@
  * block size, and where the destination buffer starts exactly at a page
  * boundary.  Based on the reproducer from the commit message.  Note that this
  * issue only reproduces on certain architectures, such as arm and arm64.
+ *
+ * On some older kernel without commit 160544075f2a ("crypto: scatterwalk - Hide
+ * PageSlab call to optimise away flush_dcache_page") , it doesn't use
+ * ARCH_IMPLEMENTS_FLUSH_DCACHE_PAGE macro. It can crash on all architectures.
+ * Without skcipher walk interface, it is also a regresstion test for commit
+ * 0868def3e410("crypto: blkcipher - fix crash flushing dcache in error path").
  */
 
 #include <errno.h>
@@ -40,4 +46,10 @@ static void run(void)
 
 static struct tst_test test = {
 	.test_all = run,
+	.tags = (const struct tst_tag[]) {
+		{"linux-git", "8088d3dd4d7c"},
+		{"linux-git", "160544075f2a"},
+		{"linux-git", "0868def3e410"},
+		{}
+	}
 };
