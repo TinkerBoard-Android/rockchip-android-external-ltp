@@ -50,6 +50,12 @@ enum {
 	TST_GB = 1073741824,
 };
 
+#define OVL_BASE_MNTPOINT        "mntpoint"
+#define OVL_LOWER	OVL_BASE_MNTPOINT"/lower"
+#define OVL_UPPER	OVL_BASE_MNTPOINT"/upper"
+#define OVL_WORK	OVL_BASE_MNTPOINT"/work"
+#define OVL_MNT		OVL_BASE_MNTPOINT"/ovl"
+
 /*
  * @path: path is the pathname of any file within the mounted file system
  * @mult: mult should be TST_KB, TST_MB or TST_GB
@@ -156,21 +162,28 @@ int tst_fill_fd(int fd, char pattern, size_t bs, size_t bcount);
  */
 int tst_fill_file(const char *path, char pattern, size_t bs, size_t bcount);
 
+#define TST_FS_SKIP_FUSE 0x01
+
 /*
  * Return 1 if a specified fiilsystem is supported
  * Return 0 if a specified fiilsystem isn't supported
  */
-int tst_fs_is_supported(const char *fs_type);
+int tst_fs_is_supported(const char *fs_type, int flags);
 
 /*
  * Returns NULL-terminated array of kernel-supported filesystems.
  */
-const char **tst_get_supported_fs_types(void);
+const char **tst_get_supported_fs_types(int flags);
 
 /*
  * Creates and writes to files on given path until write fails with ENOSPC
  */
 void tst_fill_fs(const char *path, int verbose);
+
+/*
+ * test if FIBMAP ioctl is supported
+ */
+int tst_fibmap(const char *filename);
 
 #ifdef TST_TEST_H__
 static inline long tst_fs_type(const char *path)
