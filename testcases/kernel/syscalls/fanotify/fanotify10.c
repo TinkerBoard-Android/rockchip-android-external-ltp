@@ -440,10 +440,13 @@ static struct tst_test test = {
 	.cleanup = cleanup,
 	.mount_device = 1,
 	.mntpoint = MOUNT_PATH,
-	.needs_tmpdir = 1,
 	.needs_root = 1,
 	.forks_child = 1,
-	.resource_files = resource_files
+	.resource_files = resource_files,
+	.tags = (const struct tst_tag[]) {
+		{"linux-git", "9bdda4e9cf2d"},
+		{}
+	}
 };
 
 #else

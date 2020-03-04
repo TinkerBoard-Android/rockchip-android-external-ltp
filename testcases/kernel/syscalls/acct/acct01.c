@@ -91,12 +91,6 @@ static void setup(void)
 	memset(nametoolong, 'a', PATH_MAX+1);
 }
 
-static void cleanup(void)
-{
-	SAFE_UNLINK(TEST_TMPFILE);
-	SAFE_UNLINK(TEST_ELOOP);
-}
-
 static void verify_acct(unsigned int nr)
 {
 	struct test_case *tcase = &tcases[nr];
@@ -126,11 +120,9 @@ static void verify_acct(unsigned int nr)
 
 static struct tst_test test = {
 	.needs_root = 1,
-	.needs_tmpdir = 1,
 	.mntpoint = "mntpoint",
 	.needs_rofs = 1,
 	.tcnt = ARRAY_SIZE(tcases),
 	.setup = setup,
-	.cleanup = cleanup,
 	.test = verify_acct,
 };
