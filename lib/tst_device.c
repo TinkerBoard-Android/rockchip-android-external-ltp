@@ -146,7 +146,7 @@ int tst_attach_device(const char *dev, const char *file)
 	struct loop_info loopinfo;
 
 	/* b/148978487 */
-	int attach_tries = 3;
+	int attach_tries = 20;
 	while (attach_tries--) {
 		dev_fd = open(dev, O_RDWR);
 		if (dev_fd >= 0)
