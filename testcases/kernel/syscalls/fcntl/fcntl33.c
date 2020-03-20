@@ -117,10 +117,11 @@ static void do_test(unsigned int i)
 	if (TST_RET == -1) {
 		if (type == TST_OVERLAYFS_MAGIC && TST_ERR == EAGAIN) {
 			tst_res(TINFO | TTERRNO,
-				"fcntl(F_SETLEASE, F_WRLCK) failed on overlapfs as expected");
+				"fcntl(F_SETLEASE, F_WRLCK) failed on overlayfs as expected");
 		} else {
 			tst_res(TFAIL | TTERRNO, "fcntl() failed to set lease");
 		}
+		TST_CHECKPOINT_WAKE(0);
 		goto exit;
 	}
 
@@ -225,7 +226,6 @@ static void cleanup(void)
 static struct tst_test test = {
 	.forks_child = 1,
 	.needs_root = 1,
-	.needs_tmpdir = 1,
 	.needs_checkpoints = 1,
 	.tcnt = ARRAY_SIZE(test_cases),
 	.setup = setup,

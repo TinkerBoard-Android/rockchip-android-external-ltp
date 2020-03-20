@@ -33,7 +33,7 @@
 
 #define FIVE_HUNDRED_MB         (500ULL*1024*1024)
 
-#if defined(_s390_)
+#if defined(__s390__) || defined(__s390x__)
 #define ALLOC_THRESHOLD		FIVE_HUNDRED_MB
 #elif defined(TST_ABI32)
 #define ALLOC_THRESHOLD		(2*FIVE_HUNDRED_MB)
@@ -58,7 +58,7 @@ static char *opt_chunksize, *opt_maxbytes, *opt_maxpercent;
 static struct tst_option mtest_options[] = {
 	{"c:", &opt_chunksize,	"-c  size of chunk in bytes to malloc on each pass"},
 	{"b:", &opt_maxbytes,	"-b  maximum number of bytes to allocate before stopping"},
-	{"p:", &opt_maxpercent, "-u  percent of total memory used at which the program stops"},
+	{"p:", &opt_maxpercent, "-p  percent of total memory used at which the program stops"},
 	{"w",  &dowrite,   	"-w  write to the memory after allocating"},
 	{"v",  &verbose,     	"-v  verbose"},
 	{NULL, NULL, 		NULL}
@@ -216,10 +216,15 @@ static void mem_test(void)
 	if (children_done < pid_cntr) {
 		tst_res(TFAIL, "kbytes allocated %sless than expected %llu",
 				write_msg, alloc_maxbytes / 1024);
-	} else {
-		tst_res(TPASS, "%llu kbytes allocated %s",
-				alloc_maxbytes / 1024, write_msg);
+
+		for (i = 0; i < pid_cntr; i++)
+			kill(pid_list[i], SIGKILL);
+
+		return;
 	}
+
+	tst_res(TPASS, "%llu kbytes allocated %s",
+			alloc_maxbytes / 1024, write_msg);
 
 	for (i = 0; i < pid_cntr; i++) {
 		TST_PROCESS_STATE_WAIT(pid_list[i], 'T');
