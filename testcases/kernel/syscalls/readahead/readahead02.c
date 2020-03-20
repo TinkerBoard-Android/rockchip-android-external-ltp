@@ -43,17 +43,11 @@ static char *opt_fsizestr;
 static int pagesize;
 static unsigned long cached_max;
 static int ovl_mounted;
-
-#define MNTPOINT        "mntpoint"
-#define OVL_LOWER	MNTPOINT"/lower"
-#define OVL_UPPER	MNTPOINT"/upper"
-#define OVL_WORK	MNTPOINT"/work"
-#define OVL_MNT		MNTPOINT"/ovl"
 static int readahead_length  = 4096;
 static char sys_bdi_ra_path[PATH_MAX];
 static int orig_bdi_limit;
 
-static const char mntpoint[] = MNTPOINT;
+static const char mntpoint[] = OVL_BASE_MNTPOINT;
 
 static struct tst_option options[] = {
 	{"s:", &opt_fsizestr, "-s    testfile size (default 64MB)"},
@@ -132,7 +126,8 @@ static void create_testfile(int use_overlay)
 	char *tmp;
 	size_t i;
 
-	sprintf(testfile, "%s/testfile", use_overlay ? OVL_MNT : MNTPOINT);
+	sprintf(testfile, "%s/testfile",
+		use_overlay ? OVL_MNT : OVL_BASE_MNTPOINT);
 	tst_res(TINFO, "creating test file of size: %zu", testfile_size);
 	tmp = SAFE_MALLOC(pagesize);
 
@@ -329,27 +324,6 @@ static void test_readahead(unsigned int n)
 	}
 }
 
-static void setup_overlay(void)
-{
-	int ret;
-
-	/* Setup an overlay mount with lower dir and file */
-	SAFE_MKDIR(OVL_LOWER, 0755);
-	SAFE_MKDIR(OVL_UPPER, 0755);
-	SAFE_MKDIR(OVL_WORK, 0755);
-	SAFE_MKDIR(OVL_MNT, 0755);
-	ret = mount("overlay", OVL_MNT, "overlay", 0, "lowerdir="OVL_LOWER
-		    ",upperdir="OVL_UPPER",workdir="OVL_WORK);
-	if (ret < 0) {
-		if (errno == ENODEV) {
-			tst_res(TINFO,
-				"overlayfs is not configured in this kernel.");
-			return;
-		}
-		tst_brk(TBROK | TERRNO, "overlayfs mount failed");
-	}
-	ovl_mounted = 1;
-}
 
 /*
  * We try raising bdi readahead limit as much as we can. We write
@@ -413,7 +387,7 @@ static void setup(void)
 	setup_readahead_length();
 	tst_res(TINFO, "readahead length: %d", readahead_length);
 
-	setup_overlay();
+	ovl_mounted = TST_MOUNT_OVERLAY();
 }
 
 static void cleanup(void)
@@ -427,7 +401,6 @@ static void cleanup(void)
 
 static struct tst_test test = {
 	.needs_root = 1,
-	.needs_tmpdir = 1,
 	.mount_device = 1,
 	.mntpoint = mntpoint,
 	.setup = setup,
@@ -435,4 +408,9 @@ static struct tst_test test = {
 	.options = options,
 	.test = test_readahead,
 	.tcnt = ARRAY_SIZE(tcases),
+	.tags = (const struct tst_tag[]) {
+		{"linux-git", "b833a3660394"},
+		{"linux-git", "5b910bd615ba"},
+		{}
+	}
 };
