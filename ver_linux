@@ -70,7 +70,7 @@ make --version 2>&1 | awk -F, '{print $1}' | awk \
 ld -v 2>&1 | awk -F\) '{print $1}' | awk \
       '/BFD/{print "binutils              ",$NF}'
 
-fdformat --version 2>&1 | awk -F\- '{print "util-linux            ", $NF}'
+mkswap -V 2>&1 | awk '{print "util-linux            ", $NF}'
 
 mount --version 2>&1 | awk -F\- '{print "mount                 ", $NF}'
 
@@ -111,6 +111,9 @@ ip -V 2>&1 | awk \
 
 ping -V 2>&1 | awk \
 'NR==1{print "iputils               ", $NF}'
+
+ethtool --version | grep version 2>&1 | awk \
+'NR==1{print "ethtool               ", $NF}'
 
 # Kbd needs 'loadkeys -h',
 loadkeys -h 2>&1 | awk \
