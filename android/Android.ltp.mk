@@ -41,38 +41,6 @@ module_prebuilt := testcases/data/ld01/f1.c
 module_src_files := testcases/commands/ld/datafiles/f1.c
 include $(ltp_build_prebuilt)
 
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config0
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config0
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config1
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config1
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config2
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config2
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config3
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config3
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config4
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config4
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config5
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config5
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config6
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config6
-include $(ltp_build_prebuilt)
-
-module_prebuilt := testcases/data/ext4-ffsb/ffsb-config7
-module_src_files := testcases/kernel/fs/ext4-new-features/ext4-ffsb-config/ffsb-config7
-include $(ltp_build_prebuilt)
-
 module_prebuilt := testcases/data/binfmt_misc02/file.extension
 module_src_files := testcases/kernel/fs/binfmt_misc/datafiles/file.extension
 include $(ltp_build_prebuilt)
