@@ -50,6 +50,7 @@ static int parse_results(void)
 	unsigned long long big_task_us = 0;
 	unsigned long long small_task_us = 0;
 	unsigned long long smalltask_ts_usec = 0;
+	unsigned long long smalltask_tm_usec = 0;
 	unsigned long long downmigrate_ts_usec = 0;
 	unsigned long long downmigrate_latency_usec = 0;
 	cpu_set_t cpuset;
@@ -62,10 +63,11 @@ static int parse_results(void)
 	for (i = 0; i < num_trace_records; i++) {
 		unsigned long long segment_us;
 		struct trace_sched_switch *t = trace[i].event_data;
+		unsigned long long trace_ts_usec = TS_TO_USEC(trace[i].ts);
 
 		if (trace[i].event_type == TRACE_RECORD_TRACING_MARK_WRITE &&
 			   !strcmp(trace[i].event_data, "SMALL TASK")) {
-			smalltask_ts_usec = TS_TO_USEC(trace[i].ts);
+			smalltask_tm_usec = trace_ts_usec;
 			continue;
 		}
 
@@ -73,12 +75,15 @@ static int parse_results(void)
 			continue;
 
 		if (t->next_pid == task_tid) {
+			if (!smalltask_ts_usec && smalltask_tm_usec &&
+					trace_ts_usec > smalltask_tm_usec)
+				smalltask_ts_usec = trace_ts_usec;
 			/* Start of task execution segment. */
 			if (exec_start_us) {
 				printf("Trace parse fail: double exec start\n");
 				return -1;
 			}
-			exec_start_us = TS_TO_USEC(trace[i].ts);
+			exec_start_us = trace_ts_usec;
 			if (smalltask_ts_usec && !downmigrate_ts_usec &&
 			    CPU_ISSET(trace[i].cpu, &cpuset))
 				downmigrate_ts_usec = exec_start_us;
@@ -87,7 +92,7 @@ static int parse_results(void)
 		if (t->prev_pid != task_tid)
 			continue;
 		/* End of task execution segment. */
-		segment_us = TS_TO_USEC(trace[i].ts);
+		segment_us = trace_ts_usec;
 		segment_us -= exec_start_us;
 		exec_start_us = 0;
 		if (CPU_ISSET(trace[i].cpu, &cpuset)) {
