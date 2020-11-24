@@ -126,6 +126,7 @@ static int parse_results(void)
 			periods_parsed++;
 			next_deadline_ts_us += 20000;
 			next_period_ts_us += 20000;
+			period_exec_time_us = 0;
 		}
 		if (trace[i].event_type == TRACE_RECORD_SCHED_SWITCH) {
 			struct trace_sched_switch *t = trace[i].event_data;
