@@ -24,7 +24,7 @@
 
 #define TRACE_EVENTS "sched_wakeup sched_switch sched_process_exit"
 
-#define EXEC_MIN_PCT 33
+#define EXEC_MIN_PCT 32
 #define EXEC_MAX_PCT 34
 
 static sem_t sem;
