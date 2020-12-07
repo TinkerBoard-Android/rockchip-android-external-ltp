@@ -19,9 +19,11 @@ build = ["gen.bp"]
 
 genrule {
     name: "ltp_syscalls_h",
-    tool_files: ["include/lapi/syscalls/regen.sh"],
+    tool_files: [
+        "include/lapi/syscalls/regen.sh",
+        "include/lapi/syscalls/*.in",
+    ],
     cmd: "$(location) $(genDir)/lapi/syscalls.h",
-    srcs: ["include/lapi/syscalls/*.in"],
     out: ["lapi/syscalls.h"],
 }
 
