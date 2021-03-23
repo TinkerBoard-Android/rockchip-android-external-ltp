@@ -4,5 +4,5 @@
 third_party {
   # would be RESTRICTED save for GFDL in:
   #   testcases/kernel/device-drivers/v4l/user_space/doc/spec/*.htm*
-  license_type: RESTRICTED
+  license_type: BY_EXCEPTION_ONLY
 }
