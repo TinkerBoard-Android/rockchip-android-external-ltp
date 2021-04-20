@@ -20,11 +20,17 @@
 
 #include "trace_parse.h"
 
+#define TRACEFS_MAX_PATH_LEN 512
+
 int num_trace_records = 0;
 struct trace_record *trace = NULL;
 
 static int trace_fd = -1;
 static char *trace_buffer = NULL;
+
+const char *tracefs_root = "/sys/kernel/tracing/";
+const char *debugfs_tracefs_root = "/sys/kernel/debug/tracing/";
+char *ftrace_root_dir;
 
 static int parse_event_type(char *event_name)
 {
@@ -86,9 +92,28 @@ void print_trace_record(struct trace_record *tr)
 		printf("(other)\n");
 }
 
+void trace_setup(void)
+{
+	struct stat buf;
+
+	if (stat("/sys/kernel/tracing/trace", &buf) == 0)
+		ftrace_root_dir = tracefs_root;
+	else
+		ftrace_root_dir = debugfs_tracefs_root;
+
+}
+
+void tracefs_write(const char *file_name, const char *value)
+{
+	char buf[TRACEFS_MAX_PATH_LEN];
+
+	snprintf(buf, sizeof(buf), "%s%s", ftrace_root_dir, file_name);
+	SAFE_FILE_PRINTF(buf, value);
+}
+
 void trace_cleanup(void)
 {
-	SAFE_FILE_PRINTF(TRACING_DIR "tracing_on", "0");
+	tracefs_write("tracing_on", "0");
 
 }
 
@@ -397,12 +422,15 @@ static int refill_buffer(char *buffer, char *idx)
 	int bytes_to_read;
 	int bytes_read = 0;
 	int rv;
+	char buf[256];
 
 	bytes_in_buffer = TRACE_BUFFER_SIZE - (idx - buffer) - 1;
 	bytes_to_read = TRACE_BUFFER_SIZE - bytes_in_buffer - 1;
 
 	if (trace_fd == -1) {
-		trace_fd = open(TRACING_DIR "trace", O_RDONLY);
+		snprintf(buf, sizeof(buf), "%strace", ftrace_root_dir);
+
+		trace_fd = open(buf, O_RDONLY);
 		if (trace_fd == -1) {
 			printf("Could not open trace file!\n");
 			return 0;
